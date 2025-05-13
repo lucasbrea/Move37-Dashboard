@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+@layer components {
+  .dashboard-card {
+    @apply bg-gray-800 rounded-xl shadow-xl cursor-pointer 
+           transition-all duration-300 ease-in-out
+           hover:bg-gray-700 hover:shadow-2xl hover:scale-[1.02]
+           border-2 border-gray-700;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dashboard-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .dashboard-card:hover::after {
+    opacity: 1;
+  }
+} 
