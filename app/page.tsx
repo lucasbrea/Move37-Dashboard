@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Home() {
   const router = useRouter();
@@ -35,19 +36,38 @@ export default function Home() {
           }}
         >
           {categories.map((category) => (
-            <div
-              key={category}
-              onClick={() => handleCardClick(category)}
-              className="dashboard-card"
-              style={{
-                minWidth: '300px',
-                width: '100%'
-              }}
-            >
-              <h2 className="text-4xl font-bold text-center text-gray-100 px-6">
-                {category}
-              </h2>
-            </div>
+            category === 'Padrillo' ? (
+              <a 
+                href="https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link" // Replace with your desired URL
+                key={category}
+                className="dashboard-card"
+                style={{
+                  minWidth: '300px',
+                  width: '100%',
+                  textDecoration: 'none'
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2 className="text-4xl font-bold text-center text-gray-100 px-6">
+                  {category}
+                </h2>
+              </a>
+            ) : (
+              <div
+                key={category}
+                onClick={() => handleCardClick(category)}
+                className="dashboard-card"
+                style={{
+                  minWidth: '300px',
+                  width: '100%'
+                }}
+              >
+                <h2 className="text-4xl font-bold text-center text-gray-100 px-6">
+                  {category}
+                </h2>
+              </div>
+            )
           ))}
         </div>
       </div>
