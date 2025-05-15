@@ -3,40 +3,57 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-gray-900 text-gray-100;
+  @apply text-gray-900;
+  font-family: 'Playfair Display', serif;
+  background-image: url('/racetrack.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.overlay {
+  @apply fixed inset-0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 0;
 }
 
 @layer components {
   .dashboard-card {
-    @apply bg-gray-800 rounded-xl shadow-xl cursor-pointer 
+    @apply backdrop-blur-md bg-white/20 rounded-xl cursor-pointer 
            transition-all duration-300 ease-in-out
-           hover:bg-gray-700 hover:shadow-2xl hover:scale-[1.02]
-           border-2 border-gray-700;
+           hover:bg-white/30
+           border border-white/30
+           relative;
     height: 280px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   }
 
-  .dashboard-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  .card-image {
+    @apply rounded-lg object-cover;
+    width: 180px;
+    height: 180px;
+    margin-left: 2rem;
   }
 
-  .dashboard-card:hover::after {
-    opacity: 1;
+  .card-title {
+    @apply text-2xl font-light text-white px-0 drop-shadow-md 
+           absolute top-[2.8rem] right-6;
+  }
+
+  .dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
   }
 } 

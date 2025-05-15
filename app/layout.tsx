@@ -1,8 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Move37 Dashboard',
@@ -15,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} min-h-screen`}>
+    <html lang="en">
+      <body className={playfair.className}>
         {children}
       </body>
     </html>
