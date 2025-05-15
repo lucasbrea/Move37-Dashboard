@@ -2,7 +2,7 @@
 
 import CategoryLayout from '../components/CategoryLayout';
 
-export default function PadrilloPage() {
+export default function CriasPage() {
   const externalLinks = [
     {
       
