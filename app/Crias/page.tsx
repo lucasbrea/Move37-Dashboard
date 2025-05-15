@@ -5,6 +5,8 @@ import CategoryLayout from '../components/CategoryLayout';
 export default function CriasPage() {
   const externalLinks = [
     {
+      title:"Comparing Generations",
+      url:"https://docs.google.com/spreadsheets/d/1SL_1IohEmQBG5jECf8bMjABxdC9C46WY/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true"
       
     },
     // Add more links here as needed
