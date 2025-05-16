@@ -19,18 +19,22 @@ export default function CriadorPage() {
     {
       title:"Report Firmamento(stud)",
       url:"https://drive.google.com/file/d/10IfAEtpEKAY-a-rT-2DmE2IuiArgl5f0/view?usp=drive_link"
+    },
+    {
+      title:"Proposal La Pasion",
+      url:"https://drive.google.com/file/d/1I7T5c7txWsWIU4baOt8TUrxUs9YFqyxc/view?usp=drive_link"
     }
     // Add more links here as needed
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0a192f]">
       {/* Header */}
-      <nav className="border-b">
+      <nav className="border-b border-[#233554]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <a 
             href="/"
-            className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            className="text-gray-300 hover:text-white transition-colors duration-200"
           >
             ← Back to Dashboard
           </a>
@@ -39,7 +43,7 @@ export default function CriadorPage() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Title */}
-        <h1 className="text-5xl font-light text-gray-900 mb-12">
+        <h1 className="text-5xl font-light text-gray-100 mb-12">
           Criador
         </h1>
 
@@ -51,8 +55,8 @@ export default function CriadorPage() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-6 py-4 bg-white border-2 border-gray-200 
-                       rounded-xl text-gray-800 hover:bg-gray-50 hover:border-gray-300 
+              className="flex items-center justify-center px-6 py-4 backdrop-blur-md bg-white/5 border-2 border-white/20 
+                       rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/30 
                        transition-all duration-200 text-center font-light"
             >
               {link.title}
