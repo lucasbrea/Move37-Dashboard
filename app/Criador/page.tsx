@@ -37,6 +37,12 @@ export default function CriadorPage() {
       url: "https://drive.google.com/file/d/1I7T5c7txWsWIU4baOt8TUrxUs9YFqyxc/view?usp=drive_link",
       category: "proposals",
       tags: ["proposal", "la pasion"]
+    },
+    {
+      title:"Clasico Winners - Firmamento",
+      url: "https://docs.google.com/spreadsheets/d/1nPtSaUjvyH9XkR2OaMDG56xJnJn_iUnQ/edit?usp=sharing&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags:["Firmamento","Clasico"]
     }
   ];
 
