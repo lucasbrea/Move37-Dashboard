@@ -22,7 +22,7 @@ export default function PadrilloPage() {
     },
     {
       title: "Past Auctions Table",
-      url: "https://docs.google.com/spreadsheets/d/13tjcOk3hUZAMk65gZk_peJV4XVUHgu0hyO6ch3cPlBg/edit?usp=drive_link",
+      url: "https://docs.google.com/spreadsheets/d/1BLXQ1t2lgHsptAADF8xueVqb4Zkm0pkV3X6tbeYllyw/edit?usp=drive_link",
       category: "tables",
       tags: ["auctions", "history"]
     }
