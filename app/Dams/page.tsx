@@ -13,6 +13,12 @@ export default function DamsPage() {
       url: "https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link",
       category: "tables",
       tags: ["data", "spreadsheet", "padrillos"]
+    },
+    {
+      title:"Dams Up for Auction",
+      url:"https://docs.google.com/spreadsheets/d/14s20DVU6yj5ShNVu8Y4ybqLIsXzhIQjf/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags:["auctions","dams"]
     }
     // Add more links here as needed
   ];
