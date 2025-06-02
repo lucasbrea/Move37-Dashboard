@@ -91,7 +91,7 @@ export default function CriasPage() {
                        rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/30 
                        transition-all duration-200"
             >
-              <span className="text-center font-light mb-2">{link.title}</span>
+              <span className="text-center font-light font-sans mb-2">{link.title}</span>
               <div className="flex flex-wrap gap-2 justify-center">
                 {link.tags.map((tag, tagIndex) => (
                   <span

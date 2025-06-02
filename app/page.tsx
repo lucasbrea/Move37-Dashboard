@@ -172,8 +172,8 @@ export default function HomePage() {
       </header>
       {/* Main Content */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <h1 className="text-4xl sm:text-5xl font-bold font-sans text-center mb-8 text-white tracking-tight">
-          Move37 Dashboard
+        <h1 className="text-4xl sm:text-5xl font-sans text-center mb-8 text-white tracking-tight">
+          Dashboard
         </h1>
         {/* Global Search Bar */}
         <div className="w-full flex justify-center mb-10 font-sans">

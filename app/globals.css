@@ -45,7 +45,7 @@ body {
   }
 
   .card-title {
-    @apply text-2xl font-light text-white px-0 drop-shadow-md 
+    @apply text-2xl font-sans font-light text-white px-0 drop-shadow-md 
            absolute top-[2.8rem] right-6;
   }
 

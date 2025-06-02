@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={playfair.className}>
+      <body className="font-sans">
         {children}
       </body>
     </html>
