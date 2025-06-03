@@ -9,11 +9,13 @@ export default function CriasPage() {
 
   const externalLinks = [
     {
-      title: "Spreadsheet de Padrillos",
-      url: "https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link",
-      category: "tables",
-      tags: ["data", "spreadsheet", "padrillos"]
+      title: "Example Report",
+      url: "https://drive.google.com/file/d/1tYF3isWs8y61tewyZRZa67-u3-5uHWYP/view?usp=drive_link",
+      category: "reports",
+      tags: ["example"],
+      date: "2025-05-26"
     }
+    
     // Add more links here as needed
   ];
 
