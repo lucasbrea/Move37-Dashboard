@@ -43,6 +43,19 @@ export default function CriadorPage() {
       url: "https://docs.google.com/spreadsheets/d/1nPtSaUjvyH9XkR2OaMDG56xJnJn_iUnQ/edit?usp=sharing&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags:["Firmamento","Clasico"]
+    },
+    {
+      title:"Add-Ons Firmamento",
+      url:"https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
+      category:"reports",
+      tags:["firmamento","auctions"]
+    },
+    {
+      title:"Firmamento Auction Analysis(Sep 2024)",
+      url:"https://drive.google.com/file/d/1bcs_Ck1iTGmDDRoKqbdLP3_R9EDt5D5T/view?usp=drive_link",
+      category:"reports",
+      tags:["firmamento","auction","analysis"]
+
     }
   ];
 

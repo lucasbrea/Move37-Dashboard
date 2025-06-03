@@ -60,6 +60,19 @@ const allLinks = [
     category: 'Criador',
     tags: ['Firmamento', 'Clasico'],
   },
+  {
+    title:"Add-Ons Firmamento",
+    url:"https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
+    category:"reports",
+    tags:["firmamento","auctions"]
+  },
+  {
+    title:"Firmamento Auction Analysis(Sep 2024)",
+    url:"https://drive.google.com/file/d/1bcs_Ck1iTGmDDRoKqbdLP3_R9EDt5D5T/view?usp=drive_link",
+    category:"reports",
+    tags:["firmamento","auction","analysis"]
+
+  },
   // Entrenador
   {
     title: 'Report Frenkel',

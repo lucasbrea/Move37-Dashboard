@@ -6,6 +6,7 @@ import DataTable, { TableColumn } from 'react-data-table-component';
 import AuctionTable from '../components/dams_auctions';
 import AuctionTableHorses from '../components/horses_auctions';
 import AuctionTablePastAuctions from '../components/past_auctions';
+import PlotGenerator from '../components/summary';
 
 export default function MyPage() {
   const [activeTab, setActiveTab] = useState('current');
@@ -87,6 +88,12 @@ export default function MyPage() {
             <div>
               <h2 className="text-2xl font-light text-gray-100 mb-4">Past Auctions</h2>
               <AuctionTablePastAuctions data={auctions}/>
+            </div>
+          )}
+          {activeTab === 'summary' && (
+            <div>
+              <h2 className="text-2xl font-light text-gray-100 mb-4">Past Auctions</h2>
+              <PlotGenerator/>
             </div>
           )}
         </div>
