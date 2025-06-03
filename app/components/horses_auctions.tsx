@@ -84,7 +84,7 @@ export default function AuctionTableHorses({
     "Recent G1 Wnrs/Born":"bg-yellow-50",
 
     "Age":"bg-gray-100",
-    "Top BSN's":"bg-gray-100", 
+    "Top BSNs":"bg-gray-100", 
     "Raced Stk? Won G-Stk? Won-G1?":"bg-gray-100",
     "#Offs Ran":"bg-gray-100",
     "Offs Top BSNs":"bg-gray-100",
@@ -147,7 +147,7 @@ export default function AuctionTableHorses({
      "PRS", "PR", "PS",
      "Sire PS","Dam's Age and Racing Career","Dam's Offsprings Performance","Dam's Family (Parents & Siblings)",
      "STK Races /Races","STK Wins 2-5yo/#2-5yo","Recent G1 Wnrs/Born",
-     "Age","Top BSN's", "Raced Stk? Won G-Stk? Won-G1?","#Offs Ran","Offs Top BSNs","Offs Wnrs before 3yo(non-ALT)","Offs Stk Wnrs","CEI per offs(**)","Dam's Siblings(GS) Stk wins",
+     "Age","Top BSNs", "Raced Stk? Won G-Stk? Won-G1?","#Offs Ran","Offs Top BSNs","Offs Wnrs before 3yo(non-ALT)","Offs Stk Wnrs","CEI per offs(**)","Dam's Siblings(GS) Stk wins",
      "PRS Value (2.200 USDB per Bps)",
      "Start","End","Lote","Href"
 

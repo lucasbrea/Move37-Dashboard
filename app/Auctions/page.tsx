@@ -9,7 +9,7 @@ import AuctionTablePastAuctions from '../components/past_auctions';
 
 export default function MyPage() {
   const [activeTab, setActiveTab] = useState('current');
-
+  activeTab === 'current' && setActiveTab('dams');
   const [dams, setDams] = useState([]);
   const [horses, setHorses] = useState([]);
   const [auctions, setAuctions] = useState([]);
