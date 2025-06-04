@@ -23,6 +23,12 @@ const allLinks = [
     category: 'Padrillo',
     tags: ['auctions', 'history'],
   },
+  {
+    title:"Padrillos Table - Sire - MF",
+    url:"https://docs.google.com/spreadsheets/d/11Dyn2boaP3ch0T47N9_6gED5ZdwfC_9W/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category: "tables",
+    tags:["padrillos","spreadsheet"],
+  },
   // Criador
   {
     title: 'Criador Table',
