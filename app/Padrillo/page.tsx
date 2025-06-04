@@ -3,6 +3,16 @@
 import { useState, useMemo } from 'react';
 import CategoryLayout from '../components/CategoryLayout';
 
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
+};
+
 export default function PadrilloPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -12,19 +22,29 @@ export default function PadrilloPage() {
       title: "Padrillos Table - CB",
       url: "https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link",
       category: "tables",
-      tags: ["data", "spreadsheet"]
+      tags: ["data", "spreadsheet"],
+      date: "2025-06-05"
     },
     {
       title: "Envidienme - Profile",
       url: "https://drive.google.com/file/d/1k72dGx4w32kruH1uSLl6Y_naH-_JXy3A/view?usp=drive_link",
       category: "profiles",
-      tags: ["envidienme", "profile"]
+      tags: ["envidienme", "profile"],
+      date: "2025-06-05"
     },
     {
       title: "Past Auctions Table",
       url: "https://docs.google.com/spreadsheets/d/1BLXQ1t2lgHsptAADF8xueVqb4Zkm0pkV3X6tbeYllyw/edit?usp=drive_link",
       category: "tables",
-      tags: ["auctions", "history"]
+      tags: ["auctions", "history"],
+      date: "2025-06-05"
+    },
+    {
+      title:"Padrillos Table - Sire - MF",
+      url:"https://docs.google.com/spreadsheets/d/11Dyn2boaP3ch0T47N9_6gED5ZdwfC_9W/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags:["padrillos","spreadsheet"],
+      date: "2025-06-05"
     }
     // Add more links here as needed
   ];
@@ -114,6 +134,9 @@ export default function PadrilloPage() {
                   </span>
                 ))}
               </div>
+              <span className="text-xs text-gray-400 text-center">
+                {formatDate(link.date)}
+              </span>
             </a>
           ))}
         </div>
