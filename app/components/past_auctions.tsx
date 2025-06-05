@@ -38,6 +38,8 @@ export default function AuctionTablePastAuctions({
     "PS":"bg-green-100", 
     "PR":"bg-green-100",
 
+    // "Sire PS":"bg-red-100",
+
     "Value USDB":"bg-yellow-100", 
     "Price per Bp":"bg-yellow-100", 
     "Auction Order":"bg-yellow-100", 
@@ -128,7 +130,7 @@ export default function AuctionTablePastAuctions({
 
   const columnTitles = [
     "Name", "Sire", "Dam", "Birth Date", "Haras", "Sex",
-    "PRS", "PS", "PR",
+    "PRS", "PS", "PR", 
     "Value USDB", "Price per Bp", "Auction Order", "Auction Date", "Year", "Title"
   ];
 
@@ -158,6 +160,7 @@ export default function AuctionTablePastAuctions({
             <tr>
               <th colSpan={6} className="bg-gray-100 text-center border border-gray-300 px-2 py-1">Basic Information</th>
               <th colSpan={3} className="bg-green-100 text-center border border-gray-300 px-2 py-1">Selection</th>
+              {/* <th className="bg-red-100 text-center border border-gray-300 px-2 py-1">Sire</th> */}
               <th colSpan={6} className="bg-yellow-100 text-center border border-gray-300 px-2 py-1">Auction Info</th>
             </tr>
             <tr>
