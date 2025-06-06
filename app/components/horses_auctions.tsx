@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState, useMemo, useRef, useEffect} from 'react';
 
 interface AuctionTableProps {
   data: any[];
@@ -10,7 +10,31 @@ export default function AuctionTableHorses({
   gradientColumns = ["PRS", "PR","PS","Inbreeding Coef."]
   
 }: AuctionTableProps) {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const headerScroll = headerRef.current;
+    const bodyScroll = bodyRef.current;
+
+    if (!headerScroll || !bodyScroll) return;
+
+    const handleBodyScroll = () => {
+      headerScroll.scrollLeft = bodyScroll.scrollLeft;
+    };
+
+    const handleHeaderScroll = () => {
+      bodyScroll.scrollLeft = headerScroll.scrollLeft;
+    };
+
+    bodyScroll.addEventListener('scroll', handleBodyScroll);
+    headerScroll.addEventListener('scroll', handleHeaderScroll);
+
+    return () => {
+      bodyScroll.removeEventListener('scroll', handleBodyScroll);
+      headerScroll.removeEventListener('scroll', handleHeaderScroll);
+    };
+  }, []);
 
   const [sortColumn, setSortColumn] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
@@ -155,8 +179,42 @@ export default function AuctionTableHorses({
    
   ];
 
+  const columnWidths: Record<string, string> = {
+    "Ranking Gen23": "min-w-[80px]",
+    "Horse": "min-w-[200px]",
+    "Sire": "min-w-[160px]",
+    "Dam": "min-w-[160px]",
+    "Haras": "min-w-[120px]",
+    "Sex": "min-w-[20px]",
+    "Birth Month": "min-w-[20px]",
+    "Birth Date": "min-w-[20px]",
+    "PRS": "min-w-[20px]",
+    "PR": "min-w-[20px]",
+    "PS": "min-w-[20px]",
+    "Sire PS": "min-w-[20px]",
+    "Dam's Age and Racing Career": "min-w-[20px]",
+    "Dam's Offsprings Performance": "min-w-[20px]",
+    "Dam's Family (Parents & Siblings)": "min-w-[20px]",
+    "STK Races /Races": "min-w-[20px]",
+    "STK Wins 2-5yo/#2-5yo": "min-w-[20px]",
+    "Recent G1 Wnrs/Born": "min-w-[20px]",
+    "Age": "min-w-[20px]",
+    "Top BSNs": "min-w-[20px]",
+    "Raced Stk? Won G-Stk? Won-G1?": "min-w-[20px]",
+    "#Offs Ran": "min-w-[20px]",
+    "Offs Top BSNs": "min-w-[20px]",
+    "Offs Wnrs before 3yo(non-ALT)": "min-w-[20px]",
+    "Offs Stk Wnrs": "min-w-[20px]",
+    "CEI per offs(**)": "min-w-[20px]",
+    "Dam's Siblings(GS) Stk wins": "min-w-[20px]",
+    "PRS Value (2.200 USDB per Bps)": "min-w-[20px]",
+    "Start": "min-w-[30px]",
+    "End": "min-w-[30px]",
+    "Lote": "min-w-[20px]"
+  };
+
   return (
-    <div className="w-full overflow-x-auto text-gray-800 font-sans">
+    <div className="w-full text-gray-800 font-sans">
       <div className="grid grid-cols-4 gap-4 p-2">
         {filterableColumns.map((col, i) => (
           <div key={i} className="flex flex-col text-[10px]">
@@ -174,9 +232,9 @@ export default function AuctionTableHorses({
           </div>
         ))}
       </div>
-      <div className="w-full overflow-x-auto">
+      <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 300px)' }}>
         <table className="w-full table-auto border text-[10px] leading-tight text-gray-800">
-          <thead>
+          <thead className="sticky top-0 bg-white">
             <tr>
               <th colSpan={8} className="bg-gray-100 text-center border border-gray-300 px-2 py-1">Basic Information</th>
               <th colSpan={3} className="bg-green-100 text-center border border-gray-300 px-2 py-1">Selection</th>
@@ -191,7 +249,7 @@ export default function AuctionTableHorses({
                 <th
                   key={i}
                   onClick={() => handleSort(title)}
-                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 ${columnGroupColors[title] || ''}`}
+                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 ${columnGroupColors[title] || ''} ${columnWidths[title] || 'min-w-[80px]'}`}
                 >
                   {title}
                   {sortColumn === title ? (sortDirection === 'asc' ? ' ▲' : ' ▼') : ''}
@@ -215,7 +273,7 @@ export default function AuctionTableHorses({
                   return (
                     <td
                       key={colIdx}
-                      className="px-2 py-1 text-center whitespace-nowrap"
+                      className={`px-2 py-1 text-center whitespace-nowrap ${columnWidths[colName] || 'min-w-[80px]'}`}
                       style={style}
                       title={String(rawValue)}
                     >

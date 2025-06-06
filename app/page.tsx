@@ -25,7 +25,7 @@ const allLinks = [
   },
   {
     title:"Padrillos Table - Sire - MF",
-    url:"https://docs.google.com/spreadsheets/d/11Dyn2boaP3ch0T47N9_6gED5ZdwfC_9W/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    url:"https://docs.google.com/spreadsheets/d/1f1hnpQPQCXoQVqyfxocdVJddxcQoC4HK/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
     category: "tables",
     tags:["padrillos","spreadsheet"],
   },

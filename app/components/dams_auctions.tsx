@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState, useMemo, useRef, useEffect} from 'react';
 
 interface AuctionTableProps {
   data: any[];
@@ -10,7 +10,31 @@ export default function AuctionTable({
   gradientColumns = ["PRS", "PR", "PB", "TPBRS","PS","PBRS", "Inbreeding Coef."]
   
 }: AuctionTableProps) {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const headerScroll = headerRef.current;
+    const bodyScroll = bodyRef.current;
+
+    if (!headerScroll || !bodyScroll) return;
+
+    const handleBodyScroll = () => {
+      headerScroll.scrollLeft = bodyScroll.scrollLeft;
+    };
+
+    const handleHeaderScroll = () => {
+      bodyScroll.scrollLeft = headerScroll.scrollLeft;
+    };
+
+    bodyScroll.addEventListener('scroll', handleBodyScroll);
+    headerScroll.addEventListener('scroll', handleHeaderScroll);
+
+    return () => {
+      bodyScroll.removeEventListener('scroll', handleBodyScroll);
+      headerScroll.removeEventListener('scroll', handleHeaderScroll);
+    };
+  }, []);
 
   const [sortColumn, setSortColumn] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
@@ -159,8 +183,49 @@ export default function AuctionTable({
     "Lote", "Start", "End"
   ];
 
+  const columnWidths: Record<string, string> = {
+    "Ranking": "min-w-[80px]",
+    "Name": "min-w-[200px]",
+    "Sire": "min-w-[160px]",
+    "Dam": "min-w-[160px]",
+    "Haras": "min-w-[200px]",
+    "TPBRS": "min-w-[30px]",
+    "PBRS": "min-w-[20px]",
+    "PB": "min-w-[20px]",
+    "PRS": "min-w-[20px]",
+    "PR": "min-w-[20px]",
+    "PS": "min-w-[20px]",
+    "Age and Racing Career": "min-w-[20px]",
+    "Offsprings' Quality": "min-w-[20px]",
+    "Siblings' quality": "min-w-[20px]",
+    "Parents Career": "min-w-[20px]",
+    "Age": "min-w-[20px]",
+    "Top 3 BSN's": "min-w-[20px]",
+    "Raced Stk? Won G-Stk?": "min-w-[20px]",
+    "#Offs Ran": "min-w-[20px]",
+    "Dam's Foals Top 3 BSN": "min-w-[20px]",
+    "Foals before 3yo(non-ALT)": "min-w-[20px]",
+    "Foals Stk Rnrs": "min-w-[20px]",
+    "Foals Stk Wnrs": "min-w-[20px]",
+    "Siblings total G-stk runs": "min-w-[20px]",
+    "Siblings total G-stk wins": "min-w-[20px]",
+    "Inbreeding Coef.": "min-w-[20px]",
+    "#Offs Ran / #Running age": "min-w-[20px]",
+    "#Services": "min-w-[20px]",
+    "#Births": "min-w-[20px]",
+    "Date last service": "min-w-[30px]",
+    "Birth Rate": "min-w-[20px]",
+    "Total Races": "min-w-[20px]",
+    "Total Wins": "min-w-[20px]",
+    "G1 Placed": "min-w-[20px]",
+    "G1 Wins": "min-w-[20px]",
+    "Start": "min-w-[30px]",
+    "End": "min-w-[30px]",
+    "Lote": "min-w-[80px]"
+  };
+
   return (
-    <div className="w-full overflow-x-auto text-gray-800 font-sans">
+    <div className="w-full text-gray-800 font-sans">
       <div className="grid grid-cols-4 gap-4 p-2">
         {filterableColumns.map((col, i) => (
           <div key={i} className="flex flex-col text-[10px]">
@@ -178,9 +243,9 @@ export default function AuctionTable({
           </div>
         ))}
       </div>
-      <div className="w-full overflow-x-auto">
+      <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 300px)' }}>
         <table className="w-full table-auto border text-[10px] leading-tight text-gray-800">
-          <thead>
+          <thead className="sticky top-0 bg-white">
             <tr>
               <th colSpan={5} className="bg-green-100 text-center border border-gray-300 px-2 py-1">Basic Information</th>
               <th colSpan={6} className="bg-green-50 text-center border border-gray-300 px-2 py-1">Selection</th>
@@ -196,7 +261,7 @@ export default function AuctionTable({
                 <th
                   key={i}
                   onClick={() => handleSort(title)}
-                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 ${columnGroupColors[title] || ''}`}
+                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 ${columnGroupColors[title] || ''} ${columnWidths[title] || 'min-w-[80px]'}`}
                 >
                   {title}
                   {sortColumn === title ? (sortDirection === 'asc' ? ' ▲' : ' ▼') : ''}
@@ -220,7 +285,7 @@ export default function AuctionTable({
                   return (
                     <td
                       key={colIdx}
-                      className="px-2 py-1 text-center whitespace-nowrap"
+                      className={`px-2 py-1 text-center whitespace-nowrap ${columnWidths[colName] || 'min-w-[80px]'}`}
                       style={style}
                       title={String(rawValue)}
                     >
