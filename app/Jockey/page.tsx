@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import CategoryLayout from '../components/CategoryLayout';
+import CategoryFilter from '../components/CategoryFilter';
 
 export default function JockeyPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -83,18 +84,11 @@ export default function JockeyPage() {
               />
             </div>
             <div className="w-full sm:w-48">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100 
-                         focus:outline-none focus:border-white/40"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category} className="bg-[#0a192f]">
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                  </option>
-                ))}
-              </select>
+            <CategoryFilter 
+                    categories={categories}
+                    selectedCategory={selectedCategory}
+                    onFilterChange={setSelectedCategory}
+                  />
             </div>
           </div>
           

@@ -2,60 +2,63 @@
 
 import { useState, useMemo } from 'react';
 import CategoryLayout from '../components/CategoryLayout';
+import CriadorFilter from '../components/CriadorFilter';
+import CategoryFilter from '../components/CategoryFilter';
 
 export default function CriadorPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCriadores, setSelectedCriadores] = useState<string[]>([]);
 
   const externalLinks = [
     {
       title: "Criador Table",
       url: "https://docs.google.com/spreadsheets/d/131ORjkKEyewcLVQkXC00oMI-gmCZKFcO/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
-      tags: ["data", "spreadsheet"]
+      tags: ["data", "spreadsheet"],
+      criador: "Firmamento"
     },
     {
       title: "Firmamento Report",
       url: "https://drive.google.com/file/d/1XPhELxhJy83UCcKbxVFoPjPl-eghul0v/view?usp=drive_link",
       category: "reports",
-      tags: ["firmamento", "analysis"]
+      tags: ["firmamento", "analysis"],
+      criador: "Firmamento"
     },
     {
       title: "Report Firmamento(criador)",
       url: "https://drive.google.com/file/d/1hIe5M42vxqQIFNd8mMoLTcnk3BZp8wss/view?usp=drive_link",
       category: "reports",
-      tags: ["firmamento", "criador"]
+      tags: ["firmamento", "criador"],
+      criador: "Firmamento"
     },
     {
       title: "Report Firmamento(stud)",
       url: "https://drive.google.com/file/d/10IfAEtpEKAY-a-rT-2DmE2IuiArgl5f0/view?usp=drive_link",
       category: "reports",
-      tags: ["firmamento", "stud"]
+      tags: ["firmamento", "stud"],
+      criador: "Firmamento"
     },
     {
       title: "Proposal La Pasion",
       url: "https://drive.google.com/file/d/1I7T5c7txWsWIU4baOt8TUrxUs9YFqyxc/view?usp=drive_link",
       category: "proposals",
-      tags: ["proposal", "la pasion"]
+      tags: ["proposal", "la pasion"],
+      criador: "La Pasion"
     },
     {
       title:"Clasico Winners - Firmamento",
       url: "https://docs.google.com/spreadsheets/d/1nPtSaUjvyH9XkR2OaMDG56xJnJn_iUnQ/edit?usp=sharing&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
-      tags:["Firmamento","Clasico"]
+      tags:["Firmamento","Clasico"],
+      criador: "Firmamento"
     },
     {
       title:"Add-Ons Firmamento",
       url:"https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
       category:"reports",
-      tags:["firmamento","auctions"]
-    },
-    {
-      title:"Firmamento Auction Analysis(Sep 2024)",
-      url:"https://drive.google.com/file/d/1bcs_Ck1iTGmDDRoKqbdLP3_R9EDt5D5T/view?usp=drive_link",
-      category:"reports",
-      tags:["firmamento","auction","analysis"]
-
+      tags:["firmamento","auctions"],
+      criador: "Firmamento"
     }
   ];
 
@@ -69,9 +72,13 @@ export default function CriadorPage() {
       const matchesSearch = link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           link.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || link.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      const matchesCriador = selectedCriadores.length === 0 || 
+        selectedCriadores.some(criador => 
+          link.tags.some(tag => tag.toLowerCase() === criador.toLowerCase())
+        );
+      return matchesSearch && matchesCategory && matchesCriador;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, selectedCriadores]);
 
   return (
     <div className="min-h-screen bg-[#0a192f]">
@@ -106,18 +113,14 @@ export default function CriadorPage() {
             />
           </div>
           <div className="w-full sm:w-48">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100 
-                       focus:outline-none focus:border-white/40"
-            >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-[#0a192f]">
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </option>
-              ))}
-            </select>
+            <CategoryFilter 
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onFilterChange={setSelectedCategory}
+            />
+          </div>
+          <div className="w-full sm:w-48">
+            <CriadorFilter onFilterChange={setSelectedCriadores} />
           </div>
         </div>
 

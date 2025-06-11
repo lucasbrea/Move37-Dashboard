@@ -39,7 +39,7 @@ export default function AuctionTableHorses({
   const [sortColumn, setSortColumn] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
   const [filters, setFilters] = useState<Record<string, string>>({});
-  const filterableColumns = ["Sire", "Dam", "Name", "Haras"];
+  const filterableColumns = ["Sire", "Dam", "Horse", "Haras"];
   const maxValues: Record<string, number> = {};
   gradientColumns.forEach(col => {
     maxValues[col] = Math.max(
@@ -48,6 +48,53 @@ export default function AuctionTableHorses({
       )
     );
   });
+
+  const columnTypes: Record<string, 'string' | 'number' | 'date'> = {
+    'PRS Value (2.200 USDB per Bps)': 'number',
+    'Start': 'date',
+    'End': 'date',
+    'Birth Date': 'date',
+    'Birth Month': 'date',
+    'Age': 'number',
+    'PR': 'number',
+    'PS': 'number',
+    'PRS': 'number',
+    'Inbreeding Coef.': 'number',
+    // Add other gradient columns here as numbers
+    // Default to 'string' for unspecified columns
+  };
+
+  const getSortValue = (value: any, columnType: 'string' | 'number' | 'date') => {
+    if (value === null || value === undefined || value === '') return null;
+    
+    switch (columnType) {
+      case 'number':
+        // Convert to number, handle various formats
+        const numValue = typeof value === 'string' 
+          ? parseFloat(value.replace(/[,$%]/g, '')) // Remove commas, dollar signs, percentages
+          : Number(value);
+        return isNaN(numValue) ? null : numValue;
+      
+      case 'date':
+        // Handle DD/MM/YY format
+        if (typeof value === 'string') {
+          const [day, month, year] = value.split('/');
+          if (day && month && year) {
+            // Convert 2-digit year to 4-digit year
+            const fullYear = parseInt(year) < 50 ? 2000 + parseInt(year) : 1900 + parseInt(year);
+            const dateValue = new Date(fullYear, parseInt(month) - 1, parseInt(day));
+            return isNaN(dateValue.getTime()) ? null : dateValue.getTime();
+          }
+        }
+        // Fallback to standard date parsing for other formats
+        const dateValue = new Date(value);
+        return isNaN(dateValue.getTime()) ? null : dateValue.getTime();
+      
+      default:
+        return String(value).toLowerCase();
+    }
+  };
+
   const filteredData = useMemo(() => {
     let filtered = [...data];
   
@@ -69,14 +116,15 @@ export default function AuctionTableHorses({
         if (aVal == null) return 1;
         if (bVal == null) return -1;
   
-        const aNum = parseFloat(aVal);
-        const bNum = parseFloat(bVal);
+        const columnType = columnTypes[sortColumn] || 'string';
+        const aSortValue = getSortValue(aVal, columnType);
+        const bSortValue = getSortValue(bVal, columnType);
   
-        const aValNorm = isNaN(aNum) ? String(aVal) : aNum;
-        const bValNorm = isNaN(bNum) ? String(bVal) : bNum;
+        if (aSortValue === null) return 1;
+        if (bSortValue === null) return -1;
   
-        if (aValNorm < bValNorm) return sortDirection === 'asc' ? -1 : 1;
-        if (aValNorm > bValNorm) return sortDirection === 'asc' ? 1 : -1;
+        if (aSortValue < bSortValue) return sortDirection === 'asc' ? -1 : 1;
+        if (aSortValue > bSortValue) return sortDirection === 'asc' ? 1 : -1;
         return 0;
       });
     }
@@ -181,10 +229,10 @@ export default function AuctionTableHorses({
 
   const columnWidths: Record<string, string> = {
     "Ranking Gen23": "min-w-[80px]",
-    "Horse": "min-w-[200px]",
-    "Sire": "min-w-[160px]",
-    "Dam": "min-w-[160px]",
-    "Haras": "min-w-[120px]",
+    "Horse": "min-w-[100px]",
+    "Sire": "min-w-[100px]",
+    "Dam": "min-w-[100px]",
+    "Haras": "min-w-[100px]",
     "Sex": "min-w-[20px]",
     "Birth Month": "min-w-[20px]",
     "Birth Date": "min-w-[20px]",

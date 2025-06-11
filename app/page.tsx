@@ -137,7 +137,7 @@ const categories = [
     path: '/Entrenador',
     description: ''
   },
-  { name: 'Crías', 
+  { name: 'Selección Crías Argentina', 
     image: '/foals_dashboard.jpg', 
     path: '/Crias',
     description: ''

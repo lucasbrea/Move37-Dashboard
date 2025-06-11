@@ -48,6 +48,53 @@ export default function AuctionTable({
       )
     );
   });
+
+  const columnTypes: Record<string, 'string' | 'number' | 'date'> = {
+    'Start': 'date',
+    'End': 'date',
+    'Birth Date': 'date',
+    'Age': 'number',
+    'PR': 'number',
+    'PS': 'number',
+    'PRS': 'number',
+    'PB': 'number',
+    'PBRS': 'number',
+    'TPBRS': 'number',  
+    // Add other gradient columns here as numbers
+    // Default to 'string' for unspecified columns
+  };
+
+  const getSortValue = (value: any, columnType: 'string' | 'number' | 'date') => {
+    if (value === null || value === undefined || value === '') return null;
+    
+    switch (columnType) {
+      case 'number':
+        // Convert to number, handle various formats
+        const numValue = typeof value === 'string' 
+          ? parseFloat(value.replace(/[,$%]/g, '')) // Remove commas, dollar signs, percentages
+          : Number(value);
+        return isNaN(numValue) ? null : numValue;
+      
+      case 'date':
+        // Handle DD/MM/YY format
+        if (typeof value === 'string') {
+          const [day, month, year] = value.split('/');
+          if (day && month && year) {
+            // Convert 2-digit year to 4-digit year
+            const fullYear = parseInt(year) < 50 ? 2000 + parseInt(year) : 1900 + parseInt(year);
+            const dateValue = new Date(fullYear, parseInt(month) - 1, parseInt(day));
+            return isNaN(dateValue.getTime()) ? null : dateValue.getTime();
+          }
+        }
+        // Fallback to standard date parsing for other formats
+        const dateValue = new Date(value);
+        return isNaN(dateValue.getTime()) ? null : dateValue.getTime();
+      
+      default:
+        return String(value).toLowerCase();
+    }
+  };
+
   const filteredData = useMemo(() => {
     let filtered = [...data];
   
@@ -69,14 +116,15 @@ export default function AuctionTable({
         if (aVal == null) return 1;
         if (bVal == null) return -1;
   
-        const aNum = parseFloat(aVal);
-        const bNum = parseFloat(bVal);
+        const columnType = columnTypes[sortColumn] || 'string';
+        const aSortValue = getSortValue(aVal, columnType);
+        const bSortValue = getSortValue(bVal, columnType);
   
-        const aValNorm = isNaN(aNum) ? String(aVal) : aNum;
-        const bValNorm = isNaN(bNum) ? String(bVal) : bNum;
+        if (aSortValue === null) return 1;
+        if (bSortValue === null) return -1;
   
-        if (aValNorm < bValNorm) return sortDirection === 'asc' ? -1 : 1;
-        if (aValNorm > bValNorm) return sortDirection === 'asc' ? 1 : -1;
+        if (aSortValue < bSortValue) return sortDirection === 'asc' ? -1 : 1;
+        if (aSortValue > bSortValue) return sortDirection === 'asc' ? 1 : -1;
         return 0;
       });
     }

@@ -2,10 +2,13 @@
 
 import { useState, useMemo } from 'react';
 import CategoryLayout from '../components/CategoryLayout';
+import CriadorFilter from '../components/CriadorFilter';
+import CategoryFilter from '../components/CategoryFilter';
 
 export default function CriasPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCriadores, setSelectedCriadores] = useState<string[]>([]);
 
   const externalLinks = [
     {
@@ -13,7 +16,8 @@ export default function CriasPage() {
       url: "https://drive.google.com/file/d/1tYF3isWs8y61tewyZRZa67-u3-5uHWYP/view?usp=drive_link",
       category: "reports",
       tags: ["example"],
-      date: "2025-05-26"
+      date: "2025-05-26",
+      criador: "Firmamento"
     }
     
     // Add more links here as needed
@@ -29,9 +33,13 @@ export default function CriasPage() {
       const matchesSearch = link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           link.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || link.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      const matchesCriador = selectedCriadores.length === 0 || 
+        selectedCriadores.some(criador => 
+          link.tags.some(tag => tag.toLowerCase() === criador.toLowerCase())
+        );
+      return matchesSearch && matchesCategory && matchesCriador;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, selectedCriadores]);
 
   return (
     <div className="min-h-screen bg-[#0a192f]">
@@ -50,7 +58,7 @@ export default function CriasPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Title */}
         <h1 className="text-5xl font-light text-gray-100 mb-12">
-          Crias
+          Selección Crías Argentina
         </h1>
 
         {/* Search and Filter Section */}
@@ -66,18 +74,14 @@ export default function CriasPage() {
             />
           </div>
           <div className="w-full sm:w-48">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100 
-                       focus:outline-none focus:border-white/40"
-            >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-[#0a192f]">
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </option>
-              ))}
-            </select>
+            <CategoryFilter 
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onFilterChange={setSelectedCategory}
+            />
+          </div>
+          <div className="w-full sm:w-48">
+            <CriadorFilter onFilterChange={setSelectedCriadores} />
           </div>
         </div>
 

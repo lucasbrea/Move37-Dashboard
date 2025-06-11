@@ -35,22 +35,129 @@ export default function AuctionTablePastAuctions({
     };
   }, []);
 
-  const [sortColumn, setSortColumn] = useState<string | null>(null);
-  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
-  const [filters, setFilters] = useState<Record<string, string>>({});
-  const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 500;
+const [sortColumn, setSortColumn] = useState<string | null>(null);
+const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+const [filters, setFilters] = useState<Record<string, string>>({});
+const [currentPage, setCurrentPage] = useState(1);
+const rowsPerPage = 500;
 
-  const filterableColumns = ["Sire", "Dam", "Name", "Haras", "Year"];
+const filterableColumns = ["Sire", "Dam", "Name", "Haras", "Year"];
 
-  const maxValues: Record<string, number> = {};
-  gradientColumns.forEach(col => {
-    maxValues[col] = Math.max(
-      ...data.map((row: any) =>
-        parseFloat((col === "Inbreeding Coef." ? row[col] : row[col]) || 0)
-      )
-    );
+// Define column types (adjust these based on your actual columns)
+const columnTypes: Record<string, 'string' | 'number' | 'date'> = {
+  'Value USDB': 'number',
+  'Price per Bp': 'number',
+  'Auction Date': 'date',
+  'Start': 'date',
+  'End': 'date',
+  'Birth Date': 'date',
+  'Year': 'number',
+  'PR': 'number',
+  'PS': 'number',
+  'PRS': 'number',
+  // Add other gradient columns here as numbers
+  // Default to 'string' for unspecified columns
+};
+
+const getSortValue = (value: any, columnType: 'string' | 'number' | 'date') => {
+  if (value === null || value === undefined || value === '') return null;
+  
+  switch (columnType) {
+    case 'number':
+      // Convert to number, handle various formats
+      const numValue = typeof value === 'string' 
+        ? parseFloat(value.replace(/[,$%]/g, '')) // Remove commas, dollar signs, percentages
+        : Number(value);
+      return isNaN(numValue) ? null : numValue;
+    
+    case 'date':
+      // Handle DD/MM/YY format
+      if (typeof value === 'string') {
+        const [day, month, year] = value.split('/');
+        if (day && month && year) {
+          // Convert 2-digit year to 4-digit year
+          const fullYear = parseInt(year) < 50 ? 2000 + parseInt(year) : 1900 + parseInt(year);
+          const dateValue = new Date(fullYear, parseInt(month) - 1, parseInt(day));
+          return isNaN(dateValue.getTime()) ? null : dateValue.getTime();
+        }
+      }
+      // Fallback to standard date parsing for other formats
+      const dateValue = new Date(value);
+      return isNaN(dateValue.getTime()) ? null : dateValue.getTime();
+    
+    default:
+      return String(value).toLowerCase();
+  }
+};
+
+// IMPORTANT: Make sure filteredData is declared BEFORE sortedData
+// This should be moved above the sortedData declaration:
+const filteredData = useMemo(() => {
+  let filtered = [...data];
+
+  Object.entries(filters).forEach(([col, val]) => {
+    if (val && filterableColumns.includes(col)) {
+      filtered = filtered.filter(row =>
+        String(row[col] ?? '')
+          .toLowerCase()
+          .includes(val.toLowerCase())
+      );
+    }
   });
+
+  if (sortColumn) {
+    filtered.sort((a, b) => {
+      const aVal = a[sortColumn];
+      const bVal = b[sortColumn];
+
+      if (aVal == null) return 1;
+      if (bVal == null) return -1;
+
+      const columnType = columnTypes[sortColumn] || 'string';
+      const aSortValue = getSortValue(aVal, columnType);
+      const bSortValue = getSortValue(bVal, columnType);
+
+      if (aSortValue === null) return 1;
+      if (bSortValue === null) return -1;
+
+      if (aSortValue < bSortValue) return sortDirection === 'asc' ? -1 : 1;
+      if (aSortValue > bSortValue) return sortDirection === 'asc' ? 1 : -1;
+      return 0;
+    });
+  }
+
+  return filtered;
+}, [data, filters, sortColumn, sortDirection]);
+// Calculate max values for gradient columns
+const maxValues: Record<string, number> = useMemo(() => {
+  const values: Record<string, number> = {};
+  
+  // Make sure gradientColumns is defined before using it
+  if (gradientColumns && data && data.length > 0) {
+    gradientColumns.forEach(col => {
+      const numericValues = data
+        .map((row: any) => {
+          const value = row[col];
+          return parseFloat(String(value || 0).replace(/[,$%]/g, ''));
+        })
+        .filter(val => !isNaN(val) && val !== null);
+      
+      values[col] = numericValues.length > 0 ? Math.max(...numericValues) : 0;
+    });
+  }
+  
+  return values;
+}, [data, gradientColumns]);
+
+
+const handleSort = (column: string) => {
+  if (sortColumn === column) {
+    setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+  } else {
+    setSortColumn(column);
+    setSortDirection('asc');
+  }
+};
 
   const columnGroupColors: Record<string, string> = {
     "Name":"bg-gray-100", 
@@ -76,41 +183,6 @@ export default function AuctionTablePastAuctions({
 
   };
 
-  const filteredData = useMemo(() => {
-    let filtered = [...data];
-
-    Object.entries(filters).forEach(([col, val]) => {
-      if (val && filterableColumns.includes(col)) {
-        filtered = filtered.filter(row =>
-          String(row[col] ?? '')
-            .toLowerCase()
-            .includes(val.toLowerCase())
-        );
-      }
-    });
-
-    if (sortColumn) {
-      filtered.sort((a, b) => {
-        const aVal = a[sortColumn];
-        const bVal = b[sortColumn];
-
-        if (aVal == null) return 1;
-        if (bVal == null) return -1;
-
-        const aNum = parseFloat(aVal);
-        const bNum = parseFloat(bVal);
-
-        const aValNorm = isNaN(aNum) ? String(aVal) : aNum;
-        const bValNorm = isNaN(bNum) ? String(bVal) : bNum;
-
-        if (aValNorm < bValNorm) return sortDirection === 'asc' ? -1 : 1;
-        if (aValNorm > bValNorm) return sortDirection === 'asc' ? 1 : -1;
-        return 0;
-      });
-    }
-
-    return filtered;
-  }, [data, filters, sortColumn, sortDirection]);
 
   const paginatedData = useMemo(() => {
     const start = (currentPage - 1) * rowsPerPage;
@@ -118,15 +190,6 @@ export default function AuctionTablePastAuctions({
   }, [filteredData, currentPage]);
 
   const totalPages = Math.ceil(filteredData.length / rowsPerPage);
-
-  const handleSort = (colName: string) => {
-    if (sortColumn === colName) {
-      setSortDirection(prev => (prev === 'asc' ? 'desc' : 'asc'));
-    } else {
-      setSortColumn(colName);
-      setSortDirection('asc');
-    }
-  };
 
   const handleFilterChange = (colName: string, value: string) => {
     setFilters(prev => ({
