@@ -150,7 +150,50 @@ export default function CriadorPage() {
       category:"reports",
       tags:["triple alliance s.a.","criador"],
       criador: "Triple Alliance S.A."
-    }
+    },
+    {
+      title:"PRS - La Nora - Family Data - Camada 2022",
+      url:"https://docs.google.com/spreadsheets/d/1Orq4XqlFoOXC_YG1dLp6RALxnLP9sWXP/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["prs","la nora","family data","camada 2022"],
+      criador: "La Nora"
+    },
+    {
+      title:"PRS - La Nora - Family Data - Camada 2023",
+      url:"https://docs.google.com/spreadsheets/d/11uA6lqtaQ2nwb4N2_lkGdOXgvd8mMUNM/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["prs","la nora","family data","camada 2023"],
+      criador: "La Nora"
+    },
+    {
+      title:"Tracking PRS - La Nora - 2022",
+      url:"https://docs.google.com/spreadsheets/d/1OJSsVmNViP54k61lRFKy2_o8KjQugMgl/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["prs","la nora","family data","camada 2023"],
+      criador: "La Nora"
+    },
+    {
+      title:"Tracking PRS - Firmamento - 2022",
+      url:"https://docs.google.com/spreadsheets/d/1qI6LNo-vyHBfDIRxSii2SNfSRqpT5co1/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["prs","firmamento","family data","camada 2023"],
+      criador: "Firmamento"
+    },
+    {
+      title:"Tracking PRS - Firmamento - 2023",
+      url:"https://docs.google.com/spreadsheets/d/1Y1UmnyhG4sICa5sgqWGT42yMgmlgWoIn/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["prs","firmamento","family data","camada 2023"],
+      criador: "Firmamento"
+    },
+    {
+      title:"Tracking PRS - Gran Muñeca - 2023",
+      url:"https://docs.google.com/spreadsheets/d/1eSH0FrN8RgOWRGgs71efBi0kDOGOc0b8/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["prs","gran muñeca","family data","camada 2023"],
+      criador: "Gran Muñeca"
+    },
+
 
   ];
 

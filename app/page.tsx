@@ -7,7 +7,7 @@ const allLinks = [
   // Padrillo
   {
     title: 'Padrillos Table - CB',
-    url: 'https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link',
+    url: 'https://docs.google.com/spreadsheets/d/1K5G_2_cOJS9YzR9IPXHNolTRQ1TS-z1I/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true',
     category: 'Padrillo',
     tags: ['data', 'spreadsheet'],
   },
@@ -25,7 +25,7 @@ const allLinks = [
   },
   {
     title:"Padrillos Table - Sire - MF",
-    url:"https://docs.google.com/spreadsheets/d/1f1hnpQPQCXoQVqyfxocdVJddxcQoC4HK/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    url:"https://docs.google.com/spreadsheets/d/11Dyn2boaP3ch0T47N9_6gED5ZdwfC_9W/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
     category: "tables",
     tags:["padrillos","spreadsheet"],
   },
@@ -186,11 +186,48 @@ const allLinks = [
     tags:["vacacion","criador"],
   },
   {
-    title:"Criador Report - Triple Alliance S.A.",
+    title:"Criador Report - Triple Alliance S.A.", 
     url:"https://drive.google.com/file/d/1bfGK4tZpzNkOTXcLbNrTgnpjMwbaPztB/view?usp=drive_link",
     category:"reports",
     tags:["triple alliance s.a.","criador"],
-  }
+  },
+  {
+    title:"PRS - La Nora - Family Data - Camada 2022",
+    url:"https://docs.google.com/spreadsheets/d/1Orq4XqlFoOXC_YG1dLp6RALxnLP9sWXP/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","la nora","family data","camada 2022"],
+  },
+  {
+    title:"PRS - La Nora - Family Data - Camada 2023",
+    url:"https://docs.google.com/spreadsheets/d/11uA6lqtaQ2nwb4N2_lkGdOXgvd8mMUNM/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","la nora","family data","camada 2023"],
+  },
+  {
+    title:"Tracking PRS - La Nora - 2022",
+    url:"https://docs.google.com/spreadsheets/d/1OJSsVmNViP54k61lRFKy2_o8KjQugMgl/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","la nora","family data","camada 2023"],
+  },
+  {
+    title:"Tracking PRS - Firmamento - 2022",
+    url:"https://docs.google.com/spreadsheets/d/1qI6LNo-vyHBfDIRxSii2SNfSRqpT5co1/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","firmamento","family data","camada 2023"],
+  },
+  {
+    title:"Tracking PRS - Firmamento - 2023",
+    url:"https://docs.google.com/spreadsheets/d/1Y1UmnyhG4sICa5sgqWGT42yMgmlgWoIn/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","firmamento","family data","camada 2023"],
+  },
+  {
+    title:"Tracking PRS - Gran Muñeca - 2023",
+    url:"https://docs.google.com/spreadsheets/d/1eSH0FrN8RgOWRGgs71efBi0kDOGOc0b8/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","gran muñeca","family data","camada 2023"],
+  },
+
 ];
 
 const categories = [
@@ -230,7 +267,7 @@ const categories = [
     image: '/horse_auction.jpg',
     path:'/Auctions',
     description: ''
-  }
+  },
 ];
 
 export default function HomePage() {
