@@ -43,10 +43,10 @@ const allLinks = [
     tags: ['firmamento', 'analysis'],
   },
   {
-    title: 'Report Firmamento(criador)',
-    url: 'https://drive.google.com/file/d/1hIe5M42vxqQIFNd8mMoLTcnk3BZp8wss/view?usp=drive_link',
-    category: 'Criador',
-    tags: ['firmamento', 'criador'],
+    title: "Criador Report - Firmamento",
+    url: "https://drive.google.com/file/d/1paVDsYxXHp6LNKoGPIXLiLcP-v4EpJ7j/view?usp=drive_link",
+    category: "reports",
+    tags: ["firmamento", "criador"],
   },
   {
     title: 'Report Firmamento(stud)',
@@ -113,6 +113,84 @@ const allLinks = [
     category: 'Crías',
     tags: ['data', 'spreadsheet', 'padrillos'],
   },
+  {
+    title:"Criador Report - Gran Muñeca",
+    url: "https://drive.google.com/file/d/1Co17XCKtkWcWVglZeYFZIbb6l_1VBL_1/view?usp=drive_link",
+    category:"reports",
+    tags:["gran muñeca","criador"],
+  },
+  {
+    title:"Criador Report - Abolengo",
+    url:"https://drive.google.com/file/d/1TxWgkTH2S5HBlyLcK2hYl87zvu8ArY6M/view?usp=drive_link",
+    category:"reports",
+    tags:["abolengo","criador"],
+  },
+  {
+    title:"Criador Report - La Pasion",
+    url:"https://drive.google.com/file/d/1LB6qJMnQ6af6LhYVbN69AcJF3aMl0vOY/view?usp=drive_link",  
+    category:"reports",
+    tags:["la pasion","criador"],
+  },
+  {
+    title:"Criador Report - El Alfalfar",
+    url:"https://drive.google.com/file/d/1JsYHKyHTUOI6PaZ8-PuUeFbD17GyAm75/view?usp=drive_link",
+    category:"reports",
+    tags:["el alfalfar","criador"],
+  },
+  {
+    title:"Criador Report - El Paraiso",
+    url:"https://drive.google.com/file/d/1h8d7s4v2Yb0p9H5Qk6e3b7x9Xj8fXk7L/view?usp=drive_link",
+    category:"reports",
+    tags:["el paraiso","criador"],
+  },
+  {
+    title:"Criador Report - La Biznaga",
+    url:"https://drive.google.com/file/d/1EVTyCbQf52aNlLHTZ_YGlDhv9oQnD8Yq/view?usp=drive_link",
+    category:"reports",
+    tags:["la biznaga","criador"],
+  },
+  {
+    title:"Criador Report - La Nora",
+    url:"https://drive.google.com/file/d/1bA-Lc-PTuNbsfsuD12KAGG0vtj2aY2XZ/view?usp=drive_link",
+    category:"reports",
+    tags:["la nora","criador"],
+  },
+  {
+    title:"Criador Report - La Providencia",
+    url:"https://drive.google.com/file/d/1LB6qJMnQ6af6LhYVbN69AcJF3aMl0vOY/view?usp=drive_link",
+    category:"reports",
+    tags:["la providencia","criador"],
+  },
+  {
+    title:"Criador Report - La Quebrada",
+    url:"https://drive.google.com/file/d/1AsfB0kWNJezxtNwMqf0Of0doSlcoQ6K1/view?usp=drive_link",
+    category:"reports",
+    tags:["la quebrada","criador"],
+  },
+  {
+    title:"Criador Report - Santa Ines",
+    url:"https://drive.google.com/file/d/1_4pNhoL8qCEbMl0zYddrPRmXVMM_nHP5/view?usp=drive_link",
+    category:"reports",
+    tags:["santa ines","criador"],
+  },
+  {
+    title:"Criador Report - Santa Maria de Araras",
+    url:"https://drive.google.com/file/d/1C42Ow3UFHdOxE3ZkDtnxUxH_SrPR8Aji/view?usp=drive_link",
+    category:"reports",
+    tags:["santa maria de araras","criador"],
+  },
+  {
+    title:"Criador Report - Vacacion",
+    url:"https://drive.google.com/file/d/10QXGNl6pFlrGtPz3SkZhmzbh26_de2DB/view?usp=drive_link",
+    category:"reports",
+    tags:["vacacion","criador"],
+  },
+  {
+    title:"Criador Report - Triple Alliance S.A.",
+    url:"https://drive.google.com/file/d/1bfGK4tZpzNkOTXcLbNrTgnpjMwbaPztB/view?usp=drive_link",
+    category:"reports",
+    tags:["triple alliance s.a.","criador"],
+  }
 ];
 
 const categories = [
