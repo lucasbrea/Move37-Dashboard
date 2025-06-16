@@ -20,7 +20,7 @@ export default function PadrilloPage() {
   const externalLinks = [
     {
       title: "Padrillos Table - CB",
-      url: "https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link",
+      url: "https://docs.google.com/spreadsheets/d/1K5G_2_cOJS9YzR9IPXHNolTRQ1TS-z1I/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["data", "spreadsheet"],
       date: "2025-06-05"
@@ -30,13 +30,6 @@ export default function PadrilloPage() {
       url: "https://drive.google.com/file/d/1k72dGx4w32kruH1uSLl6Y_naH-_JXy3A/view?usp=drive_link",
       category: "profiles",
       tags: ["envidienme", "profile"],
-      date: "2025-06-05"
-    },
-    {
-      title: "Past Auctions Table",
-      url: "https://docs.google.com/spreadsheets/d/1BLXQ1t2lgHsptAADF8xueVqb4Zkm0pkV3X6tbeYllyw/edit?usp=drive_link",
-      category: "tables",
-      tags: ["auctions", "history"],
       date: "2025-06-05"
     },
     {
