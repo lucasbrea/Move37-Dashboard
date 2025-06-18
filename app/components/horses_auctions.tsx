@@ -70,6 +70,7 @@ export default function AuctionTableHorses({
     'Top BSNs':'number',
     'Sire PS': 'number',
     'Inbreeding Coef.': 'number',
+    'Mean PRS':'number',
     // Add other gradient columns here as numbers
     // Default to 'string' for unspecified columns
   };
@@ -176,6 +177,9 @@ export default function AuctionTableHorses({
     "Dam's Siblings(GS) Stk wins":"bg-gray-100",
 
     "PRS Value (2.200 USDB per Bps)":"bg-yellow-200",
+
+    "Mean PRS": "bg-red-200",
+    "Criador":"bg-red-200",
     
     "Start":"bg-gray-200",
     "End":"bg-gray-200",
@@ -230,7 +234,7 @@ export default function AuctionTableHorses({
      "Sire PS","Dam's Age and Racing Career","Dam's Offsprings Performance","Dam's Family (Parents & Siblings)",
      "STK Races /Races","STK Wins 2-5yo/#2-5yo","Recent G1 Wnrs/Born",
      "Age","Top BSNs", "Raced Stk? Won G-Stk? Won-G1?","#Offs Ran","Offs Top BSNs","Offs Wnrs before 3yo(non-ALT)","Offs Stk Wnrs","CEI per offs(**)","Dam's Siblings(GS) Stk wins",
-     "PRS Value (2.200 USDB per Bps)",
+     "PRS Value (2.200 USDB per Bps)", "Mean PRS", "Criador",
      "Start","End","Lote","Href"
 
 
@@ -266,6 +270,8 @@ export default function AuctionTableHorses({
     "CEI per offs(**)": "min-w-[20px]",
     "Dam's Siblings(GS) Stk wins": "min-w-[20px]",
     "PRS Value (2.200 USDB per Bps)": "min-w-[20px]",
+    "Mean PRS": "min-w-[20px]",
+    "Criador": "min-w-[20px]",
     "Start": "min-w-[30px]",
     "End": "min-w-[30px]",
     "Lote": "min-w-[20px]"
@@ -300,6 +306,7 @@ export default function AuctionTableHorses({
               <th colSpan={3} className="bg-yellow-50 text-center border border-gray-300 px-2 py-1">Sire's PS Characteristics</th>
               <th colSpan={9} className="bg-gray-100 text-center border border-gray-300 px-2 py-1">Dam's PS Characteristics</th>
               <th className="bg-yellow-200 text-center border border-gray-300 px-2 py-1">Internal Value</th>
+              <th colSpan={2} className="bg-red-200 text-center border border-gray-300 px-2 py-1">Avg PRS by Criador</th>
               <th colSpan={4} className="bg-gray-200 text-center border border-gray-300 px-2 py-1">Auction Info</th>
             </tr>
             <tr>
