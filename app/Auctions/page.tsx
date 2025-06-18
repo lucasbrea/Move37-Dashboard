@@ -8,6 +8,18 @@ import AuctionTableHorses from '../components/horses_auctions';
 import AuctionTablePastAuctions from '../components/past_auctions';
 import PlotGenerator from '../components/summary';
 import CategoryFilter from '../components/CategoryFilter';
+import AddReportButton from '../components/AddReportButton';
+import ReportCard from '../components/ReportCard';
+import { useLocalStorage } from '../components/useLocalStorage';
+
+interface Report {
+  id: string;
+  title: string;
+  url: string;
+  category: string;
+  tags: string[];
+  criador?: string;
+}
 
 export default function MyPage() {
   const [activeTab, setActiveTab] = useState('reports');
@@ -16,6 +28,24 @@ export default function MyPage() {
   const [auctions, setAuctions] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  // Use local storage for reports
+  const [reports, setReports] = useLocalStorage<Report[]>('auctions-reports', [
+    {
+      id: '1',
+      title: "Auction Analysis - Firmamento",
+      url: "https://drive.google.com/file/d/1bcs_Ck1iTGmDDRoKqbdLP3_R9EDt5D5T/view?usp=drive_link",
+      category: "repo",
+      tags: ["auction"]
+    },
+    {
+      id: '2',
+      title: "Add-Ons Firmamento",
+      url: "https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
+      category: "reports",
+      tags: ["auctions", "firmamento"]
+    }
+  ]);
 
   useEffect(() => {
     Promise.all([
@@ -39,25 +69,32 @@ export default function MyPage() {
     { id: 'summary', label: 'Summary' }
   ];
 
-  const auctionReports = [
-    {
-      title:"Firmamento Auction Analysis(Sep 2024)",
-      url:"https://drive.google.com/file/d/1bcs_Ck1iTGmDDRoKqbdLP3_R9EDt5D5T/view?usp=drive_link",
-      category:"reports",
-      tags:["firmamento","auction","analysis"],
-      criador: "Firmamento"
-    }
-    // Add more reports as needed
-  ];
+  const categories = ['all', ...Array.from(new Set(reports.map(report => report.category)))];
 
-  const categories = ['all', ...Array.from(new Set(auctionReports.map(report => report.category)))];
-
-  const filteredReports = auctionReports.filter(report => {
+  const filteredReports = reports.filter(report => {
     const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          report.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || report.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+
+  const handleAddReport = (newReport: Omit<Report, 'id'>) => {
+    const report: Report = {
+      ...newReport,
+      id: Date.now().toString()
+    };
+    setReports([...reports, report]);
+  };
+
+  const handleEditReport = (editedReport: Report) => {
+    setReports(reports.map(report => 
+      report.id === editedReport.id ? editedReport : report
+    ));
+  };
+
+  const handleDeleteReport = (reportToDelete: Report) => {
+    setReports(reports.filter(report => report.id !== reportToDelete.id));
+  };
 
   return (
     <div className="min-h-screen bg-[#0a192f]">
@@ -147,30 +184,18 @@ export default function MyPage() {
 
               {/* Reports Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredReports.map((report, index) => (
-                  <a
-                    key={index}
-                    href={report.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col px-6 py-4 backdrop-blur-md bg-white/5 border-2 border-white/20 
-                             rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/30 
-                             transition-all duration-200"
-                  >
-                    <span className="text-center font-light mb-2">{report.title}</span>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {report.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-2 py-1 text-xs rounded-full bg-white/10 text-gray-300"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </a>
+                {filteredReports.map((report) => (
+                  <ReportCard
+                    key={report.id}
+                    report={report}
+                    onEdit={handleEditReport}
+                    onDelete={handleDeleteReport}
+                  />
                 ))}
               </div>
+
+              {/* Add Report Button */}
+              <AddReportButton onAddReport={handleAddReport} />
             </div>
           )}
         </div>
@@ -178,32 +203,3 @@ export default function MyPage() {
     </div>
   );
 }
-//   return (
-//     <div className="min-h-screen bg-white">
-//       <nav className="border-b">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-//           <Link
-//             href="/"
-//             className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
-//           >
-//             ← Back to Dashboard
-//           </Link>
-//         </div>
-//       </nav>
-
-//       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-//         <h1 className="text-3xl font-semibold text-gray-900 mb-6">
-//           Data from Flask
-//         </h1>
-//         <DataTable
-//           columns={columns}
-//           data={data}
-//           pagination
-//           dense
-//           highlightOnHover
-//           responsive
-//         />
-//       </main>
-//     </div>
-//   );
-// }

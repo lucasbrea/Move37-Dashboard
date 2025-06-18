@@ -4,42 +4,69 @@ import { useState, useMemo } from 'react';
 import CategoryLayout from '../components/CategoryLayout';
 import CriadorFilter from '../components/CriadorFilter';
 import CategoryFilter from '../components/CategoryFilter';
+import AddReportButton from '../components/AddReportButton';
+import ReportCard from '../components/ReportCard';
+import { useLocalStorage } from '../components/useLocalStorage';
+
+interface Report {
+  id: string;
+  title: string;
+  url: string;
+  category: string;
+  tags: string[];
+}
 
 export default function CriasPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCriadores, setSelectedCriadores] = useState<string[]>([]);
-
-  const externalLinks = [
+  
+  // Use local storage for reports
+  const [reports, setReports] = useLocalStorage<Report[]>('crias-reports', [
     {
-      title: "Example Report",
-      url: "https://drive.google.com/file/d/1tYF3isWs8y61tewyZRZa67-u3-5uHWYP/view?usp=drive_link",
-      category: "reports",
-      tags: ["example"],
-      date: "2025-05-26",
-      criador: "Firmamento"
-    }
-    
-    // Add more links here as needed
-  ];
+      id: '1',
+      title: "Criador Table",
+      url: "https://docs.google.com/spreadsheets/d/131ORjkKEyewcLVQkXC00oMI-gmCZKFcO/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["data", "spreadsheet"]
+    },
+  ]);
 
   const categories = useMemo(() => {
-    const uniqueCategories = new Set(externalLinks.map(link => link.category));
+    const uniqueCategories = new Set(reports.map(report => report.category));
     return ['all', ...Array.from(uniqueCategories)];
-  }, []);
+  }, [reports]);
 
-  const filteredLinks = useMemo(() => {
-    return externalLinks.filter(link => {
-      const matchesSearch = link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          link.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || link.category === selectedCategory;
+  const filteredReports = useMemo(() => {
+    return reports.filter(report => {
+      const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          report.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' || report.category === selectedCategory;
       const matchesCriador = selectedCriadores.length === 0 || 
         selectedCriadores.some(criador => 
-          link.tags.some(tag => tag.toLowerCase() === criador.toLowerCase())
+          report.tags.some(tag => tag.toLowerCase() === criador.toLowerCase())
         );
       return matchesSearch && matchesCategory && matchesCriador;
     });
-  }, [searchQuery, selectedCategory, selectedCriadores]);
+  }, [searchQuery, selectedCategory, selectedCriadores, reports]);
+
+  const handleAddReport = (newReport: Omit<Report, 'id'>) => {
+    const report: Report = {
+      ...newReport,
+      id: Date.now().toString()
+    };
+    setReports([...reports, report]);
+  };
+
+  const handleEditReport = (editedReport: Report) => {
+    setReports(reports.map(report => 
+      report.id === editedReport.id ? editedReport : report
+    ));
+  };
+
+  const handleDeleteReport = (reportToDelete: Report) => {
+    setReports(reports.filter(report => report.id !== reportToDelete.id));
+  };
 
   return (
     <div className="min-h-screen bg-[#0a192f]">
@@ -85,32 +112,20 @@ export default function CriasPage() {
           </div>
         </div>
 
-        {/* Links Section */}
+        {/* Reports Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col px-6 py-4 backdrop-blur-md bg-white/5 border-2 border-white/20 
-                       rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/30 
-                       transition-all duration-200"
-            >
-              <span className="text-center font-light font-sans mb-2">{link.title}</span>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {link.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-2 py-1 text-xs rounded-full bg-white/10 text-gray-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
+          {filteredReports.map((report) => (
+            <ReportCard
+              key={report.id}
+              report={report}
+              onEdit={handleEditReport}
+              onDelete={handleDeleteReport}
+            />
           ))}
         </div>
+
+        {/* Add Report Button */}
+        <AddReportButton onAddReport={handleAddReport} />
       </main>
     </div>
   );

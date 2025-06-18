@@ -59,6 +59,16 @@ export default function AuctionTableHorses({
     'PR': 'number',
     'PS': 'number',
     'PRS': 'number',
+    'Dam\'s Age and Racing Career': 'number',
+    'Dam\'s Offsprings Performance': 'number',
+    'Dam\'s Family (Parents & Siblings)':'number',
+    'STK Races /Races': 'number',
+    'Ranking Gen23': 'number',
+    'STK Wins 2-5yo/#2-5yo': 'number',
+    'Recent G1 Wnrs/Born': 'number',
+    'Offs Top BSNs':'number',
+    'Top BSNs':'number',
+    'Sire PS': 'number',
     'Inbreeding Coef.': 'number',
     // Add other gradient columns here as numbers
     // Default to 'string' for unspecified columns
