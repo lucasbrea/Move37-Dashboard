@@ -26,6 +26,20 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["criador", "vacacion"]
     },
+    {
+      id: '2',
+      title: "PRS Family Data - Vacación - 2022",
+      url: "https://docs.google.com/spreadsheets/d/1s5nVa27-fT4tXP2MvUY97VMSRfAs3_2Y/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["vacacion", "prs"]
+    },
+    {
+      id: '3',
+      title: "PRS Family Data - Vacación - 2023",
+      url: "https://docs.google.com/spreadsheets/d/1s5nVa27-fT4tXP2MvUY97VMSRfAs3_2Y/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["vacacion","prs"]
+    },
   ]);
 
   const filteredReports = reports.filter(report => {

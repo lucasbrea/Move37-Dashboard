@@ -26,6 +26,21 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["el paraiso"]
     },
+    {
+      id: '2',
+      title: "PRS - Family Data - El Paraiso - 2022",
+      url: "https://docs.google.com/spreadsheets/d/1hhjWDquh6LkI1He9OvH5mpn_f9jx_iTw/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["el paraiso"]
+    },
+    {
+      id: '3',
+      title: "PRS - Family Data - El Paraiso - 2023",
+      url: "https://docs.google.com/spreadsheets/d/1z1pLUWibWo9AkUZAtEHj-PFA_YjaqAk3/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["el paraiso"]
+    },
+    
   ]);
 
   const filteredReports = reports.filter(report => {

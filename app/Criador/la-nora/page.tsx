@@ -45,7 +45,7 @@ export default function FirmamentoPage() {
       title: "PRS Family Data - La Nora - 2023",
       url: "https://docs.google.com/spreadsheets/d/11uA6lqtaQ2nwb4N2_lkGdOXgvd8mMUNM/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
-      tags: ["Firmamento", "Clasico"]
+      tags: ["la nora","prs"]
     },
   ]);
 

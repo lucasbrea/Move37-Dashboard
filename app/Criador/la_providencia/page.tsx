@@ -26,6 +26,20 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["la providencia"]
     },
+    {
+      id: '2',
+      title: "PRS - Family Data - La Providencia - 2022",
+      url: "https://docs.google.com/spreadsheets/d/1YdzpnOjqaqCKtXtW4G-9efT4-s5Xyjr8/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["la providencia"]
+    },
+    {
+      id: '3',
+      title: "PRS - Family Data - La Providencia - 2023",
+      url: "https://docs.google.com/spreadsheets/d/1ohoZ6B-86EAvgPKSRIh93L-wwLlz9Idv/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["la providencia"]
+    },
  
   ]);
 

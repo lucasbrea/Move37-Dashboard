@@ -21,10 +21,24 @@ export default function FirmamentoPage() {
   const [reports, setReports] = useLocalStorage<Report[]>('firmamento-reports', [
     {
       id: '1',
-      title: "Criador Report - Pozo de Luna",
+      title: "Criador Report - La Pasión",
       url: "https://drive.google.com/file/d/1LB6qJMnQ6af6LhYVbN69AcJF3aMl0vOY/view?usp=drive_link",
       category: "reports",
-      tags: ["criador", "pozo de luna"]
+      tags: ["criador", "la pasión"]
+    },
+    {
+      id: '2',
+      title: "PRS Family Data - La Pasión - 2022",
+      url: "https://docs.google.com/spreadsheets/d/194uIh08vzjmyQfTUWzJnONyneZ8DqFGO/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["la pasion", "prs"]
+    },
+    {
+      id: '3',
+      title: "PRS Family Data - La Pasión - 2023",
+      url: "https://docs.google.com/spreadsheets/d/16rrGcm7GaKGWCpcCMaUWSLmwzVuCmRCf/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["la pasion","prs"]
     },
 
   ]);

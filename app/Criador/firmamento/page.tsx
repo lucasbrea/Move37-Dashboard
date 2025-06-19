@@ -62,7 +62,21 @@ export default function FirmamentoPage() {
       url: "https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
       category: "reports",
       tags: ["auctions", "firmamento"]
-    }
+    },
+    {
+      id: '7',
+      title: "PRS - Family Data - Firmamento - 2022",
+      url: "https://docs.google.com/spreadsheets/d/12rVq5kWL9gU3-sDcBH4g8pgKqyQMgqLu/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["firmamento"]
+    },
+    {
+      id: '8',
+      title: "PRS - Family Data - Firmamento - 2023",
+      url: "https://docs.google.com/spreadsheets/d/1TrC_Cw4SrwxRI9F67rWxDFoTWJv5limu/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["firmamento"]
+    },
   ]);
 
   const filteredReports = reports.filter(report => {

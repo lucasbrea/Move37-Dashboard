@@ -26,6 +26,20 @@ export default function FirmamentoPage() {
       category: "report",
       tags: ["el alfalfar"]
     },
+    {
+      id: '2',
+      title: "PRS - Family Data - El Alfalfar - 2022",
+      url: "https://docs.google.com/spreadsheets/d/1IhfEclxcqJ8BOv1SNfEcYKwH5tVMGYMp/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["el alfalfar"]
+    },
+    {
+      id: '3',
+      title: "PRS - Family Data - El Alfalfar - 2023",
+      url: "https://docs.google.com/spreadsheets/d/1QQpQMMFYftugFHLmHo9krWOX7PeYV8bk/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["el alfalfar"]
+    },
 
   ]);
   const filteredReports = reports.filter(report => {

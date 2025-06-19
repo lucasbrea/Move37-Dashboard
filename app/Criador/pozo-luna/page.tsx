@@ -26,7 +26,21 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["pozo de luna", "analysis"]
     },
-  ]);
+    {
+      id: '2',
+      title: "PRS Family Data - Pozo de Luna - 2022",
+      url: "https://docs.google.com/spreadsheets/d/11vpj_XHYdZa_eBrbjey_8sSQXsGBhkz5/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["pozo de luna", "prs"]
+    },
+    {
+      id: '3',
+      title: "PRS Family Data - Pozo de Luna - 2023",
+      url: "https://docs.google.com/spreadsheets/d/14CN5b7E2SKyBCZsrVFIqw-MwG6YhVf83/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["pozo de luna","prs"]
+    },
+  ]); 
 
   const filteredReports = reports.filter(report => {
     const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

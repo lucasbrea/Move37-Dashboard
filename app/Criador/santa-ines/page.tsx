@@ -26,6 +26,22 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["criador", "santa ines"]
     },
+    {
+      id: '2',
+      title: "PRS Family Data - Santa Ines - 2022",
+      url: "https://docs.google.com/spreadsheets/d/1-TJGsYuoSSmfpiQMJ3CKLD3kHK4VXciS/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["santa ines", "prs"]
+    },
+    {
+      id: '3',
+      title: "PRS Family Data - Santa Ines - 2023",
+      url: "https://docs.google.com/spreadsheets/d/14CN5b7E2SKyBCZsrVFIqw-MwG6YhVf83/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["santa ines","prs"]
+    },
+    
+
 
   ]);
 

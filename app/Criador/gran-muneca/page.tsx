@@ -40,6 +40,20 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["firmamento", "analysis"]
     },
+    {
+      id: '4',
+      title: "PRS - Family Data - Gran Muñeca - 2022",
+      url: "https://docs.google.com/spreadsheets/d/1vyeo5R6zDA8Ya00qP65Z_PcdQnLGQWTM/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["gran muñeca"]
+    },
+    {
+      id: '5',
+      title: "PRS - Family Data - Gran Muñeca - 2023",
+      url: "https://docs.google.com/spreadsheets/d/1La1Jr909eIMUXwiWnfocV91Uew3N8z7Z/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["gran muñeca"]
+    },
   
   ]);
 

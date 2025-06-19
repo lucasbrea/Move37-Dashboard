@@ -25,6 +25,20 @@ export default function FirmamentoPage() {
       category: "report",
       tags: ["abolengo"]
     },
+    {
+      id: '2',
+      title: "PRS - Family Data - Abolengo - 2022",
+      url: "https://docs.google.com/spreadsheets/d/10Cpi3bNnj4-m_HHL-w9uLARs1QnWsVY1/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["abolengo"]
+    },
+    {
+      id: '3',
+      title: "PRS - Family Data - Abolengo - 2023",
+      url: "https://docs.google.com/spreadsheets/d/1sMt1zDyglv-1Pm7VrzMAPi-7nROo6ohX/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["abolengo"]
+    },
 
   ]);
 
