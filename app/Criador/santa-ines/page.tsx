@@ -36,7 +36,7 @@ export default function FirmamentoPage() {
     {
       id: '3',
       title: "PRS Family Data - Santa Ines - 2023",
-      url: "https://docs.google.com/spreadsheets/d/14CN5b7E2SKyBCZsrVFIqw-MwG6YhVf83/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      url: "https://docs.google.com/spreadsheets/d/1TebJ9uwzRsTZ9RIyE-_mx33GSReWvRy9/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["santa ines","prs"]
     },

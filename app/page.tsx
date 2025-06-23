@@ -32,7 +32,7 @@ const allLinks = [
   // Criador
   {
     title: 'Criador Table',
-    url: 'https://docs.google.com/spreadsheets/d/131ORjkKEyewcLVQkXC00oMI-gmCZKFcO/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true',
+    url: 'https://docs.google.com/spreadsheets/d/1vDFSXtrZzNpRTfiDwz_ufVg4_-6jBv18/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true',
     category: 'Criador',
     tags: ['data', 'spreadsheet'],
   },
@@ -233,7 +233,7 @@ const allLinks = [
 const categories = [
   { 
     name: 'Padrillo', 
-    image: '/horse_sire_dashbaord.jpg', 
+    image: '/horse_sire_dashbaord.jpg',  
     path: '/Padrillo',
     description: ''
   },
