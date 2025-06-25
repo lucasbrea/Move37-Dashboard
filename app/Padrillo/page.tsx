@@ -23,21 +23,21 @@ export default function PadrilloPage() {
       url: "https://docs.google.com/spreadsheets/d/1K5G_2_cOJS9YzR9IPXHNolTRQ1TS-z1I/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["data", "spreadsheet"],
-      date: "2025-06-05"
+      date: "2025-06-25"
     },
     {
       title: "Envidienme - Profile",
       url: "https://drive.google.com/file/d/1k72dGx4w32kruH1uSLl6Y_naH-_JXy3A/view?usp=drive_link",
       category: "profiles",
       tags: ["envidienme", "profile"],
-      date: "2025-06-05"
+      date: "2025-06-25"
     },
     {
       title:"Padrillos Table - Sire - MF",
       url:"https://docs.google.com/spreadsheets/d/11Dyn2boaP3ch0T47N9_6gED5ZdwfC_9W/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags:["padrillos","spreadsheet"],
-      date: "2025-06-05"
+      date: "2025-06-25"
     }
     // Add more links here as needed
   ];
