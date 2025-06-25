@@ -45,7 +45,7 @@ export default function FirmamentoPage() {
     {
       id: '4',
       title: "Clásico Winners",
-      url: "https://docs.google.com/spreadsheets/d/1UfAjmR6X19XH6CofbldWNVtH-hLuGgvV/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      url: "https://docs.google.com/spreadsheets/d/1jJxdvkAcRr_tfZaB2YWxVd7zK5KWUTKZ/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "reports",
       tags: ["firmamento", "criador"]
     },

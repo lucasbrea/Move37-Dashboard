@@ -36,7 +36,7 @@ export default function FirmamentoPage() {
     {
       id: '3',
       title: "Criador Report - Gran Muñeca",
-      url: "https://drive.google.com/file/d/1Co17XCKtkWcWVglZeYFZIbb6l_1VBL_1/view?usp=drive_link",
+      url: "https://drive.google.com/file/d/1JcVedR7m-BnrOsoxQ-aCOXqb6KOyK1XE/view?usp=drive_link",
       category: "reports",
       tags: ["firmamento", "analysis"]
     },

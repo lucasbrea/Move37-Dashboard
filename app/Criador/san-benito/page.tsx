@@ -22,7 +22,7 @@ export default function FirmamentoPage() {
     {
       id: '1',
       title: "Criador Report - San Benito",
-      url: "https://docs.google.com/spreadsheets/d/131ORjkKEyewcLVQkXC00oMI-gmCZKFcO/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      url: "https://drive.google.com/file/d/13QvpphDwddVCLmqFjj-zxxFeDj6sXERo/view?usp=drive_link",
       category: "reports",
       tags: ["san benito", "criador"]
     },

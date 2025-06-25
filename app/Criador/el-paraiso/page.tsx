@@ -22,7 +22,7 @@ export default function FirmamentoPage() {
     {
       id: '1',
       title: "Criador Report - El Paraiso",
-      url: "https://drive.google.com/file/d/10xKkZMxs0NYaFbYGNmq9CwPyAdJLwTup/view?usp=drive_link",
+      url: "https://drive.google.com/file/d/1KWRV1IjUieI_52ZPtrU1pgdHFrl3V7_u/view?usp=drive_link",
       category: "reports",
       tags: ["el paraiso"]
     },

@@ -22,7 +22,7 @@ export default function FirmamentoPage() {
     {
       id: '1',
       title: "Criador Report - La Pasión",
-      url: "https://drive.google.com/file/d/1LB6qJMnQ6af6LhYVbN69AcJF3aMl0vOY/view?usp=drive_link",
+      url: "https://drive.google.com/file/d/1RQkkDFq9Zyyzyavt--3cL42XTo2H75e2/view?usp=drive_link",
       category: "reports",
       tags: ["criador", "la pasión"]
     },
