@@ -95,24 +95,12 @@ const allLinks = [
   },
   // Dams
   {
-    title: 'Spreadsheet de Padrillos',
-    url: 'https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link',
-    category: 'Dams',
-    tags: ['data', 'spreadsheet', 'padrillos'],
-  },
-  {
     title: 'Dams Up for Auction',
     url: 'https://docs.google.com/spreadsheets/d/14s20DVU6yj5ShNVu8Y4ybqLIsXzhIQjf/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true',
     category: 'Dams',
     tags: ['auctions', 'dams'],
   },
   // Crias
-  {
-    title: 'Spreadsheet de Padrillos',
-    url: 'https://docs.google.com/spreadsheets/d/1UgWSZ4W2axebW6bOiqMLKWLCVlHP7VkW/edit?usp=drive_link',
-    category: 'Crías',
-    tags: ['data', 'spreadsheet', 'padrillos'],
-  },
   {
     title:"Criador Report - Gran Muñeca",
     url: "https://drive.google.com/file/d/1Co17XCKtkWcWVglZeYFZIbb6l_1VBL_1/view?usp=drive_link",
@@ -121,7 +109,7 @@ const allLinks = [
   },
   {
     title:"Criador Report - Abolengo",
-    url:"https://drive.google.com/file/d/1TxWgkTH2S5HBlyLcK2hYl87zvu8ArY6M/view?usp=drive_link",
+    url:"https://drive.google.com/file/d/1MwN6r7z-dS2vaDpiMtJpMBx1PF0E1F62/view?usp=drive_link",
     category:"reports",
     tags:["abolengo","criador"],
   },
@@ -142,12 +130,6 @@ const allLinks = [
     url:"https://drive.google.com/file/d/1h8d7s4v2Yb0p9H5Qk6e3b7x9Xj8fXk7L/view?usp=drive_link",
     category:"reports",
     tags:["el paraiso","criador"],
-  },
-  {
-    title:"Criador Report - La Biznaga",
-    url:"https://drive.google.com/file/d/1EVTyCbQf52aNlLHTZ_YGlDhv9oQnD8Yq/view?usp=drive_link",
-    category:"reports",
-    tags:["la biznaga","criador"],
   },
   {
     title:"Criador Report - La Nora",
@@ -205,25 +187,38 @@ const allLinks = [
   },
   {
     title:"Tracking PRS - La Nora - 2022",
-    url:"https://docs.google.com/spreadsheets/d/1OJSsVmNViP54k61lRFKy2_o8KjQugMgl/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    url:"https://docs.google.com/spreadsheets/d/1uHfkjHFPF_3nzL3iW2MTD_KUy2SuJjib/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","la nora","family data","camada 2022"],
+  },
+  {
+    title:"Tracking PRS - La Nora - 2023",
+    url:"https://docs.google.com/spreadsheets/d/1lgPpP_bh0knelu960yz4kp1jxJxo1DgU/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
     category:"tables",
     tags:["prs","la nora","family data","camada 2023"],
   },
   {
     title:"Tracking PRS - Firmamento - 2022",
-    url:"https://docs.google.com/spreadsheets/d/1qI6LNo-vyHBfDIRxSii2SNfSRqpT5co1/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    url:"https://docs.google.com/spreadsheets/d/1OeVyYpkVEx9fF7AK_yYZTcbjFkOyTT_X/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
     category:"tables",
-    tags:["prs","firmamento","family data","camada 2023"],
+    tags:["prs","firmamento","family data","camada 2022"],
   },
   {
     title:"Tracking PRS - Firmamento - 2023",
-    url:"https://docs.google.com/spreadsheets/d/1Y1UmnyhG4sICa5sgqWGT42yMgmlgWoIn/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    url:"https://docs.google.com/spreadsheets/d/1m6XlvKecbgdSwel9smEc8eGeRcJTHFeq/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
     category:"tables",
     tags:["prs","firmamento","family data","camada 2023"],
   },
   {
+    title:"Tracking PRS - Gran Muñeca - 2022",
+    url:"https://docs.google.com/spreadsheets/d/1lGF2QVITIEYjnzPBSc_P3t673vWZePTH/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    category:"tables",
+    tags:["prs","gran muñeca","family data","camada 2022"],
+  },
+
+  {
     title:"Tracking PRS - Gran Muñeca - 2023",
-    url:"https://docs.google.com/spreadsheets/d/1eSH0FrN8RgOWRGgs71efBi0kDOGOc0b8/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+    url:"https://docs.google.com/spreadsheets/d/1Ozyy9_duTKs2ZR8_5kgTmSxHYo37xTIx/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
     category:"tables",
     tags:["prs","gran muñeca","family data","camada 2023"],
   },
