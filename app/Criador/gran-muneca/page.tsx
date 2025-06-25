@@ -22,14 +22,14 @@ export default function FirmamentoPage() {
     {
       id: '1',
       title: "Tracking PRS 2022 - Gran Muñeca",
-      url: "https://docs.google.com/spreadsheets/d/1sIERypulcGpOyatuZq_a5yBsZvbubH6w/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      url: "https://docs.google.com/spreadsheets/d/1lGF2QVITIEYjnzPBSc_P3t673vWZePTH/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["prs", "gran muneca"]
     },
     {
       id: '2',
-      title: "Tracking PRS 2022 - Gran Muñeca",
-      url: "https://docs.google.com/spreadsheets/d/1eSH0FrN8RgOWRGgs71efBi0kDOGOc0b8/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      title: "Tracking PRS 2023 - Gran Muñeca",
+      url: "https://docs.google.com/spreadsheets/d/1Ozyy9_duTKs2ZR8_5kgTmSxHYo37xTIx/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["gran muneca", "prs"]
     },
