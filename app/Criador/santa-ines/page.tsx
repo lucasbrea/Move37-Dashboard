@@ -40,6 +40,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["santa ines","prs"]
     },
+    {
+      id: '4',
+      title: "Stake Winners - Santa Inés",
+      url: "https://docs.google.com/spreadsheets/d/1OKRKL_3xQ6NaDY8Gze2MuS6461GQ4MSd8fWBiTGDS7M/edit?usp=drive_link",
+      category: "tables",
+      tags: ["santa ines"]
+    },
     
 
 

@@ -54,6 +54,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["gran muñeca"]
     },
+    {
+      id: '6',
+      title: "Stake Winners - Gran Muñeca",
+      url: "https://docs.google.com/spreadsheets/d/1vDmTqyt6kjUwY83oSr0DEZGxe1TOKBHofaXLIz0C7DQ/edit?usp=drive_link",
+      category: "tables",
+      tags: ["gran muñeca"]
+    },
   
   ]);
 

@@ -26,6 +26,13 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["criador", "santa maria"]
     },
+    {
+      id: '2',
+      title: "Stake Winners - Santa María de Araras",
+      url: "https://docs.google.com/spreadsheets/d/1N7LKDt7_-rSyv-_yzN30uoI0CPdu3eNufGUTpEy9Zco/edit?usp=drive_link",
+      category: "tables",
+      tags: ["SMA"]
+    },
   ]);
 
   const filteredReports = reports.filter(report => {

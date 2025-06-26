@@ -26,6 +26,13 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["san benito", "criador"]
     },
+    {
+      id: '2',
+      title: "Stake Winners - San Benito",
+      url: "https://docs.google.com/spreadsheets/d/1TnnsCMOIs8Mf4T8nR2g_2844nt_JQ6p3a1OCM9BY0_4/edit?usp=drive_link",
+      category: "reports",
+      tags: ["san benito", "criador"]
+    },
   ]);
 
   const filteredReports = reports.filter(report => {

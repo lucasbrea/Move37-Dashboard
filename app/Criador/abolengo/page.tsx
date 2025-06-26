@@ -39,6 +39,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["abolengo"]
     },
+    {
+      id: '4',
+      title: "Stake Winners - Abolengo",
+      url: "https://docs.google.com/spreadsheets/d/1Q_hqpU80kH0mwdJlpTz2Oo1nZrS48W0CxUsGRxl3f9o/edit?usp=drive_link",
+      category: "tables",
+      tags: ["abolengo"]
+    },
 
   ]);
 

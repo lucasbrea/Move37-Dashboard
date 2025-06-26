@@ -79,12 +79,11 @@ export default function FirmamentoPage() {
     },
     {
       id: '9',
-      title: "TEST",
-      url: "https://docs.google.com/spreadsheets/d/1TrC_Cw4SrwxRI9F67rWxDFoTWJv5limu/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      title: "Stake Winners - Firmamento",
+      url: "https://docs.google.com/spreadsheets/d/11GuHpJvwEqaN5BLy2xMf06SIaGHKMSq3xZRfJgYnuCQ/edit?usp=drive_link",
       category: "tables",
       tags: ["firmamento"]
     },
-
   ]);
 
   const filteredReports = reports.filter(report => {

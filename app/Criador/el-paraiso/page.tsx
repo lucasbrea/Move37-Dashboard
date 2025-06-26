@@ -40,6 +40,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["el paraiso"]
     },
+    {
+      id: '4',
+      title: "Stake Winners -  El Paraiso",
+      url: "https://docs.google.com/spreadsheets/d/1hIPnDZSB1T168jVKMX8QgRzQ26VL4C8BExoSC_qu5ws/edit?usp=drive_link",
+      category: "tables",
+      tags: ["el paraiso"]
+    },
     
   ]);
 

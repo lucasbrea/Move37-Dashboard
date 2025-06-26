@@ -40,6 +40,14 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["la providencia"]
     },
+    {
+      id: '4',
+      title: "Stake Winners - La Providencia",
+      url: "https://docs.google.com/spreadsheets/d/1_eJu2LPTIxcYoaKXgPYZDx0xBqROiFL5NRZUIr03hgk/edit?usp=drive_link",
+      category: "tables",
+      tags: ["la providencia"]
+    },
+ 
  
   ]);
 

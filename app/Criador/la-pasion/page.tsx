@@ -40,6 +40,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["la pasion","prs"]
     },
+    {
+      id: '4',
+      title: "Stake Winners - La Pasión",
+      url: "https://docs.google.com/spreadsheets/d/1whHDe0PsEmrR89xktUMB4QVrjDg9tmO-1EQDX1-pomw/edit?usp=drive_link",
+      category: "tables",
+      tags: ["la pasion"]
+    },
 
   ]);
 

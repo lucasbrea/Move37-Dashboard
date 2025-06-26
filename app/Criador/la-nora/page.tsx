@@ -54,6 +54,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["la nora","prs"]
     },
+    {
+      id: '6',
+      title: "Stake Winners - La Nora",
+      url: "https://docs.google.com/spreadsheets/d/1GQv80f9GyDBWLxIzFUr9m30hc1aFsHlYG-rY50AhxgY/edit?usp=drive_link",
+      category: "tables",
+      tags: ["la nora"]
+    },
   ]);
 
   const filteredReports = reports.filter(report => {

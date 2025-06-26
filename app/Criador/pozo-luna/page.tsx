@@ -22,7 +22,7 @@ export default function FirmamentoPage() {
     {
       id: '1',
       title: "Criador Report - Pozo de Luna",
-      url: "https://drive.google.com/file/d/1XPhELxhJy83UCcKbxVFoPjPl-eghul0v/view?usp=drive_link",
+      url: "https://drive.google.com/file/d/1Xri-MDXG7anaCzpjvbrZzPmktrn-GhE2/view?usp=drive_link",
       category: "reports",
       tags: ["pozo de luna", "analysis"]
     },
@@ -39,6 +39,13 @@ export default function FirmamentoPage() {
       url: "https://docs.google.com/spreadsheets/d/14CN5b7E2SKyBCZsrVFIqw-MwG6YhVf83/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["pozo de luna","prs"]
+    },
+    {
+      id: '4',
+      title: "Stake Winners -  Pozo de Luna",
+      url: "https://docs.google.com/spreadsheets/d/1wAoXERmRD8B8Urzk4rWXhrQDSDN0j0BIVw3LiAFJNm0/edit?usp=drive_link",
+      category: "tables",
+      tags: ["pozo de luna"]
     },
   ]); 
 

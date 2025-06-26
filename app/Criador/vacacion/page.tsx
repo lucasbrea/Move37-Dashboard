@@ -40,6 +40,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["vacacion","prs"]
     },
+    {
+      id: '4',
+      title: "Stake Winners - Vacación",
+      url: "https://docs.google.com/spreadsheets/d/1Zkip6AThgIU0bRTt5co4SoDtL6mQqH-YJNnrmoKqv9k/edit?usp=drive_link",
+      category: "tables",
+      tags: ["vacacion"]
+    },
   ]);
 
   const filteredReports = reports.filter(report => {

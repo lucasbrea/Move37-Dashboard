@@ -26,6 +26,13 @@ export default function FirmamentoPage() {
       category: "reports",
       tags: ["criador", "triple alliance"]
     },
+    {
+      id: '2',
+      title: "Stake Winners - Triple Alliance S.A.",
+      url: "https://docs.google.com/spreadsheets/d/1DGQL1LOgwxVdv05p40BDPkJ49H7QWhIX5_p0zTPV5n0/edit?usp=drive_linkk",
+      category: "tables",
+      tags: ["triple alliance"]
+    },
   ]);
 
   const filteredReports = reports.filter(report => {

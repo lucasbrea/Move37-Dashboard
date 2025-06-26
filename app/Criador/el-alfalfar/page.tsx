@@ -40,6 +40,13 @@ export default function FirmamentoPage() {
       category: "tables",
       tags: ["el alfalfar"]
     },
+    {
+      id: '4',
+      title: "Stake Winners - El Alfalfar",
+      url: "https://docs.google.com/spreadsheets/d/1a_V4ezUA3MYpBJ2RgAI8XhyPodtZUEUzfcb6wzIfMw0/edit?usp=drive_link",
+      category: "tables",
+      tags: ["el alfalfar"]
+    },
 
   ]);
   const filteredReports = reports.filter(report => {
