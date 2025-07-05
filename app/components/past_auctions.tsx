@@ -35,6 +35,14 @@ export default function AuctionTablePastAuctions({
     };
   }, []);
 
+const twoWeeksAgo = useMemo(() => {
+  const now = new Date();
+  now.setDate(now.getDate() - 14);
+  return now.getTime();
+}, []);
+
+const [onlyLastTwoWeeks, setOnlyLastTwoWeeks] = useState(false);
+
 const [sortColumn, setSortColumn] = useState<string | null>(null);
 const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 const [filters, setFilters] = useState<Record<string, string>>({});
@@ -95,6 +103,14 @@ const getSortValue = (value: any, columnType: 'string' | 'number' | 'date') => {
 const filteredData = useMemo(() => {
   let filtered = [...data];
 
+  if (onlyLastTwoWeeks) {
+    filtered = filtered.filter(row => {
+      const endValue = row["Auction Date"];
+      const endTimestamp = getSortValue(endValue, "date");
+      return typeof endTimestamp === 'number' && endTimestamp >= twoWeeksAgo;
+    });
+  }
+
   Object.entries(filters).forEach(([col, val]) => {
     if (val && filterableColumns.includes(col)) {
       filtered = filtered.filter(row =>
@@ -127,7 +143,7 @@ const filteredData = useMemo(() => {
   }
 
   return filtered;
-}, [data, filters, sortColumn, sortDirection]);
+}, [data, filters, sortColumn, sortDirection, onlyLastTwoWeeks, twoWeeksAgo]);
 // Calculate max values for gradient columns
 const maxValues: Record<string, number> = useMemo(() => {
   const values: Record<string, number> = {};
@@ -261,6 +277,14 @@ const handleSort = (column: string) => {
           </div>
         ))}
       </div>
+      <label className="flex items-center space-x-2 text-[10px] bg-yellow-100">
+      <input
+        type="checkbox"
+        checked={onlyLastTwoWeeks}
+        onChange={() => setOnlyLastTwoWeeks(prev => !prev)}
+      />
+      <span>Show only auctions in the last two weeks</span>
+    </label>
 
       <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 300px)' }}>
         <table className="w-full table-auto border text-[10px] leading-tight text-gray-800">
