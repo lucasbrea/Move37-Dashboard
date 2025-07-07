@@ -49,7 +49,7 @@ const [filters, setFilters] = useState<Record<string, string>>({});
 const [currentPage, setCurrentPage] = useState(1);
 const rowsPerPage = 500;
 
-const filterableColumns = ["Sire", "Dam", "Name", "Haras", "Year"];
+const filterableColumns = ["Sire", "Dam", "Name", "Haras", "Year","Title"];
 
 // Define column types (adjust these based on your actual columns)
 const columnTypes: Record<string, 'string' | 'number' | 'date'> = {
@@ -63,6 +63,7 @@ const columnTypes: Record<string, 'string' | 'number' | 'date'> = {
   'PR': 'number',
   'PS': 'number',
   'PRS': 'number',
+  'Title': 'string',
   // Add other gradient columns here as numbers
   // Default to 'string' for unspecified columns
 };
