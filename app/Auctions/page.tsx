@@ -44,6 +44,20 @@ export default function MyPage() {
       url: "https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
       category: "reports",
       tags: ["auctions", "firmamento"]
+    },
+    {
+      id:'3',
+      title:"Vacación Auction - 06/06/2025",
+      url: "https://docs.google.com/spreadsheets/d/1yz-54Y_YGwQL8N5ihptxDi5frRrGVcYz/edit?usp=sharing&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["vacacion", "auction"]
+    },
+    {
+      id:'4',
+      title:"Horses Up For Auction - 06/07/2025",
+      url:"https://docs.google.com/spreadsheets/d/1qSqZRzUeWLHMyOrbBPBXkwPl5tVCwlur/edit?usp=sharing&ouid=114898536092612537397&rtpof=true&sd=true",
+      category:"tables",
+      tags:["horses", "auction"]
     }
   ]);
 
