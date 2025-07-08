@@ -31,14 +31,14 @@ export default function GeneralStatisticsPage() {
     {
       id: '2',
       title: "Criador Table - Gens 2017-2020",
-      url: "https://docs.google.com/spreadsheets/d/1KihCGMg5_HvAIFonHi8yjG84tXapOrf7/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      url: "https://docs.google.com/spreadsheets/d/1zc25ahU0yzTckw_xIJv9yvzqk-qc2Ky-/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["criador"]
     },
     {
       id: '3',
       title: "Criador Table - Gens 2021-2022",
-      url: "https://docs.google.com/spreadsheets/d/1zc25ahU0yzTckw_xIJv9yvzqk-qc2Ky-/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      url: "https://docs.google.com/spreadsheets/d/1KihCGMg5_HvAIFonHi8yjG84tXapOrf7/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["criador"]
     },
