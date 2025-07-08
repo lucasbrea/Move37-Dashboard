@@ -23,8 +23,29 @@ export default function GeneralStatisticsPage() {
   const [reports, setReports] = useLocalStorage<Report[]>('general-statistics-reports', [
     {
       id: '1',
-      title: "Criador Table",
-      url: "https://docs.google.com/spreadsheets/d/1vDFSXtrZzNpRTfiDwz_ufVg4_-6jBv18/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      title: "Criador Table - Historical",
+      url: "https://docs.google.com/spreadsheets/d/1_ua0pcnQM4gVBHckvBTS0YICQDfnOUK4/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["criador"]
+    },
+    {
+      id: '2',
+      title: "Criador Table - Gens 2017-2020",
+      url: "https://docs.google.com/spreadsheets/d/1KihCGMg5_HvAIFonHi8yjG84tXapOrf7/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["criador"]
+    },
+    {
+      id: '3',
+      title: "Criador Table - Gens 2021-2022",
+      url: "https://docs.google.com/spreadsheets/d/1zc25ahU0yzTckw_xIJv9yvzqk-qc2Ky-/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
+      category: "tables",
+      tags: ["criador"]
+    },
+    {
+      id: '4',
+      title: "Criador Table - Gen 2022",
+      url: "https://docs.google.com/spreadsheets/d/17QzmqFmaO9gkFzGVz8uc9pYK4hV-hY-J/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
       category: "tables",
       tags: ["criador"]
     },
