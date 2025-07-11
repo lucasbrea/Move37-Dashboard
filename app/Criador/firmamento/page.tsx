@@ -14,7 +14,7 @@ export default function FirmamentoPage() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
   // Use Supabase for reports
-  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador', 'Gran Muneca');
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador', 'Firmamento');
 
   const filteredReports = reports.filter(report => {
     const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -74,7 +74,7 @@ export default function FirmamentoPage() {
         </div>
 
         {/* Page Title */}
-        <h1 className="text-4xl font-bold mb-8">Gran Muñeca</h1>
+        <h1 className="text-4xl font-bold mb-8">Firmamento</h1>
 
         {/* Search */}
         <div className="mb-8">
@@ -117,7 +117,7 @@ export default function FirmamentoPage() {
         )}
 
         {/* Add Report Button */}
-        {!loading && <AddReportButton onAddReport={handleAddReport} criador="Gran Muneca" location="criador" />}
+        {!loading && <AddReportButton onAddReport={handleAddReport} criador="Firmamento" location="criador" />}
 
         {/* Edit Report Modal */}
         <EditReportModal
