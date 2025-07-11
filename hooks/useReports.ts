@@ -23,9 +23,6 @@ export function useReports(location?: string, criador?: string) {
       setLoading(true)
       setError(null)
       
-      console.log('🔍 Fetching reports for location:', location)
-      console.log('🔍 Criador filter:', criador)
-      
       let query = supabase
         .from('Reports')
         .select('*')
@@ -34,29 +31,19 @@ export function useReports(location?: string, criador?: string) {
       // Apply filters if provided
       if (location) {
         query = query.eq('location', location)
-        console.log('🔍 Applied location filter:', location)
       }
       if (criador) {
         query = query.eq('criador', criador)
-        console.log('🔍 Applied criador filter:', criador)
       }
 
       const { data, error } = await query
-      
-      console.log('📊 Query result:', { 
-        dataCount: data?.length || 0, 
-        error: error?.message || 'No error',
-        firstRecord: data?.[0] || 'No data'
-      })
 
       if (error) {
         throw error
       }
 
       setReports(data || [])
-      console.log('✅ Set reports:', data?.length || 0, 'records')
     } catch (err) {
-      console.error('❌ Fetch error:', err)
       setError(err instanceof Error ? err.message : 'An error occurred')
     } finally {
       setLoading(false)
@@ -66,18 +53,10 @@ export function useReports(location?: string, criador?: string) {
   // Add a new report
   const addReport = async (report: Omit<Report, 'id' | 'created_at' | 'updated_at'>) => {
     try {
-      console.log('➕ Adding report:', report)
-      
       const { data, error } = await supabase
         .from('Reports')
         .insert([report])
         .select()
-
-      console.log('📊 Insert result:', { 
-        data: data?.length || 0, 
-        error: error?.message || 'No error',
-        insertedRecord: data?.[0] || 'No data'
-      })
 
       if (error) {
         throw error
@@ -85,12 +64,10 @@ export function useReports(location?: string, criador?: string) {
 
       if (data) {
         setReports(prev => [data[0], ...prev])
-        console.log('✅ Added report to state')
       }
 
       return data?.[0]
     } catch (err) {
-      console.error('❌ Add report error:', err)
       setError(err instanceof Error ? err.message : 'Failed to add report')
       throw err
     }

@@ -6,31 +6,18 @@ import CriadorFilter from '../components/CriadorFilter';
 import CategoryFilter from '../components/CategoryFilter';
 import AddReportButton from '../components/AddReportButton';
 import ReportCard from '../components/ReportCard';
-import { useLocalStorage } from '../components/useLocalStorage';
-
-interface Report {
-  id: string;
-  title: string;
-  url: string;
-  category: string;
-  tags: string[];
-}
+import EditReportModal from '../components/EditReportModal';
+import { useReports, Report } from '../../hooks/useReports';
 
 export default function CriasPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCriadores, setSelectedCriadores] = useState<string[]>([]);
+  const [editingReport, setEditingReport] = useState<Report | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
-  // Use local storage for reports
-  const [reports, setReports] = useLocalStorage<Report[]>('crias-reports', [
-    {
-      id: '1',
-      title: "Criador Table",
-      url: "https://docs.google.com/spreadsheets/d/131ORjkKEyewcLVQkXC00oMI-gmCZKFcO/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "tables",
-      tags: ["data", "spreadsheet"]
-    },
-  ]);
+  // Use Supabase for reports
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('crias');
 
   const categories = useMemo(() => {
     const uniqueCategories = new Set(reports.map(report => report.category));
@@ -39,33 +26,50 @@ export default function CriasPage() {
 
   const filteredReports = useMemo(() => {
     return reports.filter(report => {
-      const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          report.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || report.category === selectedCategory;
       const matchesCriador = selectedCriadores.length === 0 || 
-        selectedCriadores.some(criador => 
-          report.tags.some(tag => tag.toLowerCase() === criador.toLowerCase())
-        );
+        (report.criador && selectedCriadores.some(criador => 
+          criador.toLowerCase() === report.criador?.toLowerCase()
+        ));
       return matchesSearch && matchesCategory && matchesCriador;
     });
   }, [searchQuery, selectedCategory, selectedCriadores, reports]);
 
-  const handleAddReport = (newReport: Omit<Report, 'id'>) => {
-    const report: Report = {
-      ...newReport,
-      id: Date.now().toString()
-    };
-    setReports([...reports, report]);
+  const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
+    try {
+      await addReport(newReport);
+    } catch (error) {
+      console.error('Failed to add report:', error);
+    }
   };
 
-  const handleEditReport = (editedReport: Report) => {
-    setReports(reports.map(report => 
-      report.id === editedReport.id ? editedReport : report
-    ));
+  const handleEditReport = async (editedReport: Report) => {
+    try {
+      await updateReport(editedReport.id, editedReport);
+      setIsEditModalOpen(false);
+      setEditingReport(null);
+    } catch (error) {
+      console.error('Failed to update report:', error);
+    }
   };
 
-  const handleDeleteReport = (reportToDelete: Report) => {
-    setReports(reports.filter(report => report.id !== reportToDelete.id));
+  const handleOpenEditModal = (report: Report) => {
+    setEditingReport(report);
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingReport(null);
+  };
+
+  const handleDeleteReport = async (reportToDelete: Report) => {
+    try {
+      await deleteReport(reportToDelete.id);
+    } catch (error) {
+      console.error('Failed to delete report:', error);
+    }
   };
 
   return (
@@ -112,20 +116,45 @@ export default function CriasPage() {
           </div>
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-gray-300">Loading reports...</div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+            <div className="text-red-300">Error: {error}</div>
+          </div>
+        )}
+
         {/* Reports Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredReports.map((report) => (
-            <ReportCard
-              key={report.id}
-              report={report}
-              onEdit={handleEditReport}
-              onDelete={handleDeleteReport}
-            />
-          ))}
-        </div>
+        {!loading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredReports.map((report) => (
+              <ReportCard
+                key={report.id}
+                report={report}
+                onEdit={handleOpenEditModal}
+                onDelete={handleDeleteReport}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Add Report Button */}
-        <AddReportButton onAddReport={handleAddReport} />
+        {!loading && <AddReportButton onAddReport={handleAddReport} location="crias" />}
+
+        {/* Edit Report Modal */}
+        <EditReportModal
+          report={editingReport}
+          isOpen={isEditModalOpen}
+          onClose={handleCloseEditModal}
+          onSave={handleEditReport}
+          location="crias"
+        />
       </main>
     </div>
   );

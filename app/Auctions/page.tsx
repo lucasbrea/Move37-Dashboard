@@ -10,16 +10,8 @@ import PlotGenerator from '../components/summary';
 import CategoryFilter from '../components/CategoryFilter';
 import AddReportButton from '../components/AddReportButton';
 import ReportCard from '../components/ReportCard';
-import { useLocalStorage } from '../components/useLocalStorage';
-
-interface Report {
-  id: string;
-  title: string;
-  url: string;
-  category: string;
-  tags: string[];
-  criador?: string;
-}
+import EditReportModal from '../components/EditReportModal';
+import { useReports, Report } from '../../hooks/useReports';
 
 export default function MyPage() {
   const [activeTab, setActiveTab] = useState('reports');
@@ -28,31 +20,11 @@ export default function MyPage() {
   const [auctions, setAuctions] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [editingReport, setEditingReport] = useState<Report | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
-  // Use local storage for reports
-  const [reports, setReports] = useLocalStorage<Report[]>('auctions-reports', [
-    {
-      id: '1',
-      title: "Auction Analysis - Firmamento",
-      url: "https://drive.google.com/file/d/1bcs_Ck1iTGmDDRoKqbdLP3_R9EDt5D5T/view?usp=drive_link",
-      category: "repo",
-      tags: ["auction"]
-    },
-    {
-      id: '2',
-      title: "Add-Ons Firmamento",
-      url: "https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
-      category: "reports",
-      tags: ["auctions", "firmamento"]
-    },
-    {
-      id:'3',
-      title:"Horses Up For Auction - 06/07/2025",
-      url:"https://docs.google.com/spreadsheets/d/1qSqZRzUeWLHMyOrbBPBXkwPl5tVCwlur/edit?usp=sharing&ouid=114898536092612537397&rtpof=true&sd=true",
-      category:"tables",
-      tags:["horses", "auction"]
-    }
-  ]);
+  // Use Supabase for reports
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('auctions');
 
   useEffect(() => {
     Promise.all([
@@ -79,28 +51,45 @@ export default function MyPage() {
   const categories = ['all', ...Array.from(new Set(reports.map(report => report.category)))];
 
   const filteredReports = reports.filter(report => {
-    const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         report.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || report.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const handleAddReport = (newReport: Omit<Report, 'id'>) => {
-    const report: Report = {
-      ...newReport,
-      id: Date.now().toString()
-    };
-    setReports([...reports, report]);
+  const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
+    try {
+      await addReport(newReport);
+    } catch (error) {
+      console.error('Failed to add report:', error);
+    }
   };
 
-  const handleEditReport = (editedReport: Report) => {
-    setReports(reports.map(report => 
-      report.id === editedReport.id ? editedReport : report
-    ));
+  const handleEditReport = async (editedReport: Report) => {
+    try {
+      await updateReport(editedReport.id, editedReport);
+      setIsEditModalOpen(false);
+      setEditingReport(null);
+    } catch (error) {
+      console.error('Failed to update report:', error);
+    }
   };
 
-  const handleDeleteReport = (reportToDelete: Report) => {
-    setReports(reports.filter(report => report.id !== reportToDelete.id));
+  const handleOpenEditModal = (report: Report) => {
+    setEditingReport(report);
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingReport(null);
+  };
+
+  const handleDeleteReport = async (reportToDelete: Report) => {
+    try {
+      await deleteReport(reportToDelete.id);
+    } catch (error) {
+      console.error('Failed to delete report:', error);
+    }
   };
 
   return (
@@ -189,20 +178,45 @@ export default function MyPage() {
                 </div>
               </div>
 
+              {/* Loading State */}
+              {loading && (
+                <div className="flex items-center justify-center py-12">
+                  <div className="text-gray-300">Loading reports...</div>
+                </div>
+              )}
+
+              {/* Error State */}
+              {error && (
+                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+                  <div className="text-red-300">Error: {error}</div>
+                </div>
+              )}
+
               {/* Reports Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredReports.map((report) => (
-                  <ReportCard
-                    key={report.id}
-                    report={report}
-                    onEdit={handleEditReport}
-                    onDelete={handleDeleteReport}
-                  />
-                ))}
-              </div>
+              {!loading && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filteredReports.map((report) => (
+                    <ReportCard
+                      key={report.id}
+                      report={report}
+                      onEdit={handleOpenEditModal}
+                      onDelete={handleDeleteReport}
+                    />
+                  ))}
+                </div>
+              )}
 
               {/* Add Report Button */}
-              <AddReportButton onAddReport={handleAddReport} />
+              {!loading && <AddReportButton onAddReport={handleAddReport} location="auctions" />}
+
+              {/* Edit Report Modal */}
+              <EditReportModal
+                report={editingReport}
+                isOpen={isEditModalOpen}
+                onClose={handleCloseEditModal}
+                onSave={handleEditReport}
+                location="auctions"
+              />
             </div>
           )}
         </div>

@@ -16,15 +16,10 @@ export default function GeneralStatisticsPage() {
   // Use Supabase for reports
   const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('general-statistics');
 
-  console.log('📋 General Statistics Page - Reports:', reports.length)
-  console.log('📋 Reports data:', reports)
-
   const filteredReports = reports.filter(report => {
     const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesSearch;
   });
-
-  console.log('🔍 Filtered reports:', filteredReports.length)
 
   const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
     try {
