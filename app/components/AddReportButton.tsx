@@ -6,22 +6,21 @@ interface Report {
   title: string;
   url: string;
   category: string;
-  tags: string[];
   criador?: string;
 }
 
 interface AddReportButtonProps {
-  onAddReport: (report: Report) => void;
+  onAddReport: (report: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => void;
   criador?: string; // Optional criador for criador-specific pages
+  location: string; // Required location for the page
 }
 
-export default function AddReportButton({ onAddReport, criador }: AddReportButtonProps) {
+export default function AddReportButton({ onAddReport, criador, location }: AddReportButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     title: '',
     url: '',
     category: '',
-    tags: '',
     criador: criador || ''
   });
 
@@ -30,12 +29,12 @@ export default function AddReportButton({ onAddReport, criador }: AddReportButto
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const report: Report = {
+    const report: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string } = {
       title: formData.title,
       url: formData.url,
       category: formData.category,
-      tags: formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0),
-      criador: formData.criador || undefined
+      criador: formData.criador || undefined,
+      location: location
     };
 
     onAddReport(report);
@@ -44,7 +43,6 @@ export default function AddReportButton({ onAddReport, criador }: AddReportButto
       title: '',
       url: '',
       category: '',
-      tags: '',
       criador: criador || ''
     });
   };
@@ -55,7 +53,6 @@ export default function AddReportButton({ onAddReport, criador }: AddReportButto
       title: '',
       url: '',
       category: '',
-      tags: '',
       criador: criador || ''
     });
   };
@@ -140,20 +137,6 @@ export default function AddReportButton({ onAddReport, criador }: AddReportButto
                     </option>
                   ))}
                 </select>
-              </div>
-
-              <div>
-                <label className="block text-gray-300 text-sm font-medium mb-2">
-                  Tags
-                </label>
-                <input
-                  type="text"
-                  value={formData.tags}
-                  onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white 
-                           placeholder-gray-400 focus:outline-none focus:border-white/40"
-                  placeholder="tag1, tag2, tag3 (comma separated)"
-                />
               </div>
 
               {!criador && (

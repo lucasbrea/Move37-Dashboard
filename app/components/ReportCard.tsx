@@ -2,14 +2,7 @@
 
 import { useState } from 'react';
 
-interface Report {
-  id: string;
-  title: string;
-  url: string;
-  category: string;
-  tags: string[];
-  criador?: string;
-}
+import { Report } from '../../hooks/useReports';
 
 interface ReportCardProps {
   report: Report;
@@ -33,28 +26,7 @@ export default function ReportCard({ report, onEdit, onDelete }: ReportCardProps
   };
 
   return (
-    <div className="relative group">
-      <a
-        href={report.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-col p-6 backdrop-blur-md bg-white/5 border border-white/10 
-                 rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/20 
-                 transition-all duration-200"
-      >
-        <span className="text-lg font-medium mb-2">{report.title}</span>
-        <div className="flex flex-wrap gap-2 mt-auto">
-          {report.tags.map((tag, tagIndex) => (
-            <span
-              key={tagIndex}
-              className="px-2 py-1 text-xs rounded-full bg-white/10 text-gray-300"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </a>
-
+    <div className="relative group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-200">
       {/* Action Buttons */}
       <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
         <button
@@ -91,6 +63,36 @@ export default function ReportCard({ report, onEdit, onDelete }: ReportCardProps
             </button>
           </div>
         )}
+      </div>
+
+      {/* Report Content */}
+      <div className="pr-12">
+        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
+          {report.title}
+        </h3>
+        
+        <div className="flex items-center justify-between text-sm text-gray-400 mb-3">
+          <span className="px-2 py-1 bg-white/10 rounded-full text-xs">
+            {report.category}
+          </span>
+          {report.criador && (
+            <span className="px-2 py-1 bg-blue-500/20 rounded-full text-xs">
+              {report.criador}
+            </span>
+          )}
+        </div>
+
+        <a
+          href={report.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm"
+        >
+          View Report
+          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
   );
