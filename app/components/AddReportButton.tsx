@@ -24,7 +24,7 @@ export default function AddReportButton({ onAddReport, criador, location }: AddR
     criador: criador || ''
   });
 
-  const categories = ['reports', 'tables', 'analysis', 'proposals', 'performance', 'historical', 'statistics', 'achievements', 'auctions'];
+  const categories = ['reports', 'tables', 'analysis', 'proposals', 'auctions'];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

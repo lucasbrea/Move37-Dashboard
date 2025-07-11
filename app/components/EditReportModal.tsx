@@ -19,7 +19,7 @@ export default function EditReportModal({ report, isOpen, onClose, onSave, locat
     criador: ''
   });
 
-  const categories = ['reports', 'tables', 'analysis', 'proposals', 'performance', 'historical', 'statistics', 'achievements', 'auctions'];
+  const categories = ['reports', 'tables', 'analysis', 'proposals', 'auctions'];
 
   // Update form data when report changes
   useEffect(() => {
