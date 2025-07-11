@@ -3,58 +3,68 @@
 import { useState, useMemo } from 'react';
 import CategoryLayout from '../components/CategoryLayout';
 import CategoryFilter from '../components/CategoryFilter';
-
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString('en-GB', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  });
-};
+import AddReportButton from '../components/AddReportButton';
+import ReportCard from '../components/ReportCard';
+import EditReportModal from '../components/EditReportModal';
+import { useReports, Report } from '../../hooks/useReports';
 
 export default function PadrilloPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const externalLinks = [
-    {
-      title: "Padrillos Table - CB",
-      url: "https://docs.google.com/spreadsheets/d/1K5G_2_cOJS9YzR9IPXHNolTRQ1TS-z1I/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "tables",
-      tags: ["data", "spreadsheet"],
-      date: "2025-06-25"
-    },
-    {
-      title: "Envidienme - Profile",
-      url: "https://drive.google.com/file/d/1k72dGx4w32kruH1uSLl6Y_naH-_JXy3A/view?usp=drive_link",
-      category: "profiles",
-      tags: ["envidienme", "profile"],
-      date: "2025-06-25"
-    },
-    {
-      title:"Padrillos Table - Sire - MF",
-      url:"https://docs.google.com/spreadsheets/d/11Dyn2boaP3ch0T47N9_6gED5ZdwfC_9W/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "tables",
-      tags:["padrillos","spreadsheet"],
-      date: "2025-06-25"
-    }
-    // Add more links here as needed
-  ];
+  const [editingReport, setEditingReport] = useState<Report | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  
+  // Use Supabase for reports
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('padrillo');
 
   const categories = useMemo(() => {
-    const uniqueCategories = new Set(externalLinks.map(link => link.category));
+    const uniqueCategories = new Set(reports.map(report => report.category));
     return ['all', ...Array.from(uniqueCategories)];
-  }, []);
+  }, [reports]);
 
-  const filteredLinks = useMemo(() => {
-    return externalLinks.filter(link => {
-      const matchesSearch = link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          link.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || link.category === selectedCategory;
+  const filteredReports = useMemo(() => {
+    return reports.filter(report => {
+      const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || report.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, reports]);
+
+  const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
+    try {
+      await addReport(newReport);
+    } catch (error) {
+      console.error('Failed to add report:', error);
+    }
+  };
+
+  const handleEditReport = async (editedReport: Report) => {
+    try {
+      await updateReport(editedReport.id, editedReport);
+      setIsEditModalOpen(false);
+      setEditingReport(null);
+    } catch (error) {
+      console.error('Failed to update report:', error);
+    }
+  };
+
+  const handleOpenEditModal = (report: Report) => {
+    setEditingReport(report);
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingReport(null);
+  };
+
+  const handleDeleteReport = async (reportToDelete: Report) => {
+    try {
+      await deleteReport(reportToDelete.id);
+    } catch (error) {
+      console.error('Failed to delete report:', error);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#0a192f]">
@@ -89,43 +99,53 @@ export default function PadrilloPage() {
             />
           </div>
           <div className="w-full sm:w-48">
-          <CategoryFilter 
-                    categories={categories}
-                    selectedCategory={selectedCategory}
-                    onFilterChange={setSelectedCategory}
-                  />
+            <CategoryFilter 
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onFilterChange={setSelectedCategory}
+            />
           </div>
         </div>
 
-        {/* Links Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col px-6 py-4 backdrop-blur-md bg-white/5 border-2 border-white/20 
-                       rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/30 
-                       transition-all duration-200"
-            >
-              <span className="text-center font-light mb-2">{link.title}</span>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {link.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-2 py-1 text-xs rounded-full bg-white/10 text-gray-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <span className="text-xs text-gray-400 text-center">
-                {formatDate(link.date)}
-              </span>
-            </a>
-          ))}
-        </div>
+        {/* Loading State */}
+        {loading && (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-gray-300">Loading reports...</div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+            <div className="text-red-300">Error: {error}</div>
+          </div>
+        )}
+
+        {/* Reports Grid */}
+        {!loading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredReports.map((report) => (
+              <ReportCard
+                key={report.id}
+                report={report}
+                onEdit={handleOpenEditModal}
+                onDelete={handleDeleteReport}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Add Report Button */}
+        {!loading && <AddReportButton onAddReport={handleAddReport} location="padrillo" />}
+
+        {/* Edit Report Modal */}
+        <EditReportModal
+          report={editingReport}
+          isOpen={isEditModalOpen}
+          onClose={handleCloseEditModal}
+          onSave={handleEditReport}
+          location="padrillo"
+        />
       </main>
     </div>
   );

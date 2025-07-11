@@ -3,34 +3,68 @@
 import { useState, useMemo } from 'react';
 import CategoryLayout from '../components/CategoryLayout';
 import CategoryFilter from '../components/CategoryFilter';
+import AddReportButton from '../components/AddReportButton';
+import ReportCard from '../components/ReportCard';
+import EditReportModal from '../components/EditReportModal';
+import { useReports, Report } from '../../hooks/useReports';
 
 export default function EntrenadorPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const externalLinks = [
-    {
-      title: "Report Frenkel",
-      url: "https://drive.google.com/file/d/1MJ8IKVKJK2Ea4jA1615Z7BMW1CmQvG6k/view?usp=drive_link",
-      category: "reports",
-      tags: ["frenkel", "analysis"]
-    }
-    // Add more links here as needed
-  ];
+  const [editingReport, setEditingReport] = useState<Report | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  
+  // Use Supabase for reports
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('trainer');
 
   const categories = useMemo(() => {
-    const uniqueCategories = new Set(externalLinks.map(link => link.category));
+    const uniqueCategories = new Set(reports.map(report => report.category));
     return ['all', ...Array.from(uniqueCategories)];
-  }, []);
+  }, [reports]);
 
-  const filteredLinks = useMemo(() => {
-    return externalLinks.filter(link => {
-      const matchesSearch = link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          link.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || link.category === selectedCategory;
+  const filteredReports = useMemo(() => {
+    return reports.filter(report => {
+      const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || report.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, reports]);
+
+  const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
+    try {
+      await addReport(newReport);
+    } catch (error) {
+      console.error('Failed to add report:', error);
+    }
+  };
+
+  const handleEditReport = async (editedReport: Report) => {
+    try {
+      await updateReport(editedReport.id, editedReport);
+      setIsEditModalOpen(false);
+      setEditingReport(null);
+    } catch (error) {
+      console.error('Failed to update report:', error);
+    }
+  };
+
+  const handleOpenEditModal = (report: Report) => {
+    setEditingReport(report);
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingReport(null);
+  };
+
+  const handleDeleteReport = async (reportToDelete: Report) => {
+    try {
+      await deleteReport(reportToDelete.id);
+    } catch (error) {
+      console.error('Failed to delete report:', error);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#0a192f]">
@@ -65,40 +99,53 @@ export default function EntrenadorPage() {
             />
           </div>
           <div className="w-full sm:w-48">
-          <CategoryFilter 
-                    categories={categories}
-                    selectedCategory={selectedCategory}
-                    onFilterChange={setSelectedCategory}
-                  />
+            <CategoryFilter 
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onFilterChange={setSelectedCategory}
+            />
           </div>
         </div>
 
-        {/* Links Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col px-6 py-4 backdrop-blur-md bg-white/5 border-2 border-white/20 
-                       rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/30 
-                       transition-all duration-200"
-            >
-              <span className="text-center font-light mb-2">{link.title}</span>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {link.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-2 py-1 text-xs rounded-full bg-white/10 text-gray-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-          ))}
-        </div>
+        {/* Loading State */}
+        {loading && (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-gray-300">Loading reports...</div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+            <div className="text-red-300">Error: {error}</div>
+          </div>
+        )}
+
+        {/* Reports Grid */}
+        {!loading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredReports.map((report) => (
+              <ReportCard
+                key={report.id}
+                report={report}
+                onEdit={handleOpenEditModal}
+                onDelete={handleDeleteReport}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Add Report Button */}
+        {!loading && <AddReportButton onAddReport={handleAddReport} location="trainer" />}
+
+        {/* Edit Report Modal */}
+        <EditReportModal
+          report={editingReport}
+          isOpen={isEditModalOpen}
+          onClose={handleCloseEditModal}
+          onSave={handleEditReport}
+          location="trainer"
+        />
       </main>
     </div>
   );

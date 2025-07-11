@@ -4,60 +4,57 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import AddReportButton from '../../components/AddReportButton';
 import ReportCard from '../../components/ReportCard';
-import { useLocalStorage } from '../../components/useLocalStorage';
-
-interface Report {
-  id: string;
-  title: string;
-  url: string;
-  category: string;
-  tags: string[];
-  criador?: string;
-}
+import EditReportModal from '../../components/EditReportModal';
+import { useReports, Report } from '../../../hooks/useReports';
 
 export default function FirmamentoPage() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
-  const [reports, setReports] = useLocalStorage<Report[]>('firmamento-reports', [
-    {
-      id: '1',
-      title: "Criador Report - Triple Alliance S.A.",
-      url: "https://drive.google.com/file/d/1bfGK4tZpzNkOTXcLbNrTgnpjMwbaPztB/view?usp=drive_link",
-      category: "reports",
-      tags: ["criador", "triple alliance"]
-    },
-    {
-      id: '2',
-      title: "Stake Winners - Triple Alliance S.A.",
-      url: "https://docs.google.com/spreadsheets/d/1DGQL1LOgwxVdv05p40BDPkJ49H7QWhIX5_p0zTPV5n0/edit?usp=drive_linkk",
-      category: "tables",
-      tags: ["triple alliance"]
-    },
-  ]);
+  const [editingReport, setEditingReport] = useState<Report | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  
+  // Use Supabase for reports
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador', 'Triple Alliance');
 
   const filteredReports = reports.filter(report => {
-    const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         report.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesSearch;
   });
 
-  const handleAddReport = (newReport: Omit<Report, 'id'>) => {
-    const report: Report = {
-      ...newReport,
-      id: Date.now().toString(),
-      criador: 'Firmamento'
-    };
-    setReports([...reports, report]);
+  const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
+    try {
+      await addReport(newReport);
+    } catch (error) {
+      console.error('Failed to add report:', error);
+    }
   };
 
-  const handleEditReport = (editedReport: Report) => {
-    setReports(reports.map(report => 
-      report.id === editedReport.id ? editedReport : report
-    ));
+  const handleEditReport = async (editedReport: Report) => {
+    try {
+      await updateReport(editedReport.id, editedReport);
+      setIsEditModalOpen(false);
+      setEditingReport(null);
+    } catch (error) {
+      console.error('Failed to update report:', error);
+    }
   };
 
-  const handleDeleteReport = (reportToDelete: Report) => {
-    setReports(reports.filter(report => report.id !== reportToDelete.id));
+  const handleOpenEditModal = (report: Report) => {
+    setEditingReport(report);
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingReport(null);
+  };
+
+  const handleDeleteReport = async (reportToDelete: Report) => {
+    try {
+      await deleteReport(reportToDelete.id);
+    } catch (error) {
+      console.error('Failed to delete report:', error);
+    }
   };
 
   return (
@@ -74,7 +71,7 @@ export default function FirmamentoPage() {
             </svg>
             Back to Criadores
           </button>
-        </div>
+        </div> 
 
         {/* Page Title */}
         <h1 className="text-4xl font-bold mb-8">Triple Alliance S.A.</h1>
@@ -91,20 +88,45 @@ export default function FirmamentoPage() {
           />
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-gray-300">Loading reports...</div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+            <div className="text-red-300">Error: {error}</div>
+          </div>
+        )}
+
         {/* Documents Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredReports.map((report) => (
-            <ReportCard
-              key={report.id}
-              report={report}
-              onEdit={handleEditReport}
-              onDelete={handleDeleteReport}
-            />
-          ))}
-        </div>
+        {!loading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredReports.map((report) => (
+              <ReportCard
+                key={report.id}
+                report={report}
+                onEdit={handleOpenEditModal}
+                onDelete={handleDeleteReport}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Add Report Button */}
-        <AddReportButton onAddReport={handleAddReport} criador="Firmamento" />
+        {!loading && <AddReportButton onAddReport={handleAddReport} criador="Triple Alliance" location="criador" />}
+
+        {/* Edit Report Modal */}
+        <EditReportModal
+          report={editingReport}
+          isOpen={isEditModalOpen}
+          onClose={handleCloseEditModal}
+          onSave={handleEditReport}
+          location="criador"
+        />
       </div>
     </div>
   );

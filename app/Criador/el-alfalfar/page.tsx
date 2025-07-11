@@ -14,7 +14,7 @@ export default function ElAlfalfarPage() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
   // Use Supabase for reports
-  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('el-alfalfar', 'El Alfalfar');
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador', 'El Alfalfar');
 
   const filteredReports = reports.filter(report => {
     const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -117,7 +117,7 @@ export default function ElAlfalfarPage() {
         )}
 
         {/* Add Report Button */}
-        {!loading && <AddReportButton onAddReport={handleAddReport} criador="El Alfalfar" location="el-alfalfar" />}
+        {!loading && <AddReportButton onAddReport={handleAddReport} criador="El Alfalfar" location="criador" />}
 
         {/* Edit Report Modal */}
         <EditReportModal

@@ -24,7 +24,7 @@ export default function MyPage() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
   // Use Supabase for reports
-  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('auctions');
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('auction-reports');
 
   useEffect(() => {
     Promise.all([
@@ -207,7 +207,7 @@ export default function MyPage() {
               )}
 
               {/* Add Report Button */}
-              {!loading && <AddReportButton onAddReport={handleAddReport} location="auctions" />}
+              {!loading && <AddReportButton onAddReport={handleAddReport} location="auction-reports" />}
 
               {/* Edit Report Modal */}
               <EditReportModal
@@ -215,7 +215,7 @@ export default function MyPage() {
                 isOpen={isEditModalOpen}
                 onClose={handleCloseEditModal}
                 onSave={handleEditReport}
-                location="auctions"
+                location="auction-reports"
               />
             </div>
           )}
