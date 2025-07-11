@@ -4,111 +4,57 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import AddReportButton from '../../components/AddReportButton';
 import ReportCard from '../../components/ReportCard';
-import { useLocalStorage } from '../../components/useLocalStorage';
-
-interface Report {
-  id: string;
-  title: string;
-  url: string;
-  category: string;
-  tags: string[];
-  criador?: string;
-}
+import EditReportModal from '../../components/EditReportModal';
+import { useReports, Report } from '../../../hooks/useReports';
 
 export default function FirmamentoPage() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
+  const [editingReport, setEditingReport] = useState<Report | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
-  // Use local storage for reports
-  const [reports, setReports] = useLocalStorage<Report[]>('firmamento-reports', [
-    {
-      id: '1',
-      title: "Tracking PRS 2022",
-      url: "https://docs.google.com/spreadsheets/d/1OeVyYpkVEx9fF7AK_yYZTcbjFkOyTT_X/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "tables",
-      tags: ["data", "spreadsheet"]
-    },
-    {
-      id: '2',
-      title: "Tracking PRS 2023",
-      url: "https://docs.google.com/spreadsheets/d/1m6XlvKecbgdSwel9smEc8eGeRcJTHFeq/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "tables",
-      tags: ["data", "spreadsheet"]
-    },
-    {
-      id: '3',
-      title: "Criador Report",
-      url: "https://drive.google.com/file/d/1paVDsYxXHp6LNKoGPIXLiLcP-v4EpJ7j/view?usp=drive_link",
-      category: "reports",
-      tags: ["firmamento", "analysis"]
-    },
-    {
-      id: '4',
-      title: "Clásico Winners",
-      url: "https://docs.google.com/spreadsheets/d/1jJxdvkAcRr_tfZaB2YWxVd7zK5KWUTKZ/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "reports",
-      tags: ["firmamento", "criador"]
-    },
-    {
-      id: '5',
-      title: "Auction Analysis - Firmamento",
-      url: "https://drive.google.com/file/d/1bcs_Ck1iTGmDDRoKqbdLP3_R9EDt5D5T/view?usp=drive_link",
-      category: "repo",
-      tags: ["auction"]
-    },
-    {
-      id: '6',
-      title: "Add-Ons Firmamento",
-      url: "https://drive.google.com/file/d/1V-6Op3g4kihyXPOrEqJY-g_BxULXT4YC/view?usp=drive_link",
-      category: "reports",
-      tags: ["auctions", "firmamento"]
-    },
-    {
-      id: '7',
-      title: "PRS - Family Data - Firmamento - 2022",
-      url: "https://docs.google.com/spreadsheets/d/12rVq5kWL9gU3-sDcBH4g8pgKqyQMgqLu/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "tables",
-      tags: ["firmamento"]
-    },
-    {
-      id: '8',
-      title: "PRS - Family Data - Firmamento - 2023",
-      url: "https://docs.google.com/spreadsheets/d/1TrC_Cw4SrwxRI9F67rWxDFoTWJv5limu/edit?usp=drive_link&ouid=114898536092612537397&rtpof=true&sd=true",
-      category: "tables",
-      tags: ["firmamento"]
-    },
-    {
-      id: '9',
-      title: "Stake Winners - Firmamento",
-      url: "https://docs.google.com/spreadsheets/d/11GuHpJvwEqaN5BLy2xMf06SIaGHKMSq3xZRfJgYnuCQ/edit?usp=drive_link",
-      category: "tables",
-      tags: ["firmamento"]
-    },
-  ]);
+  // Use Supabase for reports
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('firmamento', 'Firmamento');
 
   const filteredReports = reports.filter(report => {
-    const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         report.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesSearch;
   });
 
-  const handleAddReport = (newReport: Omit<Report, 'id'>) => {
-    const report: Report = {
-      ...newReport,
-      id: Date.now().toString(),
-      criador: 'Firmamento'
-    };
-    setReports([...reports, report]);
+  const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
+    try {
+      await addReport(newReport);
+    } catch (error) {
+      console.error('Failed to add report:', error);
+    }
   };
 
-  const handleEditReport = (editedReport: Report) => {
-    setReports(reports.map(report => 
-      report.id === editedReport.id ? editedReport : report
-    ));
+  const handleEditReport = async (editedReport: Report) => {
+    try {
+      await updateReport(editedReport.id, editedReport);
+      setIsEditModalOpen(false);
+      setEditingReport(null);
+    } catch (error) {
+      console.error('Failed to update report:', error);
+    }
   };
 
-  const handleDeleteReport = (reportToDelete: Report) => {
-    setReports(reports.filter(report => report.id !== reportToDelete.id));
+  const handleOpenEditModal = (report: Report) => {
+    setEditingReport(report);
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingReport(null);
+  };
+
+  const handleDeleteReport = async (reportToDelete: Report) => {
+    try {
+      await deleteReport(reportToDelete.id);
+    } catch (error) {
+      console.error('Failed to delete report:', error);
+    }
   };
 
   return (
@@ -142,20 +88,45 @@ export default function FirmamentoPage() {
           />
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-gray-300">Loading reports...</div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+            <div className="text-red-300">Error: {error}</div>
+          </div>
+        )}
+
         {/* Documents Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredReports.map((report) => (
-            <ReportCard
-              key={report.id}
-              report={report}
-              onEdit={handleEditReport}
-              onDelete={handleDeleteReport}
-            />
-          ))}
-        </div>
+        {!loading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredReports.map((report) => (
+              <ReportCard
+                key={report.id}
+                report={report}
+                onEdit={handleOpenEditModal}
+                onDelete={handleDeleteReport}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Add Report Button */}
-        <AddReportButton onAddReport={handleAddReport} criador="Firmamento" />
+        {!loading && <AddReportButton onAddReport={handleAddReport} criador="Firmamento" location="firmamento" />}
+
+        {/* Edit Report Modal */}
+        <EditReportModal
+          report={editingReport}
+          isOpen={isEditModalOpen}
+          onClose={handleCloseEditModal}
+          onSave={handleEditReport}
+          location="firmamento"
+        />
       </div>
     </div>
   );
