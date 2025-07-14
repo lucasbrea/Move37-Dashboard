@@ -100,6 +100,14 @@ export default function CriadorPage() {
     router.push('/Criador/general-statistics');
   };
 
+  const handleDeliveredPRSClick = () => {
+    router.push('/Criador/Delivered_PRS');
+  };
+
+  const handleBacktestingSTKWnrsClick = () => {
+    router.push('/Criador/Backtesting_STK_Wnrs');
+  };
+
   return (
     <div className="min-h-screen bg-[#0a192f] text-white p-8">
       <div className="max-w-7xl mx-auto">
@@ -152,6 +160,53 @@ export default function CriadorPage() {
                 General Statistics
               </h2>
         
+            </div>
+            <svg className="w-7 h-7 text-gray-400 group-hover:text-yellow-300 transition-colors duration-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+
+          {/* Delivered PRS Card */}
+          <div
+            onClick={handleDeliveredPRSClick}
+            className="flex items-center gap-6 p-6 backdrop-blur-md bg-white/5 border border-white/10 
+                     rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/20 
+                     transition-all duration-200 cursor-pointer group"
+          >
+            <div className="w-20 h-20 rounded-xl bg-[#1a233a] border border-white/10 shadow-sm flex items-center justify-center">
+              <svg className="w-10 h-10 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <h2 className="text-2xl text-white mb-1 group-hover:text-yellow-300 transition-colors duration-200">
+                Delivered PRS
+              </h2>
+              <p className="text-gray-300 text-base font-light">
+                Delivered PRS Reports
+              </p>
+            </div>
+            <svg className="w-7 h-7 text-gray-400 group-hover:text-yellow-300 transition-colors duration-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+
+          {/* Backtesting STK Wnrs Card */}
+          <div
+            onClick={handleBacktestingSTKWnrsClick}
+            className="flex items-center gap-6 p-6 backdrop-blur-md bg-white/5 border border-white/10 
+                     rounded-xl text-gray-100 hover:bg-white/10 hover:border-white/20 
+                     transition-all duration-200 cursor-pointer group"
+          >
+            <div className="w-20 h-20 rounded-xl bg-[#1a233a] border border-white/10 shadow-sm flex items-center justify-center">
+              <svg className="w-10 h-10 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <h2 className="text-2xl text-white mb-1 group-hover:text-yellow-300 transition-colors duration-200">
+                Backtesting STK Wnrs
+              </h2>
             </div>
             <svg className="w-7 h-7 text-gray-400 group-hover:text-yellow-300 transition-colors duration-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
