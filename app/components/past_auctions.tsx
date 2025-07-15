@@ -261,10 +261,10 @@ const handleSort = (column: string) => {
 
   return (
     <div className="w-full text-gray-800 font-sans">
-      <div className="grid grid-cols-4 gap-4 p-2">
+      <div className="grid grid-cols-4 gap-2 p-2 mb-2">
         {filterableColumns.map((col, i) => (
-          <div key={i} className="flex flex-col text-[10px]">
-            <label htmlFor={col} className="text-gray-600 font-semibold mb-1">
+          <div key={i} className="flex flex-col">
+            <label htmlFor={col} className="text-gray-600 font-medium mb-1 text-xs">
               {col === "Name" ? "Horse" : col}
             </label>
             <input
@@ -272,20 +272,21 @@ const handleSort = (column: string) => {
               type="text"
               value={filters[col] || ''}
               onChange={e => handleFilterChange(col, e.target.value)}
-              className="p-1 border text-[10px] rounded bg-white"
+              className="px-2 py-1 border border-gray-300 bg-white text-xs focus:outline-none focus:border-gray-400 transition-colors duration-150"
               placeholder={`Filter ${col}`}
             />
           </div>
         ))}
       </div>
-      <label className="flex items-center space-x-2 text-[10px] bg-yellow-100">
-      <input
-        type="checkbox"
-        checked={onlyLastTwoWeeks}
-        onChange={() => setOnlyLastTwoWeeks(prev => !prev)}
-      />
-      <span>Show only auctions in the last two weeks</span>
-    </label>
+      <label className="flex items-center space-x-2 text-xs bg-yellow-100 p-2 mb-2">
+        <input
+          type="checkbox"
+          checked={onlyLastTwoWeeks}
+          onChange={() => setOnlyLastTwoWeeks(prev => !prev)}
+          className="mr-1"
+        />
+        <span className="font-medium">Show only auctions in the last two weeks</span>
+      </label>
 
       <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 300px)' }}>
         <table className="w-full table-auto border text-[10px] leading-tight text-gray-800">
@@ -301,7 +302,7 @@ const handleSort = (column: string) => {
                 <th
                   key={i}
                   onClick={() => handleSort(title)}
-                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 ${columnGroupColors[title] || ''} ${columnWidths[title] || 'min-w-[80px]'}`}
+                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 transition-colors duration-150 ${columnGroupColors[title] || ''} ${columnWidths[title] || 'min-w-[80px]'}`}
                 >
                   {title}
                   {sortColumn === title ? (sortDirection === 'asc' ? ' ▲' : ' ▼') : ''}
@@ -336,19 +337,19 @@ const handleSort = (column: string) => {
         </table>
       </div>
 
-      <div className="flex justify-between items-center p-2 text-[10px]">
+      <div className="flex justify-between items-center p-4 text-sm">
         <button
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className="px-2 py-1 border rounded disabled:opacity-50 bg-gray-200 hover:bg-gray-300 transition-colors duration-200"
+          className="px-4 py-2 border border-gray-300 rounded disabled:opacity-50 bg-white hover:bg-gray-50 transition-colors duration-150 font-medium"
         >
           Previous
         </button>
-        <span>Page {currentPage} of {totalPages}</span>
+        <span className="font-medium">Page {currentPage} of {totalPages}</span>
         <button
           onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-2 py-1 border rounded disabled:opacity-50 bg-gray-200 hover:bg-gray-300 transition-colors duration-200"
+          className="px-4 py-2 border border-gray-300 rounded disabled:opacity-50 bg-white hover:bg-gray-50 transition-colors duration-150 font-medium"
         >
           Next
         </button>

@@ -13,20 +13,22 @@ export default function CategoryFilter({ categories, onFilterChange, selectedCat
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100 
-                 hover:bg-white/10 focus:outline-none focus:border-white/40 flex justify-between items-center"
+        className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
+                 hover:bg-white/10 focus:outline-none focus:border-white/20 
+                 transition-colors duration-150 text-sm font-medium flex justify-between items-center"
       >
         <span>Filter by Category</span>
-        <span className="ml-2">{isOpen ? '▲' : '▼'}</span>
+        <span className="text-gray-400">{isOpen ? '▲' : '▼'}</span>
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-[#0a192f] border border-white/20 rounded-lg shadow-lg">
+        <div className="absolute z-10 mt-1 w-full bg-[#0a192f] border border-white/10">
           <div className="max-h-60 overflow-y-auto">
             {categories.map((category) => (
               <label
                 key={category}
-                className="flex items-center px-4 py-2 hover:bg-white/10 cursor-pointer"
+                className="flex items-center px-4 py-3 hover:bg-white/10 cursor-pointer 
+                         transition-colors duration-150"
               >
                 <input
                   type="radio"
@@ -36,9 +38,9 @@ export default function CategoryFilter({ categories, onFilterChange, selectedCat
                     onFilterChange(category);
                     setIsOpen(false);
                   }}
-                  className="mr-2"
+                  className="mr-3"
                 />
-                <span className="text-gray-300">
+                <span className="text-gray-300 text-sm font-medium">
                   {category === 'all' ? 'All Categories' : category.charAt(0).toUpperCase() + category.slice(1)}
                 </span>
               </label>

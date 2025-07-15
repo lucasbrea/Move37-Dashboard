@@ -62,33 +62,29 @@ export default function AddReportButton({ onAddReport, criador, location }: AddR
       {/* Add Report Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full 
-                 flex items-center justify-center transition-all duration-200 hover:scale-105 z-50
-                 border border-white/20 backdrop-blur-sm"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-white/10 hover:bg-white/20 text-white 
+                 flex items-center justify-center transition-all duration-150 hover:scale-105 z-50
+                 border border-white/20"
         title="Add Report"
       >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-        </svg>
+        <span className="text-xl font-light">+</span>
       </button>
 
       {/* Popup Modal */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-[#0a192f] border border-white/20 rounded-xl p-6 w-full max-w-md">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold text-white">Add New Report</h2>
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="bg-[#0a192f] border border-white/10 p-8 w-full max-w-md">
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-2xl font-light text-white">Add New Report</h2>
               <button
                 onClick={handleClose}
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-150"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <span className="text-xl">×</span>
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-gray-300 text-sm font-medium mb-2">
                   Title *
@@ -98,8 +94,9 @@ export default function AddReportButton({ onAddReport, criador, location }: AddR
                   required
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white 
-                           placeholder-gray-400 focus:outline-none focus:border-white/40"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
+                           placeholder-gray-500 focus:outline-none focus:border-white/20 
+                           transition-colors duration-150 text-sm"
                   placeholder="Enter report title"
                 />
               </div>
@@ -113,8 +110,9 @@ export default function AddReportButton({ onAddReport, criador, location }: AddR
                   required
                   value={formData.url}
                   onChange={(e) => setFormData({ ...formData, url: e.target.value })}
-                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white 
-                           placeholder-gray-400 focus:outline-none focus:border-white/40"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
+                           placeholder-gray-500 focus:outline-none focus:border-white/20 
+                           transition-colors duration-150 text-sm"
                   placeholder="https://..."
                 />
               </div>
@@ -127,8 +125,8 @@ export default function AddReportButton({ onAddReport, criador, location }: AddR
                   required
                   value={formData.category}
                   onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white 
-                           focus:outline-none focus:border-white/40"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
+                           focus:outline-none focus:border-white/20 transition-colors duration-150 text-sm"
                 >
                   <option value="">Select a category</option>
                   {categories.map((category) => (
@@ -148,26 +146,27 @@ export default function AddReportButton({ onAddReport, criador, location }: AddR
                     type="text"
                     value={formData.criador}
                     onChange={(e) => setFormData({ ...formData, criador: e.target.value })}
-                    className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white 
-                             placeholder-gray-400 focus:outline-none focus:border-white/40"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
+                             placeholder-gray-500 focus:outline-none focus:border-white/20 
+                             transition-colors duration-150 text-sm"
                     placeholder="Enter criador name (optional)"
                   />
                 </div>
               )}
 
-              <div className="flex gap-3 pt-4">
+              <div className="flex gap-4 pt-6">
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="flex-1 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg 
-                           transition-colors duration-200"
+                  className="flex-1 px-6 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 
+                           hover:border-white/20 transition-all duration-150 text-sm font-medium"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg 
-                           transition-colors duration-200"
+                  className="flex-1 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white 
+                           transition-all duration-150 text-sm font-medium"
                 >
                   Add Report
                 </button>

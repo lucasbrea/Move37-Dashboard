@@ -274,10 +274,10 @@ export default function AuctionTable({
 
   return (
     <div className="w-full text-gray-800 font-sans">
-      <div className="grid grid-cols-4 gap-4 p-2">
+      <div className="grid grid-cols-4 gap-2 p-2 mb-2">
         {filterableColumns.map((col, i) => (
-          <div key={i} className="flex flex-col text-[10px]">
-            <label htmlFor={col} className="text-gray-600 font-semibold mb-1">
+          <div key={i} className="flex flex-col">
+            <label htmlFor={col} className="text-gray-600 font-medium mb-1 text-xs">
               {col === "Name" ? "Horse" : col}
             </label>
             <input
@@ -285,7 +285,7 @@ export default function AuctionTable({
               type="text"
               value={filters[col] || ''}
               onChange={e => handleFilterChange(col, e.target.value)}
-              className="p-1 border text-[10px] rounded bg-white"
+              className="px-2 py-1 border border-gray-300 bg-white text-xs focus:outline-none focus:border-gray-400 transition-colors duration-150"
               placeholder={`Filter ${col}`}
             />
           </div>
@@ -309,7 +309,7 @@ export default function AuctionTable({
                 <th
                   key={i}
                   onClick={() => handleSort(title)}
-                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 ${columnGroupColors[title] || ''} ${columnWidths[title] || 'min-w-[80px]'}`}
+                  className={`cursor-pointer border px-2 py-1 text-center align-bottom text-[10px] hover:bg-gray-200 transition-colors duration-150 ${columnGroupColors[title] || ''} ${columnWidths[title] || 'min-w-[80px]'}`}
                 >
                   {title}
                   {sortColumn === title ? (sortDirection === 'asc' ? ' ▲' : ' ▼') : ''}

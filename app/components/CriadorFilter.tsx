@@ -49,25 +49,28 @@ export default function CriadorFilter({ onFilterChange }: CriadorFilterProps) {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100 
-                 hover:bg-white/10 focus:outline-none focus:border-white/40 flex justify-between items-center"
+        className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
+                 hover:bg-white/10 focus:outline-none focus:border-white/20 
+                 transition-colors duration-150 text-sm font-medium flex justify-between items-center"
       >
         <span>Filter by Criador</span>
-        <span className="ml-2">{isOpen ? '▲' : '▼'}</span>
+        <span className="text-gray-400">{isOpen ? '▲' : '▼'}</span>
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-[#0a192f] border border-white/20 rounded-lg shadow-lg">
-          <div className="p-2 border-b border-white/20">
+        <div className="absolute z-10 mt-1 w-full bg-[#0a192f] border border-white/10">
+          <div className="p-3 border-b border-white/10">
             <button
               onClick={handleSelectAll}
-              className="w-full px-2 py-1 text-sm text-gray-300 hover:bg-white/10 rounded"
+              className="w-full px-3 py-2 text-sm text-gray-300 hover:bg-white/10 
+                       transition-colors duration-150 font-medium"
             >
               Select All
             </button>
             <button
               onClick={handleDeselectAll}
-              className="w-full px-2 py-1 text-sm text-gray-300 hover:bg-white/10 rounded mt-1"
+              className="w-full px-3 py-2 text-sm text-gray-300 hover:bg-white/10 
+                       transition-colors duration-150 font-medium mt-2"
             >
               Deselect All
             </button>
@@ -76,15 +79,16 @@ export default function CriadorFilter({ onFilterChange }: CriadorFilterProps) {
             {criadores.map((criador) => (
               <label
                 key={criador}
-                className="flex items-center px-4 py-2 hover:bg-white/10 cursor-pointer"
+                className="flex items-center px-4 py-3 hover:bg-white/10 cursor-pointer 
+                         transition-colors duration-150"
               >
                 <input
                   type="checkbox"
                   checked={selectedCriadores.includes(criador)}
                   onChange={() => handleCriadorToggle(criador)}
-                  className="mr-2"
+                  className="mr-3"
                 />
-                <span className="text-gray-300">{criador}</span>
+                <span className="text-gray-300 text-sm font-medium">{criador}</span>
               </label>
             ))}
           </div>

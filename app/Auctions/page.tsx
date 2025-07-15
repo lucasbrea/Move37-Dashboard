@@ -98,23 +98,23 @@ export default function MyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/"
-            className="text-gray-300 hover:text-white transition-colors duration-200 font-sans"
+            className="text-gray-400 hover:text-white transition-colors duration-150 text-sm font-medium"
           >
-            ← Back to Dashboard
+            ← Dashboard
           </Link>
         </div>
       </nav>
 
       <div className="w-full px-4 sm:px-6 lg:px-8 py-8 font-sans">
         {/* Tabs */}
-        <div className="border-b border-[#233554]">
-          <nav className="-mb-px flex space-x-8" aria-label="Tabs">
+        <div className="border-b border-white/10">
+          <nav className="flex space-x-8" aria-label="Tabs">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-                  whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm
+                  whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-150
                   ${activeTab === tab.id
                     ? 'border-yellow-300 text-yellow-300'
                     : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-400'
@@ -165,8 +165,9 @@ export default function MyPage() {
                     placeholder="Search by title or tags..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100 
-                             placeholder-gray-400 focus:outline-none focus:border-white/40"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
+                             placeholder-gray-500 focus:outline-none focus:border-white/20 
+                             transition-colors duration-150 text-sm"
                   />
                 </div>
                 <div className="w-full sm:w-48">
@@ -187,7 +188,7 @@ export default function MyPage() {
 
               {/* Error State */}
               {error && (
-                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+                <div className="bg-red-500/10 border border-red-500/20 p-4 mb-6">
                   <div className="text-red-300">Error: {error}</div>
                 </div>
               )}
