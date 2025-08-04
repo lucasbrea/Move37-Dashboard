@@ -22,10 +22,10 @@ export default function CriasPage() {
   const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('crias-backtesting');
 
   const sections = [
-    { id: 'backtesting', label: 'Backtesting', description: '' },
-    { id: 'stk-winners-updates', label: 'STK Winners Updates', description: ' ' },
-    { id: 'prs-delivered', label: 'PRS Delivered', description: ' ' },
-    { id: 'prs-camada', label: 'PRS Camada', description: ' ' }
+    { id: 'Backtesting_STK_Wnrs', label: 'Backtesting - Prior Years Selection', description: '' },
+    { id: 'stk-winners-updates', label: 'Stake Winners Update', description: ' ' },
+    { id: 'Delivered_PRS', label: 'Delivered PRS', description: ' ' },
+    { id: 'prs-camada', label: 'PRS by Breeder - Camada', description: ' ' }
   ];
 
   const categories = useMemo(() => {

@@ -74,7 +74,7 @@ export default function BacktestingSTKWnrsPage() {
         </div>
 
         {/* Page Title */}
-        <h1 className="text-4xl font-bold mb-8">Backtesting STK Winners</h1>
+        <h1 className="text-4xl font-bold mb-8">Backtesting</h1>
 
         {/* Search */}
         <div className="mb-8">

@@ -100,13 +100,6 @@ export default function CriadorPage() {
     router.push('/Criador/general-statistics');
   };
 
-  const handleDeliveredPRSClick = () => {
-    router.push('/Criador/Delivered_PRS');
-  };
-
-  const handleBacktestingSTKWnrsClick = () => {
-    router.push('/Criador/Backtesting_STK_Wnrs');
-  };
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-white">
@@ -155,44 +148,6 @@ export default function CriadorPage() {
               </h2>
               <p className="text-gray-400 text-sm">
                 Overview and analytics
-              </p>
-            </div>
-            <div className="text-gray-500 text-xs font-medium tracking-wide">
-              VIEW →
-            </div>
-          </div>
-
-          {/* Delivered PRS Card */}
-          <div
-            onClick={handleDeliveredPRSClick}
-            className="group p-8 bg-white/5 border border-white/10 hover:bg-white/10 
-                     hover:border-white/20 transition-all duration-200 cursor-pointer"
-          >
-            <div className="mb-4">
-              <h2 className="text-2xl font-light text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
-                Delivered PRS
-              </h2>
-              <p className="text-gray-400 text-sm">
-                Delivered PRS Reports
-              </p>
-            </div>
-            <div className="text-gray-500 text-xs font-medium tracking-wide">
-              VIEW →
-            </div>
-          </div>
-
-          {/* Backtesting STK Wnrs Card */}
-          <div
-            onClick={handleBacktestingSTKWnrsClick}
-            className="group p-8 bg-white/5 border border-white/10 hover:bg-white/10 
-                     hover:border-white/20 transition-all duration-200 cursor-pointer"
-          >
-            <div className="mb-4">
-              <h2 className="text-2xl font-light text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
-                Backtesting STK Wnrs
-              </h2>
-              <p className="text-gray-400 text-sm">
-                Backtesting STK Winners Reports
               </p>
             </div>
             <div className="text-gray-500 text-xs font-medium tracking-wide">
