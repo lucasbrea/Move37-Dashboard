@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import CategoryLayout from '../components/CategoryLayout';
 import CriadorFilter from '../components/CriadorFilter';
 import CategoryFilter from '../components/CategoryFilter';
@@ -15,9 +16,17 @@ export default function CriasPage() {
   const [selectedCriadores, setSelectedCriadores] = useState<string[]>([]);
   const [editingReport, setEditingReport] = useState<Report | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const router = useRouter();
   
   // Use Supabase for reports
-  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('crias');
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('crias-backtesting');
+
+  const sections = [
+    { id: 'backtesting', label: 'Backtesting', description: '' },
+    { id: 'stk-winners-updates', label: 'STK Winners Updates', description: ' ' },
+    { id: 'prs-delivered', label: 'PRS Delivered', description: ' ' },
+    { id: 'prs-camada', label: 'PRS Camada', description: ' ' }
+  ];
 
   const categories = useMemo(() => {
     const uniqueCategories = new Set(reports.map(report => report.category));
@@ -72,90 +81,49 @@ export default function CriasPage() {
     }
   };
 
+  const handleSectionClick = (sectionId: string) => {
+    router.push(`/Crias/${sectionId}`);
+  };
+
   return (
-    <div className="min-h-screen bg-[#0a192f]">
-      {/* Header */}
-      <nav className="border-b border-[#233554]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div className="min-h-screen bg-[#0a192f] text-white">
+      <div className="max-w-7xl mx-auto px-8 py-12">
+        {/* Header */}
+        <nav className="mb-12">
           <a 
             href="/"
-            className="text-gray-300 hover:text-white transition-colors duration-200"
+            className="text-gray-400 hover:text-white transition-colors duration-150 text-sm font-medium"
           >
-            ← Back to Dashboard
+            ← Dashboard
           </a>
+        </nav>
+        
+        <h1 className="text-5xl font-light mb-16 tracking-tight">Selección Crías Argentina</h1>
+        
+        {/* Sections Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {sections.map((section) => (
+            <div
+              key={section.id}
+              onClick={() => handleSectionClick(section.id)}
+              className="group p-8 bg-white/5 border border-white/10 hover:bg-white/10 
+                       hover:border-white/20 transition-all duration-200 cursor-pointer"
+            >
+              <div className="mb-4">
+                <h2 className="text-2xl font-light text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
+                  {section.label}
+                </h2>
+                <p className="text-gray-400 text-sm">
+                  {section.description}
+                </p>
+              </div>
+              <div className="text-gray-500 text-xs font-medium tracking-wide">
+                VIEW →
+              </div>
+            </div>
+          ))}
         </div>
-      </nav>
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Page Title */}
-        <h1 className="text-5xl font-light text-gray-100 mb-12">
-          Selección Crías Argentina
-        </h1>
-
-        {/* Search and Filter Section */}
-        <div className="mb-8 space-y-4 sm:space-y-0 sm:flex sm:space-x-4">
-          <div className="flex-1">
-            <input
-              type="text"
-              placeholder="Search by title or tags..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100 
-                       placeholder-gray-400 focus:outline-none focus:border-white/40"
-            />
-          </div>
-          <div className="w-full sm:w-48">
-            <CategoryFilter 
-              categories={categories}
-              selectedCategory={selectedCategory}
-              onFilterChange={setSelectedCategory}
-            />
-          </div>
-          <div className="w-full sm:w-48">
-            <CriadorFilter onFilterChange={setSelectedCriadores} />
-          </div>
-        </div>
-
-        {/* Loading State */}
-        {loading && (
-          <div className="flex items-center justify-center py-12">
-            <div className="text-gray-300">Loading reports...</div>
-          </div>
-        )}
-
-        {/* Error State */}
-        {error && (
-          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
-            <div className="text-red-300">Error: {error}</div>
-          </div>
-        )}
-
-        {/* Reports Grid */}
-        {!loading && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredReports.map((report) => (
-              <ReportCard
-                key={report.id}
-                report={report}
-                onEdit={handleOpenEditModal}
-                onDelete={handleDeleteReport}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Add Report Button */}
-        {!loading && <AddReportButton onAddReport={handleAddReport} location="crias" />}
-
-        {/* Edit Report Modal */}
-        <EditReportModal
-          report={editingReport}
-          isOpen={isEditModalOpen}
-          onClose={handleCloseEditModal}
-          onSave={handleEditReport}
-          location="crias"
-        />
-      </main>
+      </div>
     </div>
   );
 } 
