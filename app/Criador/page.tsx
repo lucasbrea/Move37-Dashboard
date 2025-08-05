@@ -11,74 +11,9 @@ export default function CriadorPage() {
 
   const criadores = [
     { 
-      name: 'El Paraiso',
-      path: '/Criador/el-paraiso',
-      description: 'El Paraiso Criador Profile'
-    },
-    { 
-      name: 'Firmamento',
-      path: '/Criador/firmamento',
-      description: 'Firmamento Criador Profile'
-    },
-    { 
-      name: 'La Pasion',
-      path: '/Criador/la-pasion',
-      description: 'La Pasion Criador Profile'
-    },
-    { 
-      name: 'Abolengo',
-      path: '/Criador/abolengo',
-      description: 'Abolengo Criador Profile'
-    },
-    { 
-      name: 'Vacacion',
-      path: '/Criador/vacacion',
-      description: 'Vacacion Criador Profile'
-    },
-    { 
-      name: 'Santa Ines',
-      path: '/Criador/santa-ines',
-      description: 'Santa Ines Criador Profile'
-    },
-    { 
-      name: 'Haras Gran Muñeca',
-      path: '/Criador/gran-muneca',
-      description: 'Haras Gran Muñeca Criador Profile'
-    },
-    { 
-      name: 'Santa Maria de Araras',
-      path: '/Criador/santa-maria-araras',
-      description: 'Santa Maria de Araras Criador Profile'
-    },
-    { 
-      name: 'El Alfalfar',
-      path: '/Criador/el-alfalfar',
-      description: 'El Alfalfar Criador Profile'
-    },
-    { 
-      name: 'Triple Alliance S.A.',
-      path: '/Criador/triple-alliance',
-      description: 'Triple Alliance S.A. Criador Profile'
-    },
-    { 
-      name: 'Pozo de Luna',
-      path: '/Criador/pozo-luna',
-      description: 'Pozo de Luna Criador Profile'
-    },
-    { 
-      name: 'San Benito',
-      path: '/Criador/san-benito',
-      description: 'San Benito Criador Profile'
-    },
-    {   
-      name: 'La Nora',
-      path: '/Criador/la-nora',
-      description: 'La Nora Criador Profile'
-    },
-    { 
-      name: 'La Providencia',
-      path: '/Criador/la_providencia',
-      description: 'La Providencia Criador Profile'
+      name: 'Performance Reports',
+      path: '/Criador/performance-reports',
+      description: 'Criador Reports'
     },
   ];
 
@@ -114,7 +49,7 @@ export default function CriadorPage() {
           </a>
         </nav>
         
-        <h1 className="text-5xl font-light mb-16 tracking-tight">Criadores</h1>
+        <h1 className="text-5xl font-light mb-16 tracking-tight">Criador Performance</h1>
         
         {/* Search and Filters */}
         <div className="mb-12 flex flex-col md:flex-row gap-6">

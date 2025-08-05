@@ -14,7 +14,7 @@ export default function FirmamentoPage() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
   // Use Supabase for reports
-  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador', 'La Providencia');
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador', 'Performance Reports');
 
   const filteredReports = reports.filter(report => {
     const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -64,17 +64,14 @@ export default function FirmamentoPage() {
         <div className="flex items-center justify-between mb-8">
           <button
             onClick={() => router.back()}
-            className="flex items-center text-gray-300 hover:text-white transition-colors duration-200"
+            className="text-gray-400 hover:text-white transition-colors duration-150 text-sm font-medium"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Criadores
+            ← Back to Criador
           </button>
         </div>
 
         {/* Page Title */}
-        <h1 className="text-4xl font-bold mb-8">La Providencia</h1>
+        <h1 className="text-4xl font-bold mb-8">Performance Reports</h1>
 
         {/* Search */}
         <div className="mb-8">
@@ -117,7 +114,7 @@ export default function FirmamentoPage() {
         )}
 
         {/* Add Report Button */}
-        {!loading && <AddReportButton onAddReport={handleAddReport} criador="La Providencia" location="criador" />}
+        {!loading && <AddReportButton onAddReport={handleAddReport} criador="Performance Reports" location="performance" />}
 
         {/* Edit Report Modal */}
         <EditReportModal
