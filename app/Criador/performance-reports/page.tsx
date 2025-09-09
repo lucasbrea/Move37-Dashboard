@@ -14,7 +14,7 @@ export default function FirmamentoPage() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   
   // Use Supabase for reports
-  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador', 'Performance Reports');
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('performance', 'Performance Reports');
 
   const filteredReports = reports.filter(report => {
     const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -71,7 +71,7 @@ export default function FirmamentoPage() {
         </div>
 
         {/* Page Title */}
-        <h1 className="text-4xl font-bold mb-8">Performance Reports</h1>
+        <h1 className="text-4xl f ont-bold mb-8">Performance Reports</h1>
 
         {/* Search */}
         <div className="mb-8">
@@ -122,7 +122,7 @@ export default function FirmamentoPage() {
           isOpen={isEditModalOpen}
           onClose={handleCloseEditModal}
           onSave={handleEditReport}
-          location="criador"
+          location="performance"
         />
       </div>
     </div>
