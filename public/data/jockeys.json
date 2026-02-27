@@ -1,0 +1,320 @@
+{
+  "metadata": {
+    "exportDate": "2025-02-26",
+    "numJockeys": 2
+  },
+  "jockeys": [
+    {
+      "id": 123,
+      "name": "Brian R. Enrique",
+      "surname": "Enrique",
+      "rank": 1,
+      "racesL6m": 245,
+      "totalRaces": 11334,
+      "winShares": {
+        "l100": 0.145,
+        "l200": 0.115,
+        "l400": 0.138,
+        "l500": 0.140,
+        "hist": 0.139
+      },
+      "impliedProbs": {
+        "l100": 0.142,
+        "l200": 0.108,
+        "l400": 0.140,
+        "l500": 0.139,
+        "hist": 0.137
+      },
+      "hrr": {
+        "l50": 1.03,
+        "l200": 1.02
+      },
+      "tracks": {
+        "PAL": {
+          "wsL200": 0.115,
+          "ipL200": 0.136,
+          "racesL200": 200,
+          "wsHist": 0.149,
+          "ipHist": 0.139,
+          "racesHist": 4858
+        },
+        "SI": {
+          "wsL200": 0.098,
+          "ipL200": 0.112,
+          "racesL200": 45,
+          "wsHist": 0.121,
+          "ipHist": 0.118,
+          "racesHist": 1840
+        },
+        "LP": {
+          "wsL200": 0.220,
+          "ipL200": 0.198,
+          "racesL200": 30,
+          "wsHist": 0.210,
+          "ipHist": 0.195,
+          "racesHist": 980
+        }
+      },
+      "surfaces": {
+        "arena": {
+          "wsL200": 0.105,
+          "ipL200": 0.138,
+          "racesL200": 170,
+          "wsHist": 0.144,
+          "ipHist": 0.142,
+          "racesHist": 8881
+        },
+        "cesped": {
+          "wsL200": 0.145,
+          "ipL200": 0.120,
+          "racesL200": 55,
+          "wsHist": 0.135,
+          "ipHist": 0.128,
+          "racesHist": 2453
+        }
+      },
+      "distances": {
+        "1000": {
+          "wsL200": 0.173,
+          "ipL200": 0.141,
+          "racesL200": 45,
+          "wsHist": 0.168,
+          "ipHist": 0.148,
+          "racesHist": 3156
+        },
+        "1100-1500": {
+          "wsL200": 0.112,
+          "ipL200": 0.118,
+          "racesL200": 130,
+          "wsHist": 0.135,
+          "ipHist": 0.133,
+          "racesHist": 6200
+        },
+        "1600+": {
+          "wsL200": 0.095,
+          "ipL200": 0.110,
+          "racesL200": 50,
+          "wsHist": 0.122,
+          "ipHist": 0.128,
+          "racesHist": 1978
+        }
+      },
+      "estado": {
+        "normalWsHist": 0.138,
+        "normalWsL200": 0.143,
+        "notNormalWsHist": 0.145,
+        "notNormalWsL200": 0.093
+      },
+      "horseQuality": {
+        "avgQuality": 97,
+        "qualityPctile": 85,
+        "avgAge": 3.7,
+        "agePctile": 30,
+        "avgDistance": 1264,
+        "distancePctile": 57
+      },
+      "timeSeries": [
+        { "date": "2022-03-01", "wsL200": 0.130, "ipL200": 0.125, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.01, "hrrL200": 1.00, "racesL3m": 70, "wae": 0.005, "prizesRelative": 1.10 },
+        { "date": "2022-06-01", "wsL200": 0.135, "ipL200": 0.128, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.02, "hrrL200": 1.01, "racesL3m": 75, "wae": 0.007, "prizesRelative": 1.15 },
+        { "date": "2022-09-01", "wsL200": 0.140, "ipL200": 0.130, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.02, "hrrL200": 1.01, "racesL3m": 80, "wae": 0.010, "prizesRelative": 1.20 },
+        { "date": "2022-12-01", "wsL200": 0.138, "ipL200": 0.132, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.03, "hrrL200": 1.02, "racesL3m": 82, "wae": 0.006, "prizesRelative": 1.18 },
+        { "date": "2023-03-01", "wsL200": 0.145, "ipL200": 0.133, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.04, "hrrL200": 1.02, "racesL3m": 85, "wae": 0.012, "prizesRelative": 1.22 },
+        { "date": "2023-06-01", "wsL200": 0.142, "ipL200": 0.135, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.03, "hrrL200": 1.02, "racesL3m": 83, "wae": 0.007, "prizesRelative": 1.19 },
+        { "date": "2023-09-01", "wsL200": 0.118, "ipL200": 0.130, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.01, "hrrL200": 1.00, "racesL3m": 78, "wae": -0.012, "prizesRelative": 0.98 },
+        { "date": "2023-12-01", "wsL200": 0.110, "ipL200": 0.128, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 0.99, "hrrL200": 0.99, "racesL3m": 76, "wae": -0.018, "prizesRelative": 0.92 },
+        { "date": "2024-03-01", "wsL200": 0.115, "ipL200": 0.110, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 80, "wae": 0.005, "prizesRelative": 1.05 },
+        { "date": "2024-06-01", "wsL200": 0.120, "ipL200": 0.112, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.02, "hrrL200": 1.01, "racesL3m": 82, "wae": 0.008, "prizesRelative": 1.08 },
+        { "date": "2024-09-01", "wsL200": 0.125, "ipL200": 0.115, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.03, "hrrL200": 1.02, "racesL3m": 85, "wae": 0.010, "prizesRelative": 1.12 },
+        { "date": "2024-12-01", "wsL200": 0.115, "ipL200": 0.108, "wsL200Mean": 0.100, "wsL200P90": 0.180, "hrrL50": 1.02, "hrrL200": 1.02, "racesL3m": 83, "wae": 0.007, "prizesRelative": 1.10 }
+      ],
+      "combos": {
+        "trainers": [
+          { "name": "Diego Peña", "races": 140, "wsCombo": 15.0, "gapCombo": 0.9, "wsComboVsOther": -6.6, "gapComboVsOther": -3.1, "hrrCombo": 1.10, "hrrComboVsOther": 0.10 },
+          { "name": "Carlos Bianchi", "races": 95, "wsCombo": 18.2, "gapCombo": 3.1, "wsComboVsOther": 2.4, "gapComboVsOther": 1.2, "hrrCombo": 1.15, "hrrComboVsOther": 0.15 },
+          { "name": "Jorge Lopez", "races": 72, "wsCombo": 11.4, "gapCombo": -2.5, "wsComboVsOther": -4.8, "gapComboVsOther": -2.0, "hrrCombo": 0.95, "hrrComboVsOther": -0.08 },
+          { "name": "Marcelo Torres", "races": 58, "wsCombo": 14.5, "gapCombo": 0.2, "wsComboVsOther": -1.0, "gapComboVsOther": -0.5, "hrrCombo": 1.02, "hrrComboVsOther": 0.02 },
+          { "name": "Pablo Saenz", "races": 45, "wsCombo": 20.1, "gapCombo": 5.0, "wsComboVsOther": 4.2, "gapComboVsOther": 2.5, "hrrCombo": 1.22, "hrrComboVsOther": 0.22 }
+        ],
+        "sires": [
+          { "name": "Catcher In The Rye", "races": 88, "wsCombo": 16.2, "gapCombo": 1.8, "wsComboVsOther": 1.2, "gapComboVsOther": 0.8, "hrrCombo": 1.08, "hrrComboVsOther": 0.06 },
+          { "name": "Cityscape", "races": 64, "wsCombo": 13.5, "gapCombo": -1.2, "wsComboVsOther": -2.5, "gapComboVsOther": -1.0, "hrrCombo": 0.98, "hrrComboVsOther": -0.04 },
+          { "name": "Endorsement", "races": 52, "wsCombo": 19.3, "gapCombo": 4.2, "wsComboVsOther": 3.8, "gapComboVsOther": 2.1, "hrrCombo": 1.18, "hrrComboVsOther": 0.16 }
+        ],
+        "stables": [
+          { "name": "Stud El Paraiso", "races": 112, "wsCombo": 17.1, "gapCombo": 2.5, "wsComboVsOther": 1.8, "gapComboVsOther": 1.0, "hrrCombo": 1.12, "hrrComboVsOther": 0.10 },
+          { "name": "Haras La Nora", "races": 78, "wsCombo": 12.8, "gapCombo": -1.8, "wsComboVsOther": -3.2, "gapComboVsOther": -1.5, "hrrCombo": 0.96, "hrrComboVsOther": -0.06 },
+          { "name": "Stud Vacacion", "races": 55, "wsCombo": 21.5, "gapCombo": 6.2, "wsComboVsOther": 5.5, "gapComboVsOther": 3.0, "hrrCombo": 1.25, "hrrComboVsOther": 0.23 }
+        ]
+      },
+      "rankings": {
+        "1000": { "rank": 6, "wsInDist": 17.3, "races": 3156, "wsDiffVsOverall": 3.4, "gapToImplied": 2.0 },
+        "1100-1500": { "rank": 2, "wsInDist": 13.5, "races": 6200, "wsDiffVsOverall": -0.4, "gapToImplied": 0.3 },
+        "1600+": { "rank": 14, "wsInDist": 12.2, "races": 1978, "wsDiffVsOverall": -1.7, "gapToImplied": -0.8 }
+      },
+      "calibration": {},
+      "improvement": {
+        "ratio": 1.03,
+        "newHorsesReceived": 2418,
+        "shareNewHorses": 0.55
+      }
+    },
+    {
+      "id": 456,
+      "name": "Gonzalo D. Borda",
+      "surname": "Borda",
+      "rank": 2,
+      "racesL6m": 198,
+      "totalRaces": 8920,
+      "winShares": {
+        "l100": 0.128,
+        "l200": 0.132,
+        "l400": 0.125,
+        "l500": 0.127,
+        "hist": 0.130
+      },
+      "impliedProbs": {
+        "l100": 0.135,
+        "l200": 0.128,
+        "l400": 0.126,
+        "l500": 0.125,
+        "hist": 0.129
+      },
+      "hrr": {
+        "l50": 0.98,
+        "l200": 1.01
+      },
+      "tracks": {
+        "PAL": {
+          "wsL200": 0.138,
+          "ipL200": 0.131,
+          "racesL200": 165,
+          "wsHist": 0.142,
+          "ipHist": 0.135,
+          "racesHist": 3980
+        },
+        "SI": {
+          "wsL200": 0.105,
+          "ipL200": 0.118,
+          "racesL200": 30,
+          "wsHist": 0.118,
+          "ipHist": 0.122,
+          "racesHist": 1450
+        },
+        "LP": {
+          "wsL200": 0.158,
+          "ipL200": 0.140,
+          "racesL200": 20,
+          "wsHist": 0.165,
+          "ipHist": 0.148,
+          "racesHist": 730
+        }
+      },
+      "surfaces": {
+        "arena": {
+          "wsL200": 0.128,
+          "ipL200": 0.130,
+          "racesL200": 148,
+          "wsHist": 0.132,
+          "ipHist": 0.133,
+          "racesHist": 6850
+        },
+        "cesped": {
+          "wsL200": 0.148,
+          "ipL200": 0.122,
+          "racesL200": 40,
+          "wsHist": 0.138,
+          "ipHist": 0.120,
+          "racesHist": 2070
+        }
+      },
+      "distances": {
+        "1000": {
+          "wsL200": 0.155,
+          "ipL200": 0.138,
+          "racesL200": 35,
+          "wsHist": 0.148,
+          "ipHist": 0.135,
+          "racesHist": 2450
+        },
+        "1100-1500": {
+          "wsL200": 0.130,
+          "ipL200": 0.128,
+          "racesL200": 118,
+          "wsHist": 0.132,
+          "ipHist": 0.130,
+          "racesHist": 4980
+        },
+        "1600+": {
+          "wsL200": 0.110,
+          "ipL200": 0.122,
+          "racesL200": 38,
+          "wsHist": 0.118,
+          "ipHist": 0.125,
+          "racesHist": 1490
+        }
+      },
+      "estado": {
+        "normalWsHist": 0.131,
+        "normalWsL200": 0.135,
+        "notNormalWsHist": 0.128,
+        "notNormalWsL200": 0.122
+      },
+      "horseQuality": {
+        "avgQuality": 88,
+        "qualityPctile": 62,
+        "avgAge": 4.1,
+        "agePctile": 55,
+        "avgDistance": 1198,
+        "distancePctile": 42
+      },
+      "timeSeries": [
+        { "date": "2022-03-01", "wsL200": 0.120, "ipL200": 0.122, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 0.99, "hrrL200": 1.00, "racesL3m": 58, "wae": -0.002, "prizesRelative": 0.98 },
+        { "date": "2022-06-01", "wsL200": 0.125, "ipL200": 0.124, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.00, "hrrL200": 1.00, "racesL3m": 62, "wae": 0.001, "prizesRelative": 1.02 },
+        { "date": "2022-09-01", "wsL200": 0.130, "ipL200": 0.126, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 65, "wae": 0.004, "prizesRelative": 1.05 },
+        { "date": "2022-12-01", "wsL200": 0.128, "ipL200": 0.128, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.00, "hrrL200": 1.00, "racesL3m": 63, "wae": 0.000, "prizesRelative": 1.00 },
+        { "date": "2023-03-01", "wsL200": 0.135, "ipL200": 0.129, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.02, "hrrL200": 1.01, "racesL3m": 67, "wae": 0.006, "prizesRelative": 1.08 },
+        { "date": "2023-06-01", "wsL200": 0.132, "ipL200": 0.130, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 65, "wae": 0.002, "prizesRelative": 1.04 },
+        { "date": "2023-09-01", "wsL200": 0.138, "ipL200": 0.128, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.02, "hrrL200": 1.01, "racesL3m": 68, "wae": 0.010, "prizesRelative": 1.12 },
+        { "date": "2023-12-01", "wsL200": 0.140, "ipL200": 0.127, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.03, "hrrL200": 1.01, "racesL3m": 70, "wae": 0.013, "prizesRelative": 1.15 },
+        { "date": "2024-03-01", "wsL200": 0.132, "ipL200": 0.128, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 66, "wae": 0.004, "prizesRelative": 1.06 },
+        { "date": "2024-06-01", "wsL200": 0.128, "ipL200": 0.127, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.00, "hrrL200": 1.01, "racesL3m": 64, "wae": 0.001, "prizesRelative": 1.02 },
+        { "date": "2024-09-01", "wsL200": 0.135, "ipL200": 0.129, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 67, "wae": 0.006, "prizesRelative": 1.08 },
+        { "date": "2024-12-01", "wsL200": 0.132, "ipL200": 0.128, "wsL200Mean": 0.100, "wsL200P90": 0.175, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 65, "wae": 0.004, "prizesRelative": 1.05 }
+      ],
+      "combos": {
+        "trainers": [
+          { "name": "Miguel Ferraris", "races": 108, "wsCombo": 14.2, "gapCombo": 0.5, "wsComboVsOther": -1.2, "gapComboVsOther": -0.5, "hrrCombo": 1.04, "hrrComboVsOther": 0.04 },
+          { "name": "Alfredo Gaitan", "races": 72, "wsCombo": 16.8, "gapCombo": 2.2, "wsComboVsOther": 2.0, "gapComboVsOther": 1.0, "hrrCombo": 1.10, "hrrComboVsOther": 0.09 },
+          { "name": "Daniel Bello", "races": 48, "wsCombo": 11.0, "gapCombo": -3.2, "wsComboVsOther": -5.5, "gapComboVsOther": -2.8, "hrrCombo": 0.92, "hrrComboVsOther": -0.09 }
+        ],
+        "sires": [
+          { "name": "Indy Point", "races": 75, "wsCombo": 15.5, "gapCombo": 1.2, "wsComboVsOther": 0.8, "gapComboVsOther": 0.4, "hrrCombo": 1.06, "hrrComboVsOther": 0.05 },
+          { "name": "Noble Tune", "races": 52, "wsCombo": 17.8, "gapCombo": 3.5, "wsComboVsOther": 2.8, "gapComboVsOther": 1.8, "hrrCombo": 1.14, "hrrComboVsOther": 0.13 }
+        ],
+        "stables": [
+          { "name": "Haras La Pasion", "races": 95, "wsCombo": 15.2, "gapCombo": 1.0, "wsComboVsOther": 0.5, "gapComboVsOther": 0.2, "hrrCombo": 1.05, "hrrComboVsOther": 0.04 },
+          { "name": "Stud Firmamento", "races": 62, "wsCombo": 18.5, "gapCombo": 4.0, "wsComboVsOther": 3.5, "gapComboVsOther": 2.0, "hrrCombo": 1.16, "hrrComboVsOther": 0.14 }
+        ]
+      },
+      "rankings": {
+        "1000": { "rank": 4, "wsInDist": 15.5, "races": 2450, "wsDiffVsOverall": 2.5, "gapToImplied": 1.5 },
+        "1100-1500": { "rank": 3, "wsInDist": 13.0, "races": 4980, "wsDiffVsOverall": -0.1, "gapToImplied": 0.2 },
+        "1600+": { "rank": 9, "wsInDist": 11.8, "races": 1490, "wsDiffVsOverall": -1.3, "gapToImplied": -0.5 }
+      },
+      "calibration": {},
+      "improvement": {
+        "ratio": 1.01,
+        "newHorsesReceived": 1820,
+        "shareNewHorses": 0.48
+      }
+    }
+  ],
+  "global": {
+    "topRankings": {
+      "1000": [],
+      "1100-1500": [],
+      "1600+": []
+    },
+    "horseQualityDistribution": []
+  }
+}

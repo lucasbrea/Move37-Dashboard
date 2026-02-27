@@ -263,6 +263,12 @@ const categories = [
     path:'/Auctions',
     description: ''
   },
+  {
+    name: 'Conformation',
+    image: '/foals_dashboard.jpg',
+    path: '/Conformation',
+    description: ''
+  },
 ];
 
 export default function HomePage() {
