@@ -11,6 +11,17 @@ interface AuctionEvent {
   source: string;
 }
 
+const SOURCE_BASE_URLS: Record<string, string> = {
+  bullrich:  'https://antoniobullrich.com',
+  argsales:  'https://arg-sales.com',
+};
+
+function resolveUrl(url: string, source: string): string {
+  if (!url || url.startsWith('http')) return url;
+  const base = SOURCE_BASE_URLS[source];
+  return base ? base + url : url;
+}
+
 const SOURCE_STYLES: Record<string, { pill: string; dot: string; label: string }> = {
   fallowremates: { pill: 'bg-blue-500/20 text-blue-300 border border-blue-500/30',   dot: 'bg-blue-400',    label: 'Fallow'    },
   bullrich:      { pill: 'bg-amber-500/20 text-amber-300 border border-amber-500/30', dot: 'bg-amber-400',   label: 'Bullrich'  },
@@ -73,7 +84,14 @@ function parseCSV(text: string): AuctionEvent[] {
     endDay.setHours(23, 59, 59, 999);
     if (endDay < today) continue;
 
-    events.push({ name, link, catalog, start, end, source });
+    events.push({
+      name,
+      link:    resolveUrl(link, source),
+      catalog: resolveUrl(catalog, source),
+      start,
+      end,
+      source,
+    });
   }
 
   return events.sort((a, b) => a.start.getTime() - b.start.getTime());
