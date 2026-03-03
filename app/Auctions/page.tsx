@@ -44,10 +44,10 @@ export default function MyPage() {
   const tabs = [
     { id: 'calendar', label: 'Calendar' },
     { id: 'reports', label: 'Reports' },
-    { id: 'dams', label: 'Dams' },
-    { id: 'horses', label: 'Horses' },
-    { id: 'past', label: 'Past Auctions' },
-    { id: 'summary', label: 'Summary' }
+    // { id: 'dams', label: 'Dams' },
+    // { id: 'horses', label: 'Horses' },
+    // { id: 'past', label: 'Past Auctions' },
+    // { id: 'summary', label: 'Summary' }
   ];
 
   const categories = ['all', ...Array.from(new Set(reports.map(report => report.category)))];
