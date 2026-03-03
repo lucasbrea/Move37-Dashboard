@@ -7,6 +7,7 @@ import AuctionTable from '../components/dams_auctions';
 import AuctionTableHorses from '../components/horses_auctions';
 import AuctionTablePastAuctions from '../components/past_auctions';
 import PlotGenerator from '../components/summary';
+import AuctionCalendar from '../components/AuctionCalendar';
 import CategoryFilter from '../components/CategoryFilter';
 import AddReportButton from '../components/AddReportButton';
 import ReportCard from '../components/ReportCard';
@@ -14,7 +15,7 @@ import EditReportModal from '../components/EditReportModal';
 import { useReports, Report } from '../../hooks/useReports';
 
 export default function MyPage() {
-  const [activeTab, setActiveTab] = useState('reports');
+  const [activeTab, setActiveTab] = useState('calendar');
   const [dams, setDams] = useState([]);
   const [horses, setHorses] = useState([]);
   const [auctions, setAuctions] = useState([]);
@@ -41,6 +42,7 @@ export default function MyPage() {
   }, []);
 
   const tabs = [
+    { id: 'calendar', label: 'Calendar' },
     { id: 'reports', label: 'Reports' },
     { id: 'dams', label: 'Dams' },
     { id: 'horses', label: 'Horses' },
@@ -129,6 +131,9 @@ export default function MyPage() {
 
         {/* Tab Content */}
         <div className="mt-8">
+          {activeTab === 'calendar' && (
+            <AuctionCalendar />
+          )}
           {activeTab === 'dams' && (
             <div>
               <h2 className="text-2xl font-light text-gray-100 mb-4">Dams up for auction</h2>

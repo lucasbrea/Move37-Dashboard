@@ -203,7 +203,7 @@ function BreakdownTable({
       <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
         {title}
         <span className="ml-2 text-gray-600 normal-case font-normal">
-          ({useHist ? 'Historical' : 'L200'})
+          ({useHist ? 'Historical' : viewMode === 'l200' ? 'L200' : `L200 · ${viewMode.toUpperCase()} n/a`})
         </span>
       </h3>
       <table className="w-full text-sm">
@@ -411,7 +411,17 @@ const CHART_TOOLTIP_STYLE = {
   fontSize: '12px',
 };
 
-function TimeSeriesChart({ timeSeries }: { timeSeries: TimePoint[] }) {
+function TimeSeriesChart({
+  timeSeries,
+  viewMode,
+  wsHist,
+  ipHist,
+}: {
+  timeSeries: TimePoint[];
+  viewMode: ViewMode;
+  wsHist: number;
+  ipHist: number;
+}) {
   const chartData = useMemo(
     () =>
       timeSeries.slice(-24).map((p) => ({
@@ -423,6 +433,62 @@ function TimeSeriesChart({ timeSeries }: { timeSeries: TimePoint[] }) {
       })),
     [timeSeries]
   );
+
+  // Historical mode: the timeSeries only carries L200 rolling points.
+  // Show the overall hist values as flat reference lines instead.
+  if (viewMode === 'hist') {
+    const histChartData = timeSeries.slice(-24).map((p) => ({
+      date: p.date.slice(0, 7),
+      ws: +(wsHist * 100).toFixed(2),
+      ip: +(ipHist * 100).toFixed(2),
+    }));
+
+    if (!histChartData.length) return null;
+
+    return (
+      <div className="bg-white/5 border border-white/10 p-4">
+        <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-1">
+          Win Share vs Model — Historical
+        </h3>
+        <p className="text-xs text-gray-600 mb-4">
+          Overall historical averages (flat reference — per-date hist series not available)
+        </p>
+        <ResponsiveContainer width="100%" height={240}>
+          <LineChart
+            data={histChartData}
+            margin={{ top: 5, right: 20, left: 0, bottom: 5 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
+            <XAxis
+              dataKey="date"
+              tick={{ fill: '#6b7280', fontSize: 11 }}
+              tickLine={false}
+              axisLine={{ stroke: 'rgba(255,255,255,0.08)' }}
+            />
+            <YAxis
+              tick={{ fill: '#6b7280', fontSize: 11 }}
+              tickLine={false}
+              axisLine={false}
+              tickFormatter={(v) => v + '%'}
+              domain={['auto', 'auto']}
+              width={42}
+            />
+            <Tooltip
+              contentStyle={CHART_TOOLTIP_STYLE}
+              labelStyle={{ color: '#e5e7eb', marginBottom: '4px' }}
+              formatter={(v: number | undefined, name: string | undefined) => [
+                v != null ? `${v.toFixed(1)}%` : '—',
+                name ?? '',
+              ]}
+            />
+            <Legend wrapperStyle={{ fontSize: '11px', color: '#9ca3af', paddingTop: '8px' }} />
+            <Line type="monotone" dataKey="ip" name="Model (IP)" stroke="#6b7280" strokeWidth={1.5} strokeDasharray="6 3" dot={false} />
+            <Line type="monotone" dataKey="ws" name="Win Share" stroke="#60a5fa" strokeWidth={2} strokeDasharray="6 3" dot={false} />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+    );
+  }
 
   if (!chartData.length) return null;
 
@@ -460,9 +526,9 @@ function TimeSeriesChart({ timeSeries }: { timeSeries: TimePoint[] }) {
           <Tooltip
             contentStyle={CHART_TOOLTIP_STYLE}
             labelStyle={{ color: '#e5e7eb', marginBottom: '4px' }}
-            formatter={(v: number, name: string) => [
-              `${v.toFixed(1)}%`,
-              name,
+            formatter={(v: number | undefined, name: string | undefined) => [
+              v != null ? `${v.toFixed(1)}%` : '—',
+              name ?? '',
             ]}
           />
           <Legend
@@ -657,7 +723,12 @@ function JockeyDetail({
 
       {/* ── Time Series ── */}
       {jockey.timeSeries?.length > 0 && (
-        <TimeSeriesChart timeSeries={jockey.timeSeries} />
+        <TimeSeriesChart
+          timeSeries={jockey.timeSeries}
+          viewMode={viewMode}
+          wsHist={jockey.winShares?.hist ?? 0}
+          ipHist={jockey.impliedProbs?.hist ?? 0}
+        />
       )}
 
       {/* ── Breakdowns ── */}
@@ -795,17 +866,23 @@ export default function JockeyAnalytics() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/data/jockeys.json')
+    fetch('/data/jockey_data.json')
       .then((r) => {
         if (!r.ok)
           throw new Error(
-            `HTTP ${r.status} — place your JSON at /public/data/jockeys.json`
+            `HTTP ${r.status} — place your JSON at /public/data/jockey_data.json`
           );
         return r.json();
       })
       .then((d: JockeyData) => {
-        setData(d);
-        if (d.jockeys?.[0]) setSelectedId(d.jockeys[0].id);
+        // Normalize IDs — the export sets every jockey id to 0, so we assign
+        // a stable index-based ID to make selection work correctly.
+        const normalized: JockeyData = {
+          ...d,
+          jockeys: d.jockeys.map((j, i) => ({ ...j, id: i })),
+        };
+        setData(normalized);
+        if (normalized.jockeys.length > 0) setSelectedId(0);
         setLoading(false);
       })
       .catch((e) => {
