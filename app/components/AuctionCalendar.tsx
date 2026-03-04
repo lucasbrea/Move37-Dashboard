@@ -23,9 +23,10 @@ function resolveUrl(url: string, source: string): string {
 }
 
 const SOURCE_STYLES: Record<string, { pill: string; dot: string; label: string }> = {
-  fallowremates: { pill: 'bg-blue-500/20 text-blue-300 border border-blue-500/30',   dot: 'bg-blue-400',    label: 'Fallow'    },
-  bullrich:      { pill: 'bg-amber-500/20 text-amber-300 border border-amber-500/30', dot: 'bg-amber-400',   label: 'Bullrich'  },
-  argsales:      { pill: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30', dot: 'bg-emerald-400', label: 'ArgSales'  },
+  fallowremates:   { pill: 'bg-blue-500/20 text-blue-300 border border-blue-500/30',     dot: 'bg-blue-400',    label: 'Fallow'         },
+  bullrich:        { pill: 'bg-amber-500/20 text-amber-300 border border-amber-500/30',  dot: 'bg-amber-400',   label: 'Bullrich'       },
+  argsales:        { pill: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30', dot: 'bg-emerald-400', label: 'ArgSales'  },
+  martinzubeldia:  { pill: 'bg-violet-500/20 text-violet-300 border border-violet-500/30', dot: 'bg-violet-400', label: 'M. Zubeldia'  },
 };
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
