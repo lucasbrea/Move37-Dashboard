@@ -9,6 +9,7 @@ interface AuctionEvent {
   start: Date;
   end: Date;
   source: string;
+  prsLink: string;
 }
 
 const SOURCE_BASE_URLS: Record<string, string> = {
@@ -72,6 +73,7 @@ function parseCSV(text: string): AuctionEvent[] {
     const start   = parseDate(cols[3]);
     const end     = parseDate(cols[4]);
     const source  = cols[5].trim();
+    const prsLink = cols[6]?.trim() ?? '';
 
     if (!name || !start || !end) continue;
 
@@ -92,6 +94,7 @@ function parseCSV(text: string): AuctionEvent[] {
       start,
       end,
       source,
+      prsLink,
     });
   }
 
@@ -121,11 +124,16 @@ function fmtDate(date: Date, opts: Intl.DateTimeFormatOptions) {
 
 function EventPill({ event, onClick, active }: { event: AuctionEvent; onClick: () => void; active: boolean }) {
   const s = SOURCE_STYLES[event.source] ?? SOURCE_STYLES.fallowremates;
+  const cls = `w-full text-left px-1.5 py-0.5 rounded text-[10px] leading-tight truncate border transition-opacity ${s.pill} ${active ? 'ring-1 ring-white/40' : 'hover:opacity-80'}`;
+  if (event.link) {
+    return (
+      <a href={event.link} target="_blank" rel="noopener noreferrer" className={cls}>
+        {event.name}
+      </a>
+    );
+  }
   return (
-    <button
-      onClick={onClick}
-      className={`w-full text-left px-1.5 py-0.5 rounded text-[10px] leading-tight truncate border transition-opacity ${s.pill} ${active ? 'ring-1 ring-white/40' : 'hover:opacity-80'}`}
-    >
+    <button onClick={onClick} className={cls}>
       {event.name}
     </button>
   );
@@ -346,6 +354,11 @@ export default function AuctionCalendar() {
                       {ev.catalog && (
                         <a href={ev.catalog} className="text-xs text-gray-500 hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                           Catalogue
+                        </a>
+                      )}
+                      {ev.prsLink && (
+                        <a href={ev.prsLink} className="text-xs text-violet-400 hover:text-violet-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                          PRS →
                         </a>
                       )}
                     </div>
