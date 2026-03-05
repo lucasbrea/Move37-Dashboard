@@ -17,9 +17,14 @@ import {
 type ViewMode = 'l100' | 'l200' | 'l400' | 'l500' | 'hist';
 
 interface BreakdownEntry {
+  wsL100: number;
+  ipL100: number;
   wsL200: number;
   ipL200: number;
-  racesL200: number;
+  wsL400: number;
+  ipL400: number;
+  wsL500: number;
+  ipL500: number;
   wsHist: number;
   ipHist: number;
   racesHist: number;
@@ -194,7 +199,8 @@ function BreakdownTable({
   data: Record<string, BreakdownEntry>;
   viewMode: ViewMode;
 }) {
-  const useHist = viewMode === 'hist';
+  const wsKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100', l200: 'wsL200', l400: 'wsL400', l500: 'wsL500', hist: 'wsHist' };
+  const ipKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100', l200: 'ipL200', l400: 'ipL400', l500: 'ipL500', hist: 'ipHist' };
   const entries = Object.entries(data);
   if (entries.length === 0) return null;
 
@@ -203,7 +209,7 @@ function BreakdownTable({
       <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
         {title}
         <span className="ml-2 text-gray-600 normal-case font-normal">
-          ({useHist ? 'Historical' : viewMode === 'l200' ? 'L200' : `L200 · ${viewMode.toUpperCase()} n/a`})
+          ({viewMode === 'hist' ? 'Historical' : viewMode.toUpperCase()})
         </span>
       </h3>
       <table className="w-full text-sm">
@@ -218,9 +224,9 @@ function BreakdownTable({
         </thead>
         <tbody>
           {entries.map(([key, val]) => {
-            const ws = useHist ? val.wsHist : val.wsL200;
-            const ip = useHist ? val.ipHist : val.ipL200;
-            const races = useHist ? val.racesHist : val.racesL200;
+            const ws = val[wsKey[viewMode]] as number;
+            const ip = val[ipKey[viewMode]] as number;
+            const races = val.racesHist;
             const gap = ws - ip;
             return (
               <tr
@@ -242,7 +248,7 @@ function BreakdownTable({
                   {pp(gap)}
                 </td>
                 <td className="text-gray-500 py-2 pl-2 tabular-nums">
-                  {races.toLocaleString()}
+                  {(races ?? 0).toLocaleString()}
                 </td>
               </tr>
             );

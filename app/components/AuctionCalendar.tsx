@@ -57,9 +57,6 @@ function parseDate(str: string): Date | null {
 // ─── CSV parsing ─────────────────────────────────────────────────────────────
 
 function parseCSV(text: string): AuctionEvent[] {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
   const lines = text.trim().split('\n').slice(1); // skip header
   const seen  = new Set<string>();
   const events: AuctionEvent[] = [];
@@ -81,11 +78,6 @@ function parseCSV(text: string): AuctionEvent[] {
     const key = `${name}|${cols[3].trim()}`;
     if (seen.has(key)) continue;
     seen.add(key);
-
-    // Drop events whose end date is before today
-    const endDay = new Date(end);
-    endDay.setHours(23, 59, 59, 999);
-    if (endDay < today) continue;
 
     events.push({
       name,
