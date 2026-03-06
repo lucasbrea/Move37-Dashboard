@@ -5,9 +5,8 @@ import { useEffect, useState } from 'react';
 import DataTable, { TableColumn } from 'react-data-table-component';
 import AuctionTable from '../components/dams_auctions';
 import AuctionTableHorses from '../components/horses_auctions';
-import AuctionTablePastAuctions from '../components/past_auctions';
 import PlotGenerator from '../components/summary';
-import AuctionCalendar from '../components/AuctionCalendar';
+import AuctionCalendar, { PastAuctionsList } from '../components/AuctionCalendar';
 import CategoryFilter from '../components/CategoryFilter';
 import AddReportButton from '../components/AddReportButton';
 import ReportCard from '../components/ReportCard';
@@ -18,7 +17,6 @@ export default function MyPage() {
   const [activeTab, setActiveTab] = useState('calendar');
   const [dams, setDams] = useState([]);
   const [horses, setHorses] = useState([]);
-  const [auctions, setAuctions] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [editingReport, setEditingReport] = useState<Report | null>(null);
@@ -31,22 +29,20 @@ export default function MyPage() {
     Promise.all([
       fetch('https://auction-dashboard.onrender.com/api/data/dams').then(res => res.json()),
       fetch('https://auction-dashboard.onrender.com/api/data/horses').then(res => res.json()),
-      fetch('https://auction-dashboard.onrender.com/api/data/past_auctions').then(res => res.json())
     ])
-    .then(([damsData, horsesData,auctionsData]) => {
+    .then(([damsData, horsesData]) => {
       setDams(damsData);
       setHorses(horsesData);
-      setAuctions(auctionsData);
     })
     .catch(err => console.error("Fetch error:", err));
   }, []);
 
   const tabs = [
     { id: 'calendar', label: 'Calendar' },
+    { id: 'past', label: 'Past Auctions' },
     { id: 'reports', label: 'Reports' },
     // { id: 'dams', label: 'Dams' },
     // { id: 'horses', label: 'Horses' },
-    // { id: 'past', label: 'Past Auctions' },
     // { id: 'summary', label: 'Summary' }
   ];
 
@@ -147,10 +143,7 @@ export default function MyPage() {
             </div>
           )}
           {activeTab === 'past' && (
-            <div>
-              <h2 className="text-2xl font-light text-gray-100 mb-4">Past Auctions</h2>
-              <AuctionTablePastAuctions data={auctions}/>
-            </div>
+            <PastAuctionsList />
           )}
           {activeTab === 'summary' && (
             <div>

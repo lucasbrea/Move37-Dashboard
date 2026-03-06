@@ -597,9 +597,13 @@ function JockeySidebar({
 
   const filtered = useMemo(
     () =>
-      jockeys.filter((j) =>
-        j.name.toLowerCase().includes(search.toLowerCase())
-      ),
+      jockeys
+        .filter((j) => j.name.toLowerCase().includes(search.toLowerCase()))
+        .sort((a, b) => {
+          const gapA = (a.winShares?.l200 ?? 0) - (a.impliedProbs?.l200 ?? 0);
+          const gapB = (b.winShares?.l200 ?? 0) - (b.impliedProbs?.l200 ?? 0);
+          return gapB - gapA;
+        }),
     [jockeys, search]
   );
 
@@ -625,7 +629,7 @@ function JockeySidebar({
 
       {/* List */}
       <div className="overflow-y-auto flex-1">
-        {filtered.map((j) => {
+        {filtered.map((j, i) => {
           const ws = j.winShares?.l200 ?? 0;
           const ip = j.impliedProbs?.l200 ?? 0;
           const gap = ws - ip;
@@ -643,7 +647,7 @@ function JockeySidebar({
             >
               <div className="flex items-center gap-2">
                 <span className="text-gray-600 text-xs w-4 text-right flex-shrink-0 tabular-nums">
-                  {j.rank}.
+                  {i + 1}.
                 </span>
                 <span className="text-gray-100 text-sm font-medium truncate">
                   {j.surname}
@@ -668,10 +672,12 @@ function JockeySidebar({
 
 function JockeyDetail({
   jockey,
+  gapRank,
   viewMode,
   onViewModeChange,
 }: {
   jockey: Jockey;
+  gapRank: number;
   viewMode: ViewMode;
   onViewModeChange: (m: ViewMode) => void;
 }) {
@@ -695,7 +701,7 @@ function JockeyDetail({
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <div className="text-xs text-gray-600 uppercase tracking-wider mb-1">
-            Rank #{jockey.rank}
+            Rank #{gapRank}
           </div>
           <h2 className="text-2xl font-light text-white">{jockey.name}</h2>
           <p className="text-xs text-gray-500 mt-1">
@@ -902,6 +908,16 @@ export default function JockeyAnalytics() {
     [data, selectedId]
   );
 
+  const gapRank = useMemo(() => {
+    if (!data || selectedId === null) return 1;
+    const sorted = [...data.jockeys].sort((a, b) => {
+      const gapA = (a.winShares?.l200 ?? 0) - (a.impliedProbs?.l200 ?? 0);
+      const gapB = (b.winShares?.l200 ?? 0) - (b.impliedProbs?.l200 ?? 0);
+      return gapB - gapA;
+    });
+    return sorted.findIndex((j) => j.id === selectedId) + 1;
+  }, [data, selectedId]);
+
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20 text-gray-500 text-sm">
@@ -935,6 +951,7 @@ export default function JockeyAnalytics() {
         {selectedJockey ? (
           <JockeyDetail
             jockey={selectedJockey}
+            gapRank={gapRank}
             viewMode={viewMode}
             onViewModeChange={setViewMode}
           />
