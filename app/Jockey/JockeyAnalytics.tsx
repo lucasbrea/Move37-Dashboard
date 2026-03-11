@@ -27,6 +27,10 @@ interface BreakdownEntry {
   ipL500: number;
   wsHist: number;
   ipHist: number;
+  racesL100: number;
+  racesL200: number;
+  racesL400: number;
+  racesL500: number;
   racesHist: number;
 }
 
@@ -199,8 +203,9 @@ function BreakdownTable({
   data: Record<string, BreakdownEntry>;
   viewMode: ViewMode;
 }) {
-  const wsKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100', l200: 'wsL200', l400: 'wsL400', l500: 'wsL500', hist: 'wsHist' };
-  const ipKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100', l200: 'ipL200', l400: 'ipL400', l500: 'ipL500', hist: 'ipHist' };
+  const wsKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100',    l200: 'wsL200',    l400: 'wsL400',    l500: 'wsL500',    hist: 'wsHist'    };
+  const ipKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100',    l200: 'ipL200',    l400: 'ipL400',    l500: 'ipL500',    hist: 'ipHist'    };
+  const racesKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'racesL100', l200: 'racesL200', l400: 'racesL400', l500: 'racesL500', hist: 'racesHist' };
   const entries = Object.entries(data);
   if (entries.length === 0) return null;
 
@@ -226,7 +231,7 @@ function BreakdownTable({
           {entries.map(([key, val]) => {
             const ws = val[wsKey[viewMode]] as number;
             const ip = val[ipKey[viewMode]] as number;
-            const races = val.racesHist;
+            const races = val[racesKey[viewMode]] as number;
             const gap = ws - ip;
             return (
               <tr
