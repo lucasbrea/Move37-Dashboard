@@ -217,7 +217,7 @@ function BreakdownTable({
           <tr className="border-b border-white/10 text-right">
             <th className="text-left text-gray-500 font-normal py-1.5 pr-2" />
             <th className="text-gray-500 font-normal py-1.5 px-2">WS</th>
-            <th className="text-gray-500 font-normal py-1.5 px-2">IP</th>
+            <th className="text-gray-500 font-normal py-1.5 px-2">Public</th>
             <th className="text-gray-500 font-normal py-1.5 px-2">Gap</th>
             <th className="text-gray-500 font-normal py-1.5 pl-2">Races</th>
           </tr>
@@ -361,7 +361,7 @@ function RankingsTable({
             <th className="text-gray-500 font-normal py-1.5 px-2">WS%</th>
             <th className="text-gray-500 font-normal py-1.5 px-2">vs Overall</th>
             <th className="text-gray-500 font-normal py-1.5 pl-2">
-              Gap to Model
+              Gap to Public
             </th>
           </tr>
         </thead>
@@ -454,7 +454,7 @@ function TimeSeriesChart({
     return (
       <div className="bg-white/5 border border-white/10 p-4">
         <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-1">
-          Win Share vs Model — Historical
+          Win Share vs Public Odds — Historical
         </h3>
         <p className="text-xs text-gray-600 mb-4">
           Overall historical averages (flat reference — per-date hist series not available)
@@ -488,7 +488,7 @@ function TimeSeriesChart({
               ]}
             />
             <Legend wrapperStyle={{ fontSize: '11px', color: '#9ca3af', paddingTop: '8px' }} />
-            <Line type="monotone" dataKey="ip" name="Model (IP)" stroke="#6b7280" strokeWidth={1.5} strokeDasharray="6 3" dot={false} />
+            <Line type="monotone" dataKey="ip" name="Public Odds" stroke="#6b7280" strokeWidth={1.5} strokeDasharray="6 3" dot={false} />
             <Line type="monotone" dataKey="ws" name="Win Share" stroke="#60a5fa" strokeWidth={2} strokeDasharray="6 3" dot={false} />
           </LineChart>
         </ResponsiveContainer>
@@ -501,7 +501,7 @@ function TimeSeriesChart({
   return (
     <div className="bg-white/5 border border-white/10 p-4">
       <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-1">
-        Win Share vs Model — L200 rolling
+        Win Share vs Public Odds — L200 rolling
       </h3>
       <p className="text-xs text-gray-600 mb-4">
         Last {chartData.length} data points
@@ -563,7 +563,7 @@ function TimeSeriesChart({
           <Line
             type="monotone"
             dataKey="ip"
-            name="Model (IP)"
+            name="Public Odds"
             stroke="#6b7280"
             strokeWidth={1.5}
             dot={false}
@@ -719,8 +719,8 @@ function JockeyDetail({
           value={pct(ws)}
           sub={`Window: ${viewMode.toUpperCase()}`}
         />
-        <StatCard label="Implied Prob" value={pct(ip)} />
-        <StatCard label="Gap vs Model" value={pp(gap)} gap={gap} />
+        <StatCard label="Public Odds" value={pct(ip)} />
+        <StatCard label="Gap vs Public" value={pp(gap)} gap={gap} />
         <StatCard
           label="HRR"
           value={(jockey.hrr?.l200 ?? 0).toFixed(2)}
