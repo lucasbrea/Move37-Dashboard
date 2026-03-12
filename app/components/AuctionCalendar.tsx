@@ -10,6 +10,7 @@ interface AuctionEvent {
   end: Date;
   source: string;
   prsLink: string;
+  conformationLink: string;
 }
 
 const SOURCE_BASE_URLS: Record<string, string> = {
@@ -70,7 +71,8 @@ function parseCSV(text: string): AuctionEvent[] {
     const start   = parseDate(cols[3]);
     const end     = parseDate(cols[4]);
     const source  = cols[5].trim();
-    const prsLink = cols[6]?.trim() ?? '';
+    const prsLink         = cols[6]?.trim() ?? '';
+    const conformationLink = cols[7]?.trim() ?? '';
 
     if (!name || !start || !end) continue;
 
@@ -87,6 +89,7 @@ function parseCSV(text: string): AuctionEvent[] {
       end,
       source,
       prsLink,
+      conformationLink,
     });
   }
 
@@ -299,6 +302,11 @@ export default function AuctionCalendar() {
                       Download Catalogue
                     </a>
                   )}
+                  {selectedEvent.conformationLink && (
+                    <a href={selectedEvent.conformationLink} className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                      Conformation →
+                    </a>
+                  )}
                 </div>
               </div>
               <button onClick={() => setSelectedEvent(null)} className="text-gray-600 hover:text-gray-300 text-xl leading-none flex-shrink-0">×</button>
@@ -351,6 +359,11 @@ export default function AuctionCalendar() {
                       {ev.prsLink && (
                         <a href={ev.prsLink} className="text-xs text-violet-400 hover:text-violet-300 transition-colors" target="_blank" rel="noopener noreferrer">
                           PRS →
+                        </a>
+                      )}
+                      {ev.conformationLink && (
+                        <a href={ev.conformationLink} className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                          Conformation →
                         </a>
                       )}
                     </div>
@@ -457,6 +470,11 @@ export function PastAuctionsList() {
                     {ev.prsLink && (
                       <a href={ev.prsLink} className="text-xs text-violet-400 hover:text-violet-300 transition-colors" target="_blank" rel="noopener noreferrer">
                         PRS →
+                      </a>
+                    )}
+                    {ev.conformationLink && (
+                      <a href={ev.conformationLink} className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                        Conformation →
                       </a>
                     )}
                   </div>
