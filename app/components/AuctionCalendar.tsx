@@ -312,7 +312,7 @@ export default function AuctionCalendar() {
                   )}
                   {selectedEvent.pbrsLink && (
                     <a href={selectedEvent.pbrsLink} className="text-xs text-orange-400 hover:text-orange-300 transition-colors" target="_blank" rel="noopener noreferrer">
-                      PBRS →
+                      Dams →
                     </a>
                   )}
                 </div>
@@ -376,7 +376,7 @@ export default function AuctionCalendar() {
                       )}
                       {ev.pbrsLink && (
                         <a href={ev.pbrsLink} className="text-xs text-orange-400 hover:text-orange-300 transition-colors" target="_blank" rel="noopener noreferrer">
-                          PBRS →
+                          Dams →
                         </a>
                       )}
                     </div>
@@ -492,7 +492,7 @@ export function PastAuctionsList() {
                     )}
                     {ev.pbrsLink && (
                       <a href={ev.pbrsLink} className="text-xs text-orange-400 hover:text-orange-300 transition-colors" target="_blank" rel="noopener noreferrer">
-                        PBRS →
+                        Dams →
                       </a>
                     )}
                   </div>
