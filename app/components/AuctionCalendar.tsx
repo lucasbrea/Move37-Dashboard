@@ -30,6 +30,7 @@ const SOURCE_STYLES: Record<string, { pill: string; dot: string; label: string }
   bullrich:        { pill: 'bg-amber-500/20 text-amber-300 border border-amber-500/30',  dot: 'bg-amber-400',   label: 'Bullrich'       },
   argsales:        { pill: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30', dot: 'bg-emerald-400', label: 'ArgSales'  },
   martinzubeldia:  { pill: 'bg-violet-500/20 text-violet-300 border border-violet-500/30', dot: 'bg-violet-400', label: 'M. Zubeldia'  },
+  blacktype:       { pill: 'bg-rose-500/20 text-rose-300 border border-rose-500/30',       dot: 'bg-rose-400',    label: 'Blacktype'      },
 };
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];

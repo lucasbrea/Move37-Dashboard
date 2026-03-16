@@ -279,20 +279,20 @@ function ComboTable({
       <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
         {title} Combos
       </h3>
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm">
+      <table className="w-full text-xs">
           <thead>
             <tr className="border-b border-white/10 text-right">
-              <th className="text-left text-gray-500 font-normal py-1.5 pr-2">
-                Name
+              <th className="text-left text-gray-500 font-normal py-1.5 pr-2">Name</th>
+              <th className="text-gray-500 font-normal py-1.5 px-1">Races</th>
+              <th className="text-gray-500 font-normal py-1.5 px-1">WS%</th>
+              <th className="text-gray-500 font-normal py-1.5 px-1 leading-tight text-right">
+                <span className="block">Gap to</span>
+                <span className="block">Public</span>
               </th>
-              <th className="text-gray-500 font-normal py-1.5 px-2">Races</th>
-              <th className="text-gray-500 font-normal py-1.5 px-2">WS%</th>
-              <th className="text-gray-500 font-normal py-1.5 px-2">Gap</th>
-              <th className="text-gray-500 font-normal py-1.5 px-2">
-                vs Others
+              <th className="text-gray-500 font-normal py-1.5 pl-1 leading-tight text-right">
+                <span className="block">Gap to</span>
+                <span className="block">Others</span>
               </th>
-              <th className="text-gray-500 font-normal py-1.5 pl-2">HRR</th>
             </tr>
           </thead>
           <tbody>
@@ -301,114 +301,21 @@ function ComboTable({
                 key={i}
                 className="border-b border-white/5 hover:bg-white/5 text-right transition-colors"
               >
-                <td className="text-gray-200 text-left py-2 pr-2 truncate max-w-[110px]">
+                <td className="text-gray-200 text-left py-2 pr-2 max-w-[90px] truncate" title={row.name}>
                   {row.name}
                 </td>
-                <td className="text-gray-500 py-2 px-2 tabular-nums">
-                  {row.races}
+                <td className="text-gray-500 py-2 px-1 tabular-nums">{row.races}</td>
+                <td className="text-gray-200 py-2 px-1 tabular-nums">{row.wsCombo.toFixed(1)}%</td>
+                <td className={`py-2 px-1 tabular-nums ${row.gapCombo >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {row.gapCombo >= 0 ? '+' : ''}{row.gapCombo.toFixed(1)}
                 </td>
-                <td className="text-gray-200 py-2 px-2 tabular-nums">
-                  {row.wsCombo.toFixed(1)}%
-                </td>
-                <td
-                  className={`py-2 px-2 tabular-nums ${
-                    row.gapCombo >= 0 ? 'text-green-400' : 'text-red-400'
-                  }`}
-                >
-                  {row.gapCombo >= 0 ? '+' : ''}
-                  {row.gapCombo.toFixed(1)}
-                </td>
-                <td
-                  className={`py-2 px-2 tabular-nums ${
-                    row.wsComboVsOther >= 0 ? 'text-green-400' : 'text-red-400'
-                  }`}
-                >
-                  {row.wsComboVsOther >= 0 ? '+' : ''}
-                  {row.wsComboVsOther.toFixed(1)}
-                </td>
-                <td
-                  className={`py-2 pl-2 tabular-nums font-medium ${
-                    row.hrrCombo >= 1 ? 'text-green-400' : 'text-red-400'
-                  }`}
-                >
-                  {row.hrrCombo.toFixed(2)}
+                <td className={`py-2 pl-1 tabular-nums ${row.wsComboVsOther >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {row.wsComboVsOther >= 0 ? '+' : ''}{row.wsComboVsOther.toFixed(1)}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
-    </div>
-  );
-}
-
-// ─── RankingsTable ───────────────────────────────────────────────────────────
-
-function RankingsTable({
-  rankings,
-}: {
-  rankings: Record<string, RankEntry>;
-}) {
-  const entries = Object.entries(rankings);
-  if (!entries.length) return null;
-  return (
-    <div className="bg-white/5 border border-white/10 p-4">
-      <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
-        Rankings by Distance
-      </h3>
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="border-b border-white/10 text-right">
-            <th className="text-left text-gray-500 font-normal py-1.5 pr-2">
-              Distance
-            </th>
-            <th className="text-gray-500 font-normal py-1.5 px-2">Rank</th>
-            <th className="text-gray-500 font-normal py-1.5 px-2">WS%</th>
-            <th className="text-gray-500 font-normal py-1.5 px-2">vs Overall</th>
-            <th className="text-gray-500 font-normal py-1.5 pl-2">
-              Gap to Public
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {entries.map(([dist, r]) => (
-            <tr
-              key={dist}
-              className="border-b border-white/5 hover:bg-white/5 text-right transition-colors"
-            >
-              <td className="text-gray-200 text-left py-2 pr-2">{dist}</td>
-              <td
-                className={`py-2 px-2 font-medium tabular-nums ${
-                  r.rank <= 3
-                    ? 'text-yellow-300'
-                    : r.rank <= 10
-                    ? 'text-gray-200'
-                    : 'text-gray-500'
-                }`}
-              >
-                #{r.rank}
-              </td>
-              <td className="text-gray-200 py-2 px-2 tabular-nums">
-                {r.wsInDist.toFixed(1)}%
-              </td>
-              <td
-                className={`py-2 px-2 tabular-nums ${gapCls(r.wsDiffVsOverall)}`}
-              >
-                {r.wsDiffVsOverall >= 0 ? '+' : ''}
-                {r.wsDiffVsOverall.toFixed(1)}
-              </td>
-              <td
-                className={`py-2 pl-2 font-medium tabular-nums ${gapCls(
-                  r.gapToImplied
-                )}`}
-              >
-                {r.gapToImplied >= 0 ? '+' : ''}
-                {r.gapToImplied.toFixed(1)}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 }
@@ -727,11 +634,6 @@ function JockeyDetail({
         <StatCard label="Public Odds" value={pct(ip)} />
         <StatCard label="Gap vs Public" value={pp(gap)} gap={gap} />
         <StatCard
-          label="HRR"
-          value={(jockey.hrr?.l200 ?? 0).toFixed(2)}
-          sub={`L50: ${(jockey.hrr?.l50 ?? 0).toFixed(2)}`}
-        />
-        <StatCard
           label="Races L6m"
           value={jockey.racesL6m?.toLocaleString() ?? '—'}
           sub={`Total: ${jockey.totalRaces?.toLocaleString() ?? '—'}`}
@@ -775,11 +677,6 @@ function JockeyDetail({
         </div>
       )}
 
-      {/* ── Rankings by Distance ── */}
-      {jockey.rankings && Object.keys(jockey.rankings).length > 0 && (
-        <RankingsTable rankings={jockey.rankings} />
-      )}
-
       {/* ── Combo Tables ── */}
       {hasCombos ? (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -788,87 +685,6 @@ function JockeyDetail({
           <ComboTable title="Stable" data={jockey.combos?.stables ?? []} />
         </div>
       ) : null}
-
-      {/* ── Horse Quality + Improvement ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {jockey.horseQuality && (
-          <div className="bg-white/5 border border-white/10 p-4">
-            <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
-              Horse Quality
-            </h3>
-            <div className="grid grid-cols-3 gap-3">
-              <StatCard
-                label="Avg Quality"
-                value={(jockey.horseQuality.avgQuality ?? 0).toFixed(0)}
-                sub={`P${jockey.horseQuality.qualityPctile ?? '?'}`}
-              />
-              <StatCard
-                label="Avg Age"
-                value={(jockey.horseQuality.avgAge ?? 0).toFixed(1)}
-                sub={`P${jockey.horseQuality.agePctile ?? '?'}`}
-              />
-              <StatCard
-                label="Avg Dist"
-                value={
-                  (jockey.horseQuality.avgDistance ?? 0).toFixed(0) + 'm'
-                }
-                sub={`P${jockey.horseQuality.distancePctile ?? '?'}`}
-              />
-            </div>
-          </div>
-        )}
-
-        {jockey.improvement && (
-          <div className="bg-white/5 border border-white/10 p-4">
-            <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
-              New Horses &amp; Improvement
-            </h3>
-            <div className="grid grid-cols-3 gap-3">
-              <StatCard
-                label="Imp. Ratio"
-                value={(jockey.improvement.ratio ?? 1).toFixed(2)}
-              />
-              <StatCard
-                label="New Horses"
-                value={(
-                  jockey.improvement.newHorsesReceived ?? 0
-                ).toLocaleString()}
-              />
-              <StatCard
-                label="Share New"
-                value={pct(jockey.improvement.shareNewHorses ?? 0)}
-              />
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* ── Track Condition (Estado) ── */}
-      {jockey.estado && (
-        <div className="bg-white/5 border border-white/10 p-4">
-          <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
-            Track Condition (Estado)
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <StatCard
-              label="Normal — Hist"
-              value={pct(jockey.estado.normalWsHist ?? 0)}
-            />
-            <StatCard
-              label="Normal — L200"
-              value={pct(jockey.estado.normalWsL200 ?? 0)}
-            />
-            <StatCard
-              label="Not Normal — Hist"
-              value={pct(jockey.estado.notNormalWsHist ?? 0)}
-            />
-            <StatCard
-              label="Not Normal — L200"
-              value={pct(jockey.estado.notNormalWsL200 ?? 0)}
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }
