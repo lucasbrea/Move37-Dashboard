@@ -394,9 +394,9 @@ function TimeSeriesChart({
             <Tooltip
               contentStyle={CHART_TOOLTIP_STYLE}
               labelStyle={{ color: '#e5e7eb', marginBottom: '4px' }}
-              formatter={(v: number | undefined, name: string | undefined) => [
-                v != null ? `${v.toFixed(1)}%` : '—',
-                name ?? '',
+              formatter={(v: unknown, name: unknown) => [
+                typeof v === 'number' ? `${v.toFixed(1)}%` : '—',
+                typeof name === 'string' ? name : '',
               ]}
             />
             <Legend wrapperStyle={{ fontSize: '11px', color: '#9ca3af', paddingTop: '8px' }} />
