@@ -35,6 +35,10 @@ export default function CriadorPage() {
     router.push('/Criador/general-statistics');
   };
 
+  const handleAnalyticsClick = () => {
+    router.push('/Criador/analytics');
+  };
+
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-white">
@@ -71,6 +75,25 @@ export default function CriadorPage() {
 
         {/* Criadores Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Analytics Card */}
+          <div
+            onClick={handleAnalyticsClick}
+            className="group p-8 bg-white/5 border border-white/10 hover:bg-white/10
+                     hover:border-white/20 transition-all duration-200 cursor-pointer"
+          >
+            <div className="mb-4">
+              <h2 className="text-2xl font-light text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
+                Analytics
+              </h2>
+              <p className="text-gray-400 text-sm">
+                Per-criador stats by birth year cohort
+              </p>
+            </div>
+            <div className="text-gray-500 text-xs font-medium tracking-wide">
+              VIEW →
+            </div>
+          </div>
+
           {/* General Statistics Card */}
           <div
             onClick={handleGeneralStatsClick}
