@@ -496,6 +496,17 @@ function TimeSeriesChart({
 
 // ─── JockeySidebar ───────────────────────────────────────────────────────────
 
+const WS_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100', l200: 'wsL200', l400: 'wsL400', l500: 'wsL500', hist: 'wsHist' };
+const IP_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100', l200: 'ipL200', l400: 'ipL400', l500: 'ipL500', hist: 'ipHist' };
+
+const VIEW_OPTIONS: { key: ViewMode; label: string }[] = [
+  { key: 'l100', label: 'L100' },
+  { key: 'l200', label: 'L200' },
+  { key: 'l400', label: 'L400' },
+  { key: 'l500', label: 'L500' },
+  { key: 'hist', label: 'Hist' },
+];
+
 function JockeySidebar({
   jockeys,
   selectedId,
@@ -506,27 +517,50 @@ function JockeySidebar({
   onSelect: (id: number) => void;
 }) {
   const [search, setSearch] = useState('');
+  const [rankMode, setRankMode] = useState<ViewMode>('l200');
+  const [distFilter, setDistFilter] = useState<string>('all');
 
-  const filtered = useMemo(
-    () =>
-      jockeys
-        .filter((j) => j.name.toLowerCase().includes(search.toLowerCase()))
-        .sort((a, b) => {
-          const gapA = (a.winShares?.l200 ?? 0) - (a.impliedProbs?.l200 ?? 0);
-          const gapB = (b.winShares?.l200 ?? 0) - (b.impliedProbs?.l200 ?? 0);
-          return gapB - gapA;
-        }),
-    [jockeys, search]
-  );
+  const allDistances = useMemo(() => {
+    const dists = new Set<string>();
+    jockeys.forEach((j) => Object.keys(j.distances ?? {}).forEach((d) => dists.add(d)));
+    return Array.from(dists).sort((a, b) => parseInt(a) - parseInt(b));
+  }, [jockeys]);
+
+  const filtered = useMemo(() => {
+    const term = search.toLowerCase();
+    return jockeys
+      .filter(
+        (j) =>
+          j.name.toLowerCase().includes(term) ||
+          j.surname.toLowerCase().includes(term)
+      )
+      .sort((a, b) => {
+        let valA: number, valB: number;
+        if (distFilter !== 'all') {
+          const entA = a.distances?.[distFilter];
+          const entB = b.distances?.[distFilter];
+          const wsA = entA ? (entA[WS_KEY[rankMode]] as number) : 0;
+          const wsB = entB ? (entB[WS_KEY[rankMode]] as number) : 0;
+          const ipA = entA ? (entA[IP_KEY[rankMode]] as number) : 0;
+          const ipB = entB ? (entB[IP_KEY[rankMode]] as number) : 0;
+          valA = wsA - ipA;
+          valB = wsB - ipB;
+        } else {
+          valA = (a.winShares?.[rankMode] ?? 0) - (a.impliedProbs?.[rankMode] ?? 0);
+          valB = (b.winShares?.[rankMode] ?? 0) - (b.impliedProbs?.[rankMode] ?? 0);
+        }
+        return valB - valA;
+      });
+  }, [jockeys, search, rankMode, distFilter]);
 
   return (
     <div
-      className="w-56 flex-shrink-0 border-r border-white/10 flex flex-col overflow-hidden"
+      className="w-72 flex-shrink-0 border-r border-white/10 flex flex-col overflow-hidden"
       style={{ height: 'calc(100vh - 220px)', position: 'sticky', top: 0 }}
     >
       {/* Header */}
-      <div className="p-3 border-b border-white/10 flex-shrink-0">
-        <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+      <div className="p-3 border-b border-white/10 flex-shrink-0 space-y-2">
+        <p className="text-xs text-gray-500 uppercase tracking-wider">
           Jockeys
         </p>
         <input
@@ -537,13 +571,50 @@ function JockeySidebar({
           className="w-full px-2.5 py-1.5 text-sm bg-white/5 border border-white/10 text-gray-300
                      placeholder-gray-600 focus:outline-none focus:border-white/30 rounded"
         />
+        {/* Timeseries selector for ranking */}
+        <div className="flex gap-0.5 bg-white/5 border border-white/10 p-0.5 rounded">
+          {VIEW_OPTIONS.map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => setRankMode(key)}
+              className={`flex-1 py-1 text-xs font-medium rounded transition-colors duration-150 ${
+                rankMode === key
+                  ? 'bg-white/20 text-white'
+                  : 'text-gray-500 hover:text-gray-200'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        {/* Distance filter */}
+        <select
+          value={distFilter}
+          onChange={(e) => setDistFilter(e.target.value)}
+          className="w-full px-2.5 py-1.5 text-xs bg-white/5 border border-white/10 text-gray-300
+                     focus:outline-none focus:border-white/30 rounded"
+        >
+          <option value="all">All distances</option>
+          {allDistances.map((d) => (
+            <option key={d} value={d}>
+              {d}
+            </option>
+          ))}
+        </select>
       </div>
 
       {/* List */}
       <div className="overflow-y-auto flex-1">
         {filtered.map((j, i) => {
-          const ws = j.winShares?.l200 ?? 0;
-          const ip = j.impliedProbs?.l200 ?? 0;
+          let ws: number, ip: number;
+          if (distFilter !== 'all' && j.distances?.[distFilter]) {
+            const ent = j.distances[distFilter];
+            ws = ent[WS_KEY[rankMode]] as number;
+            ip = ent[IP_KEY[rankMode]] as number;
+          } else {
+            ws = j.winShares?.[rankMode] ?? 0;
+            ip = j.impliedProbs?.[rankMode] ?? 0;
+          }
           const gap = ws - ip;
           const isSelected = j.id === selectedId;
 
@@ -558,14 +629,14 @@ function JockeySidebar({
               }`}
             >
               <div className="flex items-center gap-2">
-                <span className="text-gray-600 text-xs w-4 text-right flex-shrink-0 tabular-nums">
+                <span className="text-gray-600 text-xs w-5 text-right flex-shrink-0 tabular-nums">
                   {i + 1}.
                 </span>
-                <span className="text-gray-100 text-sm font-medium truncate">
+                <span className="text-gray-100 text-sm font-medium">
                   {j.surname}
                 </span>
               </div>
-              <div className="flex items-center gap-3 mt-0.5 pl-6">
+              <div className="flex items-center gap-3 mt-0.5 pl-7">
                 <span className="text-xs text-gray-600">
                   WS{' '}
                   <span className="text-gray-400 tabular-nums">{pct(ws)}</span>
@@ -732,12 +803,12 @@ export default function JockeyAnalytics() {
   const gapRank = useMemo(() => {
     if (!data || selectedId === null) return 1;
     const sorted = [...data.jockeys].sort((a, b) => {
-      const gapA = (a.winShares?.l200 ?? 0) - (a.impliedProbs?.l200 ?? 0);
-      const gapB = (b.winShares?.l200 ?? 0) - (b.impliedProbs?.l200 ?? 0);
+      const gapA = (a.winShares?.[viewMode] ?? 0) - (a.impliedProbs?.[viewMode] ?? 0);
+      const gapB = (b.winShares?.[viewMode] ?? 0) - (b.impliedProbs?.[viewMode] ?? 0);
       return gapB - gapA;
     });
     return sorted.findIndex((j) => j.id === selectedId) + 1;
-  }, [data, selectedId]);
+  }, [data, selectedId, viewMode]);
 
   if (loading) {
     return (
