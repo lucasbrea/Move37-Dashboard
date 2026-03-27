@@ -14,7 +14,7 @@ import {
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-type ViewMode = 'l100' | 'l200' | 'l400' | 'l500' | 'hist';
+type ViewMode = 'l100' | 'l200' | 'l400' | 'l500' | 'hist' | 'l30d' | 'l90d' | 'l180d';
 
 interface BreakdownEntry {
   wsL100: number;
@@ -32,6 +32,15 @@ interface BreakdownEntry {
   racesL400: number;
   racesL500: number;
   racesHist: number;
+  wsL30d: number;
+  ipL30d: number;
+  racesL30d: number;
+  wsL90d: number;
+  ipL90d: number;
+  racesL90d: number;
+  wsL180d: number;
+  ipL180d: number;
+  racesL180d: number;
 }
 
 interface ComboEntry {
@@ -167,11 +176,14 @@ function ViewToggle({
   onChange: (m: ViewMode) => void;
 }) {
   const options: { key: ViewMode; label: string }[] = [
-    { key: 'l100', label: 'L100' },
-    { key: 'l200', label: 'L200' },
-    { key: 'l400', label: 'L400' },
-    { key: 'l500', label: 'L500' },
-    { key: 'hist', label: 'Hist' },
+    { key: 'l30d',  label: 'L30d'  },
+    { key: 'l90d',  label: 'L90d'  },
+    { key: 'l180d', label: 'L180d' },
+    { key: 'l100',  label: 'L100'  },
+    { key: 'l200',  label: 'L200'  },
+    { key: 'l400',  label: 'L400'  },
+    { key: 'l500',  label: 'L500'  },
+    { key: 'hist',  label: 'Hist'  },
   ];
   return (
     <div className="flex gap-1 bg-white/5 border border-white/10 p-1 rounded">
@@ -203,9 +215,9 @@ function BreakdownTable({
   data: Record<string, BreakdownEntry>;
   viewMode: ViewMode;
 }) {
-  const wsKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100',    l200: 'wsL200',    l400: 'wsL400',    l500: 'wsL500',    hist: 'wsHist'    };
-  const ipKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100',    l200: 'ipL200',    l400: 'ipL400',    l500: 'ipL500',    hist: 'ipHist'    };
-  const racesKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'racesL100', l200: 'racesL200', l400: 'racesL400', l500: 'racesL500', hist: 'racesHist' };
+  const wsKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100',    l200: 'wsL200',    l400: 'wsL400',    l500: 'wsL500',    hist: 'wsHist',    l30d: 'wsL30d',    l90d: 'wsL90d',    l180d: 'wsL180d'    };
+  const ipKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100',    l200: 'ipL200',    l400: 'ipL400',    l500: 'ipL500',    hist: 'ipHist',    l30d: 'ipL30d',    l90d: 'ipL90d',    l180d: 'ipL180d'    };
+  const racesKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'racesL100', l200: 'racesL200', l400: 'racesL400', l500: 'racesL500', hist: 'racesHist', l30d: 'racesL30d', l90d: 'racesL90d', l180d: 'racesL180d' };
   const entries = Object.entries(data);
   if (entries.length === 0) return null;
 
@@ -496,15 +508,18 @@ function TimeSeriesChart({
 
 // ─── JockeySidebar ───────────────────────────────────────────────────────────
 
-const WS_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100', l200: 'wsL200', l400: 'wsL400', l500: 'wsL500', hist: 'wsHist' };
-const IP_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100', l200: 'ipL200', l400: 'ipL400', l500: 'ipL500', hist: 'ipHist' };
+const WS_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100', l200: 'wsL200', l400: 'wsL400', l500: 'wsL500', hist: 'wsHist', l30d: 'wsL30d', l90d: 'wsL90d', l180d: 'wsL180d' };
+const IP_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100', l200: 'ipL200', l400: 'ipL400', l500: 'ipL500', hist: 'ipHist', l30d: 'ipL30d', l90d: 'ipL90d', l180d: 'ipL180d' };
 
 const VIEW_OPTIONS: { key: ViewMode; label: string }[] = [
-  { key: 'l100', label: 'L100' },
-  { key: 'l200', label: 'L200' },
-  { key: 'l400', label: 'L400' },
-  { key: 'l500', label: 'L500' },
-  { key: 'hist', label: 'Hist' },
+  { key: 'l30d',  label: 'L30d'  },
+  { key: 'l90d',  label: 'L90d'  },
+  { key: 'l180d', label: 'L180d' },
+  { key: 'l100',  label: 'L100'  },
+  { key: 'l200',  label: 'L200'  },
+  { key: 'l400',  label: 'L400'  },
+  { key: 'l500',  label: 'L500'  },
+  { key: 'hist',  label: 'Hist'  },
 ];
 
 function JockeySidebar({
