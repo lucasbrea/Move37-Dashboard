@@ -1,141 +1,213 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { useRouter } from 'next/navigation';
-import CriadorFilter from '../components/CriadorFilter';
+import CategoryFilter from '../components/CategoryFilter';
+import AddReportButton from '../components/AddReportButton';
+import ReportCard from '../components/ReportCard';
+import EditReportModal from '../components/EditReportModal';
+import { useReports, Report } from '../../hooks/useReports';
+import CriadorAnalytics from './CriadorAnalytics';
+
+type ActiveTab = 'reports' | 'analytics';
 
 export default function CriadorPage() {
+  const [activeTab, setActiveTab] = useState<ActiveTab>('reports');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCriadores, setSelectedCriadores] = useState<string[]>([]);
-  const router = useRouter();
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
+  const [editingReport, setEditingReport] = useState<Report | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
-  const criadores = [
-    { 
-      name: 'Performance Reports',
-      path: '/Criador/performance-reports',
-      description: 'Criador Reports'
-    },
-  ];
+  const { reports, loading, error, addReport, updateReport, deleteReport } = useReports('criador');
 
-  const filteredCriadores = useMemo(() => {
-    return criadores.filter(criador => {
-      const matchesSearch = criador.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          criador.description.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCriador = selectedCriadores.length === 0 || 
-        selectedCriadores.includes(criador.name);
-      return matchesSearch && matchesCriador;
+  const categories = useMemo(() => {
+    const uniqueCategories = new Set(reports.map(report => report.category));
+    return ['all', ...Array.from(uniqueCategories)];
+  }, [reports]);
+
+  const filteredReports = useMemo(() => {
+    return reports.filter(report => {
+      const matchesSearch = report.title.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || report.category === selectedCategory;
+
+      if (startDate || endDate) {
+        const reportDate = new Date(report.created_at || '');
+        const matchesStartDate = !startDate || reportDate >= new Date(startDate);
+        const matchesEndDate = !endDate || reportDate <= new Date(endDate);
+        return matchesSearch && matchesCategory && matchesStartDate && matchesEndDate;
+      }
+
+      return matchesSearch && matchesCategory;
     });
-  }, [searchQuery, selectedCriadores]);
+  }, [searchQuery, selectedCategory, startDate, endDate, reports]);
 
-  const handleCardClick = (path: string) => {
-    router.push(path);
+  const handleAddReport = async (newReport: Omit<Report, 'id' | 'created_at' | 'updated_at'> & { location: string }) => {
+    try {
+      await addReport(newReport);
+    } catch (error) {
+      console.error('Failed to add report:', error);
+    }
   };
 
-  const handleGeneralStatsClick = () => {
-    router.push('/Criador/general-statistics');
+  const handleEditReport = async (editedReport: Report) => {
+    try {
+      await updateReport(editedReport.id, editedReport);
+      setIsEditModalOpen(false);
+      setEditingReport(null);
+    } catch (error) {
+      console.error('Failed to update report:', error);
+    }
   };
 
-  const handleAnalyticsClick = () => {
-    router.push('/Criador/analytics');
+  const handleOpenEditModal = (report: Report) => {
+    setEditingReport(report);
+    setIsEditModalOpen(true);
   };
 
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingReport(null);
+  };
+
+  const handleDeleteReport = async (reportToDelete: Report) => {
+    try {
+      await deleteReport(reportToDelete.id);
+    } catch (error) {
+      console.error('Failed to delete report:', error);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-[#0a192f] text-white">
-      <div className="max-w-7xl mx-auto px-8 py-12">
-        {/* Header */}
-        <nav className="mb-12">
-          <a 
+    <div className="min-h-screen bg-[#0a192f]">
+      {/* Header */}
+      <nav className="border-b border-[#233554]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <a
             href="/"
-            className="text-gray-400 hover:text-white transition-colors duration-150 text-sm font-medium"
+            className="text-gray-300 hover:text-white transition-colors duration-200"
           >
-            ← Dashboard
+            ← Back to Dashboard
           </a>
-        </nav>
-        
-        <h1 className="text-5xl font-light mb-16 tracking-tight">Criador Performance</h1>
-        
-        {/* Search and Filters */}
-        <div className="mb-12 flex flex-col md:flex-row gap-6">
-          <div className="flex-1">
-            <input
-              type="text"
-              placeholder="Search criadores..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white 
-                       placeholder-gray-500 focus:outline-none focus:border-white/20 
-                       transition-colors duration-150 text-sm"
-            />
-          </div>
-          <div className="flex gap-4">
-            <CriadorFilter onFilterChange={setSelectedCriadores} />
-          </div>
         </div>
+      </nav>
 
-        {/* Criadores Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Analytics Card */}
-          <div
-            onClick={handleAnalyticsClick}
-            className="group p-8 bg-white/5 border border-white/10 hover:bg-white/10
-                     hover:border-white/20 transition-all duration-200 cursor-pointer"
-          >
-            <div className="mb-4">
-              <h2 className="text-2xl font-light text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
-                Analytics
-              </h2>
-              <p className="text-gray-400 text-sm">
-                Per-criador stats by birth year cohort
-              </p>
-            </div>
-            <div className="text-gray-500 text-xs font-medium tracking-wide">
-              VIEW →
-            </div>
-          </div>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h1 className="text-5xl font-light text-gray-100 mb-8">Criador</h1>
 
-          {/* General Statistics Card */}
-          <div
-            onClick={handleGeneralStatsClick}
-            className="group p-8 bg-white/5 border border-white/10 hover:bg-white/10 
-                     hover:border-white/20 transition-all duration-200 cursor-pointer"
-          >
-            <div className="mb-4">
-              <h2 className="text-2xl font-light text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
-                General Statistics
-              </h2>
-              <p className="text-gray-400 text-sm">
-                Overview and analytics
-              </p>
-            </div>
-            <div className="text-gray-500 text-xs font-medium tracking-wide">
-              VIEW →
-            </div>
-          </div>
-
-          {/* Individual Criador Cards */}
-          {filteredCriadores.map((criador) => (
-            <div
-              key={criador.name}
-              onClick={() => handleCardClick(criador.path)}
-              className="group p-8 bg-white/5 border border-white/10 hover:bg-white/10 
-                       hover:border-white/20 transition-all duration-200 cursor-pointer"
+        {/* ── Tabs ── */}
+        <div className="flex gap-1 mb-8 border-b border-white/10 pb-0">
+          {(['reports', 'analytics'] as ActiveTab[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-5 py-2 text-sm font-medium capitalize transition-colors duration-150 border-b-2 -mb-px ${
+                activeTab === tab
+                  ? 'text-white border-blue-500'
+                  : 'text-gray-500 border-transparent hover:text-gray-300'
+              }`}
             >
-              <div className="mb-4">
-                <h2 className="text-2xl font-light text-white mb-2 group-hover:text-yellow-300 transition-colors duration-200">
-                  {criador.name}
-                </h2>
-                <p className="text-gray-400 text-sm">
-                  {criador.description}
-                </p>
-              </div>
-              <div className="text-gray-500 text-xs font-medium tracking-wide">
-                VIEW →
-              </div>
-            </div>
+              {tab === 'analytics' ? 'Analytics' : 'Reports'}
+            </button>
           ))}
         </div>
-      </div>
+
+        {/* ── Analytics Tab ── */}
+        {activeTab === 'analytics' && <CriadorAnalytics />}
+
+        {/* ── Reports Tab ── */}
+        {activeTab === 'reports' && (
+          <>
+            <div className="mb-8 space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex-1">
+                  <input
+                    type="text"
+                    placeholder="Search by title or tags..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100
+                             placeholder-gray-400 focus:outline-none focus:border-white/40"
+                  />
+                </div>
+                <div className="w-full sm:w-48">
+                  <CategoryFilter
+                    categories={categories}
+                    selectedCategory={selectedCategory}
+                    onFilterChange={setSelectedCategory}
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex-1 sm:flex-none sm:w-48">
+                  <input
+                    type="date"
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                    className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100
+                             focus:outline-none focus:border-white/40 [&::-webkit-calendar-picker-indicator]:invert"
+                  />
+                </div>
+                <div className="flex-1 sm:flex-none sm:w-48">
+                  <input
+                    type="date"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                    className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-gray-100
+                             focus:outline-none focus:border-white/40 [&::-webkit-calendar-picker-indicator]:invert"
+                  />
+                </div>
+                {(startDate || endDate) && (
+                  <button
+                    onClick={() => { setStartDate(''); setEndDate(''); }}
+                    className="px-4 py-2 rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 transition-colors duration-200"
+                  >
+                    Clear Dates
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {loading && (
+              <div className="flex items-center justify-center py-12">
+                <div className="text-gray-300">Loading reports...</div>
+              </div>
+            )}
+
+            {error && (
+              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
+                <div className="text-red-300">Error: {error}</div>
+              </div>
+            )}
+
+            {!loading && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredReports.map((report) => (
+                  <ReportCard
+                    key={report.id}
+                    report={report}
+                    onEdit={handleOpenEditModal}
+                    onDelete={handleDeleteReport}
+                  />
+                ))}
+              </div>
+            )}
+
+            {!loading && (
+              <AddReportButton onAddReport={handleAddReport} location="criador" />
+            )}
+
+            <EditReportModal
+              report={editingReport}
+              isOpen={isEditModalOpen}
+              onClose={handleCloseEditModal}
+              onSave={handleEditReport}
+              location="criador"
+            />
+          </>
+        )}
+      </main>
     </div>
   );
-} 
+}

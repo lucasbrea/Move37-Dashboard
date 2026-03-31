@@ -1,0 +1,538 @@
+{
+  "metadata": {
+    "exportDate": "2026-03-30",
+    "numTrainers": 5
+  },
+  "trainers": [
+    {
+      "id": 0,
+      "name": "Jorge Navarro",
+      "surname": "Navarro",
+      "rank": 1,
+      "racesL6m": 420,
+      "totalRaces": 980,
+      "winShares": {
+        "l100": 0.14,
+        "l200": 0.138,
+        "l400": 0.135,
+        "l500": 0.132,
+        "hist": 0.13,
+        "l30d": 0.15,
+        "l90d": 0.142,
+        "l180d": 0.136
+      },
+      "impliedProbs": {
+        "l100": 0.118,
+        "l200": 0.12,
+        "l400": 0.121,
+        "l500": 0.122,
+        "hist": 0.119,
+        "l30d": 0.116,
+        "l90d": 0.119,
+        "l180d": 0.12
+      },
+      "hrr": { "l50": 1.08, "l200": 1.05 },
+      "tracks": {
+        "PAL": {
+          "wsL100": 0.155, "ipL100": 0.125, "racesL100": 48,
+          "wsL200": 0.148, "ipL200": 0.122, "racesL200": 95,
+          "wsL400": 0.14,  "ipL400": 0.12,  "racesL400": 188,
+          "wsL500": 0.138, "ipL500": 0.121, "racesL500": 230,
+          "wsHist": 0.135, "ipHist": 0.12,  "racesHist": 480,
+          "wsL30d": 0.16,  "ipL30d": 0.124, "racesL30d": 22,
+          "wsL90d": 0.15,  "ipL90d": 0.123, "racesL90d": 68,
+          "wsL180d": 0.143,"ipL180d": 0.121,"racesL180d": 135
+        },
+        "SI": {
+          "wsL100": 0.13,  "ipL100": 0.118, "racesL100": 32,
+          "wsL200": 0.125, "ipL200": 0.116, "racesL200": 62,
+          "wsL400": 0.12,  "ipL400": 0.115, "racesL400": 122,
+          "wsL500": 0.118, "ipL500": 0.116, "racesL500": 148,
+          "wsHist": 0.115, "ipHist": 0.114, "racesHist": 310,
+          "wsL30d": 0.14,  "ipL30d": 0.117, "racesL30d": 14,
+          "wsL90d": 0.132, "ipL90d": 0.116, "racesL90d": 44,
+          "wsL180d": 0.126,"ipL180d": 0.115,"racesL180d": 88
+        },
+        "LP": {
+          "wsL100": 0.14,  "ipL100": 0.12,  "racesL100": 20,
+          "wsL200": 0.138, "ipL200": 0.122, "racesL200": 43,
+          "wsL400": 0.135, "ipL400": 0.122, "racesL400": 90,
+          "wsL500": 0.132, "ipL500": 0.121, "racesL500": 112,
+          "wsHist": 0.13,  "ipHist": 0.12,  "racesHist": 190,
+          "wsL30d": 0.15,  "ipL30d": 0.119, "racesL30d": 9,
+          "wsL90d": 0.142, "ipL90d": 0.12,  "racesL90d": 30,
+          "wsL180d": 0.137,"ipL180d": 0.121,"racesL180d": 62
+        }
+      },
+      "surfaces": {
+        "arena": {
+          "wsL100": 0.145, "ipL100": 0.122, "racesL100": 55,
+          "wsL200": 0.14,  "ipL200": 0.12,  "racesL200": 108,
+          "wsL400": 0.138, "ipL400": 0.119, "racesL400": 210,
+          "wsL500": 0.135, "ipL500": 0.12,  "racesL500": 260,
+          "wsHist": 0.132, "ipHist": 0.118, "racesHist": 540,
+          "wsL30d": 0.155, "ipL30d": 0.121, "racesL30d": 25,
+          "wsL90d": 0.148, "ipL90d": 0.12,  "racesL90d": 78,
+          "wsL180d": 0.141,"ipL180d": 0.119,"racesL180d": 155
+        },
+        "cesped": {
+          "wsL100": 0.13,  "ipL100": 0.116, "racesL100": 45,
+          "wsL200": 0.132, "ipL200": 0.118, "racesL200": 92,
+          "wsL400": 0.13,  "ipL400": 0.118, "racesL400": 190,
+          "wsL500": 0.128, "ipL500": 0.119, "racesL500": 240,
+          "wsHist": 0.126, "ipHist": 0.117, "racesHist": 440,
+          "wsL30d": 0.142, "ipL30d": 0.115, "racesL30d": 20,
+          "wsL90d": 0.136, "ipL90d": 0.116, "racesL90d": 64,
+          "wsL180d": 0.131,"ipL180d": 0.117,"racesL180d": 125
+        }
+      },
+      "distances": {
+        "1000": {
+          "wsL100": 0.15,  "ipL100": 0.13,  "racesL100": 20,
+          "wsL200": 0.145, "ipL200": 0.128, "racesL200": 38,
+          "wsL400": 0.14,  "ipL400": 0.125, "racesL400": 75,
+          "wsL500": 0.138, "ipL500": 0.124, "racesL500": 90,
+          "wsHist": 0.135, "ipHist": 0.122, "racesHist": 180,
+          "wsL30d": 0.16,  "ipL30d": 0.131, "racesL30d": 9,
+          "wsL90d": 0.152, "ipL90d": 0.129, "racesL90d": 28,
+          "wsL180d": 0.146,"ipL180d": 0.126,"racesL180d": 55
+        },
+        "1100-1500": {
+          "wsL100": 0.14,  "ipL100": 0.12,  "racesL100": 50,
+          "wsL200": 0.138, "ipL200": 0.12,  "racesL200": 98,
+          "wsL400": 0.135, "ipL400": 0.119, "racesL400": 195,
+          "wsL500": 0.133, "ipL500": 0.12,  "racesL500": 240,
+          "wsHist": 0.13,  "ipHist": 0.118, "racesHist": 480,
+          "wsL30d": 0.15,  "ipL30d": 0.119, "racesL30d": 23,
+          "wsL90d": 0.142, "ipL90d": 0.12,  "racesL90d": 72,
+          "wsL180d": 0.136,"ipL180d": 0.12, "racesL180d": 145
+        },
+        "1600+": {
+          "wsL100": 0.135, "ipL100": 0.115, "racesL100": 30,
+          "wsL200": 0.132, "ipL200": 0.116, "racesL200": 64,
+          "wsL400": 0.13,  "ipL400": 0.117, "racesL400": 130,
+          "wsL500": 0.128, "ipL500": 0.118, "racesL500": 160,
+          "wsHist": 0.125, "ipHist": 0.115, "racesHist": 320,
+          "wsL30d": 0.145, "ipL30d": 0.114, "racesL30d": 13,
+          "wsL90d": 0.138, "ipL90d": 0.115, "racesL90d": 42,
+          "wsL180d": 0.132,"ipL180d": 0.116,"racesL180d": 84
+        }
+      },
+      "timeSeries": [
+        { "date": "2024-04-01", "wsL200": 0.128, "ipL200": 0.118, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.04, "hrrL200": 1.03, "racesL3m": 68 },
+        { "date": "2024-05-01", "wsL200": 0.131, "ipL200": 0.119, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.05, "hrrL200": 1.04, "racesL3m": 72 },
+        { "date": "2024-06-01", "wsL200": 0.133, "ipL200": 0.12,  "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.05, "hrrL200": 1.04, "racesL3m": 74 },
+        { "date": "2024-07-01", "wsL200": 0.13,  "ipL200": 0.12,  "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.06, "hrrL200": 1.04, "racesL3m": 70 },
+        { "date": "2024-08-01", "wsL200": 0.135, "ipL200": 0.119, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.07, "hrrL200": 1.05, "racesL3m": 76 },
+        { "date": "2024-09-01", "wsL200": 0.136, "ipL200": 0.12,  "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.07, "hrrL200": 1.05, "racesL3m": 75 },
+        { "date": "2024-10-01", "wsL200": 0.138, "ipL200": 0.121, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.07, "hrrL200": 1.05, "racesL3m": 78 },
+        { "date": "2024-11-01", "wsL200": 0.14,  "ipL200": 0.121, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.08, "hrrL200": 1.05, "racesL3m": 80 },
+        { "date": "2024-12-01", "wsL200": 0.139, "ipL200": 0.12,  "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.08, "hrrL200": 1.05, "racesL3m": 79 },
+        { "date": "2025-01-01", "wsL200": 0.141, "ipL200": 0.12,  "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.08, "hrrL200": 1.06, "racesL3m": 82 },
+        { "date": "2025-02-01", "wsL200": 0.143, "ipL200": 0.121, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.08, "hrrL200": 1.06, "racesL3m": 84 },
+        { "date": "2025-03-01", "wsL200": 0.138, "ipL200": 0.12,  "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.08, "hrrL200": 1.05, "racesL3m": 70 }
+      ],
+      "combos": {
+        "jockeys": [
+          { "name": "Montoya",   "races": 85, "wsCombo": 17.2, "gapCombo": 5.1,  "wsComboVsOther": 3.4,  "gapComboVsOther": 2.8,  "hrrCombo": 1.12, "hrrComboVsOther": 0.08 },
+          { "name": "Suarez",    "races": 62, "wsCombo": 15.8, "gapCombo": 3.9,  "wsComboVsOther": 2.1,  "gapComboVsOther": 1.6,  "hrrCombo": 1.09, "hrrComboVsOther": 0.05 },
+          { "name": "Rodriguez", "races": 48, "wsCombo": 14.5, "gapCombo": 2.8,  "wsComboVsOther": 1.2,  "gapComboVsOther": 0.9,  "hrrCombo": 1.07, "hrrComboVsOther": 0.03 },
+          { "name": "Benitez",   "races": 35, "wsCombo": 12.4, "gapCombo": 0.6,  "wsComboVsOther": -0.8, "gapComboVsOther": -0.4, "hrrCombo": 1.04, "hrrComboVsOther": 0.01 },
+          { "name": "Flores",    "races": 28, "wsCombo": 11.8, "gapCombo": -0.5, "wsComboVsOther": -1.5, "gapComboVsOther": -1.1, "hrrCombo": 1.02, "hrrComboVsOther": -0.01 }
+        ],
+        "sires": [
+          { "name": "Catcher In The Rye", "races": 42, "wsCombo": 18.1, "gapCombo": 6.2,  "wsComboVsOther": 4.0,  "gapComboVsOther": 3.1,  "hrrCombo": 1.14, "hrrComboVsOther": 0.10 },
+          { "name": "Honor Code",         "races": 38, "wsCombo": 16.5, "gapCombo": 4.5,  "wsComboVsOther": 2.5,  "gapComboVsOther": 2.0,  "hrrCombo": 1.10, "hrrComboVsOther": 0.06 },
+          { "name": "Overanalyze",        "races": 31, "wsCombo": 15.2, "gapCombo": 3.2,  "wsComboVsOther": 1.4,  "gapComboVsOther": 1.0,  "hrrCombo": 1.08, "hrrComboVsOther": 0.04 }
+        ],
+        "stables": [
+          { "name": "Haras El Paraiso", "races": 58, "wsCombo": 16.8, "gapCombo": 4.8,  "wsComboVsOther": 2.9,  "gapComboVsOther": 2.3,  "hrrCombo": 1.11, "hrrComboVsOther": 0.07 },
+          { "name": "Haras Don Enrique","races": 44, "wsCombo": 15.4, "gapCombo": 3.4,  "wsComboVsOther": 1.6,  "gapComboVsOther": 1.2,  "hrrCombo": 1.08, "hrrComboVsOther": 0.04 },
+          { "name": "Haras La Biznaga", "races": 32, "wsCombo": 13.8, "gapCombo": 1.8,  "wsComboVsOther": 0.2,  "gapComboVsOther": -0.1, "hrrCombo": 1.05, "hrrComboVsOther": 0.01 }
+        ]
+      },
+      "rankings": {},
+      "improvement": { "ratio": 1.08, "newHorsesReceived": 42, "shareNewHorses": 0.12 },
+      "horseQuality": { "avgQuality": 82, "qualityPctile": 78, "avgAge": 3.4, "agePctile": 55, "avgDistance": 1320, "distancePctile": 60 },
+      "estado": { "normalWsHist": 0.13, "normalWsL200": 0.138, "notNormalWsHist": 0.11, "notNormalWsL200": 0.12 }
+    },
+    {
+      "id": 1,
+      "name": "Carlos Etchechoury",
+      "surname": "Etchechoury",
+      "rank": 2,
+      "racesL6m": 380,
+      "totalRaces": 860,
+      "winShares": {
+        "l100": 0.122, "l200": 0.125, "l400": 0.12, "l500": 0.118,
+        "hist": 0.115, "l30d": 0.13, "l90d": 0.126, "l180d": 0.122
+      },
+      "impliedProbs": {
+        "l100": 0.112, "l200": 0.114, "l400": 0.113, "l500": 0.114,
+        "hist": 0.112, "l30d": 0.11, "l90d": 0.112, "l180d": 0.113
+      },
+      "hrr": { "l50": 1.05, "l200": 1.04 },
+      "tracks": {
+        "PAL": {
+          "wsL100": 0.13,  "ipL100": 0.115, "racesL100": 40,
+          "wsL200": 0.128, "ipL200": 0.114, "racesL200": 80,
+          "wsL400": 0.124, "ipL400": 0.113, "racesL400": 160,
+          "wsL500": 0.122, "ipL500": 0.113, "racesL500": 200,
+          "wsHist": 0.118, "ipHist": 0.112, "racesHist": 420,
+          "wsL30d": 0.138, "ipL30d": 0.114, "racesL30d": 18,
+          "wsL90d": 0.131, "ipL90d": 0.113, "racesL90d": 56,
+          "wsL180d": 0.126,"ipL180d": 0.113,"racesL180d": 112
+        },
+        "SI": {
+          "wsL100": 0.118, "ipL100": 0.112, "racesL100": 30,
+          "wsL200": 0.12,  "ipL200": 0.113, "racesL200": 58,
+          "wsL400": 0.116, "ipL400": 0.112, "racesL400": 115,
+          "wsL500": 0.114, "ipL500": 0.113, "racesL500": 140,
+          "wsHist": 0.112, "ipHist": 0.111, "racesHist": 290,
+          "wsL30d": 0.125, "ipL30d": 0.111, "racesL30d": 12,
+          "wsL90d": 0.12,  "ipL90d": 0.112, "racesL90d": 38,
+          "wsL180d": 0.117,"ipL180d": 0.112,"racesL180d": 78
+        }
+      },
+      "surfaces": {
+        "arena": {
+          "wsL100": 0.125, "ipL100": 0.114, "racesL100": 48,
+          "wsL200": 0.127, "ipL200": 0.114, "racesL200": 94,
+          "wsL400": 0.122, "ipL400": 0.113, "racesL400": 185,
+          "wsL500": 0.12,  "ipL500": 0.113, "racesL500": 228,
+          "wsHist": 0.117, "ipHist": 0.112, "racesHist": 470,
+          "wsL30d": 0.133, "ipL30d": 0.113, "racesL30d": 22,
+          "wsL90d": 0.128, "ipL90d": 0.113, "racesL90d": 68,
+          "wsL180d": 0.123,"ipL180d": 0.113,"racesL180d": 135
+        },
+        "cesped": {
+          "wsL100": 0.118, "ipL100": 0.11,  "racesL100": 32,
+          "wsL200": 0.12,  "ipL200": 0.111, "racesL200": 64,
+          "wsL400": 0.116, "ipL400": 0.111, "racesL400": 130,
+          "wsL500": 0.114, "ipL500": 0.112, "racesL500": 162,
+          "wsHist": 0.112, "ipHist": 0.11,  "racesHist": 340,
+          "wsL30d": 0.126, "ipL30d": 0.109, "racesL30d": 14,
+          "wsL90d": 0.122, "ipL90d": 0.11,  "racesL90d": 44,
+          "wsL180d": 0.118,"ipL180d": 0.111,"racesL180d": 90
+        }
+      },
+      "distances": {
+        "1000": {
+          "wsL100": 0.128, "ipL100": 0.116, "racesL100": 18,
+          "wsL200": 0.13,  "ipL200": 0.116, "racesL200": 35,
+          "wsL400": 0.125, "ipL400": 0.115, "racesL400": 68,
+          "wsL500": 0.123, "ipL500": 0.115, "racesL500": 84,
+          "wsHist": 0.12,  "ipHist": 0.114, "racesHist": 170,
+          "wsL30d": 0.136, "ipL30d": 0.115, "racesL30d": 8,
+          "wsL90d": 0.131, "ipL90d": 0.116, "racesL90d": 24,
+          "wsL180d": 0.127,"ipL180d": 0.115,"racesL180d": 50
+        },
+        "1100-1500": {
+          "wsL100": 0.122, "ipL100": 0.113, "racesL100": 44,
+          "wsL200": 0.124, "ipL200": 0.113, "racesL200": 88,
+          "wsL400": 0.12,  "ipL400": 0.112, "racesL400": 175,
+          "wsL500": 0.118, "ipL500": 0.113, "racesL500": 218,
+          "wsHist": 0.115, "ipHist": 0.111, "racesHist": 440,
+          "wsL30d": 0.13,  "ipL30d": 0.112, "racesL30d": 20,
+          "wsL90d": 0.125, "ipL90d": 0.113, "racesL90d": 62,
+          "wsL180d": 0.121,"ipL180d": 0.112,"racesL180d": 125
+        },
+        "1600+": {
+          "wsL100": 0.118, "ipL100": 0.11,  "racesL100": 28,
+          "wsL200": 0.12,  "ipL200": 0.111, "racesL200": 55,
+          "wsL400": 0.116, "ipL400": 0.111, "racesL400": 112,
+          "wsL500": 0.114, "ipL500": 0.111, "racesL500": 140,
+          "wsHist": 0.112, "ipHist": 0.11,  "racesHist": 290,
+          "wsL30d": 0.126, "ipL30d": 0.109, "racesL30d": 12,
+          "wsL90d": 0.121, "ipL90d": 0.11,  "racesL90d": 38,
+          "wsL180d": 0.117,"ipL180d": 0.11, "racesL180d": 78
+        }
+      },
+      "timeSeries": [
+        { "date": "2024-04-01", "wsL200": 0.112, "ipL200": 0.111, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.02, "hrrL200": 1.02, "racesL3m": 62 },
+        { "date": "2024-05-01", "wsL200": 0.115, "ipL200": 0.112, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.03, "hrrL200": 1.02, "racesL3m": 64 },
+        { "date": "2024-06-01", "wsL200": 0.118, "ipL200": 0.112, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.03, "hrrL200": 1.03, "racesL3m": 66 },
+        { "date": "2024-07-01", "wsL200": 0.12,  "ipL200": 0.113, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.04, "hrrL200": 1.03, "racesL3m": 68 },
+        { "date": "2024-08-01", "wsL200": 0.122, "ipL200": 0.113, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.04, "hrrL200": 1.03, "racesL3m": 70 },
+        { "date": "2024-09-01", "wsL200": 0.124, "ipL200": 0.114, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.05, "hrrL200": 1.04, "racesL3m": 72 },
+        { "date": "2024-10-01", "wsL200": 0.125, "ipL200": 0.114, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.05, "hrrL200": 1.04, "racesL3m": 74 },
+        { "date": "2024-11-01", "wsL200": 0.126, "ipL200": 0.114, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.05, "hrrL200": 1.04, "racesL3m": 75 },
+        { "date": "2024-12-01", "wsL200": 0.125, "ipL200": 0.113, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.04, "hrrL200": 1.04, "racesL3m": 73 },
+        { "date": "2025-01-01", "wsL200": 0.127, "ipL200": 0.114, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.05, "hrrL200": 1.04, "racesL3m": 76 },
+        { "date": "2025-02-01", "wsL200": 0.128, "ipL200": 0.114, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.05, "hrrL200": 1.04, "racesL3m": 78 },
+        { "date": "2025-03-01", "wsL200": 0.125, "ipL200": 0.114, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.04, "hrrL200": 1.04, "racesL3m": 66 }
+      ],
+      "combos": {
+        "jockeys": [
+          { "name": "Suarez",    "races": 72, "wsCombo": 15.8, "gapCombo": 4.2, "wsComboVsOther": 2.6, "gapComboVsOther": 1.9, "hrrCombo": 1.09, "hrrComboVsOther": 0.05 },
+          { "name": "Montoya",   "races": 55, "wsCombo": 14.2, "gapCombo": 2.8, "wsComboVsOther": 1.0, "gapComboVsOther": 0.6, "hrrCombo": 1.06, "hrrComboVsOther": 0.02 },
+          { "name": "Benitez",   "races": 40, "wsCombo": 13.4, "gapCombo": 1.9, "wsComboVsOther": 0.4, "gapComboVsOther": 0.2, "hrrCombo": 1.04, "hrrComboVsOther": 0.01 }
+        ],
+        "sires": [
+          { "name": "Catcher In The Rye", "races": 36, "wsCombo": 16.2, "gapCombo": 4.8, "wsComboVsOther": 3.2, "gapComboVsOther": 2.4, "hrrCombo": 1.11, "hrrComboVsOther": 0.07 },
+          { "name": "Fortify",            "races": 28, "wsCombo": 14.8, "gapCombo": 3.2, "wsComboVsOther": 1.8, "gapComboVsOther": 1.2, "hrrCombo": 1.08, "hrrComboVsOther": 0.04 }
+        ],
+        "stables": [
+          { "name": "Haras Don Enrique", "races": 50, "wsCombo": 15.6, "gapCombo": 3.8, "wsComboVsOther": 2.2, "gapComboVsOther": 1.6, "hrrCombo": 1.09, "hrrComboVsOther": 0.05 },
+          { "name": "Haras El Paraiso",  "races": 38, "wsCombo": 14.4, "gapCombo": 2.6, "wsComboVsOther": 1.0, "gapComboVsOther": 0.6, "hrrCombo": 1.06, "hrrComboVsOther": 0.02 }
+        ]
+      },
+      "rankings": {},
+      "improvement": { "ratio": 1.04, "newHorsesReceived": 36, "shareNewHorses": 0.10 },
+      "horseQuality": { "avgQuality": 79, "qualityPctile": 68, "avgAge": 3.6, "agePctile": 48, "avgDistance": 1280, "distancePctile": 52 },
+      "estado": { "normalWsHist": 0.115, "normalWsL200": 0.125, "notNormalWsHist": 0.10, "notNormalWsL200": 0.11 }
+    },
+    {
+      "id": 2,
+      "name": "Oscar Labanca",
+      "surname": "Labanca",
+      "rank": 3,
+      "racesL6m": 310,
+      "totalRaces": 720,
+      "winShares": {
+        "l100": 0.108, "l200": 0.11, "l400": 0.107, "l500": 0.105,
+        "hist": 0.103, "l30d": 0.115, "l90d": 0.112, "l180d": 0.109
+      },
+      "impliedProbs": {
+        "l100": 0.108, "l200": 0.109, "l400": 0.109, "l500": 0.11,
+        "hist": 0.108, "l30d": 0.107, "l90d": 0.108, "l180d": 0.109
+      },
+      "hrr": { "l50": 1.01, "l200": 1.01 },
+      "tracks": {
+        "PAL": {
+          "wsL100": 0.112, "ipL100": 0.11,  "racesL100": 35,
+          "wsL200": 0.114, "ipL200": 0.11,  "racesL200": 68,
+          "wsL400": 0.11,  "ipL400": 0.109, "racesL400": 138,
+          "wsL500": 0.108, "ipL500": 0.11,  "racesL500": 170,
+          "wsHist": 0.106, "ipHist": 0.108, "racesHist": 360,
+          "wsL30d": 0.12,  "ipL30d": 0.109, "racesL30d": 16,
+          "wsL90d": 0.116, "ipL90d": 0.109, "racesL90d": 48,
+          "wsL180d": 0.112,"ipL180d": 0.109,"racesL180d": 96
+        },
+        "SI": {
+          "wsL100": 0.106, "ipL100": 0.108, "racesL100": 28,
+          "wsL200": 0.108, "ipL200": 0.108, "racesL200": 54,
+          "wsL400": 0.105, "ipL400": 0.108, "racesL400": 108,
+          "wsL500": 0.103, "ipL500": 0.109, "racesL500": 134,
+          "wsHist": 0.101, "ipHist": 0.107, "racesHist": 280,
+          "wsL30d": 0.112, "ipL30d": 0.107, "racesL30d": 12,
+          "wsL90d": 0.108, "ipL90d": 0.107, "racesL90d": 36,
+          "wsL180d": 0.106,"ipL180d": 0.108,"racesL180d": 72
+        }
+      },
+      "surfaces": {
+        "arena": {
+          "wsL100": 0.11,  "ipL100": 0.109, "racesL100": 42,
+          "wsL200": 0.112, "ipL200": 0.109, "racesL200": 82,
+          "wsL400": 0.108, "ipL400": 0.109, "racesL400": 162,
+          "wsL500": 0.106, "ipL500": 0.11,  "racesL500": 200,
+          "wsHist": 0.104, "ipHist": 0.108, "racesHist": 420,
+          "wsL30d": 0.117, "ipL30d": 0.108, "racesL30d": 19,
+          "wsL90d": 0.113, "ipL90d": 0.108, "racesL90d": 58,
+          "wsL180d": 0.109,"ipL180d": 0.109,"racesL180d": 116
+        },
+        "cesped": {
+          "wsL100": 0.106, "ipL100": 0.107, "racesL100": 28,
+          "wsL200": 0.108, "ipL200": 0.108, "racesL200": 54,
+          "wsL400": 0.105, "ipL400": 0.108, "racesL400": 108,
+          "wsL500": 0.103, "ipL500": 0.109, "racesL500": 134,
+          "wsHist": 0.101, "ipHist": 0.107, "racesHist": 280,
+          "wsL30d": 0.113, "ipL30d": 0.107, "racesL30d": 12,
+          "wsL90d": 0.109, "ipL90d": 0.107, "racesL90d": 36,
+          "wsL180d": 0.106,"ipL180d": 0.108,"racesL180d": 72
+        }
+      },
+      "distances": {
+        "1100-1500": {
+          "wsL100": 0.11,  "ipL100": 0.109, "racesL100": 40,
+          "wsL200": 0.112, "ipL200": 0.109, "racesL200": 78,
+          "wsL400": 0.108, "ipL400": 0.109, "racesL400": 156,
+          "wsL500": 0.106, "ipL500": 0.11,  "racesL500": 194,
+          "wsHist": 0.104, "ipHist": 0.108, "racesHist": 400,
+          "wsL30d": 0.117, "ipL30d": 0.108, "racesL30d": 18,
+          "wsL90d": 0.113, "ipL90d": 0.108, "racesL90d": 56,
+          "wsL180d": 0.109,"ipL180d": 0.109,"racesL180d": 112
+        },
+        "1600+": {
+          "wsL100": 0.106, "ipL100": 0.107, "racesL100": 25,
+          "wsL200": 0.108, "ipL200": 0.108, "racesL200": 50,
+          "wsL400": 0.105, "ipL400": 0.108, "racesL400": 100,
+          "wsL500": 0.103, "ipL500": 0.109, "racesL500": 124,
+          "wsHist": 0.101, "ipHist": 0.107, "racesHist": 260,
+          "wsL30d": 0.113, "ipL30d": 0.107, "racesL30d": 11,
+          "wsL90d": 0.109, "ipL90d": 0.107, "racesL90d": 34,
+          "wsL180d": 0.106,"ipL180d": 0.108,"racesL180d": 68
+        }
+      },
+      "timeSeries": [
+        { "date": "2024-04-01", "wsL200": 0.101, "ipL200": 0.107, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.99, "hrrL200": 1.00, "racesL3m": 52 },
+        { "date": "2024-06-01", "wsL200": 0.103, "ipL200": 0.108, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.00, "hrrL200": 1.00, "racesL3m": 54 },
+        { "date": "2024-08-01", "wsL200": 0.106, "ipL200": 0.108, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.00, "hrrL200": 1.01, "racesL3m": 56 },
+        { "date": "2024-10-01", "wsL200": 0.108, "ipL200": 0.109, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 58 },
+        { "date": "2024-12-01", "wsL200": 0.11,  "ipL200": 0.109, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 60 },
+        { "date": "2025-02-01", "wsL200": 0.111, "ipL200": 0.109, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 62 },
+        { "date": "2025-03-01", "wsL200": 0.11,  "ipL200": 0.109, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 1.01, "hrrL200": 1.01, "racesL3m": 54 }
+      ],
+      "combos": {
+        "jockeys": [
+          { "name": "Rodriguez", "races": 60, "wsCombo": 13.8, "gapCombo": 1.8, "wsComboVsOther": 0.8, "gapComboVsOther": 0.4, "hrrCombo": 1.04, "hrrComboVsOther": 0.02 },
+          { "name": "Flores",    "races": 45, "wsCombo": 12.6, "gapCombo": 0.6, "wsComboVsOther": -0.2,"gapComboVsOther": -0.3,"hrrCombo": 1.02, "hrrComboVsOther": 0.00 }
+        ],
+        "sires": [
+          { "name": "Overanalyze", "races": 30, "wsCombo": 14.2, "gapCombo": 2.8, "wsComboVsOther": 1.8, "gapComboVsOther": 1.2, "hrrCombo": 1.07, "hrrComboVsOther": 0.04 }
+        ],
+        "stables": [
+          { "name": "Haras La Biznaga", "races": 42, "wsCombo": 13.4, "gapCombo": 1.6, "wsComboVsOther": 0.6, "gapComboVsOther": 0.2, "hrrCombo": 1.03, "hrrComboVsOther": 0.01 }
+        ]
+      },
+      "rankings": {},
+      "improvement": { "ratio": 1.01, "newHorsesReceived": 28, "shareNewHorses": 0.08 },
+      "horseQuality": { "avgQuality": 76, "qualityPctile": 58, "avgAge": 3.8, "agePctile": 40, "avgDistance": 1350, "distancePctile": 65 },
+      "estado": { "normalWsHist": 0.103, "normalWsL200": 0.11, "notNormalWsHist": 0.09, "notNormalWsL200": 0.10 }
+    },
+    {
+      "id": 3,
+      "name": "Miguel Angel Cafere",
+      "surname": "Cafere",
+      "rank": 4,
+      "racesL6m": 265,
+      "totalRaces": 610,
+      "winShares": {
+        "l100": 0.095, "l200": 0.098, "l400": 0.096, "l500": 0.094,
+        "hist": 0.092, "l30d": 0.102, "l90d": 0.099, "l180d": 0.097
+      },
+      "impliedProbs": {
+        "l100": 0.102, "l200": 0.104, "l400": 0.103, "l500": 0.104,
+        "hist": 0.102, "l30d": 0.101, "l90d": 0.102, "l180d": 0.103
+      },
+      "hrr": { "l50": 0.98, "l200": 0.99 },
+      "tracks": {
+        "PAL": {
+          "wsL100": 0.098, "ipL100": 0.104, "racesL100": 30,
+          "wsL200": 0.1,   "ipL200": 0.105, "racesL200": 58,
+          "wsL400": 0.098, "ipL400": 0.104, "racesL400": 116,
+          "wsL500": 0.096, "ipL500": 0.104, "racesL500": 144,
+          "wsHist": 0.094, "ipHist": 0.102, "racesHist": 300,
+          "wsL30d": 0.105, "ipL30d": 0.103, "racesL30d": 14,
+          "wsL90d": 0.101, "ipL90d": 0.103, "racesL90d": 42,
+          "wsL180d": 0.098,"ipL180d": 0.104,"racesL180d": 84
+        }
+      },
+      "surfaces": {
+        "arena": {
+          "wsL100": 0.096, "ipL100": 0.103, "racesL100": 38,
+          "wsL200": 0.099, "ipL200": 0.104, "racesL200": 74,
+          "wsL400": 0.097, "ipL400": 0.103, "racesL400": 148,
+          "wsL500": 0.095, "ipL500": 0.104, "racesL500": 183,
+          "wsHist": 0.093, "ipHist": 0.102, "racesHist": 380,
+          "wsL30d": 0.103, "ipL30d": 0.102, "racesL30d": 17,
+          "wsL90d": 0.1,   "ipL90d": 0.102, "racesL90d": 52,
+          "wsL180d": 0.097,"ipL180d": 0.103,"racesL180d": 104
+        }
+      },
+      "distances": {
+        "1100-1500": {
+          "wsL100": 0.097, "ipL100": 0.103, "racesL100": 35,
+          "wsL200": 0.099, "ipL200": 0.104, "racesL200": 68,
+          "wsL400": 0.097, "ipL400": 0.103, "racesL400": 136,
+          "wsL500": 0.095, "ipL500": 0.104, "racesL500": 168,
+          "wsHist": 0.093, "ipHist": 0.102, "racesHist": 350,
+          "wsL30d": 0.104, "ipL30d": 0.102, "racesL30d": 16,
+          "wsL90d": 0.1,   "ipL90d": 0.102, "racesL90d": 48,
+          "wsL180d": 0.097,"ipL180d": 0.103,"racesL180d": 96
+        }
+      },
+      "timeSeries": [
+        { "date": "2024-04-01", "wsL200": 0.09,  "ipL200": 0.102, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.97, "hrrL200": 0.98, "racesL3m": 44 },
+        { "date": "2024-07-01", "wsL200": 0.093, "ipL200": 0.103, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.98, "hrrL200": 0.98, "racesL3m": 46 },
+        { "date": "2024-10-01", "wsL200": 0.096, "ipL200": 0.103, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.99, "hrrL200": 0.99, "racesL3m": 48 },
+        { "date": "2025-01-01", "wsL200": 0.098, "ipL200": 0.104, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.99, "hrrL200": 0.99, "racesL3m": 50 },
+        { "date": "2025-03-01", "wsL200": 0.098, "ipL200": 0.104, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.98, "hrrL200": 0.99, "racesL3m": 44 }
+      ],
+      "combos": {
+        "jockeys": [
+          { "name": "Benitez", "races": 52, "wsCombo": 12.4, "gapCombo": 0.8, "wsComboVsOther": 0.2, "gapComboVsOther": 0.1, "hrrCombo": 1.02, "hrrComboVsOther": 0.01 }
+        ],
+        "sires": [],
+        "stables": []
+      },
+      "rankings": {},
+      "improvement": { "ratio": 0.99, "newHorsesReceived": 22, "shareNewHorses": 0.07 },
+      "horseQuality": { "avgQuality": 72, "qualityPctile": 45, "avgAge": 4.0, "agePctile": 35, "avgDistance": 1300, "distancePctile": 55 },
+      "estado": { "normalWsHist": 0.092, "normalWsL200": 0.098, "notNormalWsHist": 0.085, "notNormalWsL200": 0.092 }
+    },
+    {
+      "id": 4,
+      "name": "Ruben Tato",
+      "surname": "Tato",
+      "rank": 5,
+      "racesL6m": 220,
+      "totalRaces": 520,
+      "winShares": {
+        "l100": 0.082, "l200": 0.085, "l400": 0.083, "l500": 0.081,
+        "hist": 0.08, "l30d": 0.088, "l90d": 0.086, "l180d": 0.084
+      },
+      "impliedProbs": {
+        "l100": 0.095, "l200": 0.097, "l400": 0.096, "l500": 0.097,
+        "hist": 0.095, "l30d": 0.094, "l90d": 0.095, "l180d": 0.096
+      },
+      "hrr": { "l50": 0.95, "l200": 0.96 },
+      "tracks": {
+        "PAL": {
+          "wsL100": 0.084, "ipL100": 0.097, "racesL100": 26,
+          "wsL200": 0.086, "ipL200": 0.098, "racesL200": 50,
+          "wsL400": 0.084, "ipL400": 0.097, "racesL400": 100,
+          "wsL500": 0.082, "ipL500": 0.097, "racesL500": 124,
+          "wsHist": 0.081, "ipHist": 0.095, "racesHist": 260,
+          "wsL30d": 0.09,  "ipL30d": 0.096, "racesL30d": 12,
+          "wsL90d": 0.087, "ipL90d": 0.096, "racesL90d": 36,
+          "wsL180d": 0.084,"ipL180d": 0.097,"racesL180d": 72
+        }
+      },
+      "surfaces": {
+        "arena": {
+          "wsL100": 0.083, "ipL100": 0.096, "racesL100": 32,
+          "wsL200": 0.086, "ipL200": 0.097, "racesL200": 62,
+          "wsL400": 0.084, "ipL400": 0.096, "racesL400": 124,
+          "wsL500": 0.082, "ipL500": 0.097, "racesL500": 153,
+          "wsHist": 0.08,  "ipHist": 0.095, "racesHist": 320,
+          "wsL30d": 0.089, "ipL30d": 0.095, "racesL30d": 15,
+          "wsL90d": 0.086, "ipL90d": 0.096, "racesL90d": 44,
+          "wsL180d": 0.084,"ipL180d": 0.096,"racesL180d": 88
+        }
+      },
+      "distances": {
+        "1100-1500": {
+          "wsL100": 0.083, "ipL100": 0.096, "racesL100": 30,
+          "wsL200": 0.085, "ipL200": 0.097, "racesL200": 58,
+          "wsL400": 0.083, "ipL400": 0.096, "racesL400": 116,
+          "wsL500": 0.081, "ipL500": 0.097, "racesL500": 144,
+          "wsHist": 0.08,  "ipHist": 0.095, "racesHist": 300,
+          "wsL30d": 0.089, "ipL30d": 0.095, "racesL30d": 14,
+          "wsL90d": 0.086, "ipL90d": 0.096, "racesL90d": 40,
+          "wsL180d": 0.083,"ipL180d": 0.096,"racesL180d": 80
+        }
+      },
+      "timeSeries": [
+        { "date": "2024-04-01", "wsL200": 0.079, "ipL200": 0.095, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.94, "hrrL200": 0.95, "racesL3m": 36 },
+        { "date": "2024-07-01", "wsL200": 0.081, "ipL200": 0.096, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.95, "hrrL200": 0.96, "racesL3m": 38 },
+        { "date": "2024-10-01", "wsL200": 0.083, "ipL200": 0.096, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.95, "hrrL200": 0.96, "racesL3m": 40 },
+        { "date": "2025-01-01", "wsL200": 0.085, "ipL200": 0.097, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.96, "hrrL200": 0.96, "racesL3m": 42 },
+        { "date": "2025-03-01", "wsL200": 0.085, "ipL200": 0.097, "wsL200Mean": 0.1, "wsL200P90": 0.18, "hrrL50": 0.95, "hrrL200": 0.96, "racesL3m": 36 }
+      ],
+      "combos": {
+        "jockeys": [
+          { "name": "Flores",    "races": 40, "wsCombo": 11.2, "gapCombo": -0.8, "wsComboVsOther": -1.0, "gapComboVsOther": -0.5, "hrrCombo": 0.99, "hrrComboVsOther": -0.01 },
+          { "name": "Rodriguez", "races": 30, "wsCombo": 10.8, "gapCombo": -1.2, "wsComboVsOther": -1.4, "gapComboVsOther": -0.8, "hrrCombo": 0.97, "hrrComboVsOther": -0.02 }
+        ],
+        "sires": [],
+        "stables": []
+      },
+      "rankings": {},
+      "improvement": { "ratio": 0.96, "newHorsesReceived": 18, "shareNewHorses": 0.06 },
+      "horseQuality": { "avgQuality": 68, "qualityPctile": 32, "avgAge": 4.2, "agePctile": 28, "avgDistance": 1250, "distancePctile": 45 },
+      "estado": { "normalWsHist": 0.08, "normalWsL200": 0.085, "notNormalWsHist": 0.075, "notNormalWsL200": 0.082 }
+    }
+  ],
+  "global": {}
+}
