@@ -251,7 +251,7 @@ function BreakdownTable({
                 className="border-b border-white/5 hover:bg-white/5 text-right transition-colors"
               >
                 <td className="text-gray-200 text-left py-2 pr-2 font-medium">
-                  {key}
+                  {title === 'Distances' ? distLabel(key) : key}
                 </td>
                 <td className="text-gray-200 py-2 px-2 tabular-nums">
                   {pct(ws)}
@@ -508,6 +508,13 @@ function TimeSeriesChart({
 
 // ─── JockeySidebar ───────────────────────────────────────────────────────────
 
+const DIST_LABELS: Record<string, string> = {
+  '1000':     'Corta',
+  '1100-1500': 'Media',
+  '1600+':    'Larga',
+};
+const distLabel = (d: string) => DIST_LABELS[d] ?? d;
+
 const WS_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100', l200: 'wsL200', l400: 'wsL400', l500: 'wsL500', hist: 'wsHist', l30d: 'wsL30d', l90d: 'wsL90d', l180d: 'wsL180d' };
 const IP_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100', l200: 'ipL200', l400: 'ipL400', l500: 'ipL500', hist: 'ipHist', l30d: 'ipL30d', l90d: 'ipL90d', l180d: 'ipL180d' };
 
@@ -612,7 +619,7 @@ function JockeySidebar({
           <option value="all">All distances</option>
           {allDistances.map((d) => (
             <option key={d} value={d}>
-              {d}
+              {distLabel(d)}
             </option>
           ))}
         </select>

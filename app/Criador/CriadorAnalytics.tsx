@@ -22,6 +22,7 @@ interface WindowStats {
   foalsBorn: number;
   runShare: number;
   adjRS: number;
+  adjPS: number | null;
   winShare: number;
   stkWnrsRnrs: number;
   stkWnrsBorn: number;
@@ -302,13 +303,18 @@ function CriadorDetail({ criador, rank, window: win, onWindowChange }: {
       {/* Racing stats */}
       <div>
         <p className="text-xs text-gray-600 uppercase tracking-wider mb-2">Racing Performance</p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-9 gap-3">
           <StatCard label="Foals Born"     value={s.foalsBorn.toString()} />
           <StatCard label="Run Share"      value={pct(s.runShare)} />
           <StatCard
             label="Adj RS (pp)"
             value={(s.adjRS >= 0 ? '+' : '') + fmt1(s.adjRS)}
             highlight={s.adjRS > 0 ? 'green' : s.adjRS < -5 ? 'red' : 'neutral'}
+          />
+          <StatCard
+            label="Adj PS (pp)"
+            value={s.adjPS != null ? (s.adjPS >= 0 ? '+' : '') + fmt1(s.adjPS) : '—'}
+            highlight={s.adjPS == null ? 'neutral' : s.adjPS > 0 ? 'green' : s.adjPS < -5 ? 'red' : 'neutral'}
           />
           <StatCard label="Win Share"      value={pct(s.winShare)} />
           <StatCard label="STK Wnrs/Rnrs" value={pct(s.stkWnrsRnrs)} />
