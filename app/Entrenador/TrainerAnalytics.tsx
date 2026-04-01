@@ -228,6 +228,13 @@ function transformCuidadorData(raw: CuidadorData): TrainerData {
 
 const pct = (v: number) => (v * 100).toFixed(1) + '%';
 const pp = (v: number) => (v >= 0 ? '+' : '') + (v * 100).toFixed(1) + 'pp';
+
+const DIST_LABELS: Record<string, string> = {
+  '1000':      'Corta',
+  '1100-1500': 'Media',
+  '1600+':     'Larga',
+};
+const distLabel = (d: string) => DIST_LABELS[d] ?? d;
 const gapCls = (v: number) => (v >= 0 ? 'text-green-400' : 'text-red-400');
 
 // ─── GapBadge ────────────────────────────────────────────────────────────────
@@ -387,7 +394,7 @@ function TimeSeriesChart({ timeSeries, viewMode, wsHist, ipHist }: {
   );
 
   const chartData = useMemo(
-    () => sortedSeries.slice(-24).map((p) => ({
+    () => sortedSeries.slice(-50).map((p) => ({
       date: p.date.slice(0, 7),
       ws: +(p.wsL200 * 100).toFixed(2),
       ip: +(p.ipL200 * 100).toFixed(2),
@@ -398,7 +405,7 @@ function TimeSeriesChart({ timeSeries, viewMode, wsHist, ipHist }: {
   );
 
   if (viewMode === 'hist') {
-    const histChartData = sortedSeries.slice(-24).map((p) => ({
+    const histChartData = sortedSeries.slice(-50).map((p) => ({
       date: p.date.slice(0, 7),
       ws: +(wsHist * 100).toFixed(2),
       ip: +(ipHist * 100).toFixed(2),
@@ -461,16 +468,11 @@ const VIEW_OPTIONS: { key: ViewMode; label: string }[] = [
   { key: 'l500', label: 'L500' }, { key: 'hist', label: 'Hist' },
 ];
 
-function TrainerSidebar({ trainers, selectedId, onSelect }: { trainers: Trainer[]; selectedId: number | null; onSelect: (id: number) => void }) {
+function TrainerSidebar({ trainers, selectedId, onSelect, viewMode, distFilter }: {
+  trainers: Trainer[]; selectedId: number | null; onSelect: (id: number) => void;
+  viewMode: ViewMode; distFilter: string;
+}) {
   const [search, setSearch] = useState('');
-  const [rankMode, setRankMode] = useState<ViewMode>('l200');
-  const [distFilter, setDistFilter] = useState<string>('all');
-
-  const allDistances = useMemo(() => {
-    const dists = new Set<string>();
-    trainers.forEach((t) => Object.keys(t.distances ?? {}).forEach((d) => dists.add(d)));
-    return Array.from(dists);
-  }, [trainers]);
 
   const filtered = useMemo(() => {
     const term = search.toLowerCase();
@@ -481,15 +483,15 @@ function TrainerSidebar({ trainers, selectedId, onSelect }: { trainers: Trainer[
         if (distFilter !== 'all') {
           const entA = a.distances?.[distFilter];
           const entB = b.distances?.[distFilter];
-          valA = entA ? (entA[WS_KEY[rankMode]] as number) - (entA[IP_KEY[rankMode]] as number) : 0;
-          valB = entB ? (entB[WS_KEY[rankMode]] as number) - (entB[IP_KEY[rankMode]] as number) : 0;
+          valA = entA ? (entA[WS_KEY[viewMode]] as number) - (entA[IP_KEY[viewMode]] as number) : 0;
+          valB = entB ? (entB[WS_KEY[viewMode]] as number) - (entB[IP_KEY[viewMode]] as number) : 0;
         } else {
-          valA = (a.winShares?.[rankMode] ?? 0) - (a.impliedProbs?.[rankMode] ?? 0);
-          valB = (b.winShares?.[rankMode] ?? 0) - (b.impliedProbs?.[rankMode] ?? 0);
+          valA = (a.winShares?.[viewMode] ?? 0) - (a.impliedProbs?.[viewMode] ?? 0);
+          valB = (b.winShares?.[viewMode] ?? 0) - (b.impliedProbs?.[viewMode] ?? 0);
         }
         return valB - valA;
       });
-  }, [trainers, search, rankMode, distFilter]);
+  }, [trainers, search, viewMode, distFilter]);
 
   return (
     <div className="w-72 flex-shrink-0 border-r border-white/10 flex flex-col overflow-hidden" style={{ height: 'calc(100vh - 220px)', position: 'sticky', top: 0 }}>
@@ -502,36 +504,17 @@ function TrainerSidebar({ trainers, selectedId, onSelect }: { trainers: Trainer[
           onChange={(e) => setSearch(e.target.value)}
           className="w-full px-2.5 py-1.5 text-sm bg-white/5 border border-white/10 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white/30 rounded"
         />
-        <div className="flex gap-0.5 bg-white/5 border border-white/10 p-0.5 rounded">
-          {VIEW_OPTIONS.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setRankMode(key)}
-              className={`flex-1 py-1 text-xs font-medium rounded transition-colors duration-150 ${rankMode === key ? 'bg-white/20 text-white' : 'text-gray-500 hover:text-gray-200'}`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        <select
-          value={distFilter}
-          onChange={(e) => setDistFilter(e.target.value)}
-          className="w-full px-2.5 py-1.5 text-xs bg-white/5 border border-white/10 text-gray-300 focus:outline-none focus:border-white/30 rounded"
-        >
-          <option value="all">All distances</option>
-          {allDistances.map((d) => <option key={d} value={d}>{d}</option>)}
-        </select>
       </div>
       <div className="overflow-y-auto flex-1">
         {filtered.map((t, i) => {
           let ws: number, ip: number;
           if (distFilter !== 'all' && t.distances?.[distFilter]) {
             const ent = t.distances[distFilter];
-            ws = ent[WS_KEY[rankMode]] as number;
-            ip = ent[IP_KEY[rankMode]] as number;
+            ws = ent[WS_KEY[viewMode]] as number;
+            ip = ent[IP_KEY[viewMode]] as number;
           } else {
-            ws = t.winShares?.[rankMode] ?? 0;
-            ip = t.impliedProbs?.[rankMode] ?? 0;
+            ws = t.winShares?.[viewMode] ?? 0;
+            ip = t.impliedProbs?.[viewMode] ?? 0;
           }
           const gap = ws - ip;
           const isSelected = t.id === selectedId;
@@ -559,8 +542,9 @@ function TrainerSidebar({ trainers, selectedId, onSelect }: { trainers: Trainer[
 
 // ─── TrainerDetail ───────────────────────────────────────────────────────────
 
-function TrainerDetail({ trainer, gapRank, viewMode, onViewModeChange }: {
+function TrainerDetail({ trainer, gapRank, viewMode, onViewModeChange, distFilter, allDistances, onDistFilterChange }: {
   trainer: Trainer; gapRank: number; viewMode: ViewMode; onViewModeChange: (m: ViewMode) => void;
+  distFilter: string; allDistances: string[]; onDistFilterChange: (d: string) => void;
 }) {
   const ws = trainer.winShares?.[viewMode] ?? 0;
   const ip = trainer.impliedProbs?.[viewMode] ?? 0;
@@ -586,7 +570,19 @@ function TrainerDetail({ trainer, gapRank, viewMode, onViewModeChange }: {
             {trainer.totalRaces?.toLocaleString()} total races · {trainer.racesL6m} in last 6 months
           </p>
         </div>
-        <ViewToggle mode={viewMode} onChange={onViewModeChange} />
+        <div className="flex items-center gap-2">
+          <select
+            value={distFilter}
+            onChange={(e) => onDistFilterChange(e.target.value)}
+            className="px-2.5 py-1.5 text-xs bg-white/5 border border-white/10 text-gray-300 focus:outline-none focus:border-white/30 rounded"
+          >
+            <option value="all">All distances</option>
+            {allDistances.map((d) => (
+              <option key={d} value={d}>{distLabel(d)}</option>
+            ))}
+          </select>
+          <ViewToggle mode={viewMode} onChange={onViewModeChange} />
+        </div>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3">
@@ -636,6 +632,7 @@ export default function TrainerAnalytics() {
   const [data, setData] = useState<TrainerData | null>(null);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('l200');
+  const [distFilter, setDistFilter] = useState<string>('all');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -665,15 +662,29 @@ export default function TrainerAnalytics() {
     [data, selectedId]
   );
 
+  const allDistances = useMemo(() => {
+    const dists = new Set<string>();
+    data?.trainers.forEach((t) => Object.keys(t.distances ?? {}).forEach((d) => dists.add(d)));
+    return Array.from(dists).sort();
+  }, [data]);
+
   const gapRank = useMemo(() => {
     if (!data || selectedId === null) return 1;
     const sorted = [...data.trainers].sort((a, b) => {
-      const gA = (a.winShares?.[viewMode] ?? 0) - (a.impliedProbs?.[viewMode] ?? 0);
-      const gB = (b.winShares?.[viewMode] ?? 0) - (b.impliedProbs?.[viewMode] ?? 0);
+      let gA: number, gB: number;
+      if (distFilter !== 'all') {
+        const entA = a.distances?.[distFilter];
+        const entB = b.distances?.[distFilter];
+        gA = entA ? (entA[WS_KEY[viewMode]] as number) - (entA[IP_KEY[viewMode]] as number) : 0;
+        gB = entB ? (entB[WS_KEY[viewMode]] as number) - (entB[IP_KEY[viewMode]] as number) : 0;
+      } else {
+        gA = (a.winShares?.[viewMode] ?? 0) - (a.impliedProbs?.[viewMode] ?? 0);
+        gB = (b.winShares?.[viewMode] ?? 0) - (b.impliedProbs?.[viewMode] ?? 0);
+      }
       return gB - gA;
     });
     return sorted.findIndex((t) => t.id === selectedId) + 1;
-  }, [data, selectedId, viewMode]);
+  }, [data, selectedId, viewMode, distFilter]);
 
   if (loading) return <div className="flex items-center justify-center py-20 text-gray-500 text-sm">Loading trainer analytics…</div>;
   if (error) return <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-400 text-sm rounded">{error}</div>;
@@ -681,10 +692,10 @@ export default function TrainerAnalytics() {
 
   return (
     <div className="flex gap-0" style={{ minHeight: 'calc(100vh - 220px)' }}>
-      <TrainerSidebar trainers={data.trainers} selectedId={selectedId} onSelect={setSelectedId} />
+      <TrainerSidebar trainers={data.trainers} selectedId={selectedId} onSelect={setSelectedId} viewMode={viewMode} distFilter={distFilter} />
       <div className="flex-1 overflow-auto min-w-0">
         {selectedTrainer ? (
-          <TrainerDetail trainer={selectedTrainer} gapRank={gapRank} viewMode={viewMode} onViewModeChange={setViewMode} />
+          <TrainerDetail trainer={selectedTrainer} gapRank={gapRank} viewMode={viewMode} onViewModeChange={setViewMode} distFilter={distFilter} allDistances={allDistances} onDistFilterChange={setDistFilter} />
         ) : (
           <div className="flex items-center justify-center py-20 text-gray-500 text-sm">
             Select a trainer from the list

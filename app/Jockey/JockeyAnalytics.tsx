@@ -359,7 +359,7 @@ function TimeSeriesChart({
 
   const chartData = useMemo(
     () =>
-      sortedSeries.slice(-24).map((p) => ({
+      sortedSeries.slice(-50).map((p) => ({
         date: p.date.slice(0, 7),
         ws: +(p.wsL200 * 100).toFixed(2),
         ip: +(p.ipL200 * 100).toFixed(2),
@@ -372,7 +372,7 @@ function TimeSeriesChart({
   // Historical mode: the timeSeries only carries L200 rolling points.
   // Show the overall hist values as flat reference lines instead.
   if (viewMode === 'hist') {
-    const histChartData = sortedSeries.slice(-24).map((p) => ({
+    const histChartData = sortedSeries.slice(-50).map((p) => ({
       date: p.date.slice(0, 7),
       ws: +(wsHist * 100).toFixed(2),
       ip: +(ipHist * 100).toFixed(2),
@@ -538,20 +538,16 @@ function JockeySidebar({
   jockeys,
   selectedId,
   onSelect,
+  viewMode,
+  distFilter,
 }: {
   jockeys: Jockey[];
   selectedId: number | null;
   onSelect: (id: number) => void;
+  viewMode: ViewMode;
+  distFilter: string;
 }) {
   const [search, setSearch] = useState('');
-  const [rankMode, setRankMode] = useState<ViewMode>('l200');
-  const [distFilter, setDistFilter] = useState<string>('all');
-
-  const allDistances = useMemo(() => {
-    const dists = new Set<string>();
-    jockeys.forEach((j) => Object.keys(j.distances ?? {}).forEach((d) => dists.add(d)));
-    return Array.from(dists).sort((a, b) => parseInt(a) - parseInt(b));
-  }, [jockeys]);
 
   const filtered = useMemo(() => {
     const term = search.toLowerCase();
@@ -566,19 +562,19 @@ function JockeySidebar({
         if (distFilter !== 'all') {
           const entA = a.distances?.[distFilter];
           const entB = b.distances?.[distFilter];
-          const wsA = entA ? (entA[WS_KEY[rankMode]] as number) : 0;
-          const wsB = entB ? (entB[WS_KEY[rankMode]] as number) : 0;
-          const ipA = entA ? (entA[IP_KEY[rankMode]] as number) : 0;
-          const ipB = entB ? (entB[IP_KEY[rankMode]] as number) : 0;
+          const wsA = entA ? (entA[WS_KEY[viewMode]] as number) : 0;
+          const wsB = entB ? (entB[WS_KEY[viewMode]] as number) : 0;
+          const ipA = entA ? (entA[IP_KEY[viewMode]] as number) : 0;
+          const ipB = entB ? (entB[IP_KEY[viewMode]] as number) : 0;
           valA = wsA - ipA;
           valB = wsB - ipB;
         } else {
-          valA = (a.winShares?.[rankMode] ?? 0) - (a.impliedProbs?.[rankMode] ?? 0);
-          valB = (b.winShares?.[rankMode] ?? 0) - (b.impliedProbs?.[rankMode] ?? 0);
+          valA = (a.winShares?.[viewMode] ?? 0) - (a.impliedProbs?.[viewMode] ?? 0);
+          valB = (b.winShares?.[viewMode] ?? 0) - (b.impliedProbs?.[viewMode] ?? 0);
         }
         return valB - valA;
       });
-  }, [jockeys, search, rankMode, distFilter]);
+  }, [jockeys, search, viewMode, distFilter]);
 
   return (
     <div
@@ -598,36 +594,6 @@ function JockeySidebar({
           className="w-full px-2.5 py-1.5 text-sm bg-white/5 border border-white/10 text-gray-300
                      placeholder-gray-600 focus:outline-none focus:border-white/30 rounded"
         />
-        {/* Timeseries selector for ranking */}
-        <div className="flex gap-0.5 bg-white/5 border border-white/10 p-0.5 rounded">
-          {VIEW_OPTIONS.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setRankMode(key)}
-              className={`flex-1 py-1 text-xs font-medium rounded transition-colors duration-150 ${
-                rankMode === key
-                  ? 'bg-white/20 text-white'
-                  : 'text-gray-500 hover:text-gray-200'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        {/* Distance filter */}
-        <select
-          value={distFilter}
-          onChange={(e) => setDistFilter(e.target.value)}
-          className="w-full px-2.5 py-1.5 text-xs bg-white/5 border border-white/10 text-gray-300
-                     focus:outline-none focus:border-white/30 rounded"
-        >
-          <option value="all">All distances</option>
-          {allDistances.map((d) => (
-            <option key={d} value={d}>
-              {distLabel(d)}
-            </option>
-          ))}
-        </select>
       </div>
 
       {/* List */}
@@ -636,11 +602,11 @@ function JockeySidebar({
           let ws: number, ip: number;
           if (distFilter !== 'all' && j.distances?.[distFilter]) {
             const ent = j.distances[distFilter];
-            ws = ent[WS_KEY[rankMode]] as number;
-            ip = ent[IP_KEY[rankMode]] as number;
+            ws = ent[WS_KEY[viewMode]] as number;
+            ip = ent[IP_KEY[viewMode]] as number;
           } else {
-            ws = j.winShares?.[rankMode] ?? 0;
-            ip = j.impliedProbs?.[rankMode] ?? 0;
+            ws = j.winShares?.[viewMode] ?? 0;
+            ip = j.impliedProbs?.[viewMode] ?? 0;
           }
           const gap = ws - ip;
           const isSelected = j.id === selectedId;
@@ -685,11 +651,17 @@ function JockeyDetail({
   gapRank,
   viewMode,
   onViewModeChange,
+  distFilter,
+  allDistances,
+  onDistFilterChange,
 }: {
   jockey: Jockey;
   gapRank: number;
   viewMode: ViewMode;
   onViewModeChange: (m: ViewMode) => void;
+  distFilter: string;
+  allDistances: string[];
+  onDistFilterChange: (d: string) => void;
 }) {
   const ws = jockey.winShares?.[viewMode] ?? jockey.winShares?.l200 ?? 0;
   const ip = jockey.impliedProbs?.[viewMode] ?? jockey.impliedProbs?.l200 ?? 0;
@@ -719,7 +691,19 @@ function JockeyDetail({
             {jockey.racesL6m} in last 6 months
           </p>
         </div>
-        <ViewToggle mode={viewMode} onChange={onViewModeChange} />
+        <div className="flex items-center gap-2">
+          <select
+            value={distFilter}
+            onChange={(e) => onDistFilterChange(e.target.value)}
+            className="px-2.5 py-1.5 text-xs bg-white/5 border border-white/10 text-gray-300 focus:outline-none focus:border-white/30 rounded"
+          >
+            <option value="all">All distances</option>
+            {allDistances.map((d) => (
+              <option key={d} value={d}>{distLabel(d)}</option>
+            ))}
+          </select>
+          <ViewToggle mode={viewMode} onChange={onViewModeChange} />
+        </div>
       </div>
 
       {/* ── Summary Stats ── */}
@@ -793,6 +777,7 @@ export default function JockeyAnalytics() {
   const [data, setData] = useState<JockeyData | null>(null);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('l200');
+  const [distFilter, setDistFilter] = useState<string>('all');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -827,15 +812,29 @@ export default function JockeyAnalytics() {
     [data, selectedId]
   );
 
+  const allDistances = useMemo(() => {
+    const dists = new Set<string>();
+    data?.jockeys.forEach((j) => Object.keys(j.distances ?? {}).forEach((d) => dists.add(d)));
+    return Array.from(dists).sort((a, b) => parseInt(a) - parseInt(b));
+  }, [data]);
+
   const gapRank = useMemo(() => {
     if (!data || selectedId === null) return 1;
     const sorted = [...data.jockeys].sort((a, b) => {
-      const gapA = (a.winShares?.[viewMode] ?? 0) - (a.impliedProbs?.[viewMode] ?? 0);
-      const gapB = (b.winShares?.[viewMode] ?? 0) - (b.impliedProbs?.[viewMode] ?? 0);
+      let gapA: number, gapB: number;
+      if (distFilter !== 'all') {
+        const entA = a.distances?.[distFilter];
+        const entB = b.distances?.[distFilter];
+        gapA = entA ? (entA[WS_KEY[viewMode]] as number) - (entA[IP_KEY[viewMode]] as number) : 0;
+        gapB = entB ? (entB[WS_KEY[viewMode]] as number) - (entB[IP_KEY[viewMode]] as number) : 0;
+      } else {
+        gapA = (a.winShares?.[viewMode] ?? 0) - (a.impliedProbs?.[viewMode] ?? 0);
+        gapB = (b.winShares?.[viewMode] ?? 0) - (b.impliedProbs?.[viewMode] ?? 0);
+      }
       return gapB - gapA;
     });
     return sorted.findIndex((j) => j.id === selectedId) + 1;
-  }, [data, selectedId, viewMode]);
+  }, [data, selectedId, viewMode, distFilter]);
 
   if (loading) {
     return (
@@ -865,6 +864,8 @@ export default function JockeyAnalytics() {
         jockeys={data.jockeys}
         selectedId={selectedId}
         onSelect={setSelectedId}
+        viewMode={viewMode}
+        distFilter={distFilter}
       />
       <div className="flex-1 overflow-auto min-w-0">
         {selectedJockey ? (
@@ -873,6 +874,9 @@ export default function JockeyAnalytics() {
             gapRank={gapRank}
             viewMode={viewMode}
             onViewModeChange={setViewMode}
+            distFilter={distFilter}
+            allDistances={allDistances}
+            onDistFilterChange={setDistFilter}
           />
         ) : (
           <div className="flex items-center justify-center py-20 text-gray-500 text-sm">
