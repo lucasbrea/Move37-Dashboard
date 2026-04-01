@@ -381,19 +381,24 @@ const CHART_TOOLTIP_STYLE = {
 function TimeSeriesChart({ timeSeries, viewMode, wsHist, ipHist }: {
   timeSeries: TimePoint[]; viewMode: ViewMode; wsHist: number; ipHist: number;
 }) {
+  const sortedSeries = useMemo(
+    () => [...timeSeries].sort((a, b) => a.date.localeCompare(b.date)),
+    [timeSeries]
+  );
+
   const chartData = useMemo(
-    () => timeSeries.slice(-24).map((p) => ({
+    () => sortedSeries.slice(-24).map((p) => ({
       date: p.date.slice(0, 7),
       ws: +(p.wsL200 * 100).toFixed(2),
       ip: +(p.ipL200 * 100).toFixed(2),
       mean: +(p.wsL200Mean * 100).toFixed(2),
       p90: +(p.wsL200P90 * 100).toFixed(2),
     })),
-    [timeSeries]
+    [sortedSeries]
   );
 
   if (viewMode === 'hist') {
-    const histChartData = timeSeries.slice(-24).map((p) => ({
+    const histChartData = sortedSeries.slice(-24).map((p) => ({
       date: p.date.slice(0, 7),
       ws: +(wsHist * 100).toFixed(2),
       ip: +(ipHist * 100).toFixed(2),
