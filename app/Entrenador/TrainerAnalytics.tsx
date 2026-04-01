@@ -321,7 +321,7 @@ function BreakdownTable({ title, data, viewMode }: { title: string; data: Record
             const gap = ws - ip;
             return (
               <tr key={key} className="border-b border-white/5 hover:bg-white/5 text-right transition-colors">
-                <td className="text-gray-200 text-left py-2 pr-2 font-medium">{key}</td>
+                <td className="text-gray-200 text-left py-2 pr-2 font-medium max-w-[140px] truncate">{title === 'Distances' ? distLabel(key) : key}</td>
                 <td className="text-gray-200 py-2 px-2 tabular-nums">{pct(ws)}</td>
                 <td className="text-gray-500 py-2 px-2 tabular-nums">{pct(ip)}</td>
                 <td className={`py-2 px-2 font-medium tabular-nums ${gapCls(gap)}`}>{pp(gap)}</td>

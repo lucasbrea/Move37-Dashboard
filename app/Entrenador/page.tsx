@@ -93,7 +93,7 @@ export default function EntrenadorPage() {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <main className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Page Title */}
         <h1 className="text-5xl font-light text-gray-100 mb-8">Entrenador</h1>
 

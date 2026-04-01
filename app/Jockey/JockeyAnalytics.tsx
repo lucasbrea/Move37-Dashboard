@@ -250,7 +250,7 @@ function BreakdownTable({
                 key={key}
                 className="border-b border-white/5 hover:bg-white/5 text-right transition-colors"
               >
-                <td className="text-gray-200 text-left py-2 pr-2 font-medium">
+                <td className="text-gray-200 text-left py-2 pr-2 font-medium max-w-[140px] truncate">
                   {title === 'Distances' ? distLabel(key) : key}
                 </td>
                 <td className="text-gray-200 py-2 px-2 tabular-nums">
