@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exportDate": "2026-03-18",
+    "exportDate": "2026-04-01",
     "numCriadors": 46,
     "timeSeriesRange": {
       "start": 2015,
@@ -43,8 +43,9 @@
         "y1": {
           "foalsBorn": 34,
           "runShare": 0.559,
-          "adjRS": 3.6,
-          "winShare": 0.25,
+          "adjRS": 2.7,
+          "adjPS": 7.5,
+          "winShare": 0.242,
           "stkWnrsRnrs": 0.105,
           "stkWnrsBorn": 0.059,
           "g1WnrsBorn": 0.029,
@@ -60,8 +61,9 @@
         "y2": {
           "foalsBorn": 69,
           "runShare": 0.609,
-          "adjRS": 3.0,
-          "winShare": 0.162,
+          "adjRS": 2.5,
+          "adjPS": 6.2,
+          "winShare": 0.163,
           "stkWnrsRnrs": 0.095,
           "stkWnrsBorn": 0.058,
           "g1WnrsBorn": 0.014,
@@ -77,8 +79,9 @@
         "y5": {
           "foalsBorn": 182,
           "runShare": 0.676,
-          "adjRS": 6.8,
-          "winShare": 0.155,
+          "adjRS": 6.5,
+          "adjPS": 7.0,
+          "winShare": 0.156,
           "stkWnrsRnrs": 0.106,
           "stkWnrsBorn": 0.071,
           "g1WnrsBorn": 0.011,
@@ -94,8 +97,9 @@
         "y7": {
           "foalsBorn": 250,
           "runShare": 0.696,
-          "adjRS": 8.7,
-          "winShare": 0.146,
+          "adjRS": 8.5,
+          "adjPS": 8.6,
+          "winShare": 0.147,
           "stkWnrsRnrs": 0.121,
           "stkWnrsBorn": 0.084,
           "g1WnrsBorn": 0.012,
@@ -111,7 +115,8 @@
         "hist": {
           "foalsBorn": 572,
           "runShare": 0.698,
-          "adjRS": 7.2,
+          "adjRS": 7.1,
+          "adjPS": 7.9,
           "winShare": 0.155,
           "stkWnrsRnrs": 0.115,
           "stkWnrsBorn": 0.08,
@@ -121,9 +126,9 @@
           "avgServicedDamAge": 9.7,
           "avgVaciosDams": 0.22,
           "avgRestDams": 0.078,
-          "deadBfr2yo": 0.046,
+          "deadBfr2yo": 0.045,
           "deadAtBirth": 0.007,
-          "avgDaysBtwServices": 10.9
+          "avgDaysBtwServices": 11.0
         }
       },
       "timeSeries": [
@@ -161,7 +166,7 @@
           "winShare": 0.1,
           "stkWnrsBorn": 0.025,
           "g1WnrsBorn": 0.0,
-          "cei": 1.67
+          "cei": 1.69
         },
         {
           "year": 2019,
@@ -179,7 +184,7 @@
           "winShare": 0.2,
           "stkWnrsBorn": 0.083,
           "g1WnrsBorn": 0.0,
-          "cei": 2.12
+          "cei": 2.14
         },
         {
           "year": 2021,
@@ -188,16 +193,16 @@
           "winShare": 0.12,
           "stkWnrsBorn": 0.057,
           "g1WnrsBorn": 0.0,
-          "cei": 0.72
+          "cei": 0.76
         },
         {
           "year": 2022,
           "foalsBorn": 34,
           "runShare": 0.56,
-          "winShare": 0.25,
+          "winShare": 0.24,
           "stkWnrsBorn": 0.059,
           "g1WnrsBorn": 0.029,
-          "cei": 0.93
+          "cei": 0.94
         }
       ]
     },
@@ -235,10 +240,11 @@
       "stats": {
         "y1": {
           "foalsBorn": 39,
-          "runShare": 0.641,
+          "runShare": 0.667,
           "adjRS": 1.2,
-          "winShare": 0.264,
-          "stkWnrsRnrs": 0.24,
+          "adjPS": 7.6,
+          "winShare": 0.257,
+          "stkWnrsRnrs": 0.231,
           "stkWnrsBorn": 0.154,
           "g1WnrsBorn": 0.026,
           "cei": 2.0,
@@ -252,13 +258,14 @@
         },
         "y2": {
           "foalsBorn": 78,
-          "runShare": 0.679,
-          "adjRS": 1.9,
-          "winShare": 0.236,
-          "stkWnrsRnrs": 0.132,
+          "runShare": 0.692,
+          "adjRS": 2.0,
+          "adjPS": 4.4,
+          "winShare": 0.234,
+          "stkWnrsRnrs": 0.13,
           "stkWnrsBorn": 0.09,
           "g1WnrsBorn": 0.013,
-          "cei": 1.6,
+          "cei": 1.7,
           "avgAvailableDams": 50.0,
           "avgServicedDamAge": 10.1,
           "avgVaciosDams": 0.22,
@@ -269,10 +276,11 @@
         },
         "y5": {
           "foalsBorn": 206,
-          "runShare": 0.752,
+          "runShare": 0.757,
           "adjRS": 3.6,
-          "winShare": 0.176,
-          "stkWnrsRnrs": 0.097,
+          "adjPS": 2.8,
+          "winShare": 0.177,
+          "stkWnrsRnrs": 0.096,
           "stkWnrsBorn": 0.073,
           "g1WnrsBorn": 0.005,
           "cei": 2.0,
@@ -286,9 +294,10 @@
         },
         "y7": {
           "foalsBorn": 289,
-          "runShare": 0.74,
+          "runShare": 0.744,
           "adjRS": 2.2,
-          "winShare": 0.159,
+          "adjPS": 1.6,
+          "winShare": 0.16,
           "stkWnrsRnrs": 0.079,
           "stkWnrsBorn": 0.059,
           "g1WnrsBorn": 0.003,
@@ -303,9 +312,10 @@
         },
         "hist": {
           "foalsBorn": 868,
-          "runShare": 0.75,
+          "runShare": 0.751,
           "adjRS": 3.6,
-          "winShare": 0.145,
+          "adjPS": 3.5,
+          "winShare": 0.146,
           "stkWnrsRnrs": 0.101,
           "stkWnrsBorn": 0.076,
           "g1WnrsBorn": 0.01,
@@ -354,7 +364,7 @@
           "winShare": 0.19,
           "stkWnrsBorn": 0.1,
           "g1WnrsBorn": 0.0,
-          "cei": 3.02
+          "cei": 3.04
         },
         {
           "year": 2019,
@@ -381,16 +391,16 @@
           "winShare": 0.21,
           "stkWnrsBorn": 0.026,
           "g1WnrsBorn": 0.0,
-          "cei": 1.31
+          "cei": 1.32
         },
         {
           "year": 2022,
           "foalsBorn": 39,
-          "runShare": 0.64,
+          "runShare": 0.67,
           "winShare": 0.26,
           "stkWnrsBorn": 0.154,
           "g1WnrsBorn": 0.026,
-          "cei": 1.99
+          "cei": 2.0
         }
       ]
     },
@@ -429,12 +439,13 @@
         "y1": {
           "foalsBorn": 44,
           "runShare": 0.364,
-          "adjRS": -3.2,
-          "winShare": 0.117,
+          "adjRS": -3.7,
+          "adjPS": 4.8,
+          "winShare": 0.111,
           "stkWnrsRnrs": 0.062,
           "stkWnrsBorn": 0.023,
           "g1WnrsBorn": 0.0,
-          "cei": 0.6,
+          "cei": 0.7,
           "avgAvailableDams": 71.0,
           "avgServicedDamAge": 9.5,
           "avgVaciosDams": 0.23,
@@ -446,8 +457,9 @@
         "y2": {
           "foalsBorn": 104,
           "runShare": 0.462,
-          "adjRS": -3.5,
-          "winShare": 0.123,
+          "adjRS": -3.7,
+          "adjPS": 6.9,
+          "winShare": 0.122,
           "stkWnrsRnrs": 0.083,
           "stkWnrsBorn": 0.038,
           "g1WnrsBorn": 0.019,
@@ -463,7 +475,8 @@
         "y5": {
           "foalsBorn": 266,
           "runShare": 0.647,
-          "adjRS": 5.1,
+          "adjRS": 5.0,
+          "adjPS": 4.6,
           "winShare": 0.125,
           "stkWnrsRnrs": 0.07,
           "stkWnrsBorn": 0.045,
@@ -472,7 +485,7 @@
           "avgAvailableDams": 77.0,
           "avgServicedDamAge": 10.0,
           "avgVaciosDams": 0.25,
-          "avgRestDams": 0.057,
+          "avgRestDams": 0.056,
           "deadBfr2yo": 0.038,
           "deadAtBirth": 0.003,
           "avgDaysBtwServices": 12.6
@@ -480,24 +493,26 @@
         "y7": {
           "foalsBorn": 315,
           "runShare": 0.67,
-          "adjRS": 5.8,
+          "adjRS": 5.7,
+          "adjPS": 5.4,
           "winShare": 0.126,
           "stkWnrsRnrs": 0.081,
           "stkWnrsBorn": 0.054,
           "g1WnrsBorn": 0.016,
           "cei": 1.8,
-          "avgAvailableDams": 76.0,
+          "avgAvailableDams": 77.0,
           "avgServicedDamAge": 9.9,
           "avgVaciosDams": 0.25,
           "avgRestDams": 0.046,
           "deadBfr2yo": 0.037,
           "deadAtBirth": 0.002,
-          "avgDaysBtwServices": 12.7
+          "avgDaysBtwServices": 12.8
         },
         "hist": {
           "foalsBorn": 446,
           "runShare": 0.673,
           "adjRS": 4.3,
+          "adjPS": 5.7,
           "winShare": 0.124,
           "stkWnrsRnrs": 0.09,
           "stkWnrsBorn": 0.061,
@@ -509,7 +524,7 @@
           "avgRestDams": 0.045,
           "deadBfr2yo": 0.042,
           "deadAtBirth": 0.007,
-          "avgDaysBtwServices": 12.8
+          "avgDaysBtwServices": 12.7
         }
       },
       "timeSeries": [
@@ -547,7 +562,7 @@
           "winShare": 0.13,
           "stkWnrsBorn": 0.082,
           "g1WnrsBorn": 0.0,
-          "cei": 2.09
+          "cei": 2.1
         },
         {
           "year": 2019,
@@ -556,7 +571,7 @@
           "winShare": 0.12,
           "stkWnrsBorn": 0.043,
           "g1WnrsBorn": 0.0,
-          "cei": 2.19
+          "cei": 2.2
         },
         {
           "year": 2020,
@@ -565,25 +580,25 @@
           "winShare": 0.12,
           "stkWnrsBorn": 0.03,
           "g1WnrsBorn": 0.015,
-          "cei": 1.88
+          "cei": 1.89
         },
         {
           "year": 2021,
           "foalsBorn": 60,
           "runShare": 0.53,
-          "winShare": 0.13,
+          "winShare": 0.12,
           "stkWnrsBorn": 0.05,
           "g1WnrsBorn": 0.033,
-          "cei": 1.85
+          "cei": 1.86
         },
         {
           "year": 2022,
           "foalsBorn": 44,
           "runShare": 0.36,
-          "winShare": 0.12,
+          "winShare": 0.11,
           "stkWnrsBorn": 0.023,
           "g1WnrsBorn": 0.0,
-          "cei": 0.64
+          "cei": 0.65
         }
       ]
     },
@@ -621,13 +636,14 @@
       "stats": {
         "y1": {
           "foalsBorn": 187,
-          "runShare": 0.636,
-          "adjRS": 0.6,
-          "winShare": 0.129,
-          "stkWnrsRnrs": 0.067,
+          "runShare": 0.647,
+          "adjRS": 0.3,
+          "adjPS": 3.4,
+          "winShare": 0.125,
+          "stkWnrsRnrs": 0.066,
           "stkWnrsBorn": 0.043,
           "g1WnrsBorn": 0.016,
-          "cei": 0.8,
+          "cei": 0.9,
           "avgAvailableDams": 231.0,
           "avgServicedDamAge": 9.9,
           "avgVaciosDams": 0.19,
@@ -638,11 +654,12 @@
         },
         "y2": {
           "foalsBorn": 357,
-          "runShare": 0.714,
-          "adjRS": 2.7,
-          "winShare": 0.146,
-          "stkWnrsRnrs": 0.09,
-          "stkWnrsBorn": 0.064,
+          "runShare": 0.72,
+          "adjRS": 2.5,
+          "adjPS": 3.8,
+          "winShare": 0.145,
+          "stkWnrsRnrs": 0.093,
+          "stkWnrsBorn": 0.067,
           "g1WnrsBorn": 0.017,
           "cei": 1.3,
           "avgAvailableDams": 226.0,
@@ -655,48 +672,51 @@
         },
         "y5": {
           "foalsBorn": 870,
-          "runShare": 0.714,
-          "adjRS": 2.7,
-          "winShare": 0.142,
-          "stkWnrsRnrs": 0.085,
-          "stkWnrsBorn": 0.061,
+          "runShare": 0.716,
+          "adjRS": 2.6,
+          "adjPS": 3.7,
+          "winShare": 0.141,
+          "stkWnrsRnrs": 0.087,
+          "stkWnrsBorn": 0.062,
           "g1WnrsBorn": 0.013,
-          "cei": 1.8,
+          "cei": 1.9,
           "avgAvailableDams": 234.0,
           "avgServicedDamAge": 9.9,
           "avgVaciosDams": 0.26,
           "avgRestDams": 0.035,
-          "deadBfr2yo": 0.048,
+          "deadBfr2yo": 0.047,
           "deadAtBirth": 0.003,
           "avgDaysBtwServices": 13.6
         },
         "y7": {
           "foalsBorn": 1278,
-          "runShare": 0.736,
-          "adjRS": 4.7,
+          "runShare": 0.737,
+          "adjRS": 4.6,
+          "adjPS": 4.2,
           "winShare": 0.15,
-          "stkWnrsRnrs": 0.091,
-          "stkWnrsBorn": 0.067,
+          "stkWnrsRnrs": 0.092,
+          "stkWnrsBorn": 0.068,
           "g1WnrsBorn": 0.013,
           "cei": 2.1,
           "avgAvailableDams": 246.0,
           "avgServicedDamAge": 10.0,
           "avgVaciosDams": 0.26,
           "avgRestDams": 0.031,
-          "deadBfr2yo": 0.047,
+          "deadBfr2yo": 0.046,
           "deadAtBirth": 0.005,
           "avgDaysBtwServices": 13.0
         },
         "hist": {
           "foalsBorn": 4308,
-          "runShare": 0.736,
+          "runShare": 0.737,
           "adjRS": 5.7,
+          "adjPS": 3.9,
           "winShare": 0.136,
-          "stkWnrsRnrs": 0.081,
+          "stkWnrsRnrs": 0.082,
           "stkWnrsBorn": 0.06,
           "g1WnrsBorn": 0.016,
           "cei": 2.2,
-          "avgAvailableDams": 251.0,
+          "avgAvailableDams": 252.0,
           "avgServicedDamAge": 10.2,
           "avgVaciosDams": 0.25,
           "avgRestDams": 0.039,
@@ -758,25 +778,25 @@
           "winShare": 0.13,
           "stkWnrsBorn": 0.056,
           "g1WnrsBorn": 0.006,
-          "cei": 1.81
+          "cei": 1.82
         },
         {
           "year": 2021,
           "foalsBorn": 170,
           "runShare": 0.8,
           "winShare": 0.15,
-          "stkWnrsBorn": 0.088,
+          "stkWnrsBorn": 0.094,
           "g1WnrsBorn": 0.018,
-          "cei": 1.85
+          "cei": 1.87
         },
         {
           "year": 2022,
           "foalsBorn": 187,
-          "runShare": 0.64,
+          "runShare": 0.65,
           "winShare": 0.13,
           "stkWnrsBorn": 0.043,
           "g1WnrsBorn": 0.016,
-          "cei": 0.83
+          "cei": 0.85
         }
       ]
     },
@@ -815,8 +835,9 @@
         "y1": {
           "foalsBorn": 42,
           "runShare": 0.738,
-          "adjRS": 16.7,
-          "winShare": 0.132,
+          "adjRS": 16.4,
+          "adjPS": 2.6,
+          "winShare": 0.139,
           "stkWnrsRnrs": 0.032,
           "stkWnrsBorn": 0.024,
           "g1WnrsBorn": 0.0,
@@ -832,8 +853,9 @@
         "y2": {
           "foalsBorn": 82,
           "runShare": 0.695,
-          "adjRS": 8.6,
-          "winShare": 0.168,
+          "adjRS": 8.4,
+          "adjPS": 8.8,
+          "winShare": 0.17,
           "stkWnrsRnrs": 0.123,
           "stkWnrsBorn": 0.085,
           "g1WnrsBorn": 0.037,
@@ -849,8 +871,9 @@
         "y5": {
           "foalsBorn": 228,
           "runShare": 0.684,
-          "adjRS": 1.9,
-          "winShare": 0.155,
+          "adjRS": 1.8,
+          "adjPS": 4.2,
+          "winShare": 0.157,
           "stkWnrsRnrs": 0.083,
           "stkWnrsBorn": 0.057,
           "g1WnrsBorn": 0.018,
@@ -867,7 +890,8 @@
           "foalsBorn": 319,
           "runShare": 0.68,
           "adjRS": 0.8,
-          "winShare": 0.15,
+          "adjPS": 3.9,
+          "winShare": 0.152,
           "stkWnrsRnrs": 0.083,
           "stkWnrsBorn": 0.056,
           "g1WnrsBorn": 0.016,
@@ -883,7 +907,8 @@
         "hist": {
           "foalsBorn": 1077,
           "runShare": 0.721,
-          "adjRS": 3.6,
+          "adjRS": 3.5,
+          "adjPS": 3.3,
           "winShare": 0.148,
           "stkWnrsRnrs": 0.075,
           "stkWnrsBorn": 0.054,
@@ -893,7 +918,7 @@
           "avgServicedDamAge": 9.8,
           "avgVaciosDams": 0.22,
           "avgRestDams": 0.047,
-          "deadBfr2yo": 0.051,
+          "deadBfr2yo": 0.05,
           "deadAtBirth": 0.027,
           "avgDaysBtwServices": 11.0
         }
@@ -948,10 +973,10 @@
           "year": 2020,
           "foalsBorn": 52,
           "runShare": 0.75,
-          "winShare": 0.17,
+          "winShare": 0.18,
           "stkWnrsBorn": 0.058,
           "g1WnrsBorn": 0.019,
-          "cei": 2.03
+          "cei": 2.04
         },
         {
           "year": 2021,
@@ -966,10 +991,10 @@
           "year": 2022,
           "foalsBorn": 42,
           "runShare": 0.74,
-          "winShare": 0.13,
+          "winShare": 0.14,
           "stkWnrsBorn": 0.024,
           "g1WnrsBorn": 0.0,
-          "cei": 0.96
+          "cei": 0.99
         }
       ]
     },
@@ -1009,7 +1034,8 @@
           "foalsBorn": 15,
           "runShare": 0.667,
           "adjRS": 11.9,
-          "winShare": 0.054,
+          "adjPS": -0.7,
+          "winShare": 0.056,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -1026,7 +1052,8 @@
           "foalsBorn": 49,
           "runShare": 0.673,
           "adjRS": 6.1,
-          "winShare": 0.116,
+          "adjPS": -1.2,
+          "winShare": 0.112,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -1043,7 +1070,8 @@
           "foalsBorn": 173,
           "runShare": 0.711,
           "adjRS": 8.3,
-          "winShare": 0.134,
+          "adjPS": 0.0,
+          "winShare": 0.133,
           "stkWnrsRnrs": 0.016,
           "stkWnrsBorn": 0.012,
           "g1WnrsBorn": 0.006,
@@ -1060,6 +1088,7 @@
           "foalsBorn": 357,
           "runShare": 0.667,
           "adjRS": 4.4,
+          "adjPS": 1.7,
           "winShare": 0.128,
           "stkWnrsRnrs": 0.034,
           "stkWnrsBorn": 0.022,
@@ -1077,7 +1106,8 @@
           "foalsBorn": 3054,
           "runShare": 0.703,
           "adjRS": 2.2,
-          "winShare": 0.141,
+          "adjPS": 3.0,
+          "winShare": 0.14,
           "stkWnrsRnrs": 0.074,
           "stkWnrsBorn": 0.052,
           "g1WnrsBorn": 0.011,
@@ -1144,13 +1174,13 @@
           "winShare": 0.13,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 1.41
+          "cei": 1.42
         },
         {
           "year": 2021,
           "foalsBorn": 34,
           "runShare": 0.68,
-          "winShare": 0.13,
+          "winShare": 0.12,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.94
@@ -1159,7 +1189,7 @@
           "year": 2022,
           "foalsBorn": 15,
           "runShare": 0.67,
-          "winShare": 0.05,
+          "winShare": 0.06,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.3
@@ -1202,11 +1232,12 @@
           "foalsBorn": 40,
           "runShare": 0.55,
           "adjRS": 7.7,
-          "winShare": 0.092,
+          "adjPS": -1.5,
+          "winShare": 0.098,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.6,
+          "cei": 0.7,
           "avgAvailableDams": 53.0,
           "avgServicedDamAge": 12.6,
           "avgVaciosDams": 0.25,
@@ -1218,70 +1249,74 @@
         "y2": {
           "foalsBorn": 84,
           "runShare": 0.631,
-          "adjRS": 11.8,
-          "winShare": 0.106,
+          "adjRS": 11.6,
+          "adjPS": 0.2,
+          "winShare": 0.109,
           "stkWnrsRnrs": 0.019,
           "stkWnrsBorn": 0.012,
           "g1WnrsBorn": 0.0,
-          "cei": 0.8,
-          "avgAvailableDams": 53.0,
+          "cei": 0.9,
+          "avgAvailableDams": 56.0,
           "avgServicedDamAge": 12.1,
           "avgVaciosDams": 0.26,
           "avgRestDams": 0.051,
-          "deadBfr2yo": 0.037,
+          "deadBfr2yo": 0.036,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 8.9
+          "avgDaysBtwServices": 8.3
         },
         "y5": {
           "foalsBorn": 190,
           "runShare": 0.674,
-          "adjRS": 7.8,
-          "winShare": 0.122,
+          "adjRS": 7.6,
+          "adjPS": 3.7,
+          "winShare": 0.123,
           "stkWnrsRnrs": 0.062,
           "stkWnrsBorn": 0.042,
           "g1WnrsBorn": 0.011,
           "cei": 1.5,
-          "avgAvailableDams": 49.0,
+          "avgAvailableDams": 51.0,
           "avgServicedDamAge": 12.4,
           "avgVaciosDams": 0.26,
           "avgRestDams": 0.042,
           "deadBfr2yo": 0.021,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 9.3
+          "avgDaysBtwServices": 9.0
         },
         "y7": {
           "foalsBorn": 240,
           "runShare": 0.679,
-          "adjRS": 6.1,
-          "winShare": 0.132,
+          "adjRS": 6.0,
+          "adjPS": 3.4,
+          "winShare": 0.133,
           "stkWnrsRnrs": 0.061,
           "stkWnrsBorn": 0.042,
           "g1WnrsBorn": 0.008,
           "cei": 1.6,
-          "avgAvailableDams": 46.0,
+          "avgAvailableDams": 48.0,
           "avgServicedDamAge": 12.7,
           "avgVaciosDams": 0.29,
           "avgRestDams": 0.043,
           "deadBfr2yo": 0.029,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 10.8
+          "avgDaysBtwServices": 10.6
         },
         "hist": {
           "foalsBorn": 539,
           "runShare": 0.716,
           "adjRS": 6.9,
+          "adjPS": 3.7,
           "winShare": 0.132,
           "stkWnrsRnrs": 0.073,
           "stkWnrsBorn": 0.052,
           "g1WnrsBorn": 0.013,
           "cei": 2.1,
-          "avgAvailableDams": 38.0,
+          "avgAvailableDams": 39.0,
           "avgServicedDamAge": 11.9,
           "avgVaciosDams": 0.27,
           "avgRestDams": 0.055,
           "deadBfr2yo": 0.028,
           "deadAtBirth": 0.004,
-          "avgDaysBtwServices": 11.0
+          "avgDaysBtwServices": 10.9
         }
       },
       "timeSeries": [
@@ -1328,7 +1363,7 @@
           "winShare": 0.17,
           "stkWnrsBorn": 0.118,
           "g1WnrsBorn": 0.059,
-          "cei": 3.39
+          "cei": 3.41
         },
         {
           "year": 2020,
@@ -1337,7 +1372,7 @@
           "winShare": 0.11,
           "stkWnrsBorn": 0.049,
           "g1WnrsBorn": 0.0,
-          "cei": 1.55
+          "cei": 1.56
         },
         {
           "year": 2021,
@@ -1346,16 +1381,16 @@
           "winShare": 0.11,
           "stkWnrsBorn": 0.023,
           "g1WnrsBorn": 0.0,
-          "cei": 1.07
+          "cei": 1.09
         },
         {
           "year": 2022,
           "foalsBorn": 40,
           "runShare": 0.55,
-          "winShare": 0.09,
+          "winShare": 0.1,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.61
+          "cei": 0.66
         }
       ]
     },
@@ -1393,9 +1428,10 @@
       "stats": {
         "y1": {
           "foalsBorn": 80,
-          "runShare": 0.488,
-          "adjRS": 0.9,
-          "winShare": 0.112,
+          "runShare": 0.525,
+          "adjRS": 1.2,
+          "adjPS": -0.0,
+          "winShare": 0.106,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -1410,10 +1446,11 @@
         },
         "y2": {
           "foalsBorn": 160,
-          "runShare": 0.55,
-          "adjRS": 0.6,
-          "winShare": 0.137,
-          "stkWnrsRnrs": 0.023,
+          "runShare": 0.569,
+          "adjRS": 0.7,
+          "adjPS": 1.0,
+          "winShare": 0.136,
+          "stkWnrsRnrs": 0.022,
           "stkWnrsBorn": 0.013,
           "g1WnrsBorn": 0.006,
           "cei": 0.8,
@@ -1427,10 +1464,11 @@
         },
         "y5": {
           "foalsBorn": 380,
-          "runShare": 0.595,
-          "adjRS": 0.5,
-          "winShare": 0.139,
-          "stkWnrsRnrs": 0.049,
+          "runShare": 0.603,
+          "adjRS": 0.7,
+          "adjPS": 2.1,
+          "winShare": 0.138,
+          "stkWnrsRnrs": 0.048,
           "stkWnrsBorn": 0.029,
           "g1WnrsBorn": 0.008,
           "cei": 1.1,
@@ -1444,10 +1482,11 @@
         },
         "y7": {
           "foalsBorn": 515,
-          "runShare": 0.627,
+          "runShare": 0.633,
           "adjRS": 0.2,
-          "winShare": 0.131,
-          "stkWnrsRnrs": 0.056,
+          "adjPS": 2.6,
+          "winShare": 0.13,
+          "stkWnrsRnrs": 0.055,
           "stkWnrsBorn": 0.035,
           "g1WnrsBorn": 0.006,
           "cei": 1.3,
@@ -1461,8 +1500,9 @@
         },
         "hist": {
           "foalsBorn": 1936,
-          "runShare": 0.638,
+          "runShare": 0.639,
           "adjRS": -0.4,
+          "adjPS": 4.1,
           "winShare": 0.134,
           "stkWnrsRnrs": 0.081,
           "stkWnrsBorn": 0.052,
@@ -1527,7 +1567,7 @@
           "year": 2020,
           "foalsBorn": 74,
           "runShare": 0.59,
-          "winShare": 0.16,
+          "winShare": 0.15,
           "stkWnrsBorn": 0.027,
           "g1WnrsBorn": 0.0,
           "cei": 1.12
@@ -1539,16 +1579,16 @@
           "winShare": 0.15,
           "stkWnrsBorn": 0.025,
           "g1WnrsBorn": 0.013,
-          "cei": 1.14
+          "cei": 1.17
         },
         {
           "year": 2022,
           "foalsBorn": 80,
-          "runShare": 0.49,
+          "runShare": 0.52,
           "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.42
+          "cei": 0.43
         }
       ]
     },
@@ -1587,12 +1627,13 @@
         "y1": {
           "foalsBorn": 33,
           "runShare": 0.576,
-          "adjRS": 11.8,
-          "winShare": 0.176,
+          "adjRS": 10.6,
+          "adjPS": 8.5,
+          "winShare": 0.17,
           "stkWnrsRnrs": 0.105,
           "stkWnrsBorn": 0.061,
           "g1WnrsBorn": 0.0,
-          "cei": 1.0,
+          "cei": 1.1,
           "avgAvailableDams": 43.0,
           "avgServicedDamAge": 11.2,
           "avgVaciosDams": 0.23,
@@ -1604,12 +1645,13 @@
         "y2": {
           "foalsBorn": 77,
           "runShare": 0.662,
-          "adjRS": 8.1,
-          "winShare": 0.125,
-          "stkWnrsRnrs": 0.039,
-          "stkWnrsBorn": 0.026,
+          "adjRS": 7.6,
+          "adjPS": 3.8,
+          "winShare": 0.128,
+          "stkWnrsRnrs": 0.059,
+          "stkWnrsBorn": 0.039,
           "g1WnrsBorn": 0.0,
-          "cei": 1.2,
+          "cei": 1.3,
           "avgAvailableDams": 46.0,
           "avgServicedDamAge": 10.7,
           "avgVaciosDams": 0.16,
@@ -1621,10 +1663,11 @@
         "y5": {
           "foalsBorn": 184,
           "runShare": 0.696,
-          "adjRS": 7.0,
-          "winShare": 0.147,
-          "stkWnrsRnrs": 0.078,
-          "stkWnrsBorn": 0.054,
+          "adjRS": 6.8,
+          "adjPS": 5.6,
+          "winShare": 0.146,
+          "stkWnrsRnrs": 0.086,
+          "stkWnrsBorn": 0.06,
           "g1WnrsBorn": 0.011,
           "cei": 2.3,
           "avgAvailableDams": 46.0,
@@ -1638,16 +1681,17 @@
         "y7": {
           "foalsBorn": 253,
           "runShare": 0.704,
-          "adjRS": 7.5,
+          "adjRS": 7.4,
+          "adjPS": 5.4,
           "winShare": 0.144,
-          "stkWnrsRnrs": 0.079,
-          "stkWnrsBorn": 0.055,
+          "stkWnrsRnrs": 0.084,
+          "stkWnrsBorn": 0.059,
           "g1WnrsBorn": 0.016,
           "cei": 2.2,
           "avgAvailableDams": 45.0,
           "avgServicedDamAge": 10.1,
           "avgVaciosDams": 0.19,
-          "avgRestDams": 0.101,
+          "avgRestDams": 0.1,
           "deadBfr2yo": 0.008,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 7.0
@@ -1656,9 +1700,10 @@
           "foalsBorn": 627,
           "runShare": 0.648,
           "adjRS": -0.1,
+          "adjPS": 3.8,
           "winShare": 0.144,
-          "stkWnrsRnrs": 0.074,
-          "stkWnrsBorn": 0.048,
+          "stkWnrsRnrs": 0.076,
+          "stkWnrsBorn": 0.049,
           "g1WnrsBorn": 0.016,
           "cei": 2.1,
           "avgAvailableDams": 33.0,
@@ -1723,25 +1768,25 @@
           "winShare": 0.16,
           "stkWnrsBorn": 0.057,
           "g1WnrsBorn": 0.0,
-          "cei": 2.58
+          "cei": 2.59
         },
         {
           "year": 2021,
           "foalsBorn": 44,
           "runShare": 0.73,
           "winShare": 0.11,
-          "stkWnrsBorn": 0.0,
+          "stkWnrsBorn": 0.023,
           "g1WnrsBorn": 0.0,
-          "cei": 1.39
+          "cei": 1.45
         },
         {
           "year": 2022,
           "foalsBorn": 33,
           "runShare": 0.58,
-          "winShare": 0.18,
+          "winShare": 0.17,
           "stkWnrsBorn": 0.061,
           "g1WnrsBorn": 0.0,
-          "cei": 1.04
+          "cei": 1.05
         }
       ]
     },
@@ -1779,13 +1824,14 @@
       "stats": {
         "y1": {
           "foalsBorn": 27,
-          "runShare": 0.704,
-          "adjRS": 30.4,
-          "winShare": 0.157,
-          "stkWnrsRnrs": 0.105,
+          "runShare": 0.741,
+          "adjRS": 32.8,
+          "adjPS": 8.8,
+          "winShare": 0.151,
+          "stkWnrsRnrs": 0.1,
           "stkWnrsBorn": 0.074,
           "g1WnrsBorn": 0.0,
-          "cei": 0.9,
+          "cei": 1.0,
           "avgAvailableDams": 49.0,
           "avgServicedDamAge": 11.4,
           "avgVaciosDams": 0.45,
@@ -1796,13 +1842,14 @@
         },
         "y2": {
           "foalsBorn": 64,
-          "runShare": 0.75,
-          "adjRS": 20.9,
-          "winShare": 0.12,
-          "stkWnrsRnrs": 0.042,
+          "runShare": 0.766,
+          "adjRS": 21.9,
+          "adjPS": 2.9,
+          "winShare": 0.116,
+          "stkWnrsRnrs": 0.041,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.0,
-          "cei": 0.9,
+          "cei": 1.0,
           "avgAvailableDams": 52.0,
           "avgServicedDamAge": 10.9,
           "avgVaciosDams": 0.38,
@@ -1813,10 +1860,11 @@
         },
         "y5": {
           "foalsBorn": 226,
-          "runShare": 0.668,
-          "adjRS": 7.7,
+          "runShare": 0.673,
+          "adjRS": 8.0,
+          "adjPS": 2.8,
           "winShare": 0.117,
-          "stkWnrsRnrs": 0.04,
+          "stkWnrsRnrs": 0.039,
           "stkWnrsBorn": 0.027,
           "g1WnrsBorn": 0.0,
           "cei": 1.4,
@@ -1830,8 +1878,9 @@
         },
         "y7": {
           "foalsBorn": 335,
-          "runShare": 0.657,
-          "adjRS": 7.4,
+          "runShare": 0.66,
+          "adjRS": 7.6,
+          "adjPS": 1.9,
           "winShare": 0.107,
           "stkWnrsRnrs": 0.032,
           "stkWnrsBorn": 0.021,
@@ -1847,13 +1896,14 @@
         },
         "hist": {
           "foalsBorn": 840,
-          "runShare": 0.713,
-          "adjRS": 7.2,
+          "runShare": 0.714,
+          "adjRS": 7.3,
+          "adjPS": 3.6,
           "winShare": 0.117,
           "stkWnrsRnrs": 0.063,
           "stkWnrsBorn": 0.045,
           "g1WnrsBorn": 0.013,
-          "cei": 1.7,
+          "cei": 1.8,
           "avgAvailableDams": 53.0,
           "avgServicedDamAge": 10.3,
           "avgVaciosDams": 0.31,
@@ -1916,7 +1966,7 @@
           "winShare": 0.16,
           "stkWnrsBorn": 0.067,
           "g1WnrsBorn": 0.0,
-          "cei": 1.56
+          "cei": 1.58
         },
         {
           "year": 2021,
@@ -1925,16 +1975,16 @@
           "winShare": 0.1,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.94
+          "cei": 0.95
         },
         {
           "year": 2022,
           "foalsBorn": 27,
-          "runShare": 0.7,
-          "winShare": 0.16,
+          "runShare": 0.74,
+          "winShare": 0.15,
           "stkWnrsBorn": 0.074,
           "g1WnrsBorn": 0.0,
-          "cei": 0.94
+          "cei": 0.95
         }
       ]
     },
@@ -1972,13 +2022,14 @@
       "stats": {
         "y1": {
           "foalsBorn": 109,
-          "runShare": 0.661,
-          "adjRS": 8.1,
-          "winShare": 0.11,
+          "runShare": 0.679,
+          "adjRS": 8.8,
+          "adjPS": -0.6,
+          "winShare": 0.116,
           "stkWnrsRnrs": 0.014,
           "stkWnrsBorn": 0.009,
           "g1WnrsBorn": 0.0,
-          "cei": 0.7,
+          "cei": 0.8,
           "avgAvailableDams": 148.0,
           "avgServicedDamAge": 10.6,
           "avgVaciosDams": 0.27,
@@ -1989,8 +2040,9 @@
         },
         "y2": {
           "foalsBorn": 234,
-          "runShare": 0.632,
-          "adjRS": 1.1,
+          "runShare": 0.641,
+          "adjRS": 1.4,
+          "adjPS": 1.4,
           "winShare": 0.119,
           "stkWnrsRnrs": 0.047,
           "stkWnrsBorn": 0.03,
@@ -2006,8 +2058,9 @@
         },
         "y5": {
           "foalsBorn": 642,
-          "runShare": 0.642,
-          "adjRS": 0.1,
+          "runShare": 0.645,
+          "adjRS": 0.2,
+          "adjPS": 1.3,
           "winShare": 0.138,
           "stkWnrsRnrs": 0.058,
           "stkWnrsBorn": 0.037,
@@ -2023,10 +2076,11 @@
         },
         "y7": {
           "foalsBorn": 927,
-          "runShare": 0.648,
+          "runShare": 0.65,
           "adjRS": -1.2,
+          "adjPS": 0.6,
           "winShare": 0.141,
-          "stkWnrsRnrs": 0.052,
+          "stkWnrsRnrs": 0.051,
           "stkWnrsBorn": 0.033,
           "g1WnrsBorn": 0.003,
           "cei": 1.5,
@@ -2040,14 +2094,15 @@
         },
         "hist": {
           "foalsBorn": 3359,
-          "runShare": 0.671,
+          "runShare": 0.672,
           "adjRS": 1.3,
+          "adjPS": 2.0,
           "winShare": 0.132,
           "stkWnrsRnrs": 0.061,
           "stkWnrsBorn": 0.041,
           "g1WnrsBorn": 0.008,
           "cei": 1.7,
-          "avgAvailableDams": 187.0,
+          "avgAvailableDams": 189.0,
           "avgServicedDamAge": 10.3,
           "avgVaciosDams": 0.23,
           "avgRestDams": 0.069,
@@ -2118,16 +2173,16 @@
           "winShare": 0.12,
           "stkWnrsBorn": 0.048,
           "g1WnrsBorn": 0.0,
-          "cei": 1.27
+          "cei": 1.28
         },
         {
           "year": 2022,
           "foalsBorn": 109,
-          "runShare": 0.66,
-          "winShare": 0.11,
+          "runShare": 0.68,
+          "winShare": 0.12,
           "stkWnrsBorn": 0.009,
           "g1WnrsBorn": 0.0,
-          "cei": 0.72
+          "cei": 0.75
         }
       ]
     },
@@ -2166,8 +2221,9 @@
         "y1": {
           "foalsBorn": 122,
           "runShare": 0.557,
-          "adjRS": 3.6,
-          "winShare": 0.17,
+          "adjRS": 2.5,
+          "adjPS": 2.7,
+          "winShare": 0.171,
           "stkWnrsRnrs": 0.044,
           "stkWnrsBorn": 0.025,
           "g1WnrsBorn": 0.016,
@@ -2178,13 +2234,14 @@
           "avgRestDams": 0.074,
           "deadBfr2yo": 0.042,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 10.4
+          "avgDaysBtwServices": 10.1
         },
         "y2": {
           "foalsBorn": 238,
           "runShare": 0.626,
-          "adjRS": 4.7,
-          "winShare": 0.14,
+          "adjRS": 4.1,
+          "adjPS": 2.3,
+          "winShare": 0.141,
           "stkWnrsRnrs": 0.047,
           "stkWnrsBorn": 0.029,
           "g1WnrsBorn": 0.008,
@@ -2195,13 +2252,14 @@
           "avgRestDams": 0.065,
           "deadBfr2yo": 0.051,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 9.8
+          "avgDaysBtwServices": 9.7
         },
         "y5": {
           "foalsBorn": 740,
           "runShare": 0.682,
-          "adjRS": 3.1,
-          "winShare": 0.148,
+          "adjRS": 3.0,
+          "adjPS": 2.2,
+          "winShare": 0.149,
           "stkWnrsRnrs": 0.046,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.005,
@@ -2212,17 +2270,18 @@
           "avgRestDams": 0.082,
           "deadBfr2yo": 0.048,
           "deadAtBirth": 0.001,
-          "avgDaysBtwServices": 10.3
+          "avgDaysBtwServices": 10.2
         },
         "y7": {
           "foalsBorn": 1154,
           "runShare": 0.681,
-          "adjRS": 1.7,
-          "winShare": 0.136,
+          "adjRS": 1.6,
+          "adjPS": 2.0,
+          "winShare": 0.137,
           "stkWnrsRnrs": 0.046,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.006,
-          "cei": 1.4,
+          "cei": 1.5,
           "avgAvailableDams": 218.0,
           "avgServicedDamAge": 10.5,
           "avgVaciosDams": 0.25,
@@ -2235,6 +2294,7 @@
           "foalsBorn": 2306,
           "runShare": 0.713,
           "adjRS": 3.7,
+          "adjPS": 2.1,
           "winShare": 0.14,
           "stkWnrsRnrs": 0.055,
           "stkWnrsBorn": 0.039,
@@ -2302,7 +2362,7 @@
           "winShare": 0.17,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.013,
-          "cei": 1.83
+          "cei": 1.85
         },
         {
           "year": 2021,
@@ -2311,7 +2371,7 @@
           "winShare": 0.13,
           "stkWnrsBorn": 0.034,
           "g1WnrsBorn": 0.0,
-          "cei": 1.53
+          "cei": 1.56
         },
         {
           "year": 2022,
@@ -2320,7 +2380,7 @@
           "winShare": 0.17,
           "stkWnrsBorn": 0.025,
           "g1WnrsBorn": 0.016,
-          "cei": 0.86
+          "cei": 0.88
         }
       ]
     },
@@ -2358,43 +2418,46 @@
       "stats": {
         "y1": {
           "foalsBorn": 276,
-          "runShare": 0.54,
-          "adjRS": -1.5,
-          "winShare": 0.154,
-          "stkWnrsRnrs": 0.034,
+          "runShare": 0.547,
+          "adjRS": -2.0,
+          "adjPS": 1.1,
+          "winShare": 0.158,
+          "stkWnrsRnrs": 0.033,
           "stkWnrsBorn": 0.018,
           "g1WnrsBorn": 0.004,
-          "cei": 0.7,
+          "cei": 0.8,
           "avgAvailableDams": 376.0,
           "avgServicedDamAge": 11.6,
           "avgVaciosDams": 0.24,
-          "avgRestDams": 0.017,
-          "deadBfr2yo": 0.038,
+          "avgRestDams": 0.016,
+          "deadBfr2yo": 0.037,
           "deadAtBirth": 0.03,
-          "avgDaysBtwServices": 13.7
+          "avgDaysBtwServices": 14.1
         },
         "y2": {
           "foalsBorn": 517,
-          "runShare": 0.594,
-          "adjRS": -0.9,
-          "winShare": 0.146,
+          "runShare": 0.598,
+          "adjRS": -1.2,
+          "adjPS": 1.0,
+          "winShare": 0.148,
           "stkWnrsRnrs": 0.036,
           "stkWnrsBorn": 0.021,
           "g1WnrsBorn": 0.002,
-          "cei": 0.9,
+          "cei": 1.0,
           "avgAvailableDams": 353.0,
           "avgServicedDamAge": 11.6,
           "avgVaciosDams": 0.26,
-          "avgRestDams": 0.029,
+          "avgRestDams": 0.032,
           "deadBfr2yo": 0.028,
           "deadAtBirth": 0.016,
-          "avgDaysBtwServices": 13.8
+          "avgDaysBtwServices": 13.9
         },
         "y5": {
           "foalsBorn": 1292,
-          "runShare": 0.704,
-          "adjRS": 1.4,
-          "winShare": 0.145,
+          "runShare": 0.705,
+          "adjRS": 1.2,
+          "adjPS": 2.5,
+          "winShare": 0.146,
           "stkWnrsRnrs": 0.065,
           "stkWnrsBorn": 0.046,
           "g1WnrsBorn": 0.01,
@@ -2402,15 +2465,16 @@
           "avgAvailableDams": 353.0,
           "avgServicedDamAge": 11.2,
           "avgVaciosDams": 0.26,
-          "avgRestDams": 0.028,
+          "avgRestDams": 0.027,
           "deadBfr2yo": 0.023,
           "deadAtBirth": 0.006,
-          "avgDaysBtwServices": 15.3
+          "avgDaysBtwServices": 15.5
         },
         "y7": {
           "foalsBorn": 1752,
-          "runShare": 0.715,
-          "adjRS": 1.2,
+          "runShare": 0.716,
+          "adjRS": 1.1,
+          "adjPS": 2.2,
           "winShare": 0.139,
           "stkWnrsRnrs": 0.062,
           "stkWnrsBorn": 0.045,
@@ -2419,25 +2483,26 @@
           "avgAvailableDams": 344.0,
           "avgServicedDamAge": 11.1,
           "avgVaciosDams": 0.27,
-          "avgRestDams": 0.027,
+          "avgRestDams": 0.026,
           "deadBfr2yo": 0.022,
           "deadAtBirth": 0.006,
-          "avgDaysBtwServices": 15.5
+          "avgDaysBtwServices": 15.6
         },
         "hist": {
           "foalsBorn": 4099,
           "runShare": 0.702,
           "adjRS": 1.4,
+          "adjPS": 2.2,
           "winShare": 0.124,
           "stkWnrsRnrs": 0.055,
           "stkWnrsBorn": 0.038,
           "g1WnrsBorn": 0.006,
           "cei": 1.8,
-          "avgAvailableDams": 255.0,
+          "avgAvailableDams": 254.0,
           "avgServicedDamAge": 10.7,
           "avgVaciosDams": 0.31,
-          "avgRestDams": 0.021,
-          "deadBfr2yo": 0.022,
+          "avgRestDams": 0.02,
+          "deadBfr2yo": 0.023,
           "deadAtBirth": 0.004,
           "avgDaysBtwServices": 18.4
         }
@@ -2504,16 +2569,16 @@
           "winShare": 0.14,
           "stkWnrsBorn": 0.025,
           "g1WnrsBorn": 0.0,
-          "cei": 1.19
+          "cei": 1.22
         },
         {
           "year": 2022,
           "foalsBorn": 276,
-          "runShare": 0.54,
-          "winShare": 0.15,
+          "runShare": 0.55,
+          "winShare": 0.16,
           "stkWnrsBorn": 0.018,
           "g1WnrsBorn": 0.004,
-          "cei": 0.71
+          "cei": 0.76
         }
       ]
     },
@@ -2557,6 +2622,7 @@
           "foalsBorn": 590,
           "runShare": 0.644,
           "adjRS": 1.2,
+          "adjPS": 2.9,
           "winShare": 0.12,
           "stkWnrsRnrs": 0.058,
           "stkWnrsBorn": 0.037,
@@ -2565,7 +2631,7 @@
           "avgAvailableDams": 68.0,
           "avgServicedDamAge": 11.9,
           "avgVaciosDams": 0.33,
-          "avgRestDams": 0.028,
+          "avgRestDams": 0.027,
           "deadBfr2yo": 0.075,
           "deadAtBirth": 0.007,
           "avgDaysBtwServices": 16.6
@@ -2607,27 +2673,29 @@
       "stats": {
         "y1": {
           "foalsBorn": 151,
-          "runShare": 0.444,
-          "adjRS": -3.6,
-          "winShare": 0.131,
-          "stkWnrsRnrs": 0.045,
+          "runShare": 0.45,
+          "adjRS": -3.8,
+          "adjPS": 2.7,
+          "winShare": 0.134,
+          "stkWnrsRnrs": 0.044,
           "stkWnrsBorn": 0.02,
           "g1WnrsBorn": 0.0,
           "cei": 0.5,
           "avgAvailableDams": 189.0,
           "avgServicedDamAge": 10.1,
           "avgVaciosDams": 0.2,
-          "avgRestDams": 0.123,
+          "avgRestDams": 0.167,
           "deadBfr2yo": 0.033,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 9.3
         },
         "y2": {
           "foalsBorn": 318,
-          "runShare": 0.528,
-          "adjRS": -1.8,
-          "winShare": 0.13,
-          "stkWnrsRnrs": 0.06,
+          "runShare": 0.538,
+          "adjRS": -1.5,
+          "adjPS": 3.2,
+          "winShare": 0.131,
+          "stkWnrsRnrs": 0.058,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.003,
           "cei": 0.9,
@@ -2641,10 +2709,11 @@
         },
         "y5": {
           "foalsBorn": 809,
-          "runShare": 0.556,
-          "adjRS": -2.6,
+          "runShare": 0.56,
+          "adjRS": -2.5,
+          "adjPS": 2.4,
           "winShare": 0.128,
-          "stkWnrsRnrs": 0.056,
+          "stkWnrsRnrs": 0.055,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.007,
           "cei": 1.2,
@@ -2658,10 +2727,11 @@
         },
         "y7": {
           "foalsBorn": 1174,
-          "runShare": 0.572,
-          "adjRS": -2.4,
+          "runShare": 0.574,
+          "adjRS": -2.3,
+          "adjPS": 2.5,
           "winShare": 0.12,
-          "stkWnrsRnrs": 0.057,
+          "stkWnrsRnrs": 0.056,
           "stkWnrsBorn": 0.032,
           "g1WnrsBorn": 0.008,
           "cei": 1.2,
@@ -2675,8 +2745,9 @@
         },
         "hist": {
           "foalsBorn": 3619,
-          "runShare": 0.622,
+          "runShare": 0.623,
           "adjRS": -0.5,
+          "adjPS": 2.8,
           "winShare": 0.132,
           "stkWnrsRnrs": 0.057,
           "stkWnrsBorn": 0.036,
@@ -2749,20 +2820,20 @@
         {
           "year": 2021,
           "foalsBorn": 167,
-          "runShare": 0.6,
+          "runShare": 0.62,
           "winShare": 0.13,
           "stkWnrsBorn": 0.042,
           "g1WnrsBorn": 0.006,
-          "cei": 1.3
+          "cei": 1.32
         },
         {
           "year": 2022,
           "foalsBorn": 151,
-          "runShare": 0.44,
+          "runShare": 0.45,
           "winShare": 0.13,
           "stkWnrsBorn": 0.02,
           "g1WnrsBorn": 0.0,
-          "cei": 0.5
+          "cei": 0.52
         }
       ]
     },
@@ -2806,6 +2877,7 @@
           "foalsBorn": 766,
           "runShare": 0.73,
           "adjRS": 6.1,
+          "adjPS": 1.7,
           "winShare": 0.121,
           "stkWnrsRnrs": 0.048,
           "stkWnrsBorn": 0.035,
@@ -2861,10 +2933,10 @@
           "year": 2019,
           "foalsBorn": 8,
           "runShare": 0.12,
-          "winShare": 0.1,
+          "winShare": 0.09,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.31
+          "cei": 0.33
         },
         {
           "year": 2020,
@@ -2911,26 +2983,28 @@
       "stats": {
         "y1": {
           "foalsBorn": 89,
-          "runShare": 0.472,
-          "adjRS": -3.2,
-          "winShare": 0.138,
+          "runShare": 0.483,
+          "adjRS": -2.6,
+          "adjPS": -1.5,
+          "winShare": 0.141,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.4,
+          "cei": 0.5,
           "avgAvailableDams": 118.0,
           "avgServicedDamAge": 10.1,
           "avgVaciosDams": 0.25,
           "avgRestDams": 0.145,
           "deadBfr2yo": 0.045,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 12.4
+          "avgDaysBtwServices": 12.7
         },
         "y2": {
           "foalsBorn": 183,
-          "runShare": 0.541,
-          "adjRS": -3.6,
-          "winShare": 0.15,
+          "runShare": 0.546,
+          "adjRS": -3.4,
+          "adjPS": -0.6,
+          "winShare": 0.152,
           "stkWnrsRnrs": 0.03,
           "stkWnrsBorn": 0.016,
           "g1WnrsBorn": 0.0,
@@ -2941,12 +3015,13 @@
           "avgRestDams": 0.101,
           "deadBfr2yo": 0.027,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 11.7
+          "avgDaysBtwServices": 11.9
         },
         "y5": {
           "foalsBorn": 467,
-          "runShare": 0.587,
-          "adjRS": -3.4,
+          "runShare": 0.589,
+          "adjRS": -3.3,
+          "adjPS": 0.3,
           "winShare": 0.16,
           "stkWnrsRnrs": 0.051,
           "stkWnrsBorn": 0.03,
@@ -2958,12 +3033,13 @@
           "avgRestDams": 0.082,
           "deadBfr2yo": 0.041,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 12.7
+          "avgDaysBtwServices": 12.8
         },
         "y7": {
           "foalsBorn": 641,
-          "runShare": 0.596,
+          "runShare": 0.598,
           "adjRS": -2.9,
+          "adjPS": 0.7,
           "winShare": 0.153,
           "stkWnrsRnrs": 0.052,
           "stkWnrsBorn": 0.031,
@@ -2975,12 +3051,13 @@
           "avgRestDams": 0.078,
           "deadBfr2yo": 0.044,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 12.4
+          "avgDaysBtwServices": 12.5
         },
         "hist": {
           "foalsBorn": 1327,
-          "runShare": 0.618,
-          "adjRS": -4.2,
+          "runShare": 0.619,
+          "adjRS": -4.1,
+          "adjPS": 0.7,
           "winShare": 0.141,
           "stkWnrsRnrs": 0.052,
           "stkWnrsBorn": 0.032,
@@ -3048,7 +3125,7 @@
           "winShare": 0.16,
           "stkWnrsBorn": 0.04,
           "g1WnrsBorn": 0.01,
-          "cei": 1.9
+          "cei": 1.91
         },
         {
           "year": 2021,
@@ -3057,16 +3134,16 @@
           "winShare": 0.16,
           "stkWnrsBorn": 0.032,
           "g1WnrsBorn": 0.0,
-          "cei": 1.19
+          "cei": 1.22
         },
         {
           "year": 2022,
           "foalsBorn": 89,
-          "runShare": 0.47,
+          "runShare": 0.48,
           "winShare": 0.14,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.41
+          "cei": 0.45
         }
       ]
     },
@@ -3104,9 +3181,10 @@
       "stats": {
         "y1": {
           "foalsBorn": 44,
-          "runShare": 0.523,
-          "adjRS": 1.0,
-          "winShare": 0.042,
+          "runShare": 0.545,
+          "adjRS": 2.9,
+          "adjPS": -2.7,
+          "winShare": 0.039,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -3114,17 +3192,18 @@
           "avgAvailableDams": 58.0,
           "avgServicedDamAge": 9.3,
           "avgVaciosDams": 0.24,
-          "avgRestDams": 0.049,
+          "avgRestDams": 0.064,
           "deadBfr2yo": 0.114,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 8.2
         },
         "y2": {
           "foalsBorn": 80,
-          "runShare": 0.613,
-          "adjRS": 5.6,
-          "winShare": 0.097,
-          "stkWnrsRnrs": 0.041,
+          "runShare": 0.625,
+          "adjRS": 6.5,
+          "adjPS": 1.3,
+          "winShare": 0.096,
+          "stkWnrsRnrs": 0.04,
           "stkWnrsBorn": 0.025,
           "g1WnrsBorn": 0.0,
           "cei": 0.7,
@@ -3138,26 +3217,28 @@
         },
         "y5": {
           "foalsBorn": 153,
-          "runShare": 0.614,
-          "adjRS": 2.7,
-          "winShare": 0.107,
-          "stkWnrsRnrs": 0.043,
+          "runShare": 0.621,
+          "adjRS": 3.3,
+          "adjPS": 1.1,
+          "winShare": 0.106,
+          "stkWnrsRnrs": 0.042,
           "stkWnrsBorn": 0.026,
           "g1WnrsBorn": 0.0,
           "cei": 1.0,
           "avgAvailableDams": 39.0,
           "avgServicedDamAge": 8.9,
           "avgVaciosDams": 0.22,
-          "avgRestDams": 0.091,
+          "avgRestDams": 0.088,
           "deadBfr2yo": 0.079,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 11.4
         },
         "y7": {
           "foalsBorn": 184,
-          "runShare": 0.636,
-          "adjRS": 4.6,
-          "winShare": 0.114,
+          "runShare": 0.641,
+          "adjRS": 5.0,
+          "adjPS": 1.8,
+          "winShare": 0.113,
           "stkWnrsRnrs": 0.051,
           "stkWnrsBorn": 0.033,
           "g1WnrsBorn": 0.0,
@@ -3172,9 +3253,10 @@
         },
         "hist": {
           "foalsBorn": 257,
-          "runShare": 0.588,
-          "adjRS": 3.4,
-          "winShare": 0.109,
+          "runShare": 0.591,
+          "adjRS": 3.7,
+          "adjPS": 2.3,
+          "winShare": 0.108,
           "stkWnrsRnrs": 0.053,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.0,
@@ -3232,7 +3314,7 @@
           "winShare": 0.1,
           "stkWnrsBorn": 0.05,
           "g1WnrsBorn": 0.0,
-          "cei": 2.07
+          "cei": 2.08
         },
         {
           "year": 2020,
@@ -3250,16 +3332,16 @@
           "winShare": 0.12,
           "stkWnrsBorn": 0.056,
           "g1WnrsBorn": 0.0,
-          "cei": 1.14
+          "cei": 1.16
         },
         {
           "year": 2022,
           "foalsBorn": 44,
-          "runShare": 0.52,
+          "runShare": 0.55,
           "winShare": 0.04,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.25
+          "cei": 0.26
         }
       ]
     },
@@ -3300,8 +3382,9 @@
         "y5": {
           "foalsBorn": 136,
           "runShare": 0.647,
-          "adjRS": 7.3,
-          "winShare": 0.094,
+          "adjRS": 7.0,
+          "adjPS": 0.2,
+          "winShare": 0.093,
           "stkWnrsRnrs": 0.023,
           "stkWnrsBorn": 0.015,
           "g1WnrsBorn": 0.007,
@@ -3309,7 +3392,7 @@
           "avgAvailableDams": 39.0,
           "avgServicedDamAge": 11.7,
           "avgVaciosDams": 0.3,
-          "avgRestDams": 0.111,
+          "avgRestDams": 0.106,
           "deadBfr2yo": 0.037,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 6.8
@@ -3317,7 +3400,8 @@
         "y7": {
           "foalsBorn": 233,
           "runShare": 0.674,
-          "adjRS": 9.2,
+          "adjRS": 9.0,
+          "adjPS": 1.6,
           "winShare": 0.114,
           "stkWnrsRnrs": 0.038,
           "stkWnrsBorn": 0.026,
@@ -3326,7 +3410,7 @@
           "avgAvailableDams": 44.0,
           "avgServicedDamAge": 11.6,
           "avgVaciosDams": 0.24,
-          "avgRestDams": 0.114,
+          "avgRestDams": 0.107,
           "deadBfr2yo": 0.03,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 6.1
@@ -3335,6 +3419,7 @@
           "foalsBorn": 482,
           "runShare": 0.701,
           "adjRS": 9.3,
+          "adjPS": 1.9,
           "winShare": 0.113,
           "stkWnrsRnrs": 0.044,
           "stkWnrsBorn": 0.031,
@@ -3343,7 +3428,7 @@
           "avgAvailableDams": 46.0,
           "avgServicedDamAge": 10.8,
           "avgVaciosDams": 0.26,
-          "avgRestDams": 0.118,
+          "avgRestDams": 0.116,
           "deadBfr2yo": 0.031,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 8.5
@@ -3411,13 +3496,13 @@
           "winShare": 0.14,
           "stkWnrsBorn": 0.105,
           "g1WnrsBorn": 0.053,
-          "cei": 1.47
+          "cei": 1.48
         },
         {
           "year": 2022,
           "foalsBorn": 18,
           "runShare": 0.44,
-          "winShare": 0.18,
+          "winShare": 0.17,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 1.02
@@ -3461,8 +3546,9 @@
         "y5": {
           "foalsBorn": 100,
           "runShare": 0.7,
-          "adjRS": 5.9,
-          "winShare": 0.132,
+          "adjRS": 5.8,
+          "adjPS": 0.6,
+          "winShare": 0.134,
           "stkWnrsRnrs": 0.043,
           "stkWnrsBorn": 0.03,
           "g1WnrsBorn": 0.0,
@@ -3470,7 +3556,7 @@
           "avgAvailableDams": 30.0,
           "avgServicedDamAge": 9.9,
           "avgVaciosDams": 0.33,
-          "avgRestDams": 0.057,
+          "avgRestDams": 0.068,
           "deadBfr2yo": 0.03,
           "deadAtBirth": 0.01,
           "avgDaysBtwServices": 10.2
@@ -3479,7 +3565,8 @@
           "foalsBorn": 193,
           "runShare": 0.627,
           "adjRS": -0.8,
-          "winShare": 0.132,
+          "adjPS": 1.7,
+          "winShare": 0.133,
           "stkWnrsRnrs": 0.05,
           "stkWnrsBorn": 0.031,
           "g1WnrsBorn": 0.005,
@@ -3487,7 +3574,7 @@
           "avgAvailableDams": 39.0,
           "avgServicedDamAge": 10.2,
           "avgVaciosDams": 0.29,
-          "avgRestDams": 0.062,
+          "avgRestDams": 0.068,
           "deadBfr2yo": 0.036,
           "deadAtBirth": 0.005,
           "avgDaysBtwServices": 9.7
@@ -3496,6 +3583,7 @@
           "foalsBorn": 1325,
           "runShare": 0.675,
           "adjRS": 3.6,
+          "adjPS": 1.6,
           "winShare": 0.123,
           "stkWnrsRnrs": 0.046,
           "stkWnrsBorn": 0.031,
@@ -3504,10 +3592,10 @@
           "avgAvailableDams": 80.0,
           "avgServicedDamAge": 10.8,
           "avgVaciosDams": 0.28,
-          "avgRestDams": 0.073,
+          "avgRestDams": 0.074,
           "deadBfr2yo": 0.039,
           "deadAtBirth": 0.008,
-          "avgDaysBtwServices": 12.1
+          "avgDaysBtwServices": 12.0
         }
       },
       "timeSeries": [
@@ -3560,7 +3648,7 @@
           "year": 2020,
           "foalsBorn": 27,
           "runShare": 0.59,
-          "winShare": 0.18,
+          "winShare": 0.2,
           "stkWnrsBorn": 0.037,
           "g1WnrsBorn": 0.0,
           "cei": 1.71
@@ -3611,12 +3699,13 @@
         "y1": {
           "foalsBorn": 61,
           "runShare": 0.557,
-          "adjRS": 0.7,
-          "winShare": 0.169,
+          "adjRS": -0.3,
+          "adjPS": 6.4,
+          "winShare": 0.171,
           "stkWnrsRnrs": 0.088,
           "stkWnrsBorn": 0.049,
           "g1WnrsBorn": 0.016,
-          "cei": 1.1,
+          "cei": 1.2,
           "avgAvailableDams": 75.0,
           "avgServicedDamAge": 11.5,
           "avgVaciosDams": 0.16,
@@ -3628,8 +3717,9 @@
         "y2": {
           "foalsBorn": 121,
           "runShare": 0.636,
-          "adjRS": 2.7,
-          "winShare": 0.166,
+          "adjRS": 2.2,
+          "adjPS": 4.9,
+          "winShare": 0.167,
           "stkWnrsRnrs": 0.078,
           "stkWnrsBorn": 0.05,
           "g1WnrsBorn": 0.008,
@@ -3645,8 +3735,9 @@
         "y5": {
           "foalsBorn": 256,
           "runShare": 0.715,
-          "adjRS": 3.0,
-          "winShare": 0.155,
+          "adjRS": 2.8,
+          "adjPS": 2.4,
+          "winShare": 0.154,
           "stkWnrsRnrs": 0.071,
           "stkWnrsBorn": 0.051,
           "g1WnrsBorn": 0.012,
@@ -3654,42 +3745,44 @@
           "avgAvailableDams": 70.0,
           "avgServicedDamAge": 11.2,
           "avgVaciosDams": 0.24,
-          "avgRestDams": 0.009,
-          "deadBfr2yo": 0.039,
+          "avgRestDams": 0.008,
+          "deadBfr2yo": 0.035,
           "deadAtBirth": 0.008,
-          "avgDaysBtwServices": 14.5
+          "avgDaysBtwServices": 14.6
         },
         "y7": {
           "foalsBorn": 332,
           "runShare": 0.747,
-          "adjRS": 4.9,
+          "adjRS": 4.7,
+          "adjPS": 2.8,
           "winShare": 0.145,
           "stkWnrsRnrs": 0.073,
           "stkWnrsBorn": 0.054,
           "g1WnrsBorn": 0.009,
           "cei": 1.8,
-          "avgAvailableDams": 66.0,
+          "avgAvailableDams": 64.0,
           "avgServicedDamAge": 11.1,
-          "avgVaciosDams": 0.25,
+          "avgVaciosDams": 0.26,
           "avgRestDams": 0.009,
-          "deadBfr2yo": 0.036,
+          "deadBfr2yo": 0.033,
           "deadAtBirth": 0.012,
           "avgDaysBtwServices": 15.6
         },
         "hist": {
           "foalsBorn": 724,
           "runShare": 0.686,
-          "adjRS": -1.4,
+          "adjRS": -1.5,
+          "adjPS": 0.9,
           "winShare": 0.113,
           "stkWnrsRnrs": 0.044,
           "stkWnrsBorn": 0.03,
           "g1WnrsBorn": 0.004,
           "cei": 1.4,
-          "avgAvailableDams": 57.0,
+          "avgAvailableDams": 55.0,
           "avgServicedDamAge": 10.7,
           "avgVaciosDams": 0.28,
           "avgRestDams": 0.037,
-          "deadBfr2yo": 0.032,
+          "deadBfr2yo": 0.031,
           "deadAtBirth": 0.007,
           "avgDaysBtwServices": 18.1
         }
@@ -3720,7 +3813,7 @@
           "winShare": 0.13,
           "stkWnrsBorn": 0.1,
           "g1WnrsBorn": 0.0,
-          "cei": 2.03
+          "cei": 2.04
         },
         {
           "year": 2018,
@@ -3756,7 +3849,7 @@
           "winShare": 0.16,
           "stkWnrsBorn": 0.05,
           "g1WnrsBorn": 0.0,
-          "cei": 1.12
+          "cei": 1.14
         },
         {
           "year": 2022,
@@ -3765,7 +3858,7 @@
           "winShare": 0.17,
           "stkWnrsBorn": 0.049,
           "g1WnrsBorn": 0.016,
-          "cei": 1.12
+          "cei": 1.16
         }
       ]
     },
@@ -3806,8 +3899,9 @@
         "y5": {
           "foalsBorn": 102,
           "runShare": 0.627,
-          "adjRS": -1.5,
-          "winShare": 0.142,
+          "adjRS": -1.8,
+          "adjPS": -0.7,
+          "winShare": 0.144,
           "stkWnrsRnrs": 0.016,
           "stkWnrsBorn": 0.01,
           "g1WnrsBorn": 0.0,
@@ -3823,7 +3917,8 @@
         "y7": {
           "foalsBorn": 227,
           "runShare": 0.634,
-          "adjRS": -1.6,
+          "adjRS": -1.8,
+          "adjPS": 3.3,
           "winShare": 0.13,
           "stkWnrsRnrs": 0.056,
           "stkWnrsBorn": 0.035,
@@ -3841,6 +3936,7 @@
           "foalsBorn": 1073,
           "runShare": 0.66,
           "adjRS": 1.6,
+          "adjPS": 1.4,
           "winShare": 0.114,
           "stkWnrsRnrs": 0.044,
           "stkWnrsBorn": 0.029,
@@ -3914,19 +4010,19 @@
           "year": 2021,
           "foalsBorn": 21,
           "runShare": 0.62,
-          "winShare": 0.06,
+          "winShare": 0.08,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.49
+          "cei": 0.52
         },
         {
           "year": 2022,
           "foalsBorn": 15,
           "runShare": 0.47,
-          "winShare": 0.24,
+          "winShare": 0.22,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.44
+          "cei": 0.46
         }
       ]
     },
@@ -3965,12 +4061,13 @@
         "y1": {
           "foalsBorn": 37,
           "runShare": 0.568,
-          "adjRS": 7.1,
-          "winShare": 0.095,
+          "adjRS": 5.3,
+          "adjPS": -0.7,
+          "winShare": 0.121,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.5,
+          "cei": 0.6,
           "avgAvailableDams": 54.0,
           "avgServicedDamAge": 10.7,
           "avgVaciosDams": 0.31,
@@ -3982,8 +4079,9 @@
         "y2": {
           "foalsBorn": 75,
           "runShare": 0.667,
-          "adjRS": 9.1,
-          "winShare": 0.115,
+          "adjRS": 8.3,
+          "adjPS": -1.0,
+          "winShare": 0.123,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -3991,7 +4089,7 @@
           "avgAvailableDams": 54.0,
           "avgServicedDamAge": 11.0,
           "avgVaciosDams": 0.3,
-          "avgRestDams": 0.069,
+          "avgRestDams": 0.0,
           "deadBfr2yo": 0.04,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 16.3
@@ -3999,8 +4097,9 @@
         "y5": {
           "foalsBorn": 178,
           "runShare": 0.663,
-          "adjRS": 4.5,
-          "winShare": 0.146,
+          "adjRS": 4.1,
+          "adjPS": 0.4,
+          "winShare": 0.148,
           "stkWnrsRnrs": 0.025,
           "stkWnrsBorn": 0.017,
           "g1WnrsBorn": 0.0,
@@ -4016,8 +4115,9 @@
         "y7": {
           "foalsBorn": 251,
           "runShare": 0.677,
-          "adjRS": 5.4,
-          "winShare": 0.133,
+          "adjRS": 5.0,
+          "adjPS": 1.2,
+          "winShare": 0.134,
           "stkWnrsRnrs": 0.035,
           "stkWnrsBorn": 0.024,
           "g1WnrsBorn": 0.004,
@@ -4033,7 +4133,8 @@
         "hist": {
           "foalsBorn": 972,
           "runShare": 0.717,
-          "adjRS": 8.5,
+          "adjRS": 8.4,
+          "adjPS": 2.0,
           "winShare": 0.114,
           "stkWnrsRnrs": 0.04,
           "stkWnrsBorn": 0.029,
@@ -4101,7 +4202,7 @@
           "winShare": 0.18,
           "stkWnrsBorn": 0.038,
           "g1WnrsBorn": 0.0,
-          "cei": 2.24
+          "cei": 2.25
         },
         {
           "year": 2021,
@@ -4110,16 +4211,16 @@
           "winShare": 0.12,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 1.27
+          "cei": 1.3
         },
         {
           "year": 2022,
           "foalsBorn": 37,
           "runShare": 0.57,
-          "winShare": 0.1,
+          "winShare": 0.12,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.51
+          "cei": 0.59
         }
       ]
     },
@@ -4158,8 +4259,9 @@
         "y1": {
           "foalsBorn": 34,
           "runShare": 0.559,
-          "adjRS": 4.7,
-          "winShare": 0.061,
+          "adjRS": 4.0,
+          "adjPS": -1.9,
+          "winShare": 0.058,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -4175,8 +4277,9 @@
         "y2": {
           "foalsBorn": 67,
           "runShare": 0.552,
-          "adjRS": 0.8,
-          "winShare": 0.097,
+          "adjRS": 0.4,
+          "adjPS": -1.5,
+          "winShare": 0.095,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -4192,8 +4295,9 @@
         "y5": {
           "foalsBorn": 167,
           "runShare": 0.563,
-          "adjRS": -1.9,
-          "winShare": 0.103,
+          "adjRS": -2.1,
+          "adjPS": -0.1,
+          "winShare": 0.102,
           "stkWnrsRnrs": 0.021,
           "stkWnrsBorn": 0.012,
           "g1WnrsBorn": 0.0,
@@ -4209,7 +4313,8 @@
         "y7": {
           "foalsBorn": 254,
           "runShare": 0.563,
-          "adjRS": -2.8,
+          "adjRS": -2.9,
+          "adjPS": -0.7,
           "winShare": 0.095,
           "stkWnrsRnrs": 0.014,
           "stkWnrsBorn": 0.008,
@@ -4227,6 +4332,7 @@
           "foalsBorn": 1264,
           "runShare": 0.636,
           "adjRS": 0.4,
+          "adjPS": 1.5,
           "winShare": 0.116,
           "stkWnrsRnrs": 0.039,
           "stkWnrsBorn": 0.025,
@@ -4303,7 +4409,7 @@
           "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.84
+          "cei": 0.86
         },
         {
           "year": 2022,
@@ -4312,7 +4418,7 @@
           "winShare": 0.06,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.4
+          "cei": 0.42
         }
       ]
     },
@@ -4356,12 +4462,13 @@
           "foalsBorn": 718,
           "runShare": 0.67,
           "adjRS": 3.6,
+          "adjPS": 0.7,
           "winShare": 0.107,
           "stkWnrsRnrs": 0.033,
           "stkWnrsBorn": 0.022,
           "g1WnrsBorn": 0.006,
           "cei": 1.5,
-          "avgAvailableDams": 51.0,
+          "avgAvailableDams": 49.0,
           "avgServicedDamAge": 11.6,
           "avgVaciosDams": 0.29,
           "avgRestDams": 0.065,
@@ -4440,6 +4547,7 @@
           "foalsBorn": 627,
           "runShare": 0.611,
           "adjRS": 3.0,
+          "adjPS": 1.6,
           "winShare": 0.099,
           "stkWnrsRnrs": 0.031,
           "stkWnrsBorn": 0.019,
@@ -4448,7 +4556,7 @@
           "avgAvailableDams": 43.0,
           "avgServicedDamAge": 11.3,
           "avgVaciosDams": 0.35,
-          "avgRestDams": 0.066,
+          "avgRestDams": 0.065,
           "deadBfr2yo": 0.022,
           "deadAtBirth": 0.01,
           "avgDaysBtwServices": 15.5
@@ -4569,6 +4677,7 @@
           "foalsBorn": 846,
           "runShare": 0.671,
           "adjRS": 8.4,
+          "adjPS": 1.1,
           "winShare": 0.096,
           "stkWnrsRnrs": 0.025,
           "stkWnrsBorn": 0.017,
@@ -4645,7 +4754,7 @@
           "winShare": 0.06,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.76
+          "cei": 0.77
         },
         {
           "year": 2022,
@@ -4692,13 +4801,14 @@
       "stats": {
         "y1": {
           "foalsBorn": 59,
-          "runShare": 0.441,
-          "adjRS": 8.2,
-          "winShare": 0.042,
+          "runShare": 0.458,
+          "adjRS": 7.9,
+          "adjPS": -0.2,
+          "winShare": 0.069,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.3,
+          "cei": 0.4,
           "avgAvailableDams": 74.0,
           "avgServicedDamAge": 9.6,
           "avgVaciosDams": 0.2,
@@ -4709,9 +4819,10 @@
         },
         "y2": {
           "foalsBorn": 104,
-          "runShare": 0.481,
+          "runShare": 0.49,
           "adjRS": 2.2,
-          "winShare": 0.089,
+          "adjPS": -0.3,
+          "winShare": 0.097,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -4726,26 +4837,28 @@
         },
         "y5": {
           "foalsBorn": 254,
-          "runShare": 0.575,
+          "runShare": 0.579,
           "adjRS": 1.1,
-          "winShare": 0.09,
-          "stkWnrsRnrs": 0.021,
+          "adjPS": 0.6,
+          "winShare": 0.092,
+          "stkWnrsRnrs": 0.02,
           "stkWnrsBorn": 0.012,
           "g1WnrsBorn": 0.0,
           "cei": 1.0,
           "avgAvailableDams": 75.0,
           "avgServicedDamAge": 10.0,
           "avgVaciosDams": 0.32,
-          "avgRestDams": 0.046,
+          "avgRestDams": 0.06,
           "deadBfr2yo": 0.008,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 7.1
         },
         "y7": {
           "foalsBorn": 358,
-          "runShare": 0.615,
+          "runShare": 0.617,
           "adjRS": 3.6,
-          "winShare": 0.086,
+          "adjPS": 0.0,
+          "winShare": 0.088,
           "stkWnrsRnrs": 0.018,
           "stkWnrsBorn": 0.011,
           "g1WnrsBorn": 0.0,
@@ -4760,10 +4873,11 @@
         },
         "hist": {
           "foalsBorn": 769,
-          "runShare": 0.633,
-          "adjRS": 3.7,
-          "winShare": 0.089,
-          "stkWnrsRnrs": 0.021,
+          "runShare": 0.635,
+          "adjRS": 3.8,
+          "adjPS": 0.4,
+          "winShare": 0.09,
+          "stkWnrsRnrs": 0.02,
           "stkWnrsBorn": 0.013,
           "g1WnrsBorn": 0.0,
           "cei": 1.0,
@@ -4820,7 +4934,7 @@
           "winShare": 0.1,
           "stkWnrsBorn": 0.019,
           "g1WnrsBorn": 0.0,
-          "cei": 1.49
+          "cei": 1.51
         },
         {
           "year": 2020,
@@ -4843,11 +4957,11 @@
         {
           "year": 2022,
           "foalsBorn": 59,
-          "runShare": 0.44,
-          "winShare": 0.04,
+          "runShare": 0.46,
+          "winShare": 0.07,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.3
+          "cei": 0.35
         }
       ]
     },
@@ -4886,8 +5000,9 @@
         "y1": {
           "foalsBorn": 44,
           "runShare": 0.5,
-          "adjRS": 7.7,
-          "winShare": 0.096,
+          "adjRS": 6.0,
+          "adjPS": -0.9,
+          "winShare": 0.112,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -4903,8 +5018,9 @@
         "y2": {
           "foalsBorn": 72,
           "runShare": 0.583,
-          "adjRS": 4.6,
-          "winShare": 0.106,
+          "adjRS": 3.9,
+          "adjPS": -1.1,
+          "winShare": 0.111,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -4920,12 +5036,13 @@
         "y5": {
           "foalsBorn": 195,
           "runShare": 0.621,
-          "adjRS": 3.2,
-          "winShare": 0.096,
+          "adjRS": 3.0,
+          "adjPS": 0.1,
+          "winShare": 0.098,
           "stkWnrsRnrs": 0.017,
           "stkWnrsBorn": 0.01,
           "g1WnrsBorn": 0.0,
-          "cei": 1.2,
+          "cei": 1.3,
           "avgAvailableDams": null,
           "avgServicedDamAge": null,
           "avgVaciosDams": null,
@@ -4937,8 +5054,9 @@
         "y7": {
           "foalsBorn": 254,
           "runShare": 0.614,
-          "adjRS": 3.6,
-          "winShare": 0.092,
+          "adjRS": 3.4,
+          "adjPS": -0.2,
+          "winShare": 0.093,
           "stkWnrsRnrs": 0.013,
           "stkWnrsBorn": 0.008,
           "g1WnrsBorn": 0.0,
@@ -4954,7 +5072,8 @@
         "hist": {
           "foalsBorn": 1025,
           "runShare": 0.622,
-          "adjRS": 2.3,
+          "adjRS": 2.2,
+          "adjPS": 0.4,
           "winShare": 0.098,
           "stkWnrsRnrs": 0.02,
           "stkWnrsBorn": 0.013,
@@ -5022,7 +5141,7 @@
           "winShare": 0.1,
           "stkWnrsBorn": 0.026,
           "g1WnrsBorn": 0.0,
-          "cei": 1.79
+          "cei": 1.81
         },
         {
           "year": 2021,
@@ -5037,10 +5156,10 @@
           "year": 2022,
           "foalsBorn": 44,
           "runShare": 0.5,
-          "winShare": 0.1,
+          "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.28
+          "cei": 0.34
         }
       ]
     },
@@ -5083,7 +5202,8 @@
         "hist": {
           "foalsBorn": 575,
           "runShare": 0.617,
-          "adjRS": 4.3,
+          "adjRS": 4.2,
+          "adjPS": 0.2,
           "winShare": 0.106,
           "stkWnrsRnrs": 0.02,
           "stkWnrsBorn": 0.012,
@@ -5209,7 +5329,8 @@
           "foalsBorn": 25,
           "runShare": 0.12,
           "adjRS": -0.0,
-          "winShare": 0.2,
+          "adjPS": 0.0,
+          "winShare": 0.143,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -5217,16 +5338,17 @@
           "avgAvailableDams": 39.0,
           "avgServicedDamAge": 12.5,
           "avgVaciosDams": 0.38,
-          "avgRestDams": 0.347,
+          "avgRestDams": 0.268,
           "deadBfr2yo": 0.0,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 2.9
         },
         "y2": {
           "foalsBorn": 47,
-          "runShare": 0.128,
-          "adjRS": 0.5,
-          "winShare": 0.095,
+          "runShare": 0.149,
+          "adjRS": 0.6,
+          "adjPS": 0.0,
+          "winShare": 0.083,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -5234,16 +5356,17 @@
           "avgAvailableDams": 36.0,
           "avgServicedDamAge": 12.7,
           "avgVaciosDams": 0.35,
-          "avgRestDams": 0.325,
+          "avgRestDams": 0.268,
           "deadBfr2yo": 0.0,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 2.0
         },
         "y5": {
           "foalsBorn": 140,
-          "runShare": 0.421,
-          "adjRS": 1.5,
-          "winShare": 0.094,
+          "runShare": 0.429,
+          "adjRS": 1.6,
+          "adjPS": 1.0,
+          "winShare": 0.093,
           "stkWnrsRnrs": 0.017,
           "stkWnrsBorn": 0.007,
           "g1WnrsBorn": 0.0,
@@ -5251,16 +5374,17 @@
           "avgAvailableDams": 38.0,
           "avgServicedDamAge": 11.7,
           "avgVaciosDams": 0.27,
-          "avgRestDams": 0.279,
+          "avgRestDams": 0.257,
           "deadBfr2yo": 0.029,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 0.8
         },
         "y7": {
           "foalsBorn": 200,
-          "runShare": 0.485,
-          "adjRS": 0.8,
-          "winShare": 0.098,
+          "runShare": 0.49,
+          "adjRS": 0.9,
+          "adjPS": 0.6,
+          "winShare": 0.097,
           "stkWnrsRnrs": 0.01,
           "stkWnrsBorn": 0.005,
           "g1WnrsBorn": 0.0,
@@ -5268,15 +5392,16 @@
           "avgAvailableDams": 40.0,
           "avgServicedDamAge": 11.9,
           "avgVaciosDams": 0.3,
-          "avgRestDams": 0.249,
+          "avgRestDams": 0.259,
           "deadBfr2yo": 0.02,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 2.7
         },
         "hist": {
           "foalsBorn": 1279,
-          "runShare": 0.632,
+          "runShare": 0.633,
           "adjRS": 1.4,
+          "adjPS": 0.8,
           "winShare": 0.089,
           "stkWnrsRnrs": 0.017,
           "stkWnrsBorn": 0.011,
@@ -5285,7 +5410,7 @@
           "avgAvailableDams": 88.0,
           "avgServicedDamAge": 11.9,
           "avgVaciosDams": 0.36,
-          "avgRestDams": 0.118,
+          "avgRestDams": 0.12,
           "deadBfr2yo": 0.032,
           "deadAtBirth": 0.009,
           "avgDaysBtwServices": 5.6
@@ -5344,25 +5469,25 @@
           "winShare": 0.1,
           "stkWnrsBorn": 0.029,
           "g1WnrsBorn": 0.0,
-          "cei": 1.17
+          "cei": 1.18
         },
         {
           "year": 2021,
           "foalsBorn": 22,
-          "runShare": 0.14,
+          "runShare": 0.18,
           "winShare": 0.06,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.04
+          "cei": 0.05
         },
         {
           "year": 2022,
           "foalsBorn": 25,
           "runShare": 0.12,
-          "winShare": 0.2,
+          "winShare": 0.14,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.04
+          "cei": 0.05
         }
       ]
     },
@@ -5406,6 +5531,7 @@
           "foalsBorn": 724,
           "runShare": 0.593,
           "adjRS": 1.7,
+          "adjPS": 0.4,
           "winShare": 0.086,
           "stkWnrsRnrs": 0.016,
           "stkWnrsBorn": 0.01,
@@ -5415,7 +5541,7 @@
           "avgServicedDamAge": 11.2,
           "avgVaciosDams": 0.39,
           "avgRestDams": 0.072,
-          "deadBfr2yo": 0.115,
+          "deadBfr2yo": 0.114,
           "deadAtBirth": 0.003,
           "avgDaysBtwServices": 7.9
         }
@@ -5535,18 +5661,19 @@
           "foalsBorn": 586,
           "runShare": 0.531,
           "adjRS": -0.2,
+          "adjPS": 0.5,
           "winShare": 0.092,
           "stkWnrsRnrs": 0.016,
           "stkWnrsBorn": 0.009,
           "g1WnrsBorn": 0.0,
           "cei": 0.8,
-          "avgAvailableDams": 40.0,
+          "avgAvailableDams": 41.0,
           "avgServicedDamAge": 11.5,
           "avgVaciosDams": 0.36,
           "avgRestDams": 0.131,
-          "deadBfr2yo": 0.043,
+          "deadBfr2yo": 0.041,
           "deadAtBirth": 0.002,
-          "avgDaysBtwServices": 8.5
+          "avgDaysBtwServices": 8.6
         }
       },
       "timeSeries": [
@@ -5660,7 +5787,8 @@
           "foalsBorn": 30,
           "runShare": 0.333,
           "adjRS": -0.1,
-          "winShare": 0.111,
+          "adjPS": 0.0,
+          "winShare": 0.109,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -5668,7 +5796,7 @@
           "avgAvailableDams": 54.0,
           "avgServicedDamAge": 12.8,
           "avgVaciosDams": 0.44,
-          "avgRestDams": 0.1,
+          "avgRestDams": null,
           "deadBfr2yo": 0.1,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 5.0
@@ -5677,7 +5805,8 @@
           "foalsBorn": 58,
           "runShare": 0.414,
           "adjRS": 2.3,
-          "winShare": 0.131,
+          "adjPS": -0.2,
+          "winShare": 0.137,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -5685,7 +5814,7 @@
           "avgAvailableDams": 54.0,
           "avgServicedDamAge": 12.3,
           "avgVaciosDams": 0.46,
-          "avgRestDams": 0.107,
+          "avgRestDams": 0.115,
           "deadBfr2yo": 0.121,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 6.1
@@ -5693,8 +5822,9 @@
         "y5": {
           "foalsBorn": 157,
           "runShare": 0.363,
-          "adjRS": -1.0,
-          "winShare": 0.104,
+          "adjRS": -1.1,
+          "adjPS": -0.6,
+          "winShare": 0.105,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -5702,7 +5832,7 @@
           "avgAvailableDams": 53.0,
           "avgServicedDamAge": 11.6,
           "avgVaciosDams": 0.41,
-          "avgRestDams": 0.152,
+          "avgRestDams": 0.165,
           "deadBfr2yo": 0.115,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 3.8
@@ -5711,7 +5841,8 @@
           "foalsBorn": 245,
           "runShare": 0.376,
           "adjRS": -0.3,
-          "winShare": 0.095,
+          "adjPS": -0.4,
+          "winShare": 0.096,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -5719,7 +5850,7 @@
           "avgAvailableDams": 58.0,
           "avgServicedDamAge": 11.5,
           "avgVaciosDams": 0.4,
-          "avgRestDams": 0.128,
+          "avgRestDams": 0.133,
           "deadBfr2yo": 0.131,
           "deadAtBirth": 0.004,
           "avgDaysBtwServices": 4.2
@@ -5728,6 +5859,7 @@
           "foalsBorn": 994,
           "runShare": 0.562,
           "adjRS": 1.9,
+          "adjPS": 0.7,
           "winShare": 0.088,
           "stkWnrsRnrs": 0.014,
           "stkWnrsBorn": 0.008,
@@ -5801,10 +5933,10 @@
           "year": 2021,
           "foalsBorn": 28,
           "runShare": 0.5,
-          "winShare": 0.14,
+          "winShare": 0.15,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.52
+          "cei": 0.54
         },
         {
           "year": 2022,
@@ -5813,7 +5945,7 @@
           "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.27
+          "cei": 0.28
         }
       ]
     },
@@ -5852,8 +5984,9 @@
         "y1": {
           "foalsBorn": 73,
           "runShare": 0.384,
-          "adjRS": 6.4,
-          "winShare": 0.094,
+          "adjRS": 5.5,
+          "adjPS": -0.2,
+          "winShare": 0.112,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -5861,7 +5994,7 @@
           "avgAvailableDams": 99.0,
           "avgServicedDamAge": 11.1,
           "avgVaciosDams": 0.26,
-          "avgRestDams": null,
+          "avgRestDams": 0.189,
           "deadBfr2yo": 0.041,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 0.0
@@ -5869,16 +6002,17 @@
         "y2": {
           "foalsBorn": 153,
           "runShare": 0.451,
-          "adjRS": 4.8,
-          "winShare": 0.157,
+          "adjRS": 4.4,
+          "adjPS": 0.6,
+          "winShare": 0.164,
           "stkWnrsRnrs": 0.014,
           "stkWnrsBorn": 0.007,
           "g1WnrsBorn": 0.0,
-          "cei": 0.5,
+          "cei": 0.6,
           "avgAvailableDams": 102.0,
           "avgServicedDamAge": 10.9,
           "avgVaciosDams": 0.25,
-          "avgRestDams": 0.167,
+          "avgRestDams": 0.178,
           "deadBfr2yo": 0.053,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 0.1
@@ -5886,8 +6020,9 @@
         "y5": {
           "foalsBorn": 417,
           "runShare": 0.492,
-          "adjRS": 1.8,
-          "winShare": 0.169,
+          "adjRS": 1.6,
+          "adjPS": 0.8,
+          "winShare": 0.17,
           "stkWnrsRnrs": 0.02,
           "stkWnrsBorn": 0.01,
           "g1WnrsBorn": 0.0,
@@ -5895,7 +6030,7 @@
           "avgAvailableDams": 112.0,
           "avgServicedDamAge": 10.7,
           "avgVaciosDams": 0.26,
-          "avgRestDams": 0.072,
+          "avgRestDams": 0.095,
           "deadBfr2yo": 0.053,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 1.1
@@ -5903,8 +6038,9 @@
         "y7": {
           "foalsBorn": 576,
           "runShare": 0.493,
-          "adjRS": 1.8,
-          "winShare": 0.161,
+          "adjRS": 1.7,
+          "adjPS": 1.0,
+          "winShare": 0.162,
           "stkWnrsRnrs": 0.021,
           "stkWnrsBorn": 0.01,
           "g1WnrsBorn": 0.002,
@@ -5912,7 +6048,7 @@
           "avgAvailableDams": 111.0,
           "avgServicedDamAge": 10.5,
           "avgVaciosDams": 0.26,
-          "avgRestDams": 0.077,
+          "avgRestDams": 0.093,
           "deadBfr2yo": 0.056,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 1.6
@@ -5921,15 +6057,16 @@
           "foalsBorn": 1527,
           "runShare": 0.469,
           "adjRS": -1.9,
+          "adjPS": 0.5,
           "winShare": 0.125,
           "stkWnrsRnrs": 0.017,
           "stkWnrsBorn": 0.008,
           "g1WnrsBorn": 0.001,
-          "cei": 0.6,
-          "avgAvailableDams": 89.0,
+          "cei": 0.7,
+          "avgAvailableDams": 88.0,
           "avgServicedDamAge": 10.4,
           "avgVaciosDams": 0.25,
-          "avgRestDams": 0.099,
+          "avgRestDams": 0.104,
           "deadBfr2yo": 0.088,
           "deadAtBirth": 0.001,
           "avgDaysBtwServices": 3.5
@@ -5988,7 +6125,7 @@
           "winShare": 0.15,
           "stkWnrsBorn": 0.012,
           "g1WnrsBorn": 0.0,
-          "cei": 0.73
+          "cei": 0.74
         },
         {
           "year": 2021,
@@ -5997,16 +6134,16 @@
           "winShare": 0.18,
           "stkWnrsBorn": 0.013,
           "g1WnrsBorn": 0.0,
-          "cei": 0.81
+          "cei": 0.84
         },
         {
           "year": 2022,
           "foalsBorn": 73,
           "runShare": 0.38,
-          "winShare": 0.09,
+          "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.21
+          "cei": 0.24
         }
       ]
     },
@@ -6044,9 +6181,10 @@
       "stats": {
         "y1": {
           "foalsBorn": 36,
-          "runShare": 0.556,
-          "adjRS": 16.6,
-          "winShare": 0.063,
+          "runShare": 0.583,
+          "adjRS": 17.7,
+          "adjPS": -0.1,
+          "winShare": 0.069,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -6054,15 +6192,16 @@
           "avgAvailableDams": 44.0,
           "avgServicedDamAge": 12.9,
           "avgVaciosDams": 0.18,
-          "avgRestDams": 0.302,
+          "avgRestDams": null,
           "deadBfr2yo": 0.056,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 11.2
         },
         "y2": {
           "foalsBorn": 79,
-          "runShare": 0.57,
-          "adjRS": 11.4,
+          "runShare": 0.582,
+          "adjRS": 12.1,
+          "adjPS": -0.7,
           "winShare": 0.093,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
@@ -6071,32 +6210,34 @@
           "avgAvailableDams": 46.0,
           "avgServicedDamAge": 12.6,
           "avgVaciosDams": 0.15,
-          "avgRestDams": 0.301,
+          "avgRestDams": 0.3,
           "deadBfr2yo": 0.051,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 12.0
         },
         "y5": {
           "foalsBorn": 187,
-          "runShare": 0.62,
-          "adjRS": 11.3,
+          "runShare": 0.626,
+          "adjRS": 11.6,
+          "adjPS": 1.2,
           "winShare": 0.102,
           "stkWnrsRnrs": 0.026,
           "stkWnrsBorn": 0.016,
           "g1WnrsBorn": 0.0,
-          "cei": 0.9,
+          "cei": 1.0,
           "avgAvailableDams": 45.0,
           "avgServicedDamAge": 11.7,
           "avgVaciosDams": 0.16,
-          "avgRestDams": 0.294,
+          "avgRestDams": 0.292,
           "deadBfr2yo": 0.032,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 9.6
         },
         "y7": {
           "foalsBorn": 262,
-          "runShare": 0.603,
-          "adjRS": 10.5,
+          "runShare": 0.607,
+          "adjRS": 10.7,
+          "adjPS": 0.8,
           "winShare": 0.101,
           "stkWnrsRnrs": 0.019,
           "stkWnrsBorn": 0.011,
@@ -6105,15 +6246,16 @@
           "avgAvailableDams": 45.0,
           "avgServicedDamAge": 11.6,
           "avgVaciosDams": 0.18,
-          "avgRestDams": 0.255,
+          "avgRestDams": 0.236,
           "deadBfr2yo": 0.042,
           "deadAtBirth": 0.004,
           "avgDaysBtwServices": 10.2
         },
         "hist": {
           "foalsBorn": 906,
-          "runShare": 0.577,
+          "runShare": 0.578,
           "adjRS": 5.2,
+          "adjPS": 0.5,
           "winShare": 0.1,
           "stkWnrsRnrs": 0.013,
           "stkWnrsBorn": 0.008,
@@ -6122,10 +6264,10 @@
           "avgAvailableDams": 58.0,
           "avgServicedDamAge": 12.3,
           "avgVaciosDams": 0.32,
-          "avgRestDams": 0.197,
+          "avgRestDams": 0.193,
           "deadBfr2yo": 0.043,
           "deadAtBirth": 0.002,
-          "avgDaysBtwServices": 12.0
+          "avgDaysBtwServices": 11.9
         }
       },
       "timeSeries": [
@@ -6190,16 +6332,16 @@
           "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.48
+          "cei": 0.49
         },
         {
           "year": 2022,
           "foalsBorn": 36,
-          "runShare": 0.56,
-          "winShare": 0.06,
+          "runShare": 0.58,
+          "winShare": 0.07,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.46
+          "cei": 0.5
         }
       ]
     },
@@ -6237,9 +6379,10 @@
       "stats": {
         "y1": {
           "foalsBorn": 76,
-          "runShare": 0.408,
-          "adjRS": 1.9,
-          "winShare": 0.127,
+          "runShare": 0.421,
+          "adjRS": 3.1,
+          "adjPS": -0.2,
+          "winShare": 0.116,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -6247,16 +6390,17 @@
           "avgAvailableDams": 88.0,
           "avgServicedDamAge": 10.0,
           "avgVaciosDams": 0.14,
-          "avgRestDams": 0.167,
+          "avgRestDams": 0.212,
           "deadBfr2yo": 0.013,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 4.5
         },
         "y2": {
           "foalsBorn": 136,
-          "runShare": 0.507,
-          "adjRS": 2.9,
-          "winShare": 0.115,
+          "runShare": 0.515,
+          "adjRS": 3.5,
+          "adjPS": 1.0,
+          "winShare": 0.114,
           "stkWnrsRnrs": 0.014,
           "stkWnrsBorn": 0.007,
           "g1WnrsBorn": 0.0,
@@ -6264,16 +6408,17 @@
           "avgAvailableDams": 78.0,
           "avgServicedDamAge": 9.7,
           "avgVaciosDams": 0.12,
-          "avgRestDams": 0.167,
+          "avgRestDams": 0.212,
           "deadBfr2yo": 0.007,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 5.1
         },
         "y5": {
           "foalsBorn": 290,
-          "runShare": 0.6,
-          "adjRS": 5.7,
-          "winShare": 0.12,
+          "runShare": 0.603,
+          "adjRS": 6.0,
+          "adjPS": 0.3,
+          "winShare": 0.119,
           "stkWnrsRnrs": 0.011,
           "stkWnrsBorn": 0.007,
           "g1WnrsBorn": 0.0,
@@ -6281,15 +6426,16 @@
           "avgAvailableDams": 67.0,
           "avgServicedDamAge": 9.9,
           "avgVaciosDams": 0.14,
-          "avgRestDams": 0.156,
+          "avgRestDams": 0.153,
           "deadBfr2yo": 0.021,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 5.0
         },
         "y7": {
           "foalsBorn": 377,
-          "runShare": 0.599,
-          "adjRS": 6.9,
+          "runShare": 0.602,
+          "adjRS": 7.1,
+          "adjPS": 0.4,
           "winShare": 0.108,
           "stkWnrsRnrs": 0.013,
           "stkWnrsBorn": 0.008,
@@ -6298,15 +6444,16 @@
           "avgAvailableDams": 64.0,
           "avgServicedDamAge": 9.9,
           "avgVaciosDams": 0.16,
-          "avgRestDams": 0.141,
+          "avgRestDams": 0.144,
           "deadBfr2yo": 0.027,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 5.8
         },
         "hist": {
           "foalsBorn": 671,
-          "runShare": 0.62,
-          "adjRS": 5.8,
+          "runShare": 0.621,
+          "adjRS": 6.0,
+          "adjPS": -0.0,
           "winShare": 0.098,
           "stkWnrsRnrs": 0.012,
           "stkWnrsBorn": 0.007,
@@ -6315,7 +6462,7 @@
           "avgAvailableDams": 36.0,
           "avgServicedDamAge": 9.8,
           "avgVaciosDams": 0.19,
-          "avgRestDams": 0.11,
+          "avgRestDams": 0.108,
           "deadBfr2yo": 0.036,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 7.4
@@ -6383,16 +6530,16 @@
           "winShare": 0.11,
           "stkWnrsBorn": 0.017,
           "g1WnrsBorn": 0.0,
-          "cei": 1.01
+          "cei": 1.03
         },
         {
           "year": 2022,
           "foalsBorn": 76,
-          "runShare": 0.41,
-          "winShare": 0.13,
+          "runShare": 0.42,
+          "winShare": 0.12,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.38
+          "cei": 0.39
         }
       ]
     },
@@ -6432,7 +6579,8 @@
           "foalsBorn": 50,
           "runShare": 0.48,
           "adjRS": -4.3,
-          "winShare": 0.053,
+          "adjPS": 0.0,
+          "winShare": 0.062,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -6448,8 +6596,9 @@
         "y2": {
           "foalsBorn": 114,
           "runShare": 0.544,
-          "adjRS": -0.5,
-          "winShare": 0.074,
+          "adjRS": -0.6,
+          "adjPS": -0.1,
+          "winShare": 0.076,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -6464,9 +6613,10 @@
         },
         "y5": {
           "foalsBorn": 295,
-          "runShare": 0.597,
+          "runShare": 0.6,
           "adjRS": 0.8,
-          "winShare": 0.075,
+          "adjPS": 0.1,
+          "winShare": 0.077,
           "stkWnrsRnrs": 0.006,
           "stkWnrsBorn": 0.003,
           "g1WnrsBorn": 0.0,
@@ -6474,15 +6624,16 @@
           "avgAvailableDams": 84.0,
           "avgServicedDamAge": 10.5,
           "avgVaciosDams": 0.29,
-          "avgRestDams": 0.102,
+          "avgRestDams": 0.087,
           "deadBfr2yo": 0.071,
           "deadAtBirth": 0.007,
           "avgDaysBtwServices": 13.5
         },
         "y7": {
           "foalsBorn": 449,
-          "runShare": 0.628,
+          "runShare": 0.63,
           "adjRS": -0.4,
+          "adjPS": 0.1,
           "winShare": 0.072,
           "stkWnrsRnrs": 0.004,
           "stkWnrsBorn": 0.002,
@@ -6500,6 +6651,7 @@
           "foalsBorn": 1801,
           "runShare": 0.62,
           "adjRS": 0.6,
+          "adjPS": 0.4,
           "winShare": 0.077,
           "stkWnrsRnrs": 0.012,
           "stkWnrsBorn": 0.007,
@@ -6563,11 +6715,11 @@
         {
           "year": 2020,
           "foalsBorn": 52,
-          "runShare": 0.69,
-          "winShare": 0.06,
+          "runShare": 0.71,
+          "winShare": 0.07,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 1.08
+          "cei": 1.1
         },
         {
           "year": 2021,
@@ -6582,10 +6734,10 @@
           "year": 2022,
           "foalsBorn": 50,
           "runShare": 0.48,
-          "winShare": 0.05,
+          "winShare": 0.06,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.17
+          "cei": 0.2
         }
       ]
     },
@@ -6628,7 +6780,8 @@
           "foalsBorn": 144,
           "runShare": 0.278,
           "adjRS": -1.1,
-          "winShare": 0.093,
+          "adjPS": -0.0,
+          "winShare": 0.092,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -6645,6 +6798,7 @@
           "foalsBorn": 698,
           "runShare": 0.347,
           "adjRS": -2.0,
+          "adjPS": 1.5,
           "winShare": 0.095,
           "stkWnrsRnrs": 0.021,
           "stkWnrsBorn": 0.007,
@@ -6656,7 +6810,7 @@
           "avgRestDams": 0.047,
           "deadBfr2yo": 0.064,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 2.7
+          "avgDaysBtwServices": 2.6
         }
       },
       "timeSeries": [
@@ -6712,25 +6866,25 @@
           "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.5
+          "cei": 0.51
         },
         {
           "year": 2021,
           "foalsBorn": 12,
           "runShare": 0.25,
-          "winShare": 0.14,
+          "winShare": 0.13,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.17
+          "cei": 0.19
         },
         {
           "year": 2022,
           "foalsBorn": 11,
           "runShare": 0.27,
-          "winShare": 0.12,
+          "winShare": 0.11,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.13
+          "cei": 0.15
         }
       ]
     },
@@ -6769,16 +6923,17 @@
         "y1": {
           "foalsBorn": 15,
           "runShare": 0.667,
-          "adjRS": 19.4,
-          "winShare": 0.116,
+          "adjRS": 18.3,
+          "adjPS": -1.5,
+          "winShare": 0.13,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.5,
+          "cei": 0.6,
           "avgAvailableDams": 19.0,
           "avgServicedDamAge": 11.1,
           "avgVaciosDams": 0.21,
-          "avgRestDams": null,
+          "avgRestDams": 0.05,
           "deadBfr2yo": 0.0,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 6.9
@@ -6786,8 +6941,9 @@
         "y2": {
           "foalsBorn": 25,
           "runShare": 0.56,
-          "adjRS": 1.3,
-          "winShare": 0.139,
+          "adjRS": 0.8,
+          "adjPS": -1.0,
+          "winShare": 0.147,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -6795,7 +6951,7 @@
           "avgAvailableDams": 18.0,
           "avgServicedDamAge": 11.3,
           "avgVaciosDams": 0.31,
-          "avgRestDams": 0.105,
+          "avgRestDams": 0.077,
           "deadBfr2yo": 0.04,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 8.1
@@ -6803,16 +6959,17 @@
         "y5": {
           "foalsBorn": 62,
           "runShare": 0.597,
-          "adjRS": -0.7,
-          "winShare": 0.11,
+          "adjRS": -0.9,
+          "adjPS": -1.4,
+          "winShare": 0.112,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.8,
+          "cei": 0.9,
           "avgAvailableDams": 17.0,
           "avgServicedDamAge": 10.9,
           "avgVaciosDams": 0.28,
-          "avgRestDams": 0.029,
+          "avgRestDams": 0.034,
           "deadBfr2yo": 0.032,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 7.5
@@ -6820,8 +6977,9 @@
         "y7": {
           "foalsBorn": 82,
           "runShare": 0.598,
-          "adjRS": 1.8,
-          "winShare": 0.103,
+          "adjRS": 1.6,
+          "adjPS": -1.2,
+          "winShare": 0.104,
           "stkWnrsRnrs": 0.0,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
@@ -6829,7 +6987,7 @@
           "avgAvailableDams": 17.0,
           "avgServicedDamAge": 11.0,
           "avgVaciosDams": 0.29,
-          "avgRestDams": 0.03,
+          "avgRestDams": 0.033,
           "deadBfr2yo": 0.024,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 7.9
@@ -6837,7 +6995,8 @@
         "hist": {
           "foalsBorn": 184,
           "runShare": 0.62,
-          "adjRS": 2.4,
+          "adjRS": 2.2,
+          "adjPS": -0.3,
           "winShare": 0.097,
           "stkWnrsRnrs": 0.009,
           "stkWnrsBorn": 0.005,
@@ -6920,10 +7079,10 @@
           "year": 2022,
           "foalsBorn": 15,
           "runShare": 0.67,
-          "winShare": 0.12,
+          "winShare": 0.13,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
-          "cei": 0.53
+          "cei": 0.58
         }
       ]
     },
@@ -6967,6 +7126,7 @@
           "foalsBorn": 554,
           "runShare": 0.338,
           "adjRS": -0.8,
+          "adjPS": 0.4,
           "winShare": 0.05,
           "stkWnrsRnrs": 0.005,
           "stkWnrsBorn": 0.002,
@@ -6975,7 +7135,7 @@
           "avgAvailableDams": 46.0,
           "avgServicedDamAge": 11.4,
           "avgVaciosDams": 0.48,
-          "avgRestDams": 0.096,
+          "avgRestDams": 0.098,
           "deadBfr2yo": 0.058,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 10.8
@@ -7096,6 +7256,7 @@
           "foalsBorn": 670,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
@@ -7107,7 +7268,7 @@
           "avgRestDams": 0.33,
           "deadBfr2yo": 0.069,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 6.8
+          "avgDaysBtwServices": 6.7
         }
       },
       "timeSeries": [
@@ -7203,13 +7364,14 @@
           "foalsBorn": 20,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
           "avgAvailableDams": 19.0,
-          "avgServicedDamAge": 7.8,
+          "avgServicedDamAge": 7.9,
           "avgVaciosDams": 0.11,
           "avgRestDams": 0.367,
           "deadBfr2yo": 0.0,
@@ -7220,12 +7382,13 @@
           "foalsBorn": 41,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
-          "avgAvailableDams": 19.0,
+          "avgAvailableDams": 24.0,
           "avgServicedDamAge": 7.9,
           "avgVaciosDams": 0.19,
           "avgRestDams": 0.284,
@@ -7237,16 +7400,17 @@
           "foalsBorn": 102,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
-          "avgAvailableDams": 26.0,
+          "avgAvailableDams": 24.0,
           "avgServicedDamAge": 8.2,
           "avgVaciosDams": 0.22,
-          "avgRestDams": 0.215,
-          "deadBfr2yo": 0.143,
+          "avgRestDams": 0.27,
+          "deadBfr2yo": 0.158,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 0.2
         },
@@ -7254,16 +7418,17 @@
           "foalsBorn": 151,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
-          "avgAvailableDams": 26.0,
+          "avgAvailableDams": 25.0,
           "avgServicedDamAge": 7.9,
           "avgVaciosDams": 0.18,
-          "avgRestDams": 0.237,
-          "deadBfr2yo": 0.165,
+          "avgRestDams": 0.278,
+          "deadBfr2yo": 0.179,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 0.2
         },
@@ -7271,18 +7436,19 @@
           "foalsBorn": 540,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
           "avgAvailableDams": 28.0,
-          "avgServicedDamAge": 8.4,
+          "avgServicedDamAge": 8.3,
           "avgVaciosDams": 0.21,
           "avgRestDams": 0.199,
-          "deadBfr2yo": 0.146,
+          "deadBfr2yo": 0.142,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 0.3
+          "avgDaysBtwServices": 0.2
         }
       },
       "timeSeries": [
@@ -7400,6 +7566,7 @@
           "foalsBorn": 632,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
@@ -7408,8 +7575,8 @@
           "avgAvailableDams": 34.0,
           "avgServicedDamAge": 10.6,
           "avgVaciosDams": 0.2,
-          "avgRestDams": 0.37,
-          "deadBfr2yo": 0.057,
+          "avgRestDams": 0.364,
+          "deadBfr2yo": 0.054,
           "deadAtBirth": 0.003,
           "avgDaysBtwServices": 3.5
         }
@@ -7529,18 +7696,19 @@
           "foalsBorn": 963,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
-          "avgAvailableDams": 74.0,
+          "avgAvailableDams": 75.0,
           "avgServicedDamAge": 11.3,
-          "avgVaciosDams": 0.33,
-          "avgRestDams": 0.165,
+          "avgVaciosDams": 0.32,
+          "avgRestDams": 0.164,
           "deadBfr2yo": 0.062,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 5.6
+          "avgDaysBtwServices": 5.5
         }
       },
       "timeSeries": [
@@ -7594,16 +7762,17 @@
           "foalsBorn": 155,
           "runShare": 0.0,
           "adjRS": 0.0,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
-          "avgAvailableDams": 43.0,
+          "avgAvailableDams": 33.0,
           "avgServicedDamAge": 9.5,
           "avgVaciosDams": 0.43,
-          "avgRestDams": 0.193,
-          "deadBfr2yo": 0.447,
+          "avgRestDams": 0.195,
+          "deadBfr2yo": 0.484,
           "deadAtBirth": 0.0,
           "avgDaysBtwServices": 0.0
         },
@@ -7611,18 +7780,19 @@
           "foalsBorn": 492,
           "runShare": 0.0,
           "adjRS": -0.1,
+          "adjPS": null,
           "winShare": null,
           "stkWnrsRnrs": null,
           "stkWnrsBorn": 0.0,
           "g1WnrsBorn": 0.0,
           "cei": 0.0,
-          "avgAvailableDams": 49.0,
-          "avgServicedDamAge": 10.1,
+          "avgAvailableDams": 35.0,
+          "avgServicedDamAge": 10.0,
           "avgVaciosDams": 0.34,
-          "avgRestDams": 0.182,
-          "deadBfr2yo": 0.242,
+          "avgRestDams": 0.185,
+          "deadBfr2yo": 0.259,
           "deadAtBirth": 0.0,
-          "avgDaysBtwServices": 1.3
+          "avgDaysBtwServices": 0.8
         }
       },
       "timeSeries": [
