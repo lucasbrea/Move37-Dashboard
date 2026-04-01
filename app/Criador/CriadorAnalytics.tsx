@@ -223,7 +223,7 @@ function CriadorSidebar({ criadors, selectedId, onSelect, window: win }: {
   const sorted = useMemo(() =>
     [...criadors]
       .filter(c => c.name.toLowerCase().includes(search.toLowerCase()))
-      .sort((a, b) => (b.stats[win]?.winShare ?? 0) - (a.stats[win]?.winShare ?? 0)),
+      .sort((a, b) => (b.stats[win]?.stkWnrsRnrs ?? 0) - (a.stats[win]?.stkWnrsRnrs ?? 0)),
     [criadors, search, win]
   );
 
@@ -256,7 +256,7 @@ function CriadorSidebar({ criadors, selectedId, onSelect, window: win }: {
                 <span className="text-gray-100 text-sm font-medium truncate">{c.name}</span>
               </div>
               <div className="flex items-center gap-3 mt-0.5 pl-6">
-                <span className="text-xs text-gray-600">WS <span className="text-gray-400 tabular-nums">{s ? pct(s.winShare) : '—'}</span></span>
+                <span className="text-xs text-gray-600">STK/R <span className="text-gray-400 tabular-nums">{s ? pct(s.stkWnrsRnrs) : '—'}</span></span>
                 <span className="text-xs text-gray-600">CEI <span className="text-gray-400 tabular-nums">{s ? fmt1(s.cei) : '—'}</span></span>
               </div>
             </button>
@@ -291,7 +291,7 @@ function CriadorDetail({ criador, rank, window: win, onWindowChange }: {
       {/* Header */}
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <div className="text-xs text-gray-600 uppercase tracking-wider mb-1">Rank #{rank} by Win Share</div>
+          <div className="text-xs text-gray-600 uppercase tracking-wider mb-1">Rank #{rank} by STK Wnrs/Rnrs</div>
           <h2 className="text-2xl font-light text-white">{criador.name}</h2>
           <p className="text-xs text-gray-500 mt-1">
             {s.foalsBorn} foals born · cohort {winLabel}
@@ -379,7 +379,7 @@ export default function CriadorAnalytics() {
 
   const rank = useMemo(() => {
     if (!data || selectedId === null) return 1;
-    const sorted = [...data.criadors].sort((a, b) => (b.stats[win]?.winShare ?? 0) - (a.stats[win]?.winShare ?? 0));
+    const sorted = [...data.criadors].sort((a, b) => (b.stats[win]?.stkWnrsRnrs ?? 0) - (a.stats[win]?.stkWnrsRnrs ?? 0));
     return sorted.findIndex(c => c.id === selectedId) + 1;
   }, [data, selectedId, win]);
 
