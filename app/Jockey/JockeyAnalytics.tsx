@@ -14,7 +14,7 @@ import {
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-type ViewMode = 'l100' | 'l200' | 'l400' | 'l500' | 'hist' | 'l30d' | 'l90d' | 'l180d';
+type ViewMode = 'l100' | 'l200' | 'l400' | 'l500' | 'hist' | 'l30d' | 'l90d' | 'l180d' | 'Stkl50' | 'Stkl100' | 'Stkl200' | 'Stkhist';
 
 interface BreakdownEntry {
   wsL100: number;
@@ -41,6 +41,19 @@ interface BreakdownEntry {
   wsL180d: number;
   ipL180d: number;
   racesL180d: number;
+  // Strike-rate windows
+  StkwsL50: number;
+  StkipL50: number;
+  StkracesL50: number;
+  StkwsL100: number;
+  StkipL100: number;
+  StkracesL100: number;
+  StkwsL200: number;
+  StkipL200: number;
+  StkracesL200: number;
+  Stkwshist: number;
+  Stkiphist: number;
+  StkracesLhist: number;
 }
 
 interface ComboEntry {
@@ -122,6 +135,20 @@ interface JockeyData {
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
+/**
+ * Read a value from a breakdown entry, falling back to lowercase-L variants
+ * used by the surfaces breakdown (e.g. Stkwsl50 instead of StkwsL50) and
+ * the no-L hist races key (Stkraceshist vs StkracesLhist).
+ */
+function getEntryVal(entry: BreakdownEntry, key: string): number {
+  const map = entry as unknown as Record<string, number>;
+  const raw = map[key];
+  if (raw != null) return raw;
+  // surfaces lowercase-l variant: StkwsL50 → Stkwsl50
+  const altKey = key.replace(/L(\d)/, 'l$1').replace('StkracesLhist', 'Stkraceshist');
+  return map[altKey] ?? 0;
+}
+
 const pct = (v: number) => (v * 100).toFixed(1) + '%';
 const pp = (v: number) => (v >= 0 ? '+' : '') + (v * 100).toFixed(1) + 'pp';
 const gapCls = (v: number) => (v >= 0 ? 'text-green-400' : 'text-red-400');
@@ -175,7 +202,7 @@ function ViewToggle({
   mode: ViewMode;
   onChange: (m: ViewMode) => void;
 }) {
-  const options: { key: ViewMode; label: string }[] = [
+  const wsOptions: { key: ViewMode; label: string }[] = [
     { key: 'l30d',  label: 'L30d'  },
     { key: 'l90d',  label: 'L90d'  },
     { key: 'l180d', label: 'L180d' },
@@ -185,15 +212,35 @@ function ViewToggle({
     { key: 'l500',  label: 'L500'  },
     { key: 'hist',  label: 'Hist'  },
   ];
+  const stkOptions: { key: ViewMode; label: string }[] = [
+    { key: 'Stkl50',  label: 'Stk50'  },
+    { key: 'Stkl100', label: 'Stk100' },
+    { key: 'Stkl200', label: 'Stk200' },
+    { key: 'Stkhist', label: 'StkHist'},
+  ];
   return (
     <div className="flex gap-1 bg-white/5 border border-white/10 p-1 rounded">
-      {options.map(({ key, label }) => (
+      {wsOptions.map(({ key, label }) => (
         <button
           key={key}
           onClick={() => onChange(key)}
           className={`px-3 py-1 text-xs font-medium rounded transition-colors duration-150 ${
             mode === key
               ? 'bg-white/20 text-white'
+              : 'text-gray-500 hover:text-gray-200'
+          }`}
+        >
+          {label}
+        </button>
+      ))}
+      <div className="w-px bg-white/10 mx-1" />
+      {stkOptions.map(({ key, label }) => (
+        <button
+          key={key}
+          onClick={() => onChange(key)}
+          className={`px-3 py-1 text-xs font-medium rounded transition-colors duration-150 ${
+            mode === key
+              ? 'bg-amber-500/30 text-amber-300'
               : 'text-gray-500 hover:text-gray-200'
           }`}
         >
@@ -215,9 +262,9 @@ function BreakdownTable({
   data: Record<string, BreakdownEntry>;
   viewMode: ViewMode;
 }) {
-  const wsKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100',    l200: 'wsL200',    l400: 'wsL400',    l500: 'wsL500',    hist: 'wsHist',    l30d: 'wsL30d',    l90d: 'wsL90d',    l180d: 'wsL180d'    };
-  const ipKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100',    l200: 'ipL200',    l400: 'ipL400',    l500: 'ipL500',    hist: 'ipHist',    l30d: 'ipL30d',    l90d: 'ipL90d',    l180d: 'ipL180d'    };
-  const racesKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'racesL100', l200: 'racesL200', l400: 'racesL400', l500: 'racesL500', hist: 'racesHist', l30d: 'racesL30d', l90d: 'racesL90d', l180d: 'racesL180d' };
+  const wsKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100',    l200: 'wsL200',    l400: 'wsL400',    l500: 'wsL500',    hist: 'wsHist',    l30d: 'wsL30d',    l90d: 'wsL90d',    l180d: 'wsL180d',    Stkl50: 'StkwsL50',  Stkl100: 'StkwsL100',  Stkl200: 'StkwsL200',  Stkhist: 'Stkwshist'    };
+  const ipKey:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100',    l200: 'ipL200',    l400: 'ipL400',    l500: 'ipL500',    hist: 'ipHist',    l30d: 'ipL30d',    l90d: 'ipL90d',    l180d: 'ipL180d',    Stkl50: 'StkipL50',  Stkl100: 'StkipL100',  Stkl200: 'StkipL200',  Stkhist: 'Stkiphist'    };
+  const racesKey: Record<ViewMode, keyof BreakdownEntry> = { l100: 'racesL100', l200: 'racesL200', l400: 'racesL400', l500: 'racesL500', hist: 'racesHist', l30d: 'racesL30d', l90d: 'racesL90d', l180d: 'racesL180d', Stkl50: 'StkracesL50', Stkl100: 'StkracesL100', Stkl200: 'StkracesL200', Stkhist: 'StkracesLhist' };
   const entries = Object.entries(data);
   if (entries.length === 0) return null;
 
@@ -241,9 +288,9 @@ function BreakdownTable({
         </thead>
         <tbody>
           {entries.map(([key, val]) => {
-            const ws = val[wsKey[viewMode]] as number;
-            const ip = val[ipKey[viewMode]] as number;
-            const races = val[racesKey[viewMode]] as number;
+            const ws    = getEntryVal(val, wsKey[viewMode]    as string);
+            const ip    = getEntryVal(val, ipKey[viewMode]    as string);
+            const races = getEntryVal(val, racesKey[viewMode] as string);
             const gap = ws - ip;
             return (
               <tr
@@ -288,9 +335,13 @@ function ComboTable({
   if (!data?.length) return null;
   return (
     <div className="bg-white/5 border border-white/10 p-4">
-      <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
+      <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-1">
         {title} Combos
+        <span className="ml-2 text-gray-600 normal-case font-normal">(Hist)</span>
       </h3>
+      <p className="text-xs text-gray-600 mb-3">
+        "Gap to Others" = jockey's WS in this combo vs. all other jockeys in the same combination
+      </p>
       <table className="w-full text-xs">
           <thead>
             <tr className="border-b border-white/10 text-right">
@@ -513,6 +564,12 @@ function TimeSeriesChart({
 
 // ─── JockeySidebar ───────────────────────────────────────────────────────────
 
+const VIEW_LABELS: Record<ViewMode, string> = {
+  l30d: 'L30d', l90d: 'L90d', l180d: 'L180d',
+  l100: 'L100', l200: 'L200', l400: 'L400', l500: 'L500', hist: 'Hist',
+  Stkl50: 'Stk50', Stkl100: 'Stk100', Stkl200: 'Stk200', Stkhist: 'StkHist',
+};
+
 const DIST_LABELS: Record<string, string> = {
   '1000':     'Corta',
   '1100-1500': 'Media',
@@ -520,8 +577,9 @@ const DIST_LABELS: Record<string, string> = {
 };
 const distLabel = (d: string) => DIST_LABELS[d] ?? d;
 
-const WS_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100', l200: 'wsL200', l400: 'wsL400', l500: 'wsL500', hist: 'wsHist', l30d: 'wsL30d', l90d: 'wsL90d', l180d: 'wsL180d' };
-const IP_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100', l200: 'ipL200', l400: 'ipL400', l500: 'ipL500', hist: 'ipHist', l30d: 'ipL30d', l90d: 'ipL90d', l180d: 'ipL180d' };
+const WS_KEY:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100',    l200: 'wsL200',    l400: 'wsL400',    l500: 'wsL500',    hist: 'wsHist',    l30d: 'wsL30d',    l90d: 'wsL90d',    l180d: 'wsL180d',    Stkl50: 'StkwsL50',  Stkl100: 'StkwsL100',  Stkl200: 'StkwsL200',  Stkhist: 'Stkwshist'    };
+const IP_KEY:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100',    l200: 'ipL200',    l400: 'ipL400',    l500: 'ipL500',    hist: 'ipHist',    l30d: 'ipL30d',    l90d: 'ipL90d',    l180d: 'ipL180d',    Stkl50: 'StkipL50',  Stkl100: 'StkipL100',  Stkl200: 'StkipL200',  Stkhist: 'Stkiphist'    };
+const RACES_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'racesL100', l200: 'racesL200', l400: 'racesL400', l500: 'racesL500', hist: 'racesHist', l30d: 'racesL30d', l90d: 'racesL90d', l180d: 'racesL180d', Stkl50: 'StkracesL50', Stkl100: 'StkracesL100', Stkl200: 'StkracesL200', Stkhist: 'StkracesLhist' };
 
 const VIEW_OPTIONS: { key: ViewMode; label: string }[] = [
   { key: 'l30d',  label: 'L30d'  },
@@ -631,7 +689,7 @@ function JockeySidebar({
               </div>
               <div className="flex items-center gap-3 mt-0.5 pl-7">
                 <span className="text-xs text-gray-600">
-                  WS{' '}
+                  {viewMode.startsWith('Stk') ? 'SR' : 'WS'}{' '}
                   <span className="text-gray-400 tabular-nums">{pct(ws)}</span>
                 </span>
                 <GapBadge value={gap} />
@@ -663,9 +721,18 @@ function JockeyDetail({
   allDistances: string[];
   onDistFilterChange: (d: string) => void;
 }) {
+  const isStk = viewMode.startsWith('Stk');
   const ws = jockey.winShares?.[viewMode] ?? jockey.winShares?.l200 ?? 0;
   const ip = jockey.impliedProbs?.[viewMode] ?? jockey.impliedProbs?.l200 ?? 0;
   const gap = ws - ip;
+
+  const racesInWindow = useMemo(() => {
+    const tracks = jockey.tracks ?? {};
+    return Object.values(tracks).reduce(
+      (sum, entry) => sum + getEntryVal(entry, RACES_KEY[viewMode] as string),
+      0
+    );
+  }, [jockey.tracks, viewMode]);
 
   const hasBreakdowns =
     (jockey.tracks && Object.keys(jockey.tracks).length > 0) ||
@@ -687,8 +754,7 @@ function JockeyDetail({
           </div>
           <h2 className="text-2xl font-light text-white">{jockey.name}</h2>
           <p className="text-xs text-gray-500 mt-1">
-            {jockey.totalRaces?.toLocaleString()} total races ·{' '}
-            {jockey.racesL6m} in last 6 months
+            {jockey.totalRaces?.toLocaleString()} total races
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -709,15 +775,15 @@ function JockeyDetail({
       {/* ── Summary Stats ── */}
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-3">
         <StatCard
-          label="Win Share"
+          label={isStk ? 'Stk Win Share' : 'Win Share'}
           value={pct(ws)}
-          sub={`Window: ${viewMode.toUpperCase()}`}
+          sub={`Window: ${VIEW_LABELS[viewMode]}`}
         />
-        <StatCard label="Public Odds" value={pct(ip)} />
+        <StatCard label={isStk ? 'Stk Public Odds' : 'Public Odds'} value={pct(ip)} />
         <StatCard label="Gap vs Public" value={pp(gap)} gap={gap} />
         <StatCard
-          label="Races L6m"
-          value={jockey.racesL6m?.toLocaleString() ?? '—'}
+          label={`Races ${VIEW_LABELS[viewMode]}`}
+          value={racesInWindow.toLocaleString()}
           sub={`Total: ${jockey.totalRaces?.toLocaleString() ?? '—'}`}
         />
       </div>
