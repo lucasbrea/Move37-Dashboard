@@ -564,6 +564,13 @@ function TimeSeriesChart({
 
 // ─── JockeySidebar ───────────────────────────────────────────────────────────
 
+// Maps each regular window to its closest Stk equivalent
+const STK_EQUIV: Partial<Record<ViewMode, ViewMode>> = {
+  l30d: 'Stkl50', l90d: 'Stkl100', l180d: 'Stkl200',
+  l100: 'Stkl100', l200: 'Stkl200', l400: 'Stkl200', l500: 'Stkl200',
+  hist: 'Stkhist',
+};
+
 const VIEW_LABELS: Record<ViewMode, string> = {
   l30d: 'L30d', l90d: 'L90d', l180d: 'L180d',
   l100: 'L100', l200: 'L200', l400: 'L400', l500: 'L500', hist: 'Hist',
@@ -581,16 +588,6 @@ const WS_KEY:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'wsL100',    l
 const IP_KEY:    Record<ViewMode, keyof BreakdownEntry> = { l100: 'ipL100',    l200: 'ipL200',    l400: 'ipL400',    l500: 'ipL500',    hist: 'ipHist',    l30d: 'ipL30d',    l90d: 'ipL90d',    l180d: 'ipL180d',    Stkl50: 'StkipL50',  Stkl100: 'StkipL100',  Stkl200: 'StkipL200',  Stkhist: 'Stkiphist'    };
 const RACES_KEY: Record<ViewMode, keyof BreakdownEntry> = { l100: 'racesL100', l200: 'racesL200', l400: 'racesL400', l500: 'racesL500', hist: 'racesHist', l30d: 'racesL30d', l90d: 'racesL90d', l180d: 'racesL180d', Stkl50: 'StkracesL50', Stkl100: 'StkracesL100', Stkl200: 'StkracesL200', Stkhist: 'StkracesLhist' };
 
-const VIEW_OPTIONS: { key: ViewMode; label: string }[] = [
-  { key: 'l30d',  label: 'L30d'  },
-  { key: 'l90d',  label: 'L90d'  },
-  { key: 'l180d', label: 'L180d' },
-  { key: 'l100',  label: 'L100'  },
-  { key: 'l200',  label: 'L200'  },
-  { key: 'l400',  label: 'L400'  },
-  { key: 'l500',  label: 'L500'  },
-  { key: 'hist',  label: 'Hist'  },
-];
 
 function JockeySidebar({
   jockeys,
@@ -657,6 +654,7 @@ function JockeySidebar({
       {/* List */}
       <div className="overflow-y-auto flex-1">
         {filtered.map((j, i) => {
+          const isStk = viewMode.startsWith('Stk');
           let ws: number, ip: number;
           if (distFilter !== 'all' && j.distances?.[distFilter]) {
             const ent = j.distances[distFilter];
@@ -669,6 +667,16 @@ function JockeySidebar({
           const gap = ws - ip;
           const isSelected = j.id === selectedId;
 
+          // Races in selected window (sum across tracks)
+          const races = Object.values(j.tracks ?? {}).reduce(
+            (sum, entry) => sum + getEntryVal(entry, RACES_KEY[viewMode] as string),
+            0
+          );
+
+          // Stk WS for equivalent window (only shown when not already in Stk mode)
+          const stkMode = STK_EQUIV[viewMode];
+          const stkWs = !isStk && stkMode ? (j.winShares?.[stkMode] ?? null) : null;
+
           return (
             <button
               key={j.id}
@@ -679,20 +687,33 @@ function JockeySidebar({
                   : 'hover:bg-white/5 border-l-2 border-l-transparent'
               }`}
             >
-              <div className="flex items-center gap-2">
-                <span className="text-gray-600 text-xs w-5 text-right flex-shrink-0 tabular-nums">
-                  {i + 1}.
-                </span>
-                <span className="text-gray-100 text-sm font-medium">
-                  {j.surname}
-                </span>
+              {/* Name row + gap (most prominent) */}
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-gray-600 text-xs w-5 text-right flex-shrink-0 tabular-nums">
+                    {i + 1}.
+                  </span>
+                  <span className="text-gray-100 text-sm font-medium truncate">
+                    {j.surname}
+                  </span>
+                </div>
+                <GapBadge value={gap} />
               </div>
-              <div className="flex items-center gap-3 mt-0.5 pl-7">
-                <span className="text-xs text-gray-600">
-                  {viewMode.startsWith('Stk') ? 'SR' : 'WS'}{' '}
+              {/* Secondary stats row */}
+              <div className="flex items-center gap-2 mt-0.5 pl-7 text-xs text-gray-600">
+                <span>
+                  {isStk ? 'Stk Wshr' : 'WS'}{' '}
                   <span className="text-gray-400 tabular-nums">{pct(ws)}</span>
                 </span>
-                <GapBadge value={gap} />
+                {stkWs !== null && (
+                  <span>
+                    · Stk{' '}
+                    <span className="text-amber-400/80 tabular-nums">{pct(stkWs)}</span>
+                  </span>
+                )}
+                <span>
+                  · <span className="text-gray-500 tabular-nums">{races}</span>
+                </span>
               </div>
             </button>
           );
