@@ -24,9 +24,10 @@ const SOURCE_STYLES: Record<string, { pill: string; dot: string; label: string }
   blacktype:           { pill: 'bg-rose-500/20 text-rose-300 border border-rose-500/30',       dot: 'bg-rose-400',    label: 'Blacktype'        },
   racehorse:           { pill: 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30',       dot: 'bg-cyan-400',    label: 'Racehorse'        },
   monasteriotattersall:{ pill: 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30', dot: 'bg-yellow-400',  label: 'Mon. Tattersall'  },
+  marketingequino:     { pill: 'bg-pink-500/20 text-pink-300 border border-pink-500/30',       dot: 'bg-pink-400',    label: 'Marketing Equino' },
 };
 
-const SOURCE_OPTIONS = ['fallowremates', 'bullrich', 'argsales', 'martinzubeldia', 'blacktype', 'racehorse', 'monasteriotattersall'];
+const SOURCE_OPTIONS = ['fallowremates', 'bullrich', 'argsales', 'martinzubeldia', 'blacktype', 'racehorse', 'monasteriotattersall', 'marketingequino'];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
