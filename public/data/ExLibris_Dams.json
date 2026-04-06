@@ -407,7 +407,7 @@
         "posicion": 2.0,
         "ecpos": 4.0,
         "pwin_bsn": 91.74714660644531,
-        "ema": NaN,
+        "ema": null,
         "glicko": 1696.1483154296875
       }
     ]
@@ -555,7 +555,7 @@
         "posicion": 8.0,
         "ecpos": 13.0,
         "pwin_bsn": 106.26128387451172,
-        "ema": NaN,
+        "ema": null,
         "glicko": 1654.3370361328125
       }
     ]

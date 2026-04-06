@@ -263,6 +263,12 @@ const categories = [
     path:'/Auctions',
     description: ''
   },
+  {
+    name: 'Ex Libris',
+    image: '/ex_libris_silks.png',
+    path: '/Ex_Libris',
+    description: '',
+  },
 ];
 
 export default function HomePage() {
