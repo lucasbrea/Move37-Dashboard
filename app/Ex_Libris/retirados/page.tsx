@@ -41,7 +41,7 @@ export default function RetiradosPage() {
         <div className="flex items-center justify-between mb-12">
           <h1 className="text-4xl font-light tracking-tight">Retirados</h1>
           <AddReportButton
-            onAdd={handleAddReport}
+            onAddReport={handleAddReport}
             location="ex-libris-retirados"
           />
         </div>
@@ -65,6 +65,8 @@ export default function RetiradosPage() {
 
         {isEditModalOpen && editingReport && (
           <EditReportModal
+            isOpen={isEditModalOpen}
+            location="ex-libris-retirados"
             report={editingReport}
             onSave={handleEditReport}
             onClose={() => { setIsEditModalOpen(false); setEditingReport(null); }}

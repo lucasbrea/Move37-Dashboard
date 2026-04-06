@@ -41,7 +41,7 @@ export default function ServiciosOptimos2026Page() {
         <div className="flex items-center justify-between mb-12">
           <h1 className="text-4xl font-light tracking-tight">Servicios Óptimos 2026</h1>
           <AddReportButton
-            onAdd={handleAddReport}
+            onAddReport={handleAddReport}
             location="ex-libris-servicios-optimos-2026"
           />
         </div>
@@ -65,6 +65,8 @@ export default function ServiciosOptimos2026Page() {
 
         {isEditModalOpen && editingReport && (
           <EditReportModal
+            isOpen={isEditModalOpen}
+            location="ex-libris-servicios-optimos-2026"
             report={editingReport}
             onSave={handleEditReport}
             onClose={() => { setIsEditModalOpen(false); setEditingReport(null); }}
