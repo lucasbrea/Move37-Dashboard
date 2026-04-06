@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 const sections = [
   { id: 'existing-dams-2026', label: 'Existing Dams 2026' },
   { id: 'servicios-optimos-2026', label: 'Servicios Óptimos 2026' },
+  { id: 'crias-2024-2025', label: 'Crías 2024 & 2025' },
   { id: 'training', label: 'Training' },
   { id: 'retirados', label: 'Retirados' },
 ];
