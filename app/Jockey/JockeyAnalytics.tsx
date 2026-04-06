@@ -564,12 +564,6 @@ function TimeSeriesChart({
 
 // ─── JockeySidebar ───────────────────────────────────────────────────────────
 
-// Maps each regular window to its closest Stk equivalent
-const STK_EQUIV: Partial<Record<ViewMode, ViewMode>> = {
-  l30d: 'Stkl50', l90d: 'Stkl100', l180d: 'Stkl200',
-  l100: 'Stkl100', l200: 'Stkl200', l400: 'Stkl200', l500: 'Stkl200',
-  hist: 'Stkhist',
-};
 
 const VIEW_LABELS: Record<ViewMode, string> = {
   l30d: 'L30d', l90d: 'L90d', l180d: 'L180d',
@@ -667,15 +661,13 @@ function JockeySidebar({
           const gap = ws - ip;
           const isSelected = j.id === selectedId;
 
-          // Races in selected window (sum across tracks)
-          const races = Object.values(j.tracks ?? {}).reduce(
-            (sum, entry) => sum + getEntryVal(entry, RACES_KEY[viewMode] as string),
-            0
-          );
-
-          // Stk WS for equivalent window (only shown when not already in Stk mode)
-          const stkMode = STK_EQUIV[viewMode];
-          const stkWs = !isStk && stkMode ? (j.winShares?.[stkMode] ?? null) : null;
+          // Races in selected window (sum across tracks) — shown in Stk mode only
+          const races = isStk
+            ? Object.values(j.tracks ?? {}).reduce(
+                (sum, entry) => sum + getEntryVal(entry, RACES_KEY[viewMode] as string),
+                0
+              )
+            : 0;
 
           return (
             <button
@@ -705,15 +697,11 @@ function JockeySidebar({
                   {isStk ? 'Stk Wshr' : 'WS'}{' '}
                   <span className="text-gray-400 tabular-nums">{pct(ws)}</span>
                 </span>
-                {stkWs !== null && (
+                {isStk && (
                   <span>
-                    · Stk{' '}
-                    <span className="text-amber-400/80 tabular-nums">{pct(stkWs)}</span>
+                    · <span className="text-gray-500 tabular-nums">{races}</span>
                   </span>
                 )}
-                <span>
-                  · <span className="text-gray-500 tabular-nums">{races}</span>
-                </span>
               </div>
             </button>
           );
