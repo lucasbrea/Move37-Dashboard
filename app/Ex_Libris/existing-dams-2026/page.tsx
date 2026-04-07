@@ -111,8 +111,8 @@ function RaceRow({ race }: { race: OffspringRace }) {
       </td>
       <td className="py-2 px-3 text-right text-gray-300">{fmt(race.p, 0)}</td>
       <td className="py-2 px-3 text-right text-gray-400">{fmt(race.ecpos, 2)}</td>
-      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.bsn, 1)}</td>
-      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.pwin_bsn, 1)}</td>
+      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.bsn, 0)}</td>
+      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.pwin_bsn, 0)}</td>
       <td className="py-2 px-3 text-right text-gray-400">{fmt(race.ema_past_bsn, 1)}</td>
       <td className="py-2 pl-3 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
     </tr>
@@ -248,8 +248,8 @@ export default function ExistingDams2026Page() {
                                     </td>
                                     <td className="py-2.5 px-4 text-right text-gray-300">{fmt(race.posicion, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ecpos, 2)}</td>
-                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 1)}</td>
-                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 1)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ema, 1)}</td>
                                     <td className="py-2.5 pl-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
                                   </tr>

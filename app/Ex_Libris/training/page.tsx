@@ -434,8 +434,8 @@ export default function ExLibrisTrainingPage() {
                                     </td>
                                     <td className="py-2.5 px-4 text-right text-gray-300">{fmt(race.p, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ecpos, 2)}</td>
-                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 1)}</td>
-                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 1)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ema_past_bsn, 1)}</td>
                                     <td className="py-2.5 pl-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
                                   </tr>
