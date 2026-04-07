@@ -5,6 +5,9 @@
     "prs": 0.027085622772574425,
     "pbrs": 0.014911049045622349,
     "M_age_at_service": 13,
+    "birthRate": 0.7142857313156128,
+    "birthRateLast3": 1.0,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2016-06-28",
@@ -89,6 +92,9 @@
     "prs": 0.03669120371341705,
     "pbrs": 0.01827704720199108,
     "M_age_at_service": 12,
+    "birthRate": 0.5,
+    "birthRateLast3": 0.6666666865348816,
+    "hadRestYear": 0.0,
     "races": []
   },
   "334207": {
@@ -97,6 +103,9 @@
     "prs": 0.029753664508461952,
     "pbrs": 0.017979474738240242,
     "M_age_at_service": 12,
+    "birthRate": 0.875,
+    "birthRateLast3": 1.0,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2017-04-10",
@@ -181,6 +190,9 @@
     "prs": 0.02794671058654785,
     "pbrs": 0.01427253894507885,
     "M_age_at_service": 10,
+    "birthRate": 0.5,
+    "birthRateLast3": 0.3333333432674408,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2019-07-10",
@@ -265,6 +277,9 @@
     "prs": 0.02426595240831375,
     "pbrs": 0.01498640887439251,
     "M_age_at_service": 10,
+    "birthRate": 0.75,
+    "birthRateLast3": 0.6666666865348816,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2021-06-01",
@@ -349,6 +364,9 @@
     "prs": 0.02950839139521122,
     "pbrs": 0.01977621577680111,
     "M_age_at_service": 9,
+    "birthRate": 1.0,
+    "birthRateLast3": 1.0,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2022-07-19",
@@ -433,6 +451,9 @@
     "prs": 0.021212061867117882,
     "pbrs": 0.013900420628488064,
     "M_age_at_service": 8,
+    "birthRate": 0.6666666865348816,
+    "birthRateLast3": 1.0,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2022-09-19",
@@ -472,6 +493,9 @@
     "prs": 0.036939896643161774,
     "pbrs": 0.02376335859298706,
     "M_age_at_service": 8,
+    "birthRate": 1.0,
+    "birthRateLast3": 0.0,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2023-06-15",
@@ -556,6 +580,9 @@
     "prs": 0.024600109085440636,
     "pbrs": 0.016531551256775856,
     "M_age_at_service": 8,
+    "birthRate": 1.0,
+    "birthRateLast3": 1.0,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2021-09-08",
@@ -640,6 +667,9 @@
     "prs": 0.05603056773543358,
     "pbrs": 0.035466067492961884,
     "M_age_at_service": 6,
+    "birthRate": 1.0,
+    "birthRateLast3": 0.0,
+    "hadRestYear": 0.0,
     "races": [
       {
         "fecha": "2024-07-03",
