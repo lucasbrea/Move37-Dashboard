@@ -76,6 +76,7 @@ function LogModal({
   const today = new Date().toISOString().slice(0, 10);
   const [estado, setEstado] = useState<EstadoType>('corriendo');
   const [cuidador, setCuidador] = useState('');
+  const [campo, setCampo] = useState('');
   const [comentarios, setComentarios] = useState('');
   const [proximasCarreras, setProximasCarreras] = useState('');
   const [saving, setSaving] = useState(false);
@@ -91,6 +92,7 @@ function LogModal({
         fecha: today,
         estado,
         cuidador: cuidador.trim() || null,
+        campo: campo.trim() || null,
         comentarios: comentarios.trim() || null,
         proximas_carreras: proximasCarreras.trim() || null,
       });
@@ -157,6 +159,21 @@ function LogModal({
             </div>
           )}
 
+          {/* Campo — only if descanso */}
+          {estado === 'descanso' && (
+            <div>
+              <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Campo</label>
+              <input
+                type="text"
+                value={campo}
+                onChange={e => setCampo(e.target.value)}
+                placeholder="Nombre del campo"
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-gray-200
+                           placeholder-gray-600 focus:outline-none focus:border-white/30 text-sm"
+              />
+            </div>
+          )}
+
           {/* Comentarios */}
           <div>
             <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Comentarios</label>
@@ -217,6 +234,7 @@ function LogHistory({ entries, onDelete }: { entries: TrainingLogEntry[]; onDele
             <div className="flex items-center gap-2 flex-wrap">
               <EstadoBadge estado={entry.estado} />
               {entry.cuidador && <span className="text-xs text-gray-500">Cuidador: {entry.cuidador}</span>}
+              {entry.campo && <span className="text-xs text-gray-500">Campo: {entry.campo}</span>}
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">
               <span className="text-xs text-gray-600">
@@ -403,7 +421,7 @@ export default function ExLibrisTrainingPage() {
                                 </tr>
                               </thead>
                               <tbody>
-                                {horse.races.map((race, i) => (
+                                {[...horse.races].sort((a, b) => b.eday.localeCompare(a.eday)).map((race, i) => (
                                   <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-100">
                                     <td className="py-1.5 pr-4 text-gray-300">{race.eday}</td>
                                     <td className="py-1.5 pr-4 text-gray-300">{race.track}</td>

@@ -10,6 +10,7 @@ export interface TrainingLogEntry {
   fecha: string;           // ISO date yyyy-mm-dd
   estado: EstadoType;
   cuidador: string | null;
+  campo: string | null;
   comentarios: string | null;
   proximas_carreras: string | null;
   created_at: string;
