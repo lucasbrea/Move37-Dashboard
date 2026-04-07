@@ -317,19 +317,19 @@ export default function ExLibrisTrainingPage() {
         <h1 className="text-3xl sm:text-4xl font-light tracking-tight mb-8">Training</h1>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full text-base border-collapse">
             <thead>
-              <tr className="border-b border-white/10 text-gray-400 text-xs uppercase tracking-wider">
-                <th className="text-left py-3 pr-4 font-medium">Nombre</th>
-                <th className="text-left py-3 px-3 font-medium">Madre</th>
-                <th className="text-left py-3 px-3 font-medium">Padrillo</th>
-                <th className="text-right py-3 px-3 font-medium">PRS</th>
-                <th className="text-right py-3 px-3 font-medium">PR</th>
-                <th className="text-right py-3 px-3 font-medium">PS</th>
-                <th className="text-center py-3 px-3 font-medium">Campaña</th>
-                <th className="text-center py-3 px-3 font-medium">Estado</th>
-                <th className="text-center py-3 px-3 font-medium">LOG</th>
-                <th className="text-center py-3 pl-3 font-medium">SB</th>
+              <tr className="border-b border-white/10 text-gray-400 text-sm uppercase tracking-wider">
+                <th className="text-center py-4 pr-4 font-medium">LOG</th>
+                <th className="text-left py-4 px-4 font-medium">Nombre</th>
+                <th className="text-left py-4 px-4 font-medium">Madre</th>
+                <th className="text-left py-4 px-4 font-medium">Padrillo</th>
+                <th className="text-right py-4 px-4 font-medium">PRS</th>
+                <th className="text-right py-4 px-4 font-medium">PR</th>
+                <th className="text-right py-4 px-4 font-medium">PS</th>
+                <th className="text-center py-4 px-4 font-medium">Campaña</th>
+                <th className="text-center py-4 px-4 font-medium">Estado</th>
+                <th className="text-center py-4 pl-4 font-medium">SB</th>
               </tr>
             </thead>
             <tbody>
@@ -342,13 +342,33 @@ export default function ExLibrisTrainingPage() {
                 return (
                   <Fragment key={horse.studbook_id}>
                     <tr className="border-b border-white/5 hover:bg-white/[0.03] transition-colors duration-100">
-                      <td className="py-3 pr-4 font-medium text-white whitespace-nowrap">{horse.name}</td>
-                      <td className="py-3 px-3 text-gray-300 whitespace-nowrap">{horse.M}</td>
-                      <td className="py-3 px-3 text-gray-300 whitespace-nowrap">{horse.padrillo}</td>
-                      <td className="py-3 px-3 text-right text-gray-300">{pct(horse.PRS)}</td>
-                      <td className="py-3 px-3 text-right text-gray-300">{pct(horse.PR)}</td>
-                      <td className="py-3 px-3 text-right text-gray-300">{pct(horse.PS)}</td>
-                      <td className="py-3 px-3 text-center">
+                      {/* LOG column — first */}
+                      <td className="py-4 pr-4 text-center">
+                        <div className="inline-flex items-center gap-2">
+                          {horseLog.length > 0 && (
+                            <button
+                              onClick={() => toggleLog(horse.studbook_id)}
+                              className="text-sm font-medium text-gray-300 hover:text-white border border-white/20 hover:border-white/40 px-3 py-1.5 rounded transition-colors min-w-[2.5rem]"
+                            >
+                              {logOpen ? '▴' : `${horseLog.length}`}
+                            </button>
+                          )}
+                          <button
+                            onClick={() => setModalHorse(horse)}
+                            className="text-sm font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300
+                                       border border-yellow-500/30 px-3 py-1.5 rounded transition-colors duration-150"
+                          >
+                            + Log
+                          </button>
+                        </div>
+                      </td>
+                      <td className="py-4 px-4 font-medium text-white whitespace-nowrap">{horse.name}</td>
+                      <td className="py-4 px-4 text-gray-300 whitespace-nowrap">{horse.M}</td>
+                      <td className="py-4 px-4 text-gray-300 whitespace-nowrap">{horse.padrillo}</td>
+                      <td className="py-4 px-4 text-right text-gray-300">{pct(horse.PRS)}</td>
+                      <td className="py-4 px-4 text-right text-gray-300">{pct(horse.PR)}</td>
+                      <td className="py-4 px-4 text-right text-gray-300">{pct(horse.PS)}</td>
+                      <td className="py-4 px-4 text-center">
                         {horse.races.length > 0 ? (
                           <button
                             onClick={() => toggleCampaign(horse.studbook_id)}
@@ -362,7 +382,7 @@ export default function ExLibrisTrainingPage() {
                         ) : <span className="text-gray-600 text-xs">—</span>}
                       </td>
                       {/* Estado column */}
-                      <td className="py-3 px-3 text-center">
+                      <td className="py-4 px-4 text-center">
                         {logsLoading ? (
                           <span className="text-gray-700 text-xs">…</span>
                         ) : latest ? (
@@ -371,27 +391,7 @@ export default function ExLibrisTrainingPage() {
                           <span className="text-gray-700 text-xs">—</span>
                         )}
                       </td>
-                      {/* LOG column */}
-                      <td className="py-3 px-3 text-center">
-                        <div className="inline-flex items-center gap-1.5">
-                          {horseLog.length > 0 && (
-                            <button
-                              onClick={() => toggleLog(horse.studbook_id)}
-                              className="text-xs text-gray-500 hover:text-gray-300 border border-white/10 px-2 py-1 rounded transition-colors"
-                            >
-                              {logOpen ? '▴' : `${horseLog.length}`}
-                            </button>
-                          )}
-                          <button
-                            onClick={() => setModalHorse(horse)}
-                            className="text-xs font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300
-                                       border border-yellow-500/30 px-2.5 py-1 rounded transition-colors duration-150"
-                          >
-                            + Log
-                          </button>
-                        </div>
-                      </td>
-                      <td className="py-3 pl-3 text-center">
+                      <td className="py-4 pl-4 text-center">
                         <a href={studBookUrl(horse.studbook_id, horse.name)} target="_blank" rel="noopener noreferrer"
                           className="text-xs text-blue-400 hover:text-blue-300 transition-colors duration-150">
                           Ver →
@@ -404,40 +404,40 @@ export default function ExLibrisTrainingPage() {
                       <tr className="bg-white/[0.02]">
                         <td colSpan={10} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
-                            <table className="w-full text-xs border-collapse">
+                            <table className="w-full text-sm border-collapse">
                               <thead>
                                 <tr className="border-b border-white/10 text-gray-500 uppercase tracking-wider">
-                                  <th className="text-left py-2 pr-4 font-medium">Fecha</th>
-                                  <th className="text-left py-2 pr-4 font-medium">Hipódromo</th>
-                                  <th className="text-left py-2 pr-4 font-medium">Sup.</th>
-                                  <th className="text-right py-2 px-3 font-medium">Dist.</th>
-                                  <th className="text-left py-2 px-3 font-medium">Estado</th>
-                                  <th className="text-right py-2 px-3 font-medium">Pos.</th>
-                                  <th className="text-right py-2 px-3 font-medium">ECPos</th>
-                                  <th className="text-right py-2 px-3 font-medium">BSN</th>
-                                  <th className="text-right py-2 px-3 font-medium">PWin BSN</th>
-                                  <th className="text-right py-2 px-3 font-medium">EMA</th>
-                                  <th className="text-right py-2 pl-3 font-medium">Glicko</th>
+                                  <th className="text-left py-2.5 pr-5 font-medium">Fecha</th>
+                                  <th className="text-left py-2.5 pr-5 font-medium">Hipódromo</th>
+                                  <th className="text-left py-2.5 pr-5 font-medium">Sup.</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">Dist.</th>
+                                  <th className="text-left py-2.5 px-4 font-medium">Estado</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">Pos.</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">ECPos</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">BSN</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">PWin BSN</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">EMA</th>
+                                  <th className="text-right py-2.5 pl-4 font-medium">Glicko</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 {[...horse.races].sort((a, b) => b.eday.localeCompare(a.eday)).map((race, i) => (
                                   <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-100">
-                                    <td className="py-1.5 pr-4 text-gray-300">{race.eday}</td>
-                                    <td className="py-1.5 pr-4 text-gray-300">{race.track}</td>
-                                    <td className="py-1.5 pr-4 text-gray-400">{race.surface}</td>
-                                    <td className="py-1.5 px-3 text-right text-gray-400">{race.distance}m</td>
-                                    <td className="py-1.5 px-3">
-                                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${race.estado === 'Normal' ? 'bg-green-900/40 text-green-400' : 'bg-gray-800 text-gray-400'}`}>
+                                    <td className="py-2.5 pr-5 text-gray-300">{race.eday}</td>
+                                    <td className="py-2.5 pr-5 text-gray-300">{race.track}</td>
+                                    <td className="py-2.5 pr-5 text-gray-400">{race.surface}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{race.distance}m</td>
+                                    <td className="py-2.5 px-4">
+                                      <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${race.estado === 'Normal' ? 'bg-green-900/40 text-green-400' : 'bg-gray-800 text-gray-400'}`}>
                                         {race.estado}
                                       </span>
                                     </td>
-                                    <td className="py-1.5 px-3 text-right text-gray-300">{fmt(race.p, 0)}</td>
-                                    <td className="py-1.5 px-3 text-right text-gray-400">{fmt(race.ecpos, 2)}</td>
-                                    <td className="py-1.5 px-3 text-right text-gray-400">{fmt(race.bsn, 1)}</td>
-                                    <td className="py-1.5 px-3 text-right text-gray-400">{fmt(race.pwin_bsn, 1)}</td>
-                                    <td className="py-1.5 px-3 text-right text-gray-400">{fmt(race.ema_past_bsn, 1)}</td>
-                                    <td className="py-1.5 pl-3 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-300">{fmt(race.p, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ecpos, 2)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 1)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 1)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ema_past_bsn, 1)}</td>
+                                    <td className="py-2.5 pl-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
                                   </tr>
                                 ))}
                               </tbody>
@@ -448,7 +448,7 @@ export default function ExLibrisTrainingPage() {
                     )}
 
                     {/* Log history expansion */}
-                    {logOpen && (
+                    {logOpen && horseLog.length > 0 && (
                       <tr className="bg-white/[0.015]">
                         <td colSpan={10} className="px-8 pb-4 pt-3 border-b border-white/5">
                           <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-3">
