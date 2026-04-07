@@ -58,7 +58,7 @@
         "ecpos": 0.0,
         "bsn": 111.45638,
         "pwin_bsn": 103.59975,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2098.3921
       },
       {
@@ -304,7 +304,7 @@
         "ecpos": 10.25,
         "bsn": 87.787834,
         "pwin_bsn": 105.16339,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1874.8463
       },
       {
@@ -459,7 +459,7 @@
         "ecpos": 0.0,
         "bsn": 102.21335,
         "pwin_bsn": 94.393311,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2084.8264
       },
       {
@@ -601,7 +601,7 @@
         "ecpos": 20.25,
         "bsn": 74.078552,
         "pwin_bsn": 94.393311,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1559.8585
       },
       {
@@ -702,7 +702,7 @@
         "ecpos": 0.300000011920929,
         "bsn": 99.557381,
         "pwin_bsn": 111.27971,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2043.3748
       },
       {
@@ -753,7 +753,7 @@
         "ecpos": 11.5,
         "bsn": 85.410355,
         "pwin_bsn": 116.23621,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2058.252
       },
       {
@@ -856,7 +856,7 @@
         "ecpos": 8.0,
         "bsn": 99.074478,
         "pwin_bsn": 113.36375,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2114.6658
       }
     ]
@@ -918,7 +918,7 @@
         "ecpos": 18.75,
         "bsn": 64.070534,
         "pwin_bsn": 103.05828,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1412.3734
       }
     ]
@@ -978,7 +978,7 @@
         "ecpos": 20.0,
         "bsn": 60.11301,
         "pwin_bsn": 100.74544,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1494.157
       },
       {

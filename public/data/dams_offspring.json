@@ -288,7 +288,7 @@
             "ecpos": 11.0,
             "bsn": 68.079971,
             "pwin_bsn": 97.024536,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 1648.9584
           }
         ]
@@ -383,7 +383,7 @@
             "ecpos": 0.0500000007450581,
             "bsn": 108.5843,
             "pwin_bsn": 111.56694,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 2150.4778
           },
           {
@@ -450,7 +450,7 @@
             "ecpos": 14.75,
             "bsn": 82.18441,
             "pwin_bsn": 112.10855,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 1973.054
           },
           {
@@ -601,7 +601,7 @@
             "ecpos": 20.0,
             "bsn": 60.11301,
             "pwin_bsn": 100.74544,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 1494.157
           },
           {
@@ -865,7 +865,7 @@
             "ecpos": 2.5,
             "bsn": 105.73469,
             "pwin_bsn": 113.06397,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 2104.2422
           },
           {
@@ -1086,7 +1086,7 @@
             "ecpos": 36.75,
             "bsn": 47.351967,
             "pwin_bsn": 109.01364,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 1489.7452
           },
           {
@@ -1258,7 +1258,7 @@
             "ecpos": 2.5,
             "bsn": 97.106361,
             "pwin_bsn": 103.53189,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 2169.9055
           },
           {
@@ -1395,7 +1395,7 @@
             "ecpos": 14.75,
             "bsn": 58.772045,
             "pwin_bsn": 119.00873,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 1854.1487
           },
           {
@@ -1577,7 +1577,7 @@
             "ecpos": 0.0,
             "bsn": 111.45638,
             "pwin_bsn": 103.59975,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 2098.3921
           },
           {
@@ -1714,7 +1714,7 @@
             "ecpos": 18.75,
             "bsn": 64.070534,
             "pwin_bsn": 103.05828,
-            "ema_past_bsn": NaN,
+            "ema_past_bsn": null,
             "glicko": 1412.3734
           },
           {
