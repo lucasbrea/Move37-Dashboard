@@ -208,7 +208,20 @@ export default function ExistingDams2026Page() {
           <span className="text-white">Existing Dams 2026</span>
         </nav>
 
-        <h1 className="text-4xl font-light tracking-tight mb-10">Existing Dams 2026</h1>
+        <div className="flex items-center justify-between mb-10">
+          <h1 className="text-4xl font-light tracking-tight">Existing Dams 2026</h1>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1r5gx3WCuu67I5qzInezpZ3DMF-AnNDrX/edit?usp=sharing&ouid=114898536092612537397&rtpof=true&sd=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-green-400 border border-green-400/30 hover:bg-green-400/10 transition-colors duration-150"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+            PBRS Sheet
+          </a>
+        </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-xs border-collapse">
