@@ -82,7 +82,7 @@ function studBookUrl(id: string, name: string) {
   return `https://www.studbook.org.ar/ejemplares/perfil/${id}/${name.toLowerCase().replace(/\s+/g, '-')}`;
 }
 
-function ToggleBtn({ count, label, expanded, onClick }: { count: number; label: string; expanded: boolean; onClick: () => void }) {
+function ToggleBtn({ count, expanded, onClick }: { count: number; expanded: boolean; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
@@ -90,7 +90,7 @@ function ToggleBtn({ count, label, expanded, onClick }: { count: number; label: 
                  border border-white/20 hover:border-yellow-400/50 hover:text-yellow-300
                  text-gray-400 transition-colors duration-150"
     >
-      {count} {label}
+      {count}
       <span style={{ display: 'inline-block', transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>▾</span>
     </button>
   );
@@ -134,6 +134,44 @@ export default function ExistingDams2026Page() {
     []
   );
 
+  // Per-dam derived stats
+  const damStats = useMemo(() => {
+    const result: Record<string, {
+      bestBsn: number | null;
+      bestBsnDist: number | null;
+      bestOffspringName: string | null;
+      bestOffspringBsn: number | null;
+    }> = {};
+
+    for (const dam of Object.values(dams)) {
+      // Highest BSN race for the dam itself
+      let bestBsn: number | null = null;
+      let bestBsnDist: number | null = null;
+      for (const r of dam.races) {
+        if (r.bsn != null && (bestBsn === null || r.bsn > bestBsn)) {
+          bestBsn = r.bsn;
+          bestBsnDist = r.distance;
+        }
+      }
+
+      // Offspring with highest single-race BSN
+      const offspring = offspringMap[dam.id]?.offspring ?? [];
+      let bestOffspringName: string | null = null;
+      let bestOffspringBsn: number | null = null;
+      for (const child of offspring) {
+        for (const r of child.races) {
+          if (r.bsn != null && (bestOffspringBsn === null || r.bsn > bestOffspringBsn)) {
+            bestOffspringBsn = r.bsn;
+            bestOffspringName = child.name;
+          }
+        }
+      }
+
+      result[dam.id] = { bestBsn, bestBsnDist, bestOffspringName, bestOffspringBsn };
+    }
+    return result;
+  }, [dams, offspringMap]);
+
   // dam campaign expansion
   const [expandedCampaign, setExpandedCampaign] = useState<Set<string>>(new Set());
   // dam offspring table expansion
@@ -175,6 +213,8 @@ export default function ExistingDams2026Page() {
                 <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">BR Last 3</th>
                 <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Rest Year</th>
                 <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Ran/Won STK</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Best BSN (Dist)</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Best Offspring BSN</th>
                 <th className="text-center py-2.5 px-3 font-medium whitespace-nowrap">Campaña</th>
                 <th className="text-center py-2.5 px-3 font-medium whitespace-nowrap">Offspring</th>
                 <th className="text-center py-2.5 pl-3 font-medium whitespace-nowrap">Studbook</th>
@@ -185,6 +225,7 @@ export default function ExistingDams2026Page() {
                 const campaignOpen = expandedCampaign.has(dam.id);
                 const offspringOpen = expandedOffspring.has(dam.id);
                 const offspringData = offspringMap[dam.id]?.offspring ?? [];
+                const stats = damStats[dam.id];
 
                 return (
                   <Fragment key={dam.id}>
@@ -201,13 +242,19 @@ export default function ExistingDams2026Page() {
                       <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.birthRateLast3)}</td>
                       <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.hadRestYear ?? '—'}</td>
                       <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.ran_won_stk ?? '—'}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">
+                        {stats?.bestBsn != null ? <>{fmt(stats.bestBsn, 0)}<span className="text-gray-500 ml-1">({stats.bestBsnDist}m)</span></> : '—'}
+                      </td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">
+                        {stats?.bestOffspringName != null ? <>{stats.bestOffspringName}<span className="text-gray-500 ml-1">{fmt(stats.bestOffspringBsn, 0)}</span></> : '—'}
+                      </td>
                       <td className="py-2.5 px-3 text-center">
-                        <ToggleBtn count={dam.races.length} label="carreras" expanded={campaignOpen}
+                        <ToggleBtn count={dam.races.length} expanded={campaignOpen}
                           onClick={() => toggle(expandedCampaign, setExpandedCampaign, dam.id)} />
                       </td>
                       <td className="py-2.5 px-3 text-center">
                         {offspringData.length > 0
-                          ? <ToggleBtn count={offspringData.length} label="crías" expanded={offspringOpen}
+                          ? <ToggleBtn count={offspringData.length} expanded={offspringOpen}
                               onClick={() => toggle(expandedOffspring, setExpandedOffspring, dam.id)} />
                           : <span className="text-gray-600 text-xs">—</span>
                         }
@@ -223,7 +270,7 @@ export default function ExistingDams2026Page() {
                     {/* Dam campaign */}
                     {campaignOpen && (
                       <tr className="bg-white/[0.02]">
-                        <td colSpan={14} className="px-8 pb-4 pt-2">
+                        <td colSpan={16} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                               <thead>
@@ -273,7 +320,7 @@ export default function ExistingDams2026Page() {
                     {/* Offspring table */}
                     {offspringOpen && (
                       <tr className="bg-white/[0.015]">
-                        <td colSpan={14} className="px-8 pb-6 pt-3">
+                        <td colSpan={16} className="px-8 pb-6 pt-3">
                           <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Crías de {dam.nombre}</p>
                           <table className="w-full text-sm border-collapse">
                             <thead>
@@ -302,7 +349,7 @@ export default function ExistingDams2026Page() {
                                       <td className="py-2.5 px-4 text-right text-gray-300">{pct(child.PS)}</td>
                                       <td className="py-2.5 px-4 text-center">
                                         {child.races.length > 0
-                                          ? <ToggleBtn count={child.races.length} label="carreras" expanded={childCampaignOpen}
+                                          ? <ToggleBtn count={child.races.length} expanded={childCampaignOpen}
                                               onClick={() => toggle(expandedOffspringCampaign, setExpandedOffspringCampaign, child.studbook_id)} />
                                           : <span className="text-gray-600">—</span>
                                         }
@@ -316,7 +363,7 @@ export default function ExistingDams2026Page() {
                                     </tr>
                                     {childCampaignOpen && (
                                       <tr className="bg-white/[0.02]">
-                                        <td colSpan={14} className="px-4 pb-3 pt-1">
+                                        <td colSpan={16} className="px-4 pb-3 pt-1">
                                           <div className="overflow-x-auto">
                                             <table className="w-full text-sm border-collapse">
                                               <thead>
