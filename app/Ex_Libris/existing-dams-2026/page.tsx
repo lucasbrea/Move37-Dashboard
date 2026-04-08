@@ -14,6 +14,7 @@ interface DamRace {
   surface: string;
   distance: number;
   estado: string;
+  cond: string | null;
   posicion: number | null;
   ecpos: number | null;
   bsn: number | null;
@@ -46,6 +47,7 @@ interface OffspringRace {
   surface: string;
   distance: number;
   estado: string;
+  cond: string | null;
   p: number | null;
   ecpos: number | null;
   bsn: number | null;
@@ -291,6 +293,7 @@ export default function ExistingDams2026Page() {
                                   <th className="text-left py-2.5 pr-5 font-medium">Fecha</th>
                                   <th className="text-left py-2.5 pr-5 font-medium">Hipódromo</th>
                                   <th className="text-left py-2.5 pr-5 font-medium">Categoría</th>
+                                  <th className="text-left py-2.5 pr-5 font-medium">Cond.</th>
                                   <th className="text-left py-2.5 pr-5 font-medium">Sup.</th>
                                   <th className="text-right py-2.5 px-4 font-medium">Dist.</th>
                                   <th className="text-left py-2.5 px-4 font-medium">Estado</th>
@@ -309,6 +312,7 @@ export default function ExistingDams2026Page() {
                                     <td className="py-2.5 pr-5 text-gray-300">{race.fecha}</td>
                                     <td className="py-2.5 pr-5 text-gray-300">{stripHip(race.track)}</td>
                                     <td className="py-2.5 pr-5 text-gray-400">{race.categoria}</td>
+                                    <td className="py-2.5 pr-5 text-gray-400">{race.cond ?? '—'}</td>
                                     <td className="py-2.5 pr-5 text-gray-400">{race.surface}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{race.distance}m</td>
                                     <td className="py-2.5 px-4">
@@ -407,6 +411,7 @@ export default function ExistingDams2026Page() {
                                                   <th className="text-left py-2 pr-4 font-medium">Fecha</th>
                                                   <th className="text-left py-2 pr-4 font-medium">Hipódromo</th>
                                                   <th className="text-left py-2 pr-4 font-medium">Categoría</th>
+                                                  <th className="text-left py-2 pr-4 font-medium">Cond.</th>
                                                   <th className="text-left py-2 pr-4 font-medium">Sup.</th>
                                                   <th className="text-right py-2 px-3 font-medium">Dist.</th>
                                                   <th className="text-left py-2 px-3 font-medium">Estado</th>
@@ -425,6 +430,7 @@ export default function ExistingDams2026Page() {
                                                     <td className="py-2 pr-4 text-gray-300">{normRaceDate(r.race_date)}</td>
                                                     <td className="py-2 pr-4 text-gray-300">{stripHip(r.track)}</td>
                                                     <td className="py-2 pr-4 text-gray-400">{r.categoria}</td>
+                                                    <td className="py-2 pr-4 text-gray-400">{r.cond ?? '—'}</td>
                                                     <td className="py-2 pr-4 text-gray-400">{r.surface}</td>
                                                     <td className="py-2 px-3 text-right text-gray-400">{r.distance}m</td>
                                                     <td className="py-2 px-3">
