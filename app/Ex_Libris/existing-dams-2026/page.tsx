@@ -20,6 +20,7 @@ interface DamRace {
   pwin_bsn: number | null;
   ema: number | null;
   glicko: number | null;
+  date_link: string | null;
 }
 
 interface Dam {
@@ -39,8 +40,9 @@ interface Dam {
 }
 
 interface OffspringRace {
-  eday: string;
+  race_date: string;
   track: string;
+  categoria: string;
   surface: string;
   distance: number;
   estado: string;
@@ -50,21 +52,26 @@ interface OffspringRace {
   pwin_bsn: number | null;
   ema_past_bsn: number | null;
   glicko: number | null;
+  date_link: string | null;
 }
 
 interface Offspring {
-  studbook_id: string;
+  studbook_id: string | number;
   name: string;
   padrillo: string;
   PRS: number | null;
   PR: number | null;
   PS: number | null;
   year: string;
+  total_win: number | null;
+  clasicos_ran: number | null;
+  clasicos_won: number | null;
   races: OffspringRace[];
 }
 
 interface OffspringEntry {
   dam_name: string;
+  ran_won_stk: string | null;
   offspring: Offspring[];
 }
 
@@ -74,8 +81,8 @@ function fmt(val: number | null, decimals = 3) {
   return val == null ? '—' : val.toFixed(decimals);
 }
 
-function pct(val: number | null) {
-  return val == null ? '—' : (val * 100).toFixed(2) + '%';
+function pct(val: number | null, decimals = 2) {
+  return val == null ? '—' : (val * 100).toFixed(decimals) + '%';
 }
 
 function studBookUrl(id: string, name: string) {
@@ -86,7 +93,7 @@ function ToggleBtn({ count, expanded, onClick }: { count: number; expanded: bool
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium
+      className="inline-flex items-center gap-0.5 px-2 py-0.5 text-xs font-medium
                  border border-white/20 hover:border-yellow-400/50 hover:text-yellow-300
                  text-gray-400 transition-colors duration-150"
     >
@@ -100,37 +107,40 @@ function stripHip(track: string) {
   return track.replace(/^Hip[oó]dromo de\s*/i, '');
 }
 
-function RaceRow({ race }: { race: OffspringRace }) {
-  return (
-    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors duration-100">
-      <td className="py-2 pr-4 text-gray-300">{race.eday}</td>
-      <td className="py-2 pr-4 text-gray-300">{stripHip(race.track)}</td>
-      <td className="py-2 pr-4 text-gray-400">{race.surface}</td>
-      <td className="py-2 px-3 text-right text-gray-400">{race.distance}m</td>
-      <td className="py-2 px-3">
-        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${race.estado === 'Normal' ? 'bg-green-900/40 text-green-400' : 'bg-gray-800 text-gray-400'}`}>
-          {race.estado}
-        </span>
-      </td>
-      <td className="py-2 px-3 text-right text-gray-300">{fmt(race.p, 0)}</td>
-      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.ecpos, 2)}</td>
-      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.bsn, 0)}</td>
-      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.pwin_bsn, 0)}</td>
-      <td className="py-2 px-3 text-right text-gray-400">{fmt(race.ema_past_bsn, 1)}</td>
-      <td className="py-2 pl-3 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
-    </tr>
-  );
+const MONTHS: Record<string, string> = {
+  jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',
+  jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12',
+};
+
+// Convert '17nov2019' → '2019-11-17' (ISO, sortable & readable)
+function normRaceDate(d: string): string {
+  const m = d.match(/^(\d{2})([a-z]{3})(\d{4})$/i);
+  if (!m) return d;
+  const [, day, mon, year] = m;
+  const mm = MONTHS[mon.toLowerCase()] ?? '??';
+  return `${year}-${mm}-${day}`;
+}
+
+function getTopBsns(races: OffspringRace[]): [{ bsn: number; dist: number } | null, { bsn: number; dist: number } | null] {
+  const sorted = races
+    .filter(r => r.bsn != null)
+    .sort((a, b) => (b.bsn as number) - (a.bsn as number));
+  const first = sorted[0] ? { bsn: sorted[0].bsn as number, dist: sorted[0].distance } : null;
+  const second = sorted[1] ? { bsn: sorted[1].bsn as number, dist: sorted[1].distance } : null;
+  return [first, second];
 }
 
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function ExistingDams2026Page() {
   const dams = useMemo<Dam[]>(
-    () => Object.entries(rawData as Record<string, Omit<Dam, 'id'>>).map(([id, d]) => ({ id, ...d })),
+    () => Object.entries(rawData as Record<string, Omit<Dam, 'id'>>)
+      .map(([id, d]) => ({ id, ...d }))
+      .sort((a, b) => (b.prs ?? -Infinity) - (a.prs ?? -Infinity)),
     []
   );
   const offspringMap = useMemo(
-    () => offspringRaw as Record<string, OffspringEntry>,
+    () => offspringRaw as unknown as Record<string, OffspringEntry>,
     []
   );
 
@@ -187,7 +197,7 @@ export default function ExistingDams2026Page() {
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-white">
-      <div className="max-w-[1600px] mx-auto px-8 py-12">
+      <div className="w-full px-4 py-12">
         <nav className="mb-12 flex items-center gap-3 text-sm text-gray-400">
           <a href="/" className="hover:text-white transition-colors duration-150">Dashboard</a>
           <span>/</span>
@@ -201,65 +211,68 @@ export default function ExistingDams2026Page() {
         <div className="overflow-x-auto">
           <table className="w-full text-xs border-collapse">
             <thead>
-              <tr className="border-b border-white/10 text-gray-400 text-xs uppercase tracking-wider">
-                <th className="text-left py-2.5 pr-4 font-medium whitespace-nowrap">Nombre</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">PB</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">PRS</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">PBRS</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Age</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Last Birth</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Exp. Birth</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Birth Rate</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">BR Last 3</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Rest Year</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Ran/Won STK</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Best BSN (Dist)</th>
-                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Best Offspring BSN</th>
-                <th className="text-center py-2.5 px-3 font-medium whitespace-nowrap">Campaña</th>
-                <th className="text-center py-2.5 px-3 font-medium whitespace-nowrap">Offspring</th>
-                <th className="text-center py-2.5 pl-3 font-medium whitespace-nowrap">Studbook</th>
+              <tr className="border-b border-white/10 text-gray-400 text-xs uppercase tracking-tight">
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Age</th>
+                <th className="text-left py-2 pr-2 font-medium whitespace-nowrap">Nombre</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">PB</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">PRS</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">PBRS</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Last Birth</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Exp. Birth</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Birth Rate</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">BR Last 3</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Rest Year</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Ran/Won STK</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Best BSN (Dist)</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Off. Ran/Won STK</th>
+                <th className="text-right py-2 px-1.5 font-medium whitespace-nowrap">Best Offspring BSN</th>
+                <th className="text-center py-2 px-1.5 font-medium whitespace-nowrap">Campaña</th>
+                <th className="text-center py-2 px-1.5 font-medium whitespace-nowrap">Offspring</th>
+                <th className="text-center py-2 pl-1.5 font-medium whitespace-nowrap">Studbook</th>
               </tr>
             </thead>
             <tbody>
               {dams.map((dam) => {
                 const campaignOpen = expandedCampaign.has(dam.id);
                 const offspringOpen = expandedOffspring.has(dam.id);
-                const offspringData = offspringMap[dam.id]?.offspring ?? [];
+                const offspringEntry = offspringMap[dam.id];
+                const offspringData = [...(offspringEntry?.offspring ?? [])].sort((a, b) => (b.PRS ?? -Infinity) - (a.PRS ?? -Infinity));
                 const stats = damStats[dam.id];
 
                 return (
                   <Fragment key={dam.id}>
                     {/* Dam row */}
-                    <tr className="border-b border-white/5 hover:bg-white/[0.03] transition-colors duration-100">
-                      <td className="py-2.5 pr-4 font-medium text-white whitespace-nowrap">{dam.nombre}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.pb)}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.prs)}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.pbrs)}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.M_age_at_service}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-400 whitespace-nowrap">{dam.last_birth ?? '—'}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-400 whitespace-nowrap">{dam.expected_birth ?? '—'}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.birthRate)}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.birthRateLast3)}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.hadRestYear ?? '—'}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.ran_won_stk ?? '—'}</td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">
+                    <tr className={`border-b border-white/5 transition-colors duration-100 ${campaignOpen || offspringOpen ? 'bg-yellow-400/[0.14] hover:bg-yellow-400/[0.18]' : 'hover:bg-white/[0.03]'}`}>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{dam.M_age_at_service}</td>
+                      <td className="py-1.5 pr-2 font-medium text-white whitespace-nowrap">{dam.nombre}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{pct(dam.pb, 1)}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{pct(dam.prs, 1)}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{pct(dam.pbrs, 1)}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-400 whitespace-nowrap">{dam.last_birth ?? '—'}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-400 whitespace-nowrap">{dam.expected_birth ?? '—'}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{pct(dam.birthRate, 0)}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{pct(dam.birthRateLast3, 0)}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{dam.hadRestYear ?? '—'}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{dam.ran_won_stk ?? '—'}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">
                         {stats?.bestBsn != null ? <>{fmt(stats.bestBsn, 0)}<span className="text-gray-500 ml-1">({stats.bestBsnDist}m)</span></> : '—'}
                       </td>
-                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">{offspringEntry?.ran_won_stk ?? '—'}</td>
+                      <td className="py-1.5 px-1.5 text-right text-gray-300 whitespace-nowrap">
                         {stats?.bestOffspringName != null ? <>{stats.bestOffspringName}<span className="text-gray-500 ml-1">{fmt(stats.bestOffspringBsn, 0)}</span></> : '—'}
                       </td>
-                      <td className="py-2.5 px-3 text-center">
+                      <td className="py-1.5 px-1.5 text-center">
                         <ToggleBtn count={dam.races.length} expanded={campaignOpen}
                           onClick={() => toggle(expandedCampaign, setExpandedCampaign, dam.id)} />
                       </td>
-                      <td className="py-2.5 px-3 text-center">
+                      <td className="py-1.5 px-1.5 text-center">
                         {offspringData.length > 0
                           ? <ToggleBtn count={offspringData.length} expanded={offspringOpen}
                               onClick={() => toggle(expandedOffspring, setExpandedOffspring, dam.id)} />
                           : <span className="text-gray-600 text-xs">—</span>
                         }
                       </td>
-                      <td className="py-2.5 pl-3 text-center">
+                      <td className="py-1.5 pl-1.5 text-center">
                         <a href={studBookUrl(dam.id, dam.nombre)} target="_blank" rel="noopener noreferrer"
                           className="text-xs text-blue-400 hover:text-blue-300 transition-colors duration-150">
                           Ver →
@@ -270,7 +283,7 @@ export default function ExistingDams2026Page() {
                     {/* Dam campaign */}
                     {campaignOpen && (
                       <tr className="bg-white/[0.02]">
-                        <td colSpan={16} className="px-8 pb-4 pt-2">
+                        <td colSpan={17} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                               <thead>
@@ -286,7 +299,8 @@ export default function ExistingDams2026Page() {
                                   <th className="text-right py-2.5 px-4 font-medium">BSN</th>
                                   <th className="text-right py-2.5 px-4 font-medium">PWin BSN</th>
                                   <th className="text-right py-2.5 px-4 font-medium">EMA</th>
-                                  <th className="text-right py-2.5 pl-4 font-medium">Glicko</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">Glicko</th>
+                                  <th className="py-2.5 pl-4 font-medium"></th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -307,7 +321,12 @@ export default function ExistingDams2026Page() {
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ema, 1)}</td>
-                                    <td className="py-2.5 pl-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
+                                    <td className="py-2.5 pl-4 text-center">
+                                      {race.date_link
+                                        ? <a href={race.date_link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-150">Ver →</a>
+                                        : <span className="text-gray-600">—</span>}
+                                    </td>
                                   </tr>
                                 ))}
                               </tbody>
@@ -320,42 +339,59 @@ export default function ExistingDams2026Page() {
                     {/* Offspring table */}
                     {offspringOpen && (
                       <tr className="bg-white/[0.015]">
-                        <td colSpan={16} className="px-8 pb-6 pt-3">
+                        <td colSpan={17} className="px-8 pb-6 pt-3">
                           <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Crías de {dam.nombre}</p>
                           <table className="w-full text-sm border-collapse">
                             <thead>
                               <tr className="border-b border-white/10 text-gray-500 uppercase tracking-wider">
-                                <th className="text-left py-2.5 pr-5 font-medium">Nombre</th>
-                                <th className="text-left py-2.5 pr-5 font-medium">Padrillo</th>
-                                <th className="text-right py-2.5 px-4 font-medium">Año</th>
-                                <th className="text-right py-2.5 px-4 font-medium">PRS</th>
-                                <th className="text-right py-2.5 px-4 font-medium">PR</th>
-                                <th className="text-right py-2.5 px-4 font-medium">PS</th>
-                                <th className="text-center py-2.5 px-4 font-medium">Campaña</th>
-                                <th className="text-center py-2.5 pl-4 font-medium">Studbook</th>
+                                <th className="text-left py-2.5 pr-5 font-medium whitespace-nowrap">Nombre</th>
+                                <th className="text-left py-2.5 pr-5 font-medium whitespace-nowrap">Padrillo</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">Año</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">PRS</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">PR</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">PS</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">Carreras</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">Wins</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">Cl. Ran</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">Cl. Won</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">Max BSN (Dist)</th>
+                                <th className="text-right py-2.5 px-4 font-medium whitespace-nowrap">2nd BSN (Dist)</th>
+                                <th className="text-center py-2.5 px-4 font-medium whitespace-nowrap">Campaña</th>
+                                <th className="text-center py-2.5 pl-4 font-medium whitespace-nowrap">Studbook</th>
                               </tr>
                             </thead>
                             <tbody>
                               {offspringData.map((child) => {
-                                const childCampaignOpen = expandedOffspringCampaign.has(child.studbook_id);
+                                const childCampaignOpen = expandedOffspringCampaign.has(String(child.studbook_id));
+                                const [maxBsn, secondBsn] = getTopBsns(child.races);
                                 return (
-                                  <Fragment key={child.studbook_id}>
+                                  <Fragment key={String(child.studbook_id)}>
                                     <tr className="border-b border-white/5 hover:bg-white/5 transition-colors duration-100">
-                                      <td className="py-2.5 pr-5 text-gray-200 font-medium">{child.name}</td>
-                                      <td className="py-2.5 pr-5 text-gray-400">{child.padrillo}</td>
+                                      <td className="py-2.5 pr-5 text-gray-200 font-medium whitespace-nowrap">{child.name}</td>
+                                      <td className="py-2.5 pr-5 text-gray-400 whitespace-nowrap">{child.padrillo}</td>
                                       <td className="py-2.5 px-4 text-right text-gray-400">{child.year}</td>
-                                      <td className="py-2.5 px-4 text-right text-gray-300">{pct(child.PRS)}</td>
-                                      <td className="py-2.5 px-4 text-right text-gray-300">{pct(child.PR)}</td>
-                                      <td className="py-2.5 px-4 text-right text-gray-300">{pct(child.PS)}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-300">{pct(child.PRS, 1)}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-300">{pct(child.PR, 1)}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-300">{pct(child.PS, 1)}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-400">{child.races.length}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-400">{child.total_win != null ? Math.round(child.total_win) : '—'}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-400">{child.clasicos_ran != null ? Math.round(child.clasicos_ran) : '—'}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-400">{child.clasicos_won != null ? Math.round(child.clasicos_won) : '—'}</td>
+                                      <td className="py-2.5 px-4 text-right text-gray-300 whitespace-nowrap">
+                                        {maxBsn ? <>{fmt(maxBsn.bsn, 0)}<span className="text-gray-500 ml-1">({maxBsn.dist}m)</span></> : '—'}
+                                      </td>
+                                      <td className="py-2.5 px-4 text-right text-gray-400 whitespace-nowrap">
+                                        {secondBsn ? <>{fmt(secondBsn.bsn, 0)}<span className="text-gray-500 ml-1">({secondBsn.dist}m)</span></> : '—'}
+                                      </td>
                                       <td className="py-2.5 px-4 text-center">
                                         {child.races.length > 0
                                           ? <ToggleBtn count={child.races.length} expanded={childCampaignOpen}
-                                              onClick={() => toggle(expandedOffspringCampaign, setExpandedOffspringCampaign, child.studbook_id)} />
+                                              onClick={() => toggle(expandedOffspringCampaign, setExpandedOffspringCampaign, String(child.studbook_id))} />
                                           : <span className="text-gray-600">—</span>
                                         }
                                       </td>
                                       <td className="py-2.5 pl-4 text-center">
-                                        <a href={studBookUrl(child.studbook_id, child.name)} target="_blank" rel="noopener noreferrer"
+                                        <a href={studBookUrl(String(child.studbook_id), child.name)} target="_blank" rel="noopener noreferrer"
                                           className="text-blue-400 hover:text-blue-300 transition-colors duration-150">
                                           Ver →
                                         </a>
@@ -363,13 +399,14 @@ export default function ExistingDams2026Page() {
                                     </tr>
                                     {childCampaignOpen && (
                                       <tr className="bg-white/[0.02]">
-                                        <td colSpan={16} className="px-4 pb-3 pt-1">
+                                        <td colSpan={14} className="px-4 pb-3 pt-1">
                                           <div className="overflow-x-auto">
                                             <table className="w-full text-sm border-collapse">
                                               <thead>
                                                 <tr className="border-b border-white/10 text-gray-600 uppercase tracking-wider">
                                                   <th className="text-left py-2 pr-4 font-medium">Fecha</th>
                                                   <th className="text-left py-2 pr-4 font-medium">Hipódromo</th>
+                                                  <th className="text-left py-2 pr-4 font-medium">Categoría</th>
                                                   <th className="text-left py-2 pr-4 font-medium">Sup.</th>
                                                   <th className="text-right py-2 px-3 font-medium">Dist.</th>
                                                   <th className="text-left py-2 px-3 font-medium">Estado</th>
@@ -378,11 +415,36 @@ export default function ExistingDams2026Page() {
                                                   <th className="text-right py-2 px-3 font-medium">BSN</th>
                                                   <th className="text-right py-2 px-3 font-medium">PWin BSN</th>
                                                   <th className="text-right py-2 px-3 font-medium">EMA</th>
-                                                  <th className="text-right py-2 pl-3 font-medium">Glicko</th>
+                                                  <th className="text-right py-2 px-3 font-medium">Glicko</th>
+                                                  <th className="py-2 pl-3 font-medium"></th>
                                                 </tr>
                                               </thead>
                                               <tbody>
-                                                {[...child.races].sort((a, b) => b.eday.localeCompare(a.eday)).map((r, i) => <RaceRow key={i} race={r} />)}
+                                                {[...child.races].sort((a, b) => normRaceDate(b.race_date).localeCompare(normRaceDate(a.race_date))).map((r, i) => (
+                                                  <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-100">
+                                                    <td className="py-2 pr-4 text-gray-300">{normRaceDate(r.race_date)}</td>
+                                                    <td className="py-2 pr-4 text-gray-300">{stripHip(r.track)}</td>
+                                                    <td className="py-2 pr-4 text-gray-400">{r.categoria}</td>
+                                                    <td className="py-2 pr-4 text-gray-400">{r.surface}</td>
+                                                    <td className="py-2 px-3 text-right text-gray-400">{r.distance}m</td>
+                                                    <td className="py-2 px-3">
+                                                      <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${r.estado === 'Normal' ? 'bg-green-900/40 text-green-400' : 'bg-gray-800 text-gray-400'}`}>
+                                                        {r.estado}
+                                                      </span>
+                                                    </td>
+                                                    <td className="py-2 px-3 text-right text-gray-300">{fmt(r.p, 0)}</td>
+                                                    <td className="py-2 px-3 text-right text-gray-400">{fmt(r.ecpos, 2)}</td>
+                                                    <td className="py-2 px-3 text-right text-gray-400">{fmt(r.bsn, 0)}</td>
+                                                    <td className="py-2 px-3 text-right text-gray-400">{fmt(r.pwin_bsn, 0)}</td>
+                                                    <td className="py-2 px-3 text-right text-gray-400">{fmt(r.ema_past_bsn, 1)}</td>
+                                                    <td className="py-2 px-3 text-right text-gray-400">{fmt(r.glicko, 0)}</td>
+                                                    <td className="py-2 pl-3 text-center">
+                                                      {r.date_link
+                                                        ? <a href={r.date_link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-150">Ver →</a>
+                                                        : <span className="text-gray-600">—</span>}
+                                                    </td>
+                                                  </tr>
+                                                ))}
                                               </tbody>
                                             </table>
                                           </div>
