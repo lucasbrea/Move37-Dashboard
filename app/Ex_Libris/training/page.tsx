@@ -7,8 +7,10 @@ import { useTrainingLog, EstadoType, TrainingLogEntry, NewTrainingLogEntry } fro
 // ── Types ────────────────────────────────────────────────────────────────────
 
 interface TrainingRace {
-  eday: string;
+  race_date: string;
   track: string;
+  categoria: string;
+  cond: string | null;
   surface: string;
   distance: number;
   estado: string;
@@ -18,6 +20,7 @@ interface TrainingRace {
   pwin_bsn: number | null;
   ema_past_bsn: number | null;
   glicko: number | null;
+  date_link?: string | null;
 }
 
 interface TrainingHorse {
@@ -46,6 +49,29 @@ function studBookUrl(id: string, name: string) {
   return `https://www.studbook.org.ar/ejemplares/perfil/${id}/${name.toLowerCase().replace(/\s+/g, '-')}`;
 }
 
+function stripHip(track: string) {
+  return track.replace(/^Hip[oó]dromo de\s*/i, '');
+}
+
+const MONTHS: Record<string, string> = {
+  jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',
+  jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12',
+};
+
+function race_dateToISO(d: string): string {
+  const m = d.match(/^(\d{2})([a-z]{3})(\d{4})$/i);
+  if (!m) return d;
+  const [, day, mon, year] = m;
+  const mm = MONTHS[mon.toLowerCase()] ?? '??';
+  return `${year}-${mm}-${day}`;
+}
+
+function firstLine(s: string | null | undefined): string {
+  if (!s) return '—';
+  const line = s.trim().split('\n')[0];
+  return line.length > 40 ? line.slice(0, 38) + '…' : line;
+}
+
 const ESTADO_STYLES: Record<EstadoType, { label: string; bg: string; text: string; dot: string }> = {
   corriendo: { label: 'Corriendo',  bg: 'bg-green-900/40',  text: 'text-green-300',  dot: 'bg-green-400'  },
   lesionado: { label: 'Lesionado',  bg: 'bg-red-900/40',    text: 'text-red-300',    dot: 'bg-red-400'    },
@@ -55,8 +81,8 @@ const ESTADO_STYLES: Record<EstadoType, { label: string; bg: string; text: strin
 function EstadoBadge({ estado }: { estado: EstadoType }) {
   const s = ESTADO_STYLES[estado];
   return (
-    <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${s.bg} ${s.text}`}>
-      <span className={`w-1.5 h-1.5 rounded-full ${s.dot}`} />
+    <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium ${s.bg} ${s.text}`}>
+      <span className={`w-1 h-1 rounded-full ${s.dot}`} />
       {s.label}
     </span>
   );
@@ -221,53 +247,11 @@ function LogModal({
   );
 }
 
-// ── Log History (inline) ──────────────────────────────────────────────────────
-
-function LogHistory({ entries, onDelete }: { entries: TrainingLogEntry[]; onDelete: (id: string) => void }) {
-  if (entries.length === 0) return <p className="text-gray-600 text-xs py-2">Sin entradas anteriores.</p>;
-
-  return (
-    <div className="space-y-3">
-      {entries.map(entry => (
-        <div key={entry.id} className="bg-white/[0.04] border border-white/10 rounded-lg p-3">
-          <div className="flex items-start justify-between gap-2 mb-1.5">
-            <div className="flex items-center gap-2 flex-wrap">
-              <EstadoBadge estado={entry.estado} />
-              {entry.cuidador && <span className="text-xs text-gray-500">Cuidador: {entry.cuidador}</span>}
-              {entry.campo && <span className="text-xs text-gray-500">Campo: {entry.campo}</span>}
-            </div>
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <span className="text-xs text-gray-600">
-                {new Date(entry.fecha + 'T12:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'short', year: 'numeric' })}
-              </span>
-              <button
-                onClick={() => { if (confirm('¿Eliminar esta entrada?')) onDelete(entry.id); }}
-                className="text-gray-600 hover:text-red-400 text-xs transition-colors duration-150"
-              >
-                ×
-              </button>
-            </div>
-          </div>
-          {entry.comentarios && (
-            <p className="text-gray-300 text-xs leading-relaxed">{entry.comentarios}</p>
-          )}
-          {entry.proximas_carreras && (
-            <div className="mt-2 pt-2 border-t border-white/5">
-              <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Próximas Carreras</p>
-              <pre className="text-xs text-gray-400 font-mono whitespace-pre-wrap">{entry.proximas_carreras}</pre>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-
 // ── Main page ─────────────────────────────────────────────────────────────────
 
 export default function ExLibrisTrainingPage() {
   const horses = useMemo<TrainingHorse[]>(
-    () => Object.values(rawData as Record<string, TrainingHorse>),
+    () => Object.values(rawData as Record<string, TrainingHorse>).sort((a, b) => (b.PRS ?? -Infinity) - (a.PRS ?? -Infinity)),
     []
   );
 
@@ -304,7 +288,7 @@ export default function ExLibrisTrainingPage() {
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-white">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <div className="w-full px-4 sm:px-6 py-8 sm:py-12">
         {/* Breadcrumb */}
         <nav className="mb-8 flex items-center gap-3 text-sm text-gray-400">
           <a href="/" className="hover:text-white transition-colors duration-150">Dashboard</a>
@@ -316,20 +300,22 @@ export default function ExLibrisTrainingPage() {
 
         <h1 className="text-3xl sm:text-4xl font-light tracking-tight mb-8">Training</h1>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-base border-collapse">
+        <div>
+          <table className="w-full text-xs border-collapse">
             <thead>
-              <tr className="border-b border-white/10 text-gray-400 text-sm uppercase tracking-wider">
-                <th className="text-center py-4 pr-4 font-medium">LOG</th>
-                <th className="text-left py-4 px-4 font-medium">Nombre</th>
-                <th className="text-left py-4 px-4 font-medium">Madre</th>
-                <th className="text-left py-4 px-4 font-medium">Padrillo</th>
-                <th className="text-right py-4 px-4 font-medium">PRS</th>
-                <th className="text-right py-4 px-4 font-medium">PR</th>
-                <th className="text-right py-4 px-4 font-medium">PS</th>
-                <th className="text-center py-4 px-4 font-medium">Campaña</th>
-                <th className="text-center py-4 px-4 font-medium">Estado</th>
-                <th className="text-center py-4 pl-4 font-medium">SB</th>
+              <tr className="border-b border-white/10 text-gray-400 text-[10px] uppercase tracking-wider">
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Nombre</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Madre</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Padrillo</th>
+                <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PRS</th>
+                <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PR</th>
+                <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PS</th>
+                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Estado</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Última Carrera</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Próx. Carreras</th>
+                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Campaña</th>
+                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">SB</th>
+                <th className="text-center py-2 pl-2 font-medium whitespace-nowrap">LOG</th>
               </tr>
             </thead>
             <tbody>
@@ -339,50 +325,23 @@ export default function ExLibrisTrainingPage() {
                 const horseLog = logsByHorse[horse.studbook_id] ?? [];
                 const latest = horseLog[0];
 
+                // Latest race (sorted by date desc)
+                const latestRace = horse.races.length > 0
+                  ? [...horse.races].sort((a, b) => race_dateToISO(b.race_date).localeCompare(race_dateToISO(a.race_date)))[0]
+                  : null;
+
                 return (
                   <Fragment key={horse.studbook_id}>
                     <tr className="border-b border-white/5 hover:bg-white/[0.03] transition-colors duration-100">
-                      {/* LOG column — first */}
-                      <td className="py-4 pr-4 text-center">
-                        <div className="inline-flex items-center gap-2">
-                          {horseLog.length > 0 && (
-                            <button
-                              onClick={() => toggleLog(horse.studbook_id)}
-                              className="text-sm font-medium text-gray-300 hover:text-white border border-white/20 hover:border-white/40 px-3 py-1.5 rounded transition-colors min-w-[2.5rem]"
-                            >
-                              {logOpen ? '▴' : `${horseLog.length}`}
-                            </button>
-                          )}
-                          <button
-                            onClick={() => setModalHorse(horse)}
-                            className="text-sm font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300
-                                       border border-yellow-500/30 px-3 py-1.5 rounded transition-colors duration-150"
-                          >
-                            + Log
-                          </button>
-                        </div>
-                      </td>
-                      <td className="py-4 px-4 font-medium text-white whitespace-nowrap">{horse.name}</td>
-                      <td className="py-4 px-4 text-gray-300 whitespace-nowrap">{horse.M}</td>
-                      <td className="py-4 px-4 text-gray-300 whitespace-nowrap">{horse.padrillo}</td>
-                      <td className="py-4 px-4 text-right text-gray-300">{pct(horse.PRS)}</td>
-                      <td className="py-4 px-4 text-right text-gray-300">{pct(horse.PR)}</td>
-                      <td className="py-4 px-4 text-right text-gray-300">{pct(horse.PS)}</td>
-                      <td className="py-4 px-4 text-center">
-                        {horse.races.length > 0 ? (
-                          <button
-                            onClick={() => toggleCampaign(horse.studbook_id)}
-                            className="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium
-                                       border border-white/20 hover:border-yellow-400/50 hover:text-yellow-300
-                                       text-gray-400 transition-colors duration-150"
-                          >
-                            {horse.races.length} carreras
-                            <span style={{ display: 'inline-block', transform: campaignOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>▾</span>
-                          </button>
-                        ) : <span className="text-gray-600 text-xs">—</span>}
-                      </td>
-                      {/* Estado column */}
-                      <td className="py-4 px-4 text-center">
+                      <td className="py-1.5 px-2 font-medium text-white whitespace-nowrap">{horse.name}</td>
+                      <td className="py-1.5 px-2 text-gray-300 whitespace-nowrap">{horse.M}</td>
+                      <td className="py-1.5 px-2 text-gray-300 whitespace-nowrap">{horse.padrillo}</td>
+                      <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PRS)}</td>
+                      <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PR)}</td>
+                      <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PS)}</td>
+
+                      {/* Estado */}
+                      <td className="py-1.5 px-2 text-center">
                         {logsLoading ? (
                           <span className="text-gray-700 text-xs">…</span>
                         ) : latest ? (
@@ -391,24 +350,103 @@ export default function ExLibrisTrainingPage() {
                           <span className="text-gray-700 text-xs">—</span>
                         )}
                       </td>
-                      <td className="py-4 pl-4 text-center">
+
+                      {/* Última carrera */}
+                      <td className="py-1.5 px-2 text-gray-400">
+                        {latestRace ? (
+                          <div>
+                            <div className="text-gray-300 whitespace-nowrap">{race_dateToISO(latestRace.race_date)} · {stripHip(latestRace.track)}</div>
+                            <div className="text-gray-500">
+                              {latestRace.distance}m
+                              {latestRace.bsn != null && <span className="text-yellow-400/70 ml-1">BSN {fmt(latestRace.bsn, 0)}</span>}
+                            </div>
+                          </div>
+                        ) : <span className="text-gray-700">—</span>}
+                      </td>
+
+                      {/* Próximas carreras potenciales */}
+                      <td className="py-1.5 px-2 text-gray-400 max-w-[160px]">
+                        {latest?.proximas_carreras
+                          ? <span className="text-gray-300 leading-tight">{firstLine(latest.proximas_carreras)}</span>
+                          : <span className="text-gray-700">—</span>}
+                      </td>
+
+                      {/* Campaña */}
+                      <td className="py-1.5 px-2 text-center">
+                        {horse.races.length > 0 ? (
+                          <button
+                            onClick={() => toggleCampaign(horse.studbook_id)}
+                            className="inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-medium
+                                       border border-white/20 hover:border-yellow-400/50 hover:text-yellow-300
+                                       text-gray-400 transition-colors duration-150"
+                          >
+                            {horse.races.length}
+                            <span style={{ display: 'inline-block', transform: campaignOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>▾</span>
+                          </button>
+                        ) : <span className="text-gray-600">—</span>}
+                      </td>
+
+                      {/* SB */}
+                      <td className="py-1.5 px-2 text-center">
                         <a href={studBookUrl(horse.studbook_id, horse.name)} target="_blank" rel="noopener noreferrer"
-                          className="text-xs text-blue-400 hover:text-blue-300 transition-colors duration-150">
+                          className="text-blue-400 hover:text-blue-300 transition-colors duration-150">
                           Ver →
                         </a>
                       </td>
+
+                      {/* LOG */}
+                      <td className="py-1.5 pl-2 text-center">
+                        <button
+                          onClick={() => setModalHorse(horse)}
+                          className="font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300
+                                     border border-yellow-500/30 px-2 py-0.5 rounded transition-colors duration-150"
+                        >
+                          +
+                        </button>
+                      </td>
                     </tr>
+
+                    {/* Latest comment row — always visible */}
+                    {!logsLoading && latest?.comentarios && (
+                      <tr className="border-b border-white/5" style={{ background: 'rgba(255,255,255,0.025)' }}>
+                        <td colSpan={12} className="px-4 py-2">
+                          <div className="flex items-start justify-between gap-6">
+                            <div className="flex items-start gap-3 min-w-0">
+                              <span className="text-gray-500 text-xs whitespace-nowrap mt-px shrink-0">
+                                {new Date(latest.fecha + 'T12:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'short', year: 'numeric' })}
+                              </span>
+                              <span className="text-gray-200 text-xs leading-relaxed">{latest.comentarios}</span>
+                            </div>
+                            {horseLog.length > 0 && (
+                              <button
+                                onClick={() => toggleLog(horse.studbook_id)}
+                                className={`flex-shrink-0 text-xs flex items-center gap-1.5 px-2.5 py-1 border rounded transition-colors duration-150 ${
+                                  logOpen
+                                    ? 'border-yellow-400/40 text-yellow-300'
+                                    : 'border-white/15 text-gray-400 hover:text-white hover:border-white/30'
+                                }`}
+                              >
+                                {horseLog.length} {horseLog.length === 1 ? 'entrada' : 'entradas'}
+                                <span style={{ display: 'inline-block', transform: logOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>▾</span>
+                              </button>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    )}
 
                     {/* Campaign expansion */}
                     {campaignOpen && (
                       <tr className="bg-white/[0.02]">
-                        <td colSpan={10} className="px-8 pb-4 pt-2">
+                        <td colSpan={12} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                               <thead>
                                 <tr className="border-b border-white/10 text-gray-500 uppercase tracking-wider">
                                   <th className="text-left py-2.5 pr-5 font-medium">Fecha</th>
                                   <th className="text-left py-2.5 pr-5 font-medium">Hipódromo</th>
+                                  <th className="text-left py-2.5 pr-5 font-medium">Categoría</th>
+                                  <th className="text-left py-2.5 pr-5 font-medium">Cond.</th>
                                   <th className="text-left py-2.5 pr-5 font-medium">Sup.</th>
                                   <th className="text-right py-2.5 px-4 font-medium">Dist.</th>
                                   <th className="text-left py-2.5 px-4 font-medium">Estado</th>
@@ -417,14 +455,17 @@ export default function ExLibrisTrainingPage() {
                                   <th className="text-right py-2.5 px-4 font-medium">BSN</th>
                                   <th className="text-right py-2.5 px-4 font-medium">PWin BSN</th>
                                   <th className="text-right py-2.5 px-4 font-medium">EMA</th>
-                                  <th className="text-right py-2.5 pl-4 font-medium">Glicko</th>
+                                  <th className="text-right py-2.5 px-4 font-medium">Glicko</th>
+                                  <th className="py-2.5 pl-4 font-medium"></th>
                                 </tr>
                               </thead>
                               <tbody>
-                                {[...horse.races].sort((a, b) => b.eday.localeCompare(a.eday)).map((race, i) => (
+                                {[...horse.races].sort((a, b) => race_dateToISO(b.race_date).localeCompare(race_dateToISO(a.race_date))).map((race, i) => (
                                   <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-100">
-                                    <td className="py-2.5 pr-5 text-gray-300">{race.eday}</td>
-                                    <td className="py-2.5 pr-5 text-gray-300">{race.track}</td>
+                                    <td className="py-2.5 pr-5 text-gray-300">{race_dateToISO(race.race_date)}</td>
+                                    <td className="py-2.5 pr-5 text-gray-300">{stripHip(race.track)}</td>
+                                    <td className="py-2.5 pr-5 text-gray-400">{race.categoria}</td>
+                                    <td className="py-2.5 pr-5 text-gray-400">{race.cond ?? '—'}</td>
                                     <td className="py-2.5 pr-5 text-gray-400">{race.surface}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{race.distance}m</td>
                                     <td className="py-2.5 px-4">
@@ -437,7 +478,12 @@ export default function ExLibrisTrainingPage() {
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ema_past_bsn, 1)}</td>
-                                    <td className="py-2.5 pl-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
+                                    <td className="py-2.5 pl-4 text-center">
+                                      {race.date_link
+                                        ? <a href={race.date_link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-150">Ver →</a>
+                                        : <span className="text-gray-600">—</span>}
+                                    </td>
                                   </tr>
                                 ))}
                               </tbody>
@@ -449,12 +495,38 @@ export default function ExLibrisTrainingPage() {
 
                     {/* Log history expansion */}
                     {logOpen && horseLog.length > 0 && (
-                      <tr className="bg-white/[0.015]">
-                        <td colSpan={10} className="px-8 pb-4 pt-3 border-b border-white/5">
-                          <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-3">
-                            Historial de LOG — {horse.name}
+                      <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
+                        <td colSpan={12} className="px-6 pb-5 pt-4 border-b border-white/8">
+                          <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-4">
+                            Historial — {horse.name}
                           </p>
-                          <LogHistory entries={horseLog} onDelete={deleteLog} />
+                          <div className="space-y-3">
+                            {horseLog.map(entry => (
+                              <div key={entry.id} className="flex gap-4 items-start border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                                <div className="shrink-0 w-24 text-gray-500 text-xs pt-0.5">
+                                  {new Date(entry.fecha + 'T12:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                </div>
+                                <div className="shrink-0 pt-0.5">
+                                  <EstadoBadge estado={entry.estado} />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-gray-200 text-sm leading-relaxed">{entry.comentarios ?? '—'}</p>
+                                  {entry.proximas_carreras && (
+                                    <div className="mt-1.5 pl-3 border-l border-white/10">
+                                      <p className="text-[10px] text-gray-600 uppercase tracking-wider mb-0.5">Próximas carreras</p>
+                                      <pre className="text-gray-400 text-xs font-mono whitespace-pre-wrap">{entry.proximas_carreras}</pre>
+                                    </div>
+                                  )}
+                                </div>
+                                <button
+                                  onClick={() => { if (confirm('¿Eliminar esta entrada?')) deleteLog(entry.id); }}
+                                  className="shrink-0 text-gray-700 hover:text-red-400 text-sm transition-colors duration-150 leading-none"
+                                >
+                                  ×
+                                </button>
+                              </div>
+                            ))}
+                          </div>
                         </td>
                       </tr>
                     )}
