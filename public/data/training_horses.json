@@ -1,13 +1,13 @@
 {
   "428121": {
-    "studbook_id": "428121",
+    "studbook_id": 428121,
     "name": "FOREVER LICINIUS",
     "padrillo": "PUERTO ESCONDIDO",
     "M": "FORLISA",
     "PRS": 0.017005067,
     "PR": 0.49463978,
     "PS": 0.034378689,
-    "yegua_studbook_id": "353106",
+    "yegua_studbook_id": 353106,
     "races": [
       {
         "race_date": "31jan2024",
@@ -21,7 +21,7 @@
         "ecpos": 0.0,
         "bsn": 111.50341,
         "pwin_bsn": 103.63945,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2098.9351
       },
       {
@@ -207,14 +207,14 @@
     ]
   },
   "428701": {
-    "studbook_id": "428701",
+    "studbook_id": 428701,
     "name": "ALPHA PASION",
     "padrillo": "LIZARD ISLAND (USA)",
     "M": "ESA PASION",
     "PRS": 0.024533097,
     "PR": 0.57088524,
     "PS": 0.042973779,
-    "yegua_studbook_id": "352337",
+    "yegua_studbook_id": 352337,
     "races": [
       {
         "race_date": "14sep2024",
@@ -228,7 +228,7 @@
         "ecpos": 10.25,
         "bsn": 87.875534,
         "pwin_bsn": 105.27771,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1876.332
       },
       {
@@ -399,14 +399,14 @@
     ]
   },
   "429622": {
-    "studbook_id": "429622",
+    "studbook_id": 429622,
     "name": "FRANTA",
     "padrillo": "FORTIFY (USA)",
     "M": "FRENCH BEACH",
     "PRS": 0.075934671,
     "PR": 0.64493209,
     "PS": 0.11774057,
-    "yegua_studbook_id": "353920",
+    "yegua_studbook_id": 353920,
     "races": [
       {
         "race_date": "28jun2024",
@@ -420,7 +420,7 @@
         "ecpos": 0.0,
         "bsn": 102.30499,
         "pwin_bsn": 94.451218,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2086.0247
       },
       {
@@ -621,14 +621,14 @@
     ]
   },
   "430858": {
-    "studbook_id": "430858",
+    "studbook_id": 430858,
     "name": "ROYAL BLISS",
     "padrillo": "FORTIFY (USA)",
     "M": "BELLEZA ROMANA",
     "PRS": 0.088571213,
     "PR": 0.67634088,
     "PS": 0.13095647,
-    "yegua_studbook_id": "328063",
+    "yegua_studbook_id": 328063,
     "races": [
       {
         "race_date": "24feb2024",
@@ -642,7 +642,7 @@
         "ecpos": 20.25,
         "bsn": 74.225388,
         "pwin_bsn": 94.451218,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1560.8947
       },
       {
@@ -753,25 +753,25 @@
     ]
   },
   "434401": {
-    "studbook_id": "434401",
+    "studbook_id": 434401,
     "name": "UCA RIM",
     "padrillo": "REMOTE (GB)",
     "M": "UCA SEATTLE",
     "PRS": 0.078696035,
     "PR": 0.68468028,
     "PS": 0.11493836,
-    "yegua_studbook_id": "352523",
+    "yegua_studbook_id": 352523,
     "races": []
   },
   "435153": {
-    "studbook_id": "435153",
+    "studbook_id": 435153,
     "name": "HIERATIC",
     "padrillo": "HIT IT A BOMB (USA)",
     "M": "INTER STAR",
     "PRS": 0.10289221,
     "PR": 0.70548457,
     "PS": 0.14584614,
-    "yegua_studbook_id": "335564",
+    "yegua_studbook_id": 335564,
     "races": [
       {
         "race_date": "07nov2025",
@@ -785,7 +785,7 @@
         "ecpos": 0.300000011920929,
         "bsn": 99.774506,
         "pwin_bsn": 111.38517,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2044.3383
       },
       {
@@ -836,14 +836,14 @@
     ]
   },
   "435844": {
-    "studbook_id": "435844",
+    "studbook_id": 435844,
     "name": "EMOTIVA CANCION",
     "padrillo": "FORTIFY (USA)",
     "M": "ELIZABETTA",
     "PRS": 0.092593402,
     "PR": 0.69155097,
     "PS": 0.13389237,
-    "yegua_studbook_id": "314988",
+    "yegua_studbook_id": 314988,
     "races": [
       {
         "race_date": "17jul2025",
@@ -857,7 +857,7 @@
         "ecpos": 11.5,
         "bsn": 85.488846,
         "pwin_bsn": 116.32442,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2059.4907
       },
       {
@@ -878,14 +878,14 @@
     ]
   },
   "436543": {
-    "studbook_id": "436543",
+    "studbook_id": 436543,
     "name": "SWEET SABRINA",
     "padrillo": "DANIEL BOONE (BRZ)",
     "M": "SAFE SABRINA",
     "PRS": 0.077071801,
     "PR": 0.63092661,
     "PS": 0.12215652,
-    "yegua_studbook_id": "333022",
+    "yegua_studbook_id": 333022,
     "races": [
       {
         "race_date": "29jun2025",
@@ -899,7 +899,7 @@
         "ecpos": 8.0,
         "bsn": 99.187225,
         "pwin_bsn": 113.47285,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 2116.26
       },
       {
@@ -980,25 +980,25 @@
     ]
   },
   "438261": {
-    "studbook_id": "438261",
+    "studbook_id": 438261,
     "name": "PETRIN TOWER",
     "padrillo": "ANGIOLO",
     "M": "MALA STRANA",
     "PRS": 0.015309306,
     "PR": 0.59237206,
     "PS": 0.025844071,
-    "yegua_studbook_id": "353194",
+    "yegua_studbook_id": 353194,
     "races": []
   },
   "438262": {
-    "studbook_id": "438262",
+    "studbook_id": 438262,
     "name": "FOREVER BENTER",
     "padrillo": "SEEK AGAIN (USA)",
     "M": "FORLISA",
     "PRS": 0.026131265,
     "PR": 0.67141616,
     "PS": 0.038919624,
-    "yegua_studbook_id": "353106",
+    "yegua_studbook_id": 353106,
     "races": [
       {
         "race_date": "26dec2025",
@@ -1012,7 +1012,7 @@
         "ecpos": 18.75,
         "bsn": 64.111626,
         "pwin_bsn": 103.13343,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1412.9521
       },
       {
@@ -1048,36 +1048,36 @@
     ]
   },
   "438264": {
-    "studbook_id": "438264",
+    "studbook_id": 438264,
     "name": "KELLY STRIPES",
     "padrillo": "CITYSCAPE (GB)",
     "M": "MICHELE STRIPES",
     "PRS": 0.016999111,
     "PR": 0.52812165,
     "PS": 0.032187868,
-    "yegua_studbook_id": "333912",
+    "yegua_studbook_id": 333912,
     "races": []
   },
   "438265": {
-    "studbook_id": "438265",
+    "studbook_id": 438265,
     "name": "ETERNAL PASSION",
     "padrillo": "SEEK AGAIN (USA)",
     "M": "ESA PASION",
     "PRS": 0.014222452,
     "PR": 0.62984413,
     "PS": 0.022580909,
-    "yegua_studbook_id": "352337",
+    "yegua_studbook_id": 352337,
     "races": []
   },
   "439707": {
-    "studbook_id": "439707",
+    "studbook_id": 439707,
     "name": "PRECIOUS MIND",
     "padrillo": "TREASURE BEACH (GB)",
     "M": "PRECIOUS TIME",
     "PRS": 0.028849214,
     "PR": 0.60015458,
     "PS": 0.048069641,
-    "yegua_studbook_id": "324778",
+    "yegua_studbook_id": 324778,
     "races": [
       {
         "race_date": "04nov2025",
@@ -1091,7 +1091,7 @@
         "ecpos": 20.0,
         "bsn": 60.027401,
         "pwin_bsn": 100.84974,
-        "ema_past_bsn": NaN,
+        "ema_past_bsn": null,
         "glicko": 1495.0428
       },
       {
