@@ -251,7 +251,7 @@ function LogModal({
 
 export default function ExLibrisTrainingPage() {
   const horses = useMemo<TrainingHorse[]>(
-    () => Object.values(rawData as Record<string, TrainingHorse>).sort((a, b) => (b.PRS ?? -Infinity) - (a.PRS ?? -Infinity)),
+    () => Object.values(rawData as unknown as Record<string, TrainingHorse>).sort((a, b) => (b.PRS ?? -Infinity) - (a.PRS ?? -Infinity)),
     []
   );
 
