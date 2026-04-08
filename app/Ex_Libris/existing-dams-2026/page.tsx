@@ -29,9 +29,12 @@ interface Dam {
   prs: number | null;
   pbrs: number | null;
   M_age_at_service: number;
+  last_birth: string | null;
+  expected_birth: string | null;
   birthRate: number | null;
   birthRateLast3: number | null;
   hadRestYear: number | null;
+  ran_won_stk: string | null;
   races: DamRace[];
 }
 
@@ -158,20 +161,23 @@ export default function ExistingDams2026Page() {
         <h1 className="text-4xl font-light tracking-tight mb-10">Existing Dams 2026</h1>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-base border-collapse">
+          <table className="w-full text-xs border-collapse">
             <thead>
-              <tr className="border-b border-white/10 text-gray-400 text-sm uppercase tracking-wider">
-                <th className="text-left py-4 pr-8 font-medium">Nombre</th>
-                <th className="text-right py-4 px-5 font-medium">PB</th>
-                <th className="text-right py-4 px-5 font-medium">PRS</th>
-                <th className="text-right py-4 px-5 font-medium">PBRS</th>
-                <th className="text-right py-4 px-5 font-medium">Age</th>
-                <th className="text-right py-4 px-5 font-medium">Birth Rate</th>
-                <th className="text-right py-4 px-5 font-medium">BR Last 3</th>
-                <th className="text-right py-4 px-5 font-medium">Rest Year</th>
-                <th className="text-center py-4 px-5 font-medium">Campaña</th>
-                <th className="text-center py-4 px-5 font-medium">Offspring</th>
-                <th className="text-center py-4 pl-5 font-medium">Studbook</th>
+              <tr className="border-b border-white/10 text-gray-400 text-xs uppercase tracking-wider">
+                <th className="text-left py-2.5 pr-4 font-medium whitespace-nowrap">Nombre</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">PB</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">PRS</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">PBRS</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Age</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Last Birth</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Exp. Birth</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Birth Rate</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">BR Last 3</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Rest Year</th>
+                <th className="text-right py-2.5 px-3 font-medium whitespace-nowrap">Ran/Won STK</th>
+                <th className="text-center py-2.5 px-3 font-medium whitespace-nowrap">Campaña</th>
+                <th className="text-center py-2.5 px-3 font-medium whitespace-nowrap">Offspring</th>
+                <th className="text-center py-2.5 pl-3 font-medium whitespace-nowrap">Studbook</th>
               </tr>
             </thead>
             <tbody>
@@ -184,26 +190,29 @@ export default function ExistingDams2026Page() {
                   <Fragment key={dam.id}>
                     {/* Dam row */}
                     <tr className="border-b border-white/5 hover:bg-white/[0.03] transition-colors duration-100">
-                      <td className="py-4 pr-8 font-medium text-white">{dam.nombre}</td>
-                      <td className="py-4 px-5 text-right text-gray-300">{pct(dam.pb)}</td>
-                      <td className="py-4 px-5 text-right text-gray-300">{pct(dam.prs)}</td>
-                      <td className="py-4 px-5 text-right text-gray-300">{pct(dam.pbrs)}</td>
-                      <td className="py-4 px-5 text-right text-gray-300">{dam.M_age_at_service}</td>
-                      <td className="py-4 px-5 text-right text-gray-300">{pct(dam.birthRate)}</td>
-                      <td className="py-4 px-5 text-right text-gray-300">{pct(dam.birthRateLast3)}</td>
-                      <td className="py-4 px-5 text-right text-gray-300">{dam.hadRestYear ?? '—'}</td>
-                      <td className="py-4 px-5 text-center">
+                      <td className="py-2.5 pr-4 font-medium text-white whitespace-nowrap">{dam.nombre}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.pb)}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.prs)}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.pbrs)}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.M_age_at_service}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-400 whitespace-nowrap">{dam.last_birth ?? '—'}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-400 whitespace-nowrap">{dam.expected_birth ?? '—'}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.birthRate)}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{pct(dam.birthRateLast3)}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.hadRestYear ?? '—'}</td>
+                      <td className="py-2.5 px-3 text-right text-gray-300 whitespace-nowrap">{dam.ran_won_stk ?? '—'}</td>
+                      <td className="py-2.5 px-3 text-center">
                         <ToggleBtn count={dam.races.length} label="carreras" expanded={campaignOpen}
                           onClick={() => toggle(expandedCampaign, setExpandedCampaign, dam.id)} />
                       </td>
-                      <td className="py-4 px-5 text-center">
+                      <td className="py-2.5 px-3 text-center">
                         {offspringData.length > 0
                           ? <ToggleBtn count={offspringData.length} label="crías" expanded={offspringOpen}
                               onClick={() => toggle(expandedOffspring, setExpandedOffspring, dam.id)} />
                           : <span className="text-gray-600 text-xs">—</span>
                         }
                       </td>
-                      <td className="py-4 pl-5 text-center">
+                      <td className="py-2.5 pl-3 text-center">
                         <a href={studBookUrl(dam.id, dam.nombre)} target="_blank" rel="noopener noreferrer"
                           className="text-xs text-blue-400 hover:text-blue-300 transition-colors duration-150">
                           Ver →
@@ -214,7 +223,7 @@ export default function ExistingDams2026Page() {
                     {/* Dam campaign */}
                     {campaignOpen && (
                       <tr className="bg-white/[0.02]">
-                        <td colSpan={11} className="px-8 pb-4 pt-2">
+                        <td colSpan={14} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                               <thead>
@@ -264,7 +273,7 @@ export default function ExistingDams2026Page() {
                     {/* Offspring table */}
                     {offspringOpen && (
                       <tr className="bg-white/[0.015]">
-                        <td colSpan={11} className="px-8 pb-6 pt-3">
+                        <td colSpan={14} className="px-8 pb-6 pt-3">
                           <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Crías de {dam.nombre}</p>
                           <table className="w-full text-sm border-collapse">
                             <thead>
@@ -307,7 +316,7 @@ export default function ExistingDams2026Page() {
                                     </tr>
                                     {childCampaignOpen && (
                                       <tr className="bg-white/[0.02]">
-                                        <td colSpan={11} className="px-4 pb-3 pt-1">
+                                        <td colSpan={14} className="px-4 pb-3 pt-1">
                                           <div className="overflow-x-auto">
                                             <table className="w-full text-sm border-collapse">
                                               <thead>
