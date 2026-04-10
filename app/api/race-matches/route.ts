@@ -80,25 +80,8 @@ const TOOL: Anthropic.Tool = {
   },
 };
 
-export async function POST(req: NextRequest) {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured' }, { status: 500 });
-  }
-
-  const { horses }: { horses: HorseInput[] } = await req.json();
-
-  const calendar = compressCalendar(calendarData as Parameters<typeof compressCalendar>[0]);
-
-  const compressedHorses = horses.map(h => ({
-    studbook_id: String(h.studbook_id),
-    name: h.name,
-    races: [...h.races]
-      .sort((a, b) => (a.race_date > b.race_date ? -1 : 1))
-      .slice(0, 4)
-      .map(r => ({ date: r.race_date, cond: r.cond, dist: r.distance, pos: r.p })),
-  }));
-
-  const prompt = `You are an expert in Argentine horse racing (turf argentino). Current date: May 2026.
+function buildPrompt(calendar: unknown, batch: { studbook_id: string; name: string; races: unknown[] }[]) {
+  return `You are an expert in Argentine horse racing (turf argentino). Current date: May 2026.
 
 ## Cond code reference (most recent race = current eligibility)
 - Sex prefix: "h"=todo caballo (open/any sex), "y"=yegua only
@@ -112,42 +95,59 @@ export async function POST(req: NextRequest) {
 ${JSON.stringify(calendar, null, 1)}
 
 ## Horses
-${JSON.stringify(compressedHorses, null, 1)}
+${JSON.stringify(batch, null, 1)}
 
 For each horse: infer sex, infer current age in May 2026, determine eligibility, call match_races. Keep current_analysis under 10 words. Keep race_description under 25 chars. Omit match_reason.`;
+}
 
-  let message;
-  try {
-    message = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 8096,
-      tools: [TOOL],
-      tool_choice: { type: 'tool', name: 'match_races' },
-      messages: [{ role: 'user', content: prompt }],
-    });
-  } catch (err) {
-    const detail = err instanceof Error ? err.message : JSON.stringify(err);
-    console.error('[race-matches] Claude error:', detail);
-    return NextResponse.json({ error: detail }, { status: 502 });
-  }
-
-  const toolUse = message.content.find(b => b.type === 'tool_use');
-  if (!toolUse || toolUse.type !== 'tool_use') {
-    console.error('[race-matches] No tool_use block. Content:', JSON.stringify(message.content));
-    return NextResponse.json({ error: 'No tool_use block in response' }, { status: 502 });
-  }
+async function runBatch(prompt: string): Promise<HorseMatch[]> {
+  const message = await client.messages.create({
+    model: 'claude-sonnet-4-5',
+    max_tokens: 8096,
+    tools: [TOOL],
+    tool_choice: { type: 'tool', name: 'match_races' },
+    messages: [{ role: 'user', content: prompt }],
+  });
 
   console.log('[race-matches] stop_reason:', message.stop_reason);
-  console.log('[race-matches] tool input preview:', JSON.stringify(toolUse.input).slice(0, 300));
+  if (message.stop_reason === 'max_tokens') throw new Error('max_tokens');
 
-  if (message.stop_reason === 'max_tokens') {
-    return NextResponse.json({ error: 'Response truncated (max_tokens). Try again.' }, { status: 502 });
-  }
+  const toolUse = message.content.find(b => b.type === 'tool_use');
+  if (!toolUse || toolUse.type !== 'tool_use') throw new Error('No tool_use block');
 
   const input = toolUse.input as { horses?: HorseMatch[] } | HorseMatch[];
-  const matchedHorses: HorseMatch[] = Array.isArray(input)
-    ? input
-    : (input as { horses?: HorseMatch[] }).horses ?? [];
+  return Array.isArray(input) ? input : (input as { horses?: HorseMatch[] }).horses ?? [];
+}
 
-  return NextResponse.json({ horses: matchedHorses });
+export async function POST(req: NextRequest) {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured' }, { status: 500 });
+  }
+
+  const { horses }: { horses: HorseInput[] } = await req.json();
+  const calendar = compressCalendar(calendarData as Parameters<typeof compressCalendar>[0]);
+
+  const compressed = horses.map(h => ({
+    studbook_id: String(h.studbook_id),
+    name: h.name,
+    races: [...h.races]
+      .sort((a, b) => (a.race_date > b.race_date ? -1 : 1))
+      .slice(0, 4)
+      .map(r => ({ date: r.race_date, cond: r.cond, dist: r.distance, pos: r.p })),
+  }));
+
+  // Split into two batches to stay within output token limits
+  const mid = Math.ceil(compressed.length / 2);
+  const batches = [compressed.slice(0, mid), compressed.slice(mid)];
+
+  try {
+    const results = await Promise.all(batches.map(b => runBatch(buildPrompt(calendar, b))));
+    const matchedHorses = results.flat();
+    console.log('[race-matches] total matched:', matchedHorses.length);
+    return NextResponse.json({ horses: matchedHorses });
+  } catch (err) {
+    const detail = err instanceof Error ? err.message : JSON.stringify(err);
+    console.error('[race-matches] error:', detail);
+    return NextResponse.json({ error: detail }, { status: 502 });
+  }
 }
