@@ -68,7 +68,7 @@ const TOOL: Anthropic.Tool = {
                   pista: { type: 'string' },
                   match_reason: { type: 'string' },
                 },
-                required: ['fecha', 'dia_label', 'race_description', 'condicion', 'distancia_mts', 'pista', 'match_reason'],
+                required: ['fecha', 'dia_label', 'race_description', 'condicion', 'distancia_mts', 'pista'],
               },
             },
           },
@@ -114,7 +114,7 @@ ${JSON.stringify(calendar, null, 1)}
 ## Horses
 ${JSON.stringify(compressedHorses, null, 1)}
 
-For each horse: infer sex, infer current age in May 2026, determine eligibility, then call match_races with all qualifying calendar races.`;
+For each horse: infer sex, infer current age in May 2026, determine eligibility, call match_races. Keep current_analysis under 10 words. Keep race_description under 25 chars. Omit match_reason.`;
 
   let message;
   try {
@@ -137,9 +137,14 @@ For each horse: infer sex, infer current age in May 2026, determine eligibility,
     return NextResponse.json({ error: 'No tool_use block in response' }, { status: 502 });
   }
 
-  console.log('[race-matches] tool input keys:', Object.keys(toolUse.input as object));
+  console.log('[race-matches] stop_reason:', message.stop_reason);
+  console.log('[race-matches] tool input preview:', JSON.stringify(toolUse.input).slice(0, 300));
+
+  if (message.stop_reason === 'max_tokens') {
+    return NextResponse.json({ error: 'Response truncated (max_tokens). Try again.' }, { status: 502 });
+  }
+
   const input = toolUse.input as { horses?: HorseMatch[] } | HorseMatch[];
-  // Normalise: Claude sometimes returns the array directly instead of wrapped
   const matchedHorses: HorseMatch[] = Array.isArray(input)
     ? input
     : (input as { horses?: HorseMatch[] }).horses ?? [];
