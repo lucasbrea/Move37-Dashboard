@@ -294,7 +294,7 @@ export default function ExLibrisTrainingPage() {
       if (!res.ok) throw new Error(await res.text());
       const data: { horses: HorseMatch[] } = await res.json();
       const byId: Record<string, HorseMatch> = {};
-      for (const m of data.horses) byId[m.studbook_id] = m;
+      for (const m of data.horses) byId[String(m.studbook_id)] = m;
       const updatedAt = new Date().toISOString();
       setSuggestedRaces(byId);
       setSuggestionsUpdatedAt(updatedAt);
@@ -553,8 +553,8 @@ export default function ExLibrisTrainingPage() {
                     )}
 
                     {/* AI race suggestions row */}
-                    {suggestedRaces?.[horse.studbook_id] && (() => {
-                      const match = suggestedRaces[horse.studbook_id];
+                    {suggestedRaces?.[String(horse.studbook_id)] && (() => {
+                      const match = suggestedRaces[String(horse.studbook_id)];
                       if (!match.eligible_races.length) return null;
                       // Group by date
                       const byDate: Record<string, typeof match.eligible_races> = {};

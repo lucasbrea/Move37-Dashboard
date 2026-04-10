@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
   const calendar = compressCalendar(calendarData as Parameters<typeof compressCalendar>[0]);
 
   const compressedHorses = horses.map(h => ({
-    id: h.studbook_id,
+    studbook_id: String(h.studbook_id),
     name: h.name,
     races: [...h.races]
       .sort((a, b) => (a.race_date > b.race_date ? -1 : 1))
