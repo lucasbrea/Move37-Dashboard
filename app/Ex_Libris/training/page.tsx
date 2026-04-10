@@ -293,8 +293,13 @@ export default function ExLibrisTrainingPage() {
       });
       if (!res.ok) throw new Error(await res.text());
       const data: { horses: HorseMatch[] } = await res.json();
+      console.log('[race-matches] response keys:', Object.keys(data));
+      console.log('[race-matches] horses count:', data.horses?.length);
+      console.log('[race-matches] first horse:', JSON.stringify(data.horses?.[0]));
       const byId: Record<string, HorseMatch> = {};
       for (const m of data.horses) byId[String(m.studbook_id)] = m;
+      console.log('[race-matches] byId keys:', Object.keys(byId));
+      console.log('[race-matches] horse studbook_ids in training:', horses.map(h => String(h.studbook_id)));
       const updatedAt = new Date().toISOString();
       setSuggestedRaces(byId);
       setSuggestionsUpdatedAt(updatedAt);
