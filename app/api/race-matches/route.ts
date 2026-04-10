@@ -53,7 +53,7 @@ const TOOL: Anthropic.Tool = {
           properties: {
             studbook_id: { type: 'string' },
             name: { type: 'string' },
-            current_analysis: { type: 'string', description: 'Sex, age in May 2026, eligibility class' },
+            current_analysis: { type: 'string' },
             eligible_races: {
               type: 'array',
               items: {
@@ -63,16 +63,14 @@ const TOOL: Anthropic.Tool = {
                   dia_label: { type: 'string' },
                   race_description: { type: 'string' },
                   condicion: { type: 'string' },
-                  categoria_carrera: { type: 'string' },
                   distancia_mts: { type: 'number' },
                   pista: { type: 'string' },
-                  match_reason: { type: 'string' },
                 },
                 required: ['fecha', 'dia_label', 'race_description', 'condicion', 'distancia_mts', 'pista'],
               },
             },
           },
-          required: ['studbook_id', 'name', 'current_analysis', 'eligible_races'],
+          required: ['studbook_id', 'name', 'eligible_races'],
         },
       },
     },
@@ -136,9 +134,9 @@ export async function POST(req: NextRequest) {
       .map(r => ({ date: r.race_date, cond: r.cond, dist: r.distance, pos: r.p })),
   }));
 
-  // Split into two batches to stay within output token limits
-  const mid = Math.ceil(compressed.length / 2);
-  const batches = [compressed.slice(0, mid), compressed.slice(mid)];
+  // Split into three batches of ~4-5 horses to stay within output token limits
+  const size = Math.ceil(compressed.length / 3);
+  const batches = [compressed.slice(0, size), compressed.slice(size, size * 2), compressed.slice(size * 2)];
 
   try {
     const results = await Promise.all(batches.map(b => runBatch(buildPrompt(calendar, b))));
