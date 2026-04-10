@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
-import { readFileSync } from 'fs';
-import path from 'path';
 import type { HorseMatch } from '../../../types/race-matches';
+import calendarData from '../../../public/data/palermo_mayo_2026_calendario.json';
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -88,9 +87,7 @@ export async function POST(req: NextRequest) {
 
   const { horses }: { horses: HorseInput[] } = await req.json();
 
-  const calendarPath = path.join(process.cwd(), 'public', 'data', 'palermo_mayo_2026_calendario.json');
-  const rawCalendar = JSON.parse(readFileSync(calendarPath, 'utf-8'));
-  const calendar = compressCalendar(rawCalendar);
+  const calendar = compressCalendar(calendarData as Parameters<typeof compressCalendar>[0]);
 
   const compressedHorses = horses.map(h => ({
     id: h.studbook_id,
