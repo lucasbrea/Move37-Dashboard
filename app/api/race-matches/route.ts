@@ -133,9 +133,16 @@ For each horse: infer sex, infer current age in May 2026, determine eligibility,
 
   const toolUse = message.content.find(b => b.type === 'tool_use');
   if (!toolUse || toolUse.type !== 'tool_use') {
+    console.error('[race-matches] No tool_use block. Content:', JSON.stringify(message.content));
     return NextResponse.json({ error: 'No tool_use block in response' }, { status: 502 });
   }
 
-  const result = toolUse.input as { horses: HorseMatch[] };
-  return NextResponse.json(result);
+  console.log('[race-matches] tool input keys:', Object.keys(toolUse.input as object));
+  const input = toolUse.input as { horses?: HorseMatch[] } | HorseMatch[];
+  // Normalise: Claude sometimes returns the array directly instead of wrapped
+  const matchedHorses: HorseMatch[] = Array.isArray(input)
+    ? input
+    : (input as { horses?: HorseMatch[] }).horses ?? [];
+
+  return NextResponse.json({ horses: matchedHorses });
 }
