@@ -13,6 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.87.0",
     "@supabase/supabase-js": "^2.50.5",
     "next": "^15.3.2",
     "plotly.js": "^3.0.1",

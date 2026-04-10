@@ -1,0 +1,2048 @@
+{
+  "calendario": {
+    "mes": "Mayo 2026",
+    "hipodromo": "Hipódromo Argentino de Palermo",
+    "notas_generales": {
+      "J": "Para jockeys y jockey aprendices con licencia o permiso de Palermo y San Isidro que no hayan ganado más de 30 carreras. Período: 1/4/25 al 31/3/26.",
+      "ALTERNATIVA": "No podrán participar los SPC pertenecientes a las Caballerizas que ocupen los 15 primeros puestos en la Estadística por Sumas Ganadas. Período: 1/5/25 al 30/4/26.",
+      "cesped": "Las carreras marcadas como 'cesped' se corren sobre pista de césped.",
+      "comision": "La Comisión de Carreras se reserva el derecho de modificar este programa."
+    },
+    "jornadas": [
+      {
+        "fecha": "2026-05-01",
+        "dia_label": "VIE 1",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-04-20",
+          "forfaits": "2026-04-27",
+          "nota": "Inscripción adelantada Serie Clásica República Argentina"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 2000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-01",
+            "nombre": "Gran Premio República Argentina",
+            "grado": "G1",
+            "condicion": "Todo Caballo 4+",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-01",
+            "nombre": "Gran Premio Criadores",
+            "grado": "G1",
+            "condicion": "Todo Caballo (productos 55/53 kg)",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-01",
+            "nombre": "Gran Premio De Las Américas",
+            "grado": "G1",
+            "condicion": "Yeguas 4+ P.P.E.",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-01",
+            "nombre": "Gran Premio Ciudad de Buenos Aires",
+            "grado": "G1",
+            "condicion": "Todo Caballo 4+",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-01",
+            "nombre": "Gran Premio Atucha",
+            "grado": "G1",
+            "condicion": "Todo Caballo 4+",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-01",
+            "nombre": "Gran Premio Especial del Montevideo",
+            "grado": "G1",
+            "condicion": "Todo Caballo 4+ - Interior",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-01",
+            "nombre": "Especial España",
+            "grado": "L",
+            "condicion": "Yeguas 4+ P.P.E.",
+            "distancia_mts": 1000,
+            "pista": "arena",
+            "nota": "NOT FOR SALE - Productos 55/53"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-04",
+        "dia_label": "LUN 4",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-04-27",
+          "forfaits": "2026-04-28"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-04",
+            "nombre": "Handicap Aniversario",
+            "grado": "Handicap",
+            "condicion": "Todo Caballo 4+",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-04",
+            "nombre": "Especial Inauguración Hipódromo Argentino",
+            "grado": "Especial",
+            "condicion": "Todo Caballo 4+ P.P.E.",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-07",
+        "dia_label": "JUE 7",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-04-27",
+          "forfaits": "2026-04-28"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-07",
+            "nombre": "Handicap Caballerizas S.P.C.",
+            "grado": "G3",
+            "condicion": "Yeguas 3+",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-07",
+            "nombre": "Circ. Prop.",
+            "grado": "Especial",
+            "condicion": "Todo Caballo",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-09",
+        "dia_label": "SAB 9",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-04",
+          "forfaits": "2026-05-05"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "cesped"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrillos de 2 años",
+            "sexo": "potrillos",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1+",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1+",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-09",
+            "nombre": "Handicap British Empire",
+            "grado": "Handicap",
+            "condicion": "Todo Caballo 3+ Perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-11",
+        "dia_label": "LUN 11",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-04",
+          "forfaits": "2026-05-05"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "cesped"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "cesped"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrillos de 2 años",
+            "sexo": "potrillos",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 2000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 2000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-11",
+            "nombre": "Handicap",
+            "grado": "Handicap",
+            "condicion": "Yeguas 4+",
+            "distancia_mts": 1400,
+            "pista": "cesped"
+          },
+          {
+            "fecha": "2026-05-11",
+            "nombre": "Especial Juan A. Maldotti",
+            "grado": "Especial",
+            "condicion": "Yeguas 4+",
+            "distancia_mts": 1400,
+            "pista": "cesped"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-17",
+        "dia_label": "DOM 17",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-11",
+          "forfaits": "2026-05-12"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "3-4",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 2200,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-17",
+            "nombre": "Handicap",
+            "grado": "Handicap",
+            "condicion": "Todo Caballo 4+ P.P.E.",
+            "distancia_mts": 1600,
+            "pista": "cesped"
+          },
+          {
+            "fecha": "2026-05-17",
+            "nombre": "Especial Blend",
+            "grado": "L",
+            "condicion": "Todo Caballo 4+ P.P.E.",
+            "distancia_mts": 1600,
+            "pista": "cesped"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-18",
+        "dia_label": "LUN 18",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-11",
+          "forfaits": "2026-05-12"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1300,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrillos de 2 años",
+            "sexo": "potrillos",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-18",
+            "nombre": "Especial del Interior",
+            "grado": "Especial",
+            "condicion": "Todo Caballo 3+ Perdedores - Interior",
+            "distancia_mts": 1000,
+            "pista": "arena",
+            "nota": "Reservado ejemplares del interior que no hayan ganado. Excluidos los que corrieron en Palermo, San Isidro o La Plata."
+          },
+          {
+            "fecha": "2026-05-18",
+            "nombre": "Especial del Interior",
+            "grado": "Especial",
+            "condicion": "Todo Caballo 3+ Perdedores - Interior",
+            "distancia_mts": 1400,
+            "pista": "arena",
+            "nota": "Reservado ejemplares del interior que no hayan ganado. Excluidos los que corrieron en Palermo, San Isidro o La Plata."
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-21",
+        "dia_label": "JUE 21",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-18",
+          "forfaits": "2026-05-19"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1+",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-21",
+            "nombre": "Handicap Atlas",
+            "grado": "Handicap",
+            "condicion": "Todo Caballo 4+",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-23",
+        "dia_label": "SAB 23",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-18",
+          "forfaits": "2026-05-19"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1300,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "3-4",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1+",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-23",
+            "nombre": "Especial Julio Félix Penna",
+            "grado": "Especial",
+            "condicion": "Todo Caballo",
+            "distancia_mts": 2500,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-23",
+            "nombre": "Especial Juan Pedro Artigas",
+            "grado": "Especial",
+            "condicion": "Todo Caballo",
+            "distancia_mts": 1600,
+            "pista": "cesped"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-28",
+        "dia_label": "JUE 28",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-22",
+          "forfaits": "2026-05-26"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 y 6 años",
+            "sexo": "yeguas",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1500,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrillos de 2 años",
+            "sexo": "potrillos",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "2",
+            "distancia_mts": 1800,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-28",
+            "nombre": "Handicap Pcas. Debutantes",
+            "grado": "Handicap",
+            "condicion": "Potrancas Debutantes",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-28",
+            "nombre": "Handicap Pllos. Debutantes",
+            "grado": "Handicap",
+            "condicion": "Potrillos Debutantes",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-05-28",
+            "nombre": "Especial Laramie Trail",
+            "grado": "Especial",
+            "condicion": "Todo Caballo 5+",
+            "distancia_mts": 2000,
+            "pista": "arena"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-05-31",
+        "dia_label": "DOM 31",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-22",
+          "forfaits": "2026-05-26"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 2000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Potrancas de 2 años",
+            "sexo": "potrancas",
+            "edad": "2 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "3-4",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 2000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 2000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1+",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-05-31",
+            "nombre": "Handicap Malvinas Argentinas",
+            "grado": "L",
+            "condicion": "Todo Caballo 3+ P.P.E.",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ]
+      },
+      {
+        "fecha": "2026-06-01",
+        "dia_label": "LUN 1 (Junio)",
+        "hipodromo": "Hipódromo Argentino de Palermo",
+        "inscripciones": {
+          "inscripcion": "2026-05-22",
+          "forfaits": "2026-05-26"
+        },
+        "carreras_perdedores": [
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 y 6 años",
+            "sexo": "todo caballo",
+            "edad": "5 y 6 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 4 años",
+            "sexo": "yeguas",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Caballos de 3 años",
+            "sexo": "caballos",
+            "edad": "3 años",
+            "condicion": "perdedores",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ],
+        "carreras_ganadores": [
+          {
+            "categoria_caballo": "Yeguas de 6 años y más edad",
+            "sexo": "yeguas",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "2-3",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 6 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "6 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1600,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 5 años y más edad",
+            "sexo": "yeguas",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 5 años y más edad",
+            "sexo": "todo caballo",
+            "edad": "5 años y más",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 4 años",
+            "sexo": "todo caballo",
+            "edad": "4 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Yeguas de 3 años",
+            "sexo": "yeguas",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1-2",
+            "distancia_mts": 1400,
+            "pista": "arena"
+          },
+          {
+            "categoria_caballo": "Todo Caballo de 3 años",
+            "sexo": "todo caballo",
+            "edad": "3 años",
+            "condicion": "ganadores",
+            "categoria_carrera": "1",
+            "distancia_mts": 1200,
+            "pista": "arena"
+          }
+        ],
+        "clasicos_especiales_handicaps": [
+          {
+            "fecha": "2026-06-01",
+            "nombre": "Coronel Pringles",
+            "grado": "G3",
+            "condicion": "Todo Caballo 3+ P.P.E.",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          },
+          {
+            "fecha": "2026-06-01",
+            "nombre": "General Lavalle",
+            "grado": "G3",
+            "condicion": "Productos 55/53",
+            "distancia_mts": 1000,
+            "pista": "arena"
+          }
+        ]
+      }
+    ]
+  }
+}

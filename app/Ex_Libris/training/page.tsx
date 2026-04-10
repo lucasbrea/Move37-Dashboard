@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, Fragment, useMemo } from 'react';
+import { useState, Fragment, useMemo, useEffect } from 'react';
 import rawData from '../../../public/data/training_horses.json';
 import { useTrainingLog, EstadoType, TrainingLogEntry, NewTrainingLogEntry } from '../../../hooks/useTrainingLog';
+import type { HorseMatch } from '../../../types/race-matches';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -66,11 +67,6 @@ function race_dateToISO(d: string): string {
   return `${year}-${mm}-${day}`;
 }
 
-function firstLine(s: string | null | undefined): string {
-  if (!s) return '—';
-  const line = s.trim().split('\n')[0];
-  return line.length > 40 ? line.slice(0, 38) + '…' : line;
-}
 
 const ESTADO_STYLES: Record<EstadoType, { label: string; bg: string; text: string; dot: string }> = {
   corriendo: { label: 'Corriendo',  bg: 'bg-green-900/40',  text: 'text-green-300',  dot: 'bg-green-400'  },
@@ -261,6 +257,55 @@ export default function ExLibrisTrainingPage() {
   const [expandedLog, setExpandedLog] = useState<Set<string>>(new Set());
   const [modalHorse, setModalHorse] = useState<TrainingHorse | null>(null);
 
+  const [suggestedRaces, setSuggestedRaces] = useState<Record<string, HorseMatch> | null>(null);
+  const [suggestionsLoading, setSuggestionsLoading] = useState(false);
+  const [suggestionsError, setSuggestionsError] = useState('');
+  const [suggestionsUpdatedAt, setSuggestionsUpdatedAt] = useState<string | null>(null);
+
+  const STORAGE_KEY = 'race_suggestions_v1';
+
+  // Load persisted suggestions on mount
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        const { data, updatedAt } = JSON.parse(stored) as { data: Record<string, HorseMatch>; updatedAt: string };
+        setSuggestedRaces(data);
+        setSuggestionsUpdatedAt(updatedAt);
+      }
+    } catch { /* ignore corrupt storage */ }
+  }, []);
+
+  const fetchSuggestions = async () => {
+    setSuggestionsLoading(true);
+    setSuggestionsError('');
+    try {
+      const res = await fetch('/api/race-matches', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          horses: horses.map(h => ({
+            studbook_id: h.studbook_id,
+            name: h.name,
+            races: h.races,
+          })),
+        }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      const data: { horses: HorseMatch[] } = await res.json();
+      const byId: Record<string, HorseMatch> = {};
+      for (const m of data.horses) byId[m.studbook_id] = m;
+      const updatedAt = new Date().toISOString();
+      setSuggestedRaces(byId);
+      setSuggestionsUpdatedAt(updatedAt);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ data: byId, updatedAt }));
+    } catch (e) {
+      setSuggestionsError(e instanceof Error ? e.message : 'Error loading suggestions');
+    } finally {
+      setSuggestionsLoading(false);
+    }
+  };
+
   const logsByHorse = useMemo(() => {
     const map: Record<string, TrainingLogEntry[]> = {};
     for (const log of logs) {
@@ -298,23 +343,47 @@ export default function ExLibrisTrainingPage() {
           <span className="text-white">Training</span>
         </nav>
 
-        <h1 className="text-3xl sm:text-4xl font-light tracking-tight mb-8">Training</h1>
+        <div className="flex items-center justify-between mb-8 gap-4 flex-wrap">
+          <h1 className="text-3xl sm:text-4xl font-light tracking-tight">Training</h1>
+          <div className="flex items-center gap-3">
+            {suggestionsError && (
+              <span className="text-red-400 text-xs">{suggestionsError}</span>
+            )}
+            {suggestedRaces && !suggestionsLoading && suggestionsUpdatedAt && (
+              <span className="text-green-400/70 text-xs">
+                ✓ Suggestions updated {new Date(suggestionsUpdatedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+              </span>
+            )}
+            <button
+              onClick={fetchSuggestions}
+              disabled={suggestionsLoading}
+              className="px-4 py-2 rounded-lg text-sm font-medium border transition-all duration-150
+                         bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-300 border-yellow-500/30
+                         disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            >
+              {suggestionsLoading ? (
+                <>
+                  <span className="inline-block w-3 h-3 border border-yellow-400/60 border-t-yellow-300 rounded-full animate-spin" />
+                  Thinking…
+                </>
+              ) : suggestedRaces ? 'Suggest Races' : 'Suggest Races'}
+            </button>
+          </div>
+        </div>
 
         <div>
           <table className="w-full text-xs border-collapse">
             <thead>
               <tr className="border-b border-white/10 text-gray-400 text-[10px] uppercase tracking-wider">
-                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Nombre</th>
-                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Madre</th>
-                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Padrillo</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Name</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Dam</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Sire</th>
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PRS</th>
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PR</th>
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PS</th>
-                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Estado</th>
-                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Última Carrera</th>
-                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Próx. Carreras</th>
-                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Campaña</th>
-                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">SB</th>
+                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">State</th>
+                <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Last Race</th>
+                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Results</th>
                 <th className="text-center py-2 pl-2 font-medium whitespace-nowrap">LOG</th>
               </tr>
             </thead>
@@ -333,7 +402,12 @@ export default function ExLibrisTrainingPage() {
                 return (
                   <Fragment key={horse.studbook_id}>
                     <tr className="border-b border-white/5 hover:bg-white/[0.03] transition-colors duration-100">
-                      <td className="py-1.5 px-2 font-medium text-white whitespace-nowrap">{horse.name}</td>
+                      <td className="py-1.5 px-2 font-medium whitespace-nowrap">
+                        <a href={studBookUrl(horse.studbook_id, horse.name)} target="_blank" rel="noopener noreferrer"
+                          className="text-white hover:text-blue-300 transition-colors duration-150">
+                          {horse.name}
+                        </a>
+                      </td>
                       <td className="py-1.5 px-2 text-gray-300 whitespace-nowrap">{horse.M}</td>
                       <td className="py-1.5 px-2 text-gray-300 whitespace-nowrap">{horse.padrillo}</td>
                       <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PRS)}</td>
@@ -364,14 +438,7 @@ export default function ExLibrisTrainingPage() {
                         ) : <span className="text-gray-700">—</span>}
                       </td>
 
-                      {/* Próximas carreras potenciales */}
-                      <td className="py-1.5 px-2 text-gray-400 max-w-[160px]">
-                        {latest?.proximas_carreras
-                          ? <span className="text-gray-300 leading-tight">{firstLine(latest.proximas_carreras)}</span>
-                          : <span className="text-gray-700">—</span>}
-                      </td>
-
-                      {/* Campaña */}
+                      {/* Results */}
                       <td className="py-1.5 px-2 text-center">
                         {horse.races.length > 0 ? (
                           <button
@@ -384,14 +451,6 @@ export default function ExLibrisTrainingPage() {
                             <span style={{ display: 'inline-block', transform: campaignOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>▾</span>
                           </button>
                         ) : <span className="text-gray-600">—</span>}
-                      </td>
-
-                      {/* SB */}
-                      <td className="py-1.5 px-2 text-center">
-                        <a href={studBookUrl(horse.studbook_id, horse.name)} target="_blank" rel="noopener noreferrer"
-                          className="text-blue-400 hover:text-blue-300 transition-colors duration-150">
-                          Ver →
-                        </a>
                       </td>
 
                       {/* LOG */}
@@ -409,7 +468,7 @@ export default function ExLibrisTrainingPage() {
                     {/* Latest comment row — always visible */}
                     {!logsLoading && latest?.comentarios && (
                       <tr className="border-b border-white/5" style={{ background: 'rgba(255,255,255,0.025)' }}>
-                        <td colSpan={12} className="px-4 py-2">
+                        <td colSpan={10} className="px-4 py-2">
                           <div className="flex items-start justify-between gap-6">
                             <div className="flex items-start gap-3 min-w-0">
                               <span className="text-gray-500 text-xs whitespace-nowrap mt-px shrink-0">
@@ -438,7 +497,7 @@ export default function ExLibrisTrainingPage() {
                     {/* Campaign expansion */}
                     {campaignOpen && (
                       <tr className="bg-white/[0.02]">
-                        <td colSpan={12} className="px-8 pb-4 pt-2">
+                        <td colSpan={10} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                               <thead>
@@ -493,10 +552,52 @@ export default function ExLibrisTrainingPage() {
                       </tr>
                     )}
 
+                    {/* AI race suggestions row */}
+                    {suggestedRaces?.[horse.studbook_id] && (() => {
+                      const match = suggestedRaces[horse.studbook_id];
+                      if (!match.eligible_races.length) return null;
+                      // Group by date
+                      const byDate: Record<string, typeof match.eligible_races> = {};
+                      for (const r of match.eligible_races) {
+                        if (!byDate[r.fecha]) byDate[r.fecha] = [];
+                        byDate[r.fecha].push(r);
+                      }
+                      return (
+                        <tr style={{ background: 'rgba(234,179,8,0.04)' }}>
+                          <td colSpan={10} className="px-4 pb-3 pt-2 border-b border-yellow-500/10">
+                            <div className="flex items-start gap-3 flex-wrap">
+                              <span className="text-[10px] text-yellow-500/60 uppercase tracking-widest shrink-0 mt-1">
+                                Mayo 2026
+                              </span>
+                              <span className="text-[10px] text-gray-600 shrink-0 mt-1 hidden sm:inline">
+                                {match.current_analysis}
+                              </span>
+                              <div className="flex flex-wrap gap-1.5 mt-0.5">
+                                {Object.entries(byDate).sort().map(([fecha, races]) =>
+                                  races.map((r, i) => (
+                                    <span
+                                      key={`${fecha}-${i}`}
+                                      title={r.match_reason}
+                                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px]
+                                                 bg-yellow-500/10 text-yellow-200/80 border border-yellow-500/20
+                                                 hover:bg-yellow-500/20 transition-colors cursor-default"
+                                    >
+                                      <span className="text-yellow-500/50">{r.dia_label}</span>
+                                      {r.race_description}
+                                    </span>
+                                  ))
+                                )}
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })()}
+
                     {/* Log history expansion */}
                     {logOpen && horseLog.length > 0 && (
                       <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
-                        <td colSpan={12} className="px-6 pb-5 pt-4 border-b border-white/8">
+                        <td colSpan={10} className="px-6 pb-5 pt-4 border-b border-white/8">
                           <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-4">
                             Historial — {horse.name}
                           </p>
