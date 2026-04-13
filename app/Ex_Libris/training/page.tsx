@@ -3,7 +3,7 @@
 import { useState, Fragment, useMemo, useEffect } from 'react';
 import rawData from '../../../public/data/training_horses.json';
 import { useTrainingLog, EstadoType, TrainingLogEntry, NewTrainingLogEntry } from '../../../hooks/useTrainingLog';
-import type { HorseMatch } from '../../../types/race-matches';
+import type { HorseMatch, EligibleRace } from '../../../types/race-matches';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -33,6 +33,9 @@ interface TrainingHorse {
   PR: number | null;
   PS: number | null;
   yegua_studbook_id: string;
+  age: number | null;
+  sex_cat: string | null;
+  total_win: number | null;
   races: TrainingRace[];
 }
 
@@ -67,6 +70,12 @@ function race_dateToISO(d: string): string {
   return `${year}-${mm}-${day}`;
 }
 
+
+const TRACK_DOT: Record<string, string> = {
+  'Palermo':    'bg-sky-400',
+  'San Isidro': 'bg-emerald-400',
+  'La Plata':   'bg-orange-400',
+};
 
 const ESTADO_STYLES: Record<EstadoType, { label: string; bg: string; text: string; dot: string }> = {
   corriendo: { label: 'Corriendo',  bg: 'bg-green-900/40',  text: 'text-green-300',  dot: 'bg-green-400'  },
@@ -243,6 +252,84 @@ function LogModal({
   );
 }
 
+// ── Race Detail Modal ─────────────────────────────────────────────────────────
+
+function RaceDetailModal({ race, onClose }: { race: EligibleRace; onClose: () => void }) {
+  const monthLabel = race.fecha.startsWith('2026-04') ? 'Abril 2026' : race.fecha.startsWith('2026-05') ? 'Mayo 2026' : race.fecha.slice(0, 7);
+  const surface = race.pista === 'cesped' ? 'Césped (Turf)' : 'Arena';
+  const sectionLabel = race.section === 'PERDEDORES' ? 'Perdedores' : race.section === 'GANADORES' ? 'Ganadores' : 'Clásico / Especial / HCP';
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4" onClick={onClose}>
+      <div
+        className="bg-[#0a192f] border border-white/15 rounded-xl max-w-sm w-full shadow-2xl overflow-hidden"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className={`px-5 py-4 flex items-start justify-between gap-3 border-b border-white/10
+          ${race.group === 'G1' ? 'bg-amber-500/10' : race.group === 'G2' ? 'bg-purple-500/10' : race.group ? 'bg-blue-500/10' : 'bg-white/5'}`}>
+          <div>
+            {race.group && (
+              <span className={`text-[10px] font-bold uppercase tracking-widest mr-2
+                ${race.group === 'G1' ? 'text-amber-400' : race.group === 'G2' ? 'text-purple-400' : 'text-blue-400'}`}>
+                {race.group}
+              </span>
+            )}
+            <span className="text-white font-medium">
+              {race.name ?? sectionLabel}
+            </span>
+          </div>
+          <button onClick={onClose} className="text-gray-500 hover:text-white text-xl leading-none shrink-0 mt-0.5">×</button>
+        </div>
+
+        {/* Body */}
+        <div className="px-5 py-4 space-y-3 text-sm">
+          <div className="flex items-center gap-2 text-gray-300">
+            <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Fecha</span>
+            <span>{race.dia_label} · <span className="text-gray-500">{monthLabel}</span></span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-300">
+            <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Distancia</span>
+            <span>{race.distancia_mts}m</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-300">
+            <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Superficie</span>
+            <span className={race.pista === 'cesped' ? 'text-green-400' : ''}>{surface}</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-300">
+            <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Sección</span>
+            <span>{sectionLabel}</span>
+          </div>
+          {race.categoria_raw && (
+            <div className="flex items-start gap-2 text-gray-300">
+              <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Categoría</span>
+              <span className="leading-relaxed">{race.categoria_raw}</span>
+            </div>
+          )}
+          {race.wins_range && (
+            <div className="flex items-center gap-2 text-gray-300">
+              <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Victorias</span>
+              <span>{race.wins_range}</span>
+            </div>
+          )}
+          {race.conditions && (
+            <div className="flex items-center gap-2 text-gray-300">
+              <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Condición</span>
+              <span className="text-yellow-300/80">{race.conditions}</span>
+            </div>
+          )}
+          {race.condicion && !['Perdedor'].includes(race.condicion) && (
+            <div className="flex items-center gap-2 text-gray-300">
+              <span className="text-gray-500 w-24 shrink-0 text-xs uppercase tracking-wider">Tipo</span>
+              <span className="text-gray-400">{race.condicion}</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Main page ─────────────────────────────────────────────────────────────────
 
 export default function ExLibrisTrainingPage() {
@@ -256,13 +343,19 @@ export default function ExLibrisTrainingPage() {
   const [expandedCampaign, setExpandedCampaign] = useState<Set<string>>(new Set());
   const [expandedLog, setExpandedLog] = useState<Set<string>>(new Set());
   const [modalHorse, setModalHorse] = useState<TrainingHorse | null>(null);
+  const [selectedRace, setSelectedRace] = useState<EligibleRace | null>(null);
+
+  // ── Race suggestion filters ────────────────────────────────────────────────
+  const [filterTrack, setFilterTrack] = useState<string>('all');
+  const [filterMonth, setFilterMonth] = useState<string>('all');
+  const [filterWeek, setFilterWeek] = useState<string>('all');
 
   const [suggestedRaces, setSuggestedRaces] = useState<Record<string, HorseMatch> | null>(null);
   const [suggestionsLoading, setSuggestionsLoading] = useState(false);
   const [suggestionsError, setSuggestionsError] = useState('');
   const [suggestionsUpdatedAt, setSuggestionsUpdatedAt] = useState<string | null>(null);
 
-  const STORAGE_KEY = 'race_suggestions_v1';
+  const STORAGE_KEY = 'race_suggestions_master_v1';
 
   // Load persisted suggestions on mount
   useEffect(() => {
@@ -280,14 +373,16 @@ export default function ExLibrisTrainingPage() {
     setSuggestionsLoading(true);
     setSuggestionsError('');
     try {
-      const res = await fetch('/api/race-matches', {
+      const res = await fetch('/api/race-matches-abril', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           horses: horses.map(h => ({
             studbook_id: h.studbook_id,
             name: h.name,
-            races: h.races,
+            age: h.age,
+            sex_cat: h.sex_cat,
+            total_win: h.total_win,
           })),
         }),
       });
@@ -319,6 +414,23 @@ export default function ExLibrisTrainingPage() {
     }
     return map;
   }, [logs]);
+
+  // ── Filter options derived from all eligible races ─────────────────────────
+  const filterOptions = useMemo(() => {
+    if (!suggestedRaces) return { tracks: [] as string[], months: [] as string[], weeks: [] as string[] };
+    const all = Object.values(suggestedRaces).flatMap(h => h.eligible_races);
+    const tracks = Array.from(new Set(all.map(r => r.track).filter(Boolean) as string[])).sort();
+    const months = Array.from(new Set(all.map(r => r.month).filter(Boolean) as string[]));
+    const weeks  = Array.from(new Set(all.map(r => r.week).filter(Boolean) as string[])).sort();
+    return { tracks, months, weeks };
+  }, [suggestedRaces]);
+
+  function weekLabel(iso: string) {
+    const mon = new Date(iso + 'T12:00:00Z');
+    const sun = new Date(mon); sun.setUTCDate(mon.getUTCDate() + 6);
+    const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${M[mon.getUTCMonth()]} ${mon.getUTCDate()}–${sun.getUTCDate()}`;
+  }
 
   const toggleCampaign = (id: string) => {
     setExpandedCampaign(prev => {
@@ -375,6 +487,69 @@ export default function ExLibrisTrainingPage() {
             </button>
           </div>
         </div>
+
+        {/* ── Filter bar (shown once suggestions are loaded) ── */}
+        {suggestedRaces && (
+          <div className="mb-4 flex flex-wrap gap-y-2 gap-x-4 text-[11px]">
+            {/* Track */}
+            <div className="flex items-center gap-1.5">
+              <span className="text-gray-500 uppercase tracking-wider">Track</span>
+              {['all', ...filterOptions.tracks].map(t => (
+                <button key={t} onClick={() => setFilterTrack(t)}
+                  className={`px-2 py-0.5 rounded border transition-colors ${
+                    filterTrack === t
+                      ? 'bg-white/15 text-white border-white/30'
+                      : 'text-gray-400 border-white/10 hover:text-white hover:border-white/20'
+                  }`}>
+                  {t === 'all' ? 'Todos' : t}
+                </button>
+              ))}
+            </div>
+            {/* Track color key */}
+            <div className="flex items-center gap-2 ml-1">
+              {Object.entries(TRACK_DOT).map(([name, dot]) => (
+                <span key={name} className="flex items-center gap-1 text-gray-500">
+                  <span className={`w-1.5 h-1.5 rounded-full ${dot}`} />
+                  {name}
+                </span>
+              ))}
+            </div>
+            {/* Month */}
+            <div className="flex items-center gap-1.5">
+              <span className="text-gray-500 uppercase tracking-wider">Mes</span>
+              {['all', ...filterOptions.months].map(m => (
+                <button key={m} onClick={() => { setFilterMonth(m); setFilterWeek('all'); }}
+                  className={`px-2 py-0.5 rounded border transition-colors ${
+                    filterMonth === m
+                      ? 'bg-white/15 text-white border-white/30'
+                      : 'text-gray-400 border-white/10 hover:text-white hover:border-white/20'
+                  }`}>
+                  {m === 'all' ? 'Todos' : m.replace(' 2026', '')}
+                </button>
+              ))}
+            </div>
+            {/* Week */}
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-gray-500 uppercase tracking-wider">Semana</span>
+              {['all', ...filterOptions.weeks
+                .filter(w => filterMonth === 'all' || (() => {
+                  const d = new Date(w + 'T12:00:00Z');
+                  const label = d.toLocaleDateString('es-AR', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+                  return filterMonth === 'all' || filterMonth.toLowerCase().startsWith(label.split(' ')[0].substring(0,3).toLowerCase());
+                })())
+              ].map(w => (
+                <button key={w} onClick={() => setFilterWeek(w)}
+                  className={`px-2 py-0.5 rounded border transition-colors ${
+                    filterWeek === w
+                      ? 'bg-white/15 text-white border-white/30'
+                      : 'text-gray-400 border-white/10 hover:text-white hover:border-white/20'
+                  }`}>
+                  {w === 'all' ? 'Todas' : weekLabel(w)}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div>
           <table className="w-full text-xs border-collapse">
@@ -561,9 +736,16 @@ export default function ExLibrisTrainingPage() {
                     {suggestedRaces?.[String(horse.studbook_id)] && (() => {
                       const match = suggestedRaces[String(horse.studbook_id)];
                       if (!match.eligible_races.length) return null;
-                      // Group by date
+                      // Apply filters then group by date
+                      const filtered = match.eligible_races.filter(r => {
+                        if (filterTrack !== 'all' && r.track !== filterTrack) return false;
+                        if (filterMonth !== 'all' && r.month !== filterMonth) return false;
+                        if (filterWeek !== 'all' && r.week !== filterWeek) return false;
+                        return true;
+                      });
+                      if (!filtered.length) return null;
                       const byDate: Record<string, typeof match.eligible_races> = {};
-                      for (const r of match.eligible_races) {
+                      for (const r of filtered) {
                         if (!byDate[r.fecha]) byDate[r.fecha] = [];
                         byDate[r.fecha].push(r);
                       }
@@ -572,25 +754,43 @@ export default function ExLibrisTrainingPage() {
                           <td colSpan={10} className="px-4 pb-3 pt-2 border-b border-yellow-500/10">
                             <div className="flex items-start gap-3 flex-wrap">
                               <span className="text-[10px] text-yellow-500/60 uppercase tracking-widest shrink-0 mt-1">
-                                Mayo 2026
+                                Abril 2026
                               </span>
                               <span className="text-[10px] text-gray-600 shrink-0 mt-1 hidden sm:inline">
                                 {match.current_analysis}
                               </span>
                               <div className="flex flex-wrap gap-1.5 mt-0.5">
                                 {Object.entries(byDate).sort().map(([fecha, races]) =>
-                                  races.map((r, i) => (
-                                    <span
-                                      key={`${fecha}-${i}`}
-                                      title={r.match_reason}
-                                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px]
-                                                 bg-yellow-500/10 text-yellow-200/80 border border-yellow-500/20
-                                                 hover:bg-yellow-500/20 transition-colors cursor-default"
-                                    >
-                                      <span className="text-yellow-500/50">{r.dia_label}</span>
-                                      {r.race_description}
-                                    </span>
-                                  ))
+                                  races.map((r, i) => {
+                                    const isGroup = !!r.group;
+                                    const isG1 = r.group === 'G1';
+                                    const isG2 = r.group === 'G2';
+                                    const trackDot = r.track ? (TRACK_DOT[r.track] ?? 'bg-gray-400') : null;
+                                    return (
+                                      <span
+                                        key={`${fecha}-${i}`}
+                                        title={`${r.track ? r.track + ' · ' : ''}${r.match_reason}`}
+                                        onClick={() => setSelectedRace(r)}
+                                        className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px]
+                                                   border transition-colors cursor-pointer
+                                                   ${isG1
+                                                     ? 'bg-amber-500/15 text-amber-200/90 border-amber-500/30 hover:bg-amber-500/25'
+                                                     : isG2
+                                                     ? 'bg-purple-500/15 text-purple-200/90 border-purple-500/30 hover:bg-purple-500/25'
+                                                     : isGroup
+                                                     ? 'bg-blue-500/15 text-blue-200/90 border-blue-500/30 hover:bg-blue-500/25'
+                                                     : 'bg-yellow-500/10 text-yellow-200/80 border-yellow-500/20 hover:bg-yellow-500/20'
+                                                   }`}
+                                      >
+                                        {trackDot && <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${trackDot}`} />}
+                                        <span className="opacity-50">{r.dia_label}</span>
+                                        {r.race_description}
+                                        {r.condicion && (
+                                          <span className="opacity-40 text-[9px] ml-0.5">· {r.condicion}</span>
+                                        )}
+                                      </span>
+                                    );
+                                  })
                                 )}
                               </div>
                             </div>
@@ -642,6 +842,11 @@ export default function ExLibrisTrainingPage() {
             </tbody>
           </table>
         </div>
+
+        {/* Race Detail Modal */}
+        {selectedRace && (
+          <RaceDetailModal race={selectedRace} onClose={() => setSelectedRace(null)} />
+        )}
 
         {/* Log Modal */}
         {modalHorse && (
