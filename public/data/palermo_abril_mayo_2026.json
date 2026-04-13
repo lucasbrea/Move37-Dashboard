@@ -1,0 +1,5776 @@
+{
+  "hippodromo": "Hipódromo Argentino de Palermo",
+  "months": [
+    "Abril 2026",
+    "Mayo 2026"
+  ],
+  "total_races": 336,
+  "inscription_dates": [
+    {
+      "date": "2026-03-30",
+      "label": "LUNES 30 de MARZO",
+      "type": "Inscripciones"
+    },
+    {
+      "date": "2026-03-31",
+      "label": "Martes 31 de Marzo",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-04-06",
+      "label": "Lunes 6 de Abril",
+      "type": "Inscripciones"
+    },
+    {
+      "date": "2026-04-07",
+      "label": "Martes 7 de Abril",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-04-13",
+      "label": "Lunes 13 de Abril",
+      "type": "Inscripciones"
+    },
+    {
+      "date": "2026-04-14",
+      "label": "Martes 14 de Abril",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-04-20",
+      "label": "LUNES 20 de ABRIL",
+      "type": "Inscripciones"
+    },
+    {
+      "date": "2026-04-21",
+      "label": "Martes 21 de Abril",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-04-27",
+      "label": "LUNES 27 de ABRIL",
+      "type": "Inscripciones (Mayo)"
+    },
+    {
+      "date": "2026-04-28",
+      "label": "Martes 28 de Abril",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-05-04",
+      "label": "Lunes 4 de Mayo",
+      "type": "Inscripciones"
+    },
+    {
+      "date": "2026-05-05",
+      "label": "Martes 5 de Mayo",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-05-11",
+      "label": "Lunes 11 de Mayo",
+      "type": "Inscripciones"
+    },
+    {
+      "date": "2026-05-12",
+      "label": "Martes 12 de Mayo",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-05-18",
+      "label": "Lunes 18 de Mayo",
+      "type": "Inscripciones"
+    },
+    {
+      "date": "2026-05-19",
+      "label": "Martes 19 de Mayo",
+      "type": "Forfaits y Compromisos de Monta"
+    },
+    {
+      "date": "2026-05-22",
+      "label": "VIERNES 22 de MAYO",
+      "type": "Inscripciones (DOM 31 y LUN 1 Jun)"
+    },
+    {
+      "date": "2026-05-26",
+      "label": "Martes 26 de Mayo",
+      "type": "Forfaits y Compromisos de Monta"
+    }
+  ],
+  "important_dates": [
+    {
+      "date": "2026-03-20",
+      "description": "INSCRIPCIÓN ADELANTADA para los Grandes Premios GILBERTO LERENA (G1) y DE HONOR (G1)"
+    },
+    {
+      "date": "2026-03-30",
+      "description": "FORFAITS y COMPROMISOS DE MONTA y SORTEO DE PARTIDORES"
+    },
+    {
+      "date": "2026-04-20",
+      "description": "INSCRIPCIÓN ADELANTADA para los Grandes Premios de la SERIE CLASICA REPÚBLICA ARGENTINA del JUEVES 1 de MAYO"
+    },
+    {
+      "date": "2026-04-27",
+      "description": "FORFAITS y COMPROMISOS DE MONTA"
+    },
+    {
+      "date": "2026-05-18",
+      "description": "ESPECIALES DEL INTERIOR - reservados para ejemplares de 3 años y más edad que no hayan ganado, provenientes del interior, en 1000 y 1400 metros"
+    },
+    {
+      "date": "2026-05-22",
+      "description": "INSCRIPCIÓN ADELANTADA para las reuniones de DOM 31 de MAYO y LUN 1 de JUNIO"
+    }
+  ],
+  "legend": {
+    "J": "Para jockeys y jockey aprendices con licencia o permiso de Palermo y San Isidro que no hayan ganado más de 30 carreras (Período: 1/3/25 al 29/2/26)",
+    "OPC": "Opcional - carrera complementaria",
+    "ALTERNATIVA": "No podrán participar los SPC pertenecientes a las Caballerizas que ocupen los 15 primeros puestos en la Estadística por Sumas Ganadas (Período: 1/4/25 al 31/3/26)",
+    "P.P.E.": "Peso Por Edad",
+    "NG": "No Ganadores",
+    "CESPED": "Carrera sobre césped (turf)",
+    "HCP": "Handicap",
+    "STK": "Stakes (Clásico con grupo asignado)",
+    "L": "Listed - carrera listada (sin grupo asignado)"
+  },
+  "races": [
+    {
+      "id": 1,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 2,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 3,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 4,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 5,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 6,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "jockey_restriction": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 7,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 8,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "jockey_restriction": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 9,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 10,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 11,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 12,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 13,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 14,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "age_note": "4y5",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 15,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 16,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 17,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 18,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 19,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 20,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 21,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 22,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 23,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 24,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "age_note": "4y5",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 25,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 26,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 27,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 28,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "optional": true,
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 29,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 30,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 31,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 32,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 33,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 34,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 35,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 36,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 37,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 38,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 39,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 40,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 41,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 42,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 43,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 44,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 45,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 46,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 47,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 48,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 49,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 50,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 51,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 52,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 53,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 54,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 55,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 56,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 57,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "Benito VILLANUEVA",
+      "eligible": "T.Caballo 3+",
+      "distance": 1600,
+      "surface": "arena",
+      "group": "G2",
+      "conditions": "P.P.E.",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 58,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "Gilberto LERENA",
+      "eligible": "Yeguas 3+",
+      "distance": 2200,
+      "surface": "cesped",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 59,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "DE HONOR",
+      "eligible": "T.Caballo 3+",
+      "distance": 2000,
+      "surface": "arena",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 60,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "ESTADOS UNIDOS",
+      "eligible": "T.Caballo 3+",
+      "distance": 1000,
+      "surface": "arena",
+      "group": "G3",
+      "conditions": "P.P.E.",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 61,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "ARTURO A",
+      "eligible": "T.Caballo 4+",
+      "distance": 2500,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 62,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "Clásico Carlos A. PEZOA",
+      "eligible": "Productos 55/53",
+      "distance": 1000,
+      "surface": "arena",
+      "conditions": "NG",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 63,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "Juan Carlos NORIEGA",
+      "eligible": "Yeguas 5+",
+      "distance": 1600,
+      "surface": "cesped",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 64,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "MANANTIAL",
+      "eligible": "T.Caballo 4+",
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 65,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "ESPECIAL DEL INTERIOR",
+      "eligible": "T.Caballo 3+ Perdedores",
+      "distance": 1000,
+      "surface": "arena",
+      "notes": "Reservado para ejemplares del interior que no hayan ganado",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 66,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "ESPECIAL DEL INTERIOR",
+      "eligible": "T.Caballo 3+ Perdedores",
+      "distance": 1400,
+      "surface": "arena",
+      "notes": "Reservado para ejemplares del interior que no hayan ganado",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 67,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "ASOC. PROP. CAB. CARRERA",
+      "eligible": "Yeguas 3+",
+      "distance": 1400,
+      "surface": "cesped",
+      "group": "G3",
+      "conditions": "P.P.E.",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 68,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "CON BRIO",
+      "eligible": "Yeguas 4+",
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 69,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "Carlos Alberto ZARLENGO",
+      "eligible": "Yeguas 5+",
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 70,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "PRACTICANTE",
+      "eligible": "T.Caballo 5+",
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 71,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 72,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 73,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 74,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 75,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 76,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "jockey_restriction": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 77,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 78,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 79,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 80,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 81,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 82,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 83,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 84,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 85,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 86,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 87,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 88,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 89,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 90,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 91,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 92,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 93,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 2200,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 94,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 95,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 96,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 97,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 98,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 99,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 100,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 101,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 2200,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 102,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 103,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 104,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 105,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 106,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 107,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 108,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 109,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 110,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 111,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 112,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 113,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 114,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 115,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 116,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 117,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 118,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 119,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 120,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 121,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 122,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 123,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 124,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 125,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 126,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 127,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 128,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 129,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 130,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 131,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 132,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 133,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 134,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 135,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 136,
+      "date": "2026-04-04",
+      "date_label": "SAB 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 137,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 138,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 139,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 140,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 141,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 142,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 143,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 144,
+      "date": "2026-04-06",
+      "date_label": "LUN 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 145,
+      "date": "2026-04-10",
+      "date_label": "VIE 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 146,
+      "date": "2026-04-13",
+      "date_label": "LUN 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 147,
+      "date": "2026-04-17",
+      "date_label": "VIE 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 148,
+      "date": "2026-04-19",
+      "date_label": "DOM 19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "alternative": true,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 149,
+      "date": "2026-04-20",
+      "date_label": "LUN 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 150,
+      "date": "2026-04-26",
+      "date_label": "DOM 26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 151,
+      "date": "2026-04-27",
+      "date_label": "LUN 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Abril 2026"
+    },
+    {
+      "id": 152,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 153,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 154,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 155,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 156,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 157,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 158,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 159,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 160,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 161,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 162,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 163,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 164,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 165,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 166,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 167,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 168,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 169,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 170,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 171,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 172,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 173,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 174,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 175,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 176,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 177,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 178,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 179,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 180,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 181,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 182,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 183,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 184,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 185,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 186,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 187,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 188,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 189,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 190,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 191,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 192,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 193,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 194,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 195,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 196,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 197,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 198,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 199,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 200,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 201,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 202,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 203,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 204,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 205,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 206,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 207,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 208,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 209,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 210,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 211,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 212,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 213,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "REPÚBLICA ARGENTINA",
+      "eligible": "T.Caballo 4+",
+      "distance": 1200,
+      "surface": "arena",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "notes": "Inscripción adelantada 20/4",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 214,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "CRIADORES",
+      "eligible": "Yeguas 4+",
+      "distance": 1000,
+      "surface": "arena",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 215,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "DE LAS AMERICAS",
+      "eligible": "Yeguas 4+",
+      "distance": 1000,
+      "surface": "arena",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 216,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "CIUDAD DE BUENOS AIRES",
+      "eligible": "T.Caballo 3+",
+      "distance": 1600,
+      "surface": "arena",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 217,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "ATUCHA",
+      "eligible": "T.Caballo 4+",
+      "distance": 1200,
+      "surface": "arena",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 218,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "MONTEVIDEO",
+      "eligible": "T.Caballo 4+",
+      "distance": 1200,
+      "surface": "arena",
+      "group": "G1",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 219,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "NOT FOR SALE",
+      "eligible": "Productos 55/53",
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 220,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Listed",
+      "name": "ESPAÑA",
+      "eligible": "Yeguas 4+",
+      "distance": 1000,
+      "surface": "arena",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 221,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "ANIVERSARIO INAUGURACIÓN",
+      "eligible": "T.Caballo 4+",
+      "distance": 1600,
+      "surface": "arena",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 222,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "HIP. ARGENTINO",
+      "eligible": "T.Caballo 4+",
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 223,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "CABALLERIZAS S.P.C.",
+      "eligible": "Yeguas 3+",
+      "distance": 1600,
+      "surface": "arena",
+      "group": "G3",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 224,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "CIRC. PROP.",
+      "eligible": "T.Caballo 3+",
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 225,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "BRITISH EMPIRE",
+      "eligible": "Yeguas 4+",
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 226,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "HANDICAP",
+      "eligible": "T.Caballo 4+",
+      "distance": 1600,
+      "surface": "cesped",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 227,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "Juan A. MALDOTTI",
+      "eligible": "Yeguas 4+",
+      "distance": 1400,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 228,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Listed",
+      "name": "BLEND",
+      "eligible": "T.Caballo 4+",
+      "distance": 1600,
+      "surface": "cesped",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 229,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "ESPECIAL DEL INTERIOR",
+      "eligible": "T.Caballo 3+ Perdedores",
+      "distance": 1000,
+      "surface": "arena",
+      "notes": "Reservado para ejemplares del interior que no hayan ganado",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 230,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "ESPECIAL DEL INTERIOR",
+      "eligible": "T.Caballo 3+ Perdedores",
+      "distance": 1400,
+      "surface": "arena",
+      "notes": "Reservado para ejemplares del interior que no hayan ganado",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 231,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "ATLAS",
+      "eligible": "T.Caballo 4+",
+      "distance": 2500,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 232,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "Juan Pedro ARTIGAS",
+      "eligible": "Pcas. Debutantes",
+      "distance": 1000,
+      "surface": "arena",
+      "notes": "Potrancas debutantes",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 233,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "Julio Félix PENNA",
+      "eligible": "Pllos. Debutantes",
+      "distance": 1600,
+      "surface": "arena",
+      "notes": "Potrillos debutantes",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 234,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "ESPECIAL",
+      "eligible": "Pcas. Debutantes",
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 235,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "LARAMIE TRAIL",
+      "eligible": "T.Caballo 5+",
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 236,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Listed",
+      "name": "MALVINAS ARGENTINAS",
+      "eligible": "T.Caballo 3+",
+      "distance": 1000,
+      "surface": "arena",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 237,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "Coronel PRINGLES",
+      "eligible": "T.Caballo 3+",
+      "distance": 1000,
+      "surface": "arena",
+      "group": "G3",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 238,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "General LAVALLE",
+      "eligible": "Productos 55/53",
+      "distance": 1000,
+      "surface": "arena",
+      "group": "G3",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 239,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 240,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 241,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 242,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 243,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 244,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 245,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 246,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 247,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 248,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 249,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 250,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 251,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 252,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 253,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 254,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 255,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 256,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 257,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 258,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 259,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 260,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 261,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 262,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 263,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 264,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 265,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 266,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 267,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 268,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 269,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 270,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 271,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 272,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 273,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 274,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 275,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 276,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 277,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 278,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 279,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 280,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 281,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 282,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 283,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 284,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 285,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 286,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 287,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 288,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 289,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 290,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 291,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 292,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 293,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 294,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 295,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 296,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 297,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 298,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 299,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 300,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 301,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1800,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 302,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 303,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 304,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 305,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 306,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 307,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 308,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 309,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 310,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 311,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 312,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 313,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 314,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 315,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 316,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 317,
+      "date": "2026-05-04",
+      "date_label": "LUN 4",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 318,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 319,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 320,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 321,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 322,
+      "date": "2026-05-23",
+      "date_label": "SAB 23",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 323,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 324,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 325,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 326,
+      "date": "2026-05-01",
+      "date_label": "VIE 1",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 327,
+      "date": "2026-05-07",
+      "date_label": "JUE 7",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 328,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 329,
+      "date": "2026-05-09",
+      "date_label": "SAB 9",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 330,
+      "date": "2026-05-11",
+      "date_label": "LUN 11",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 331,
+      "date": "2026-05-17",
+      "date_label": "DOM 17",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 2200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "alternative": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 332,
+      "date": "2026-05-18",
+      "date_label": "LUN 18",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 333,
+      "date": "2026-05-21",
+      "date_label": "JUE 21",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 334,
+      "date": "2026-05-28",
+      "date_label": "JUE 28",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 335,
+      "date": "2026-05-31",
+      "date_label": "DOM 31",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 336,
+      "date": "2026-06-01",
+      "date_label": "LUN 1 (Junio)",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    }
+  ]
+}
