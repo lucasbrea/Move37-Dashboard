@@ -4,10 +4,13 @@
     "name": "FOREVER LICINIUS",
     "padrillo": "PUERTO ESCONDIDO",
     "M": "FORLISA",
-    "PRS": 0.017005067,
-    "PR": 0.49463978,
-    "PS": 0.034378689,
+    "PRS": 0.017123519,
+    "PR": 0.48985547,
+    "PS": 0.034956265,
     "yegua_studbook_id": 353106,
+    "age": 5,
+    "sex_cat": "Hembra",
+    "total_win": 3.0,
     "races": [
       {
         "race_date": "31jan2024",
@@ -19,10 +22,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 111.50341,
-        "pwin_bsn": 103.63945,
+        "bsn": 111.54563,
+        "pwin_bsn": 103.65004,
         "ema_past_bsn": null,
-        "glicko": 2098.9351
+        "glicko": 2099.1143
       },
       {
         "race_date": "21feb2024",
@@ -34,10 +37,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 113.10355,
-        "pwin_bsn": 111.19693,
-        "ema_past_bsn": 111.50341,
-        "glicko": 2126.9065
+        "bsn": 113.14288,
+        "pwin_bsn": 111.22054,
+        "ema_past_bsn": 111.54563,
+        "glicko": 2127.0923
       },
       {
         "race_date": "29mar2024",
@@ -49,10 +52,10 @@
         "estado": "Normal",
         "p": 7.0,
         "ecpos": 9.25,
-        "bsn": 105.51759,
-        "pwin_bsn": 113.42941,
-        "ema_past_bsn": 112.57017,
-        "glicko": 2057.1011
+        "bsn": 105.56223,
+        "pwin_bsn": 113.46168,
+        "ema_past_bsn": 112.61047,
+        "glicko": 2057.2578
       },
       {
         "race_date": "19may2024",
@@ -64,10 +67,10 @@
         "estado": "Normal",
         "p": 7.0,
         "ecpos": 13.60000000149012,
-        "bsn": 91.295998,
-        "pwin_bsn": 118.02644,
-        "ema_past_bsn": 109.04388,
-        "glicko": 1970.713
+        "bsn": 91.3302,
+        "pwin_bsn": 118.04585,
+        "ema_past_bsn": 109.08635,
+        "glicko": 1970.8857
       },
       {
         "race_date": "05jun2024",
@@ -79,10 +82,10 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 2.550000011920929,
-        "bsn": 109.95449,
-        "pwin_bsn": 120.36662,
-        "ema_past_bsn": 101.94473,
-        "glicko": 2017.5338
+        "bsn": 110.03202,
+        "pwin_bsn": 120.39191,
+        "ema_past_bsn": 101.98389,
+        "glicko": 2017.7202
       },
       {
         "race_date": "19jul2024",
@@ -94,10 +97,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 107.60175,
-        "pwin_bsn": 116.29262,
-        "ema_past_bsn": 104.61465,
-        "glicko": 2048.2036
+        "bsn": 107.63529,
+        "pwin_bsn": 116.31731,
+        "ema_past_bsn": 104.6666,
+        "glicko": 2048.4355
       },
       {
         "race_date": "20aug2024",
@@ -109,10 +112,10 @@
         "estado": "Normal",
         "p": 5.0,
         "ecpos": 14.35000000149012,
-        "bsn": 105.36121,
-        "pwin_bsn": 120.58943,
-        "ema_past_bsn": 105.46811,
-        "glicko": 2017.6792
+        "bsn": 105.38312,
+        "pwin_bsn": 120.64436,
+        "ema_past_bsn": 105.51479,
+        "glicko": 2017.9116
       },
       {
         "race_date": "09oct2024",
@@ -124,10 +127,10 @@
         "estado": "Normal",
         "p": 6.0,
         "ecpos": 27.35000000149012,
-        "bsn": 71.705063,
-        "pwin_bsn": 118.80025,
-        "ema_past_bsn": 105.44138,
-        "glicko": 1989.6387
+        "bsn": 71.731422,
+        "pwin_bsn": 118.81794,
+        "ema_past_bsn": 105.48187,
+        "glicko": 1989.8656
       },
       {
         "race_date": "04nov2024",
@@ -139,10 +142,10 @@
         "estado": "Not_Normal",
         "p": 7.0,
         "ecpos": 16.25,
-        "bsn": 89.541069,
-        "pwin_bsn": 126.62807,
-        "ema_past_bsn": 97.94442,
-        "glicko": 1973.687
+        "bsn": 89.591026,
+        "pwin_bsn": 126.69952,
+        "ema_past_bsn": 97.981773,
+        "glicko": 1973.2192
       },
       {
         "race_date": "20aug2025",
@@ -154,10 +157,10 @@
         "estado": "Not_Normal",
         "p": 12.0,
         "ecpos": 14.0,
-        "bsn": 90.221245,
-        "pwin_bsn": 111.30515,
-        "ema_past_bsn": 96.263748,
-        "glicko": 1864.0975
+        "bsn": 90.256737,
+        "pwin_bsn": 111.29216,
+        "ema_past_bsn": 96.303627,
+        "glicko": 1863.9083
       },
       {
         "race_date": "27sep2025",
@@ -169,10 +172,10 @@
         "estado": "Normal",
         "p": 2.0,
         "ecpos": 3.5,
-        "bsn": 109.71796,
-        "pwin_bsn": 111.1993,
-        "ema_past_bsn": 95.165108,
-        "glicko": 1901.9078
+        "bsn": 109.70256,
+        "pwin_bsn": 111.19257,
+        "ema_past_bsn": 95.204193,
+        "glicko": 1901.7574
       },
       {
         "race_date": "25oct2025",
@@ -184,10 +187,10 @@
         "estado": "Not_Normal",
         "p": 4.0,
         "ecpos": 10.5,
-        "bsn": 104.24086,
-        "pwin_bsn": 111.21011,
-        "ema_past_bsn": 97.590584,
-        "glicko": 1931.7719
+        "bsn": 104.20314,
+        "pwin_bsn": 111.25349,
+        "ema_past_bsn": 97.62059,
+        "glicko": 1931.9016
       },
       {
         "race_date": "27feb2026",
@@ -199,10 +202,10 @@
         "estado": "Normal",
         "p": 4.0,
         "ecpos": 8.5,
-        "bsn": 99.540726,
-        "pwin_bsn": 113.22127,
-        "ema_past_bsn": 98.613701,
-        "glicko": 1948.399
+        "bsn": 100.51376,
+        "pwin_bsn": 113.08223,
+        "ema_past_bsn": 98.633293,
+        "glicko": 1948.5411
       }
     ]
   },
@@ -211,10 +214,13 @@
     "name": "ALPHA PASION",
     "padrillo": "LIZARD ISLAND (USA)",
     "M": "ESA PASION",
-    "PRS": 0.024533097,
-    "PR": 0.57088524,
-    "PS": 0.042973779,
+    "PRS": 0.024861744,
+    "PR": 0.57503021,
+    "PS": 0.043235544,
     "yegua_studbook_id": 352337,
+    "age": 4,
+    "sex_cat": "Hembra",
+    "total_win": 1.0,
     "races": [
       {
         "race_date": "14sep2024",
@@ -226,10 +232,10 @@
         "estado": "Normal",
         "p": 7.0,
         "ecpos": 10.25,
-        "bsn": 87.875534,
-        "pwin_bsn": 105.27771,
+        "bsn": 87.883728,
+        "pwin_bsn": 105.27554,
         "ema_past_bsn": null,
-        "glicko": 1876.332
+        "glicko": 1876.5188
       },
       {
         "race_date": "05oct2024",
@@ -241,10 +247,10 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 4.0,
-        "bsn": 99.560654,
-        "pwin_bsn": 112.954,
-        "ema_past_bsn": 87.875534,
-        "glicko": 2004.4893
+        "bsn": 99.611626,
+        "pwin_bsn": 112.97379,
+        "ema_past_bsn": 87.883728,
+        "glicko": 2004.7423
       },
       {
         "race_date": "15nov2024",
@@ -256,10 +262,10 @@
         "estado": "Normal",
         "p": 5.0,
         "ecpos": 5.75,
-        "bsn": 97.776543,
-        "pwin_bsn": 116.96312,
-        "ema_past_bsn": 95.665611,
-        "glicko": 2056.0659
+        "bsn": 97.77079,
+        "pwin_bsn": 116.9756,
+        "ema_past_bsn": 95.702324,
+        "glicko": 2056.3467
       },
       {
         "race_date": "22dec2024",
@@ -271,10 +277,10 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 4.5,
-        "bsn": 106.59473,
-        "pwin_bsn": 119.14811,
-        "ema_past_bsn": 96.721077,
-        "glicko": 2093.2751
+        "bsn": 106.59439,
+        "pwin_bsn": 119.17059,
+        "ema_past_bsn": 96.736557,
+        "glicko": 2093.6169
       },
       {
         "race_date": "11jan2025",
@@ -286,10 +292,10 @@
         "estado": "Normal",
         "p": 6.0,
         "ecpos": 3.75,
-        "bsn": 111.8465,
-        "pwin_bsn": 116.43612,
-        "ema_past_bsn": 100.67054,
-        "glicko": 2135.0447
+        "bsn": 111.87882,
+        "pwin_bsn": 116.44769,
+        "ema_past_bsn": 100.67969,
+        "glicko": 2135.3984
       },
       {
         "race_date": "02mar2025",
@@ -301,10 +307,10 @@
         "estado": "Not_Normal",
         "p": 5.0,
         "ecpos": 9.0,
-        "bsn": 80.28804,
-        "pwin_bsn": 112.86008,
-        "ema_past_bsn": 104.39586,
-        "glicko": 2098.8943
+        "bsn": 80.218216,
+        "pwin_bsn": 112.88918,
+        "ema_past_bsn": 104.41273,
+        "glicko": 2099.2444
       },
       {
         "race_date": "17aug2025",
@@ -316,10 +322,10 @@
         "estado": "Normal",
         "p": 2.0,
         "ecpos": 0.1000000014901161,
-        "bsn": 113.73534,
-        "pwin_bsn": 106.72374,
-        "ema_past_bsn": 97.507912,
-        "glicko": 2116.2312
+        "bsn": 113.72977,
+        "pwin_bsn": 106.72905,
+        "ema_past_bsn": 97.500015,
+        "glicko": 2116.4856
       },
       {
         "race_date": "14sep2025",
@@ -331,10 +337,10 @@
         "estado": "Normal",
         "p": 2.0,
         "ecpos": 0.5,
-        "bsn": 110.15753,
-        "pwin_bsn": 103.24547,
-        "ema_past_bsn": 101.56477,
-        "glicko": 2115.0491
+        "bsn": 110.17516,
+        "pwin_bsn": 103.24096,
+        "ema_past_bsn": 101.55746,
+        "glicko": 2115.2224
       },
       {
         "race_date": "10oct2025",
@@ -346,10 +352,10 @@
         "estado": "Normal",
         "p": 6.0,
         "ecpos": 9.0,
-        "bsn": 96.941444,
-        "pwin_bsn": 107.60222,
-        "ema_past_bsn": 103.47427,
-        "glicko": 2045.068
+        "bsn": 96.71328,
+        "pwin_bsn": 107.58512,
+        "ema_past_bsn": 103.4725,
+        "glicko": 2044.1648
       },
       {
         "race_date": "17dec2025",
@@ -361,10 +367,10 @@
         "estado": "Normal",
         "p": 2.0,
         "ecpos": 1.5,
-        "bsn": 112.36414,
-        "pwin_bsn": 108.25304,
-        "ema_past_bsn": 102.16771,
-        "glicko": 2078.677
+        "bsn": 112.3712,
+        "pwin_bsn": 108.24828,
+        "ema_past_bsn": 102.12066,
+        "glicko": 2077.8181
       },
       {
         "race_date": "07jan2026",
@@ -376,10 +382,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 98.714813,
-        "pwin_bsn": 106.43857,
-        "ema_past_bsn": 104.02161,
-        "glicko": 2109.3311
+        "bsn": 98.582054,
+        "pwin_bsn": 106.31197,
+        "ema_past_bsn": 103.98439,
+        "glicko": 2108.5466
       },
       {
         "race_date": "03apr2026",
@@ -391,10 +397,10 @@
         "estado": "Normal",
         "p": 2.0,
         "ecpos": 0.1000000014901161,
-        "bsn": 98.650322,
-        "pwin_bsn": 107.16363,
-        "ema_past_bsn": 103.13714,
-        "glicko": 2088.3979
+        "bsn": 98.249176,
+        "pwin_bsn": 106.98882,
+        "ema_past_bsn": 103.084,
+        "glicko": 2087.6184
       }
     ]
   },
@@ -403,10 +409,13 @@
     "name": "FRANTA",
     "padrillo": "FORTIFY (USA)",
     "M": "FRENCH BEACH",
-    "PRS": 0.075934671,
-    "PR": 0.64493209,
-    "PS": 0.11774057,
+    "PRS": 0.077330627,
+    "PR": 0.64764524,
+    "PS": 0.11940275,
     "yegua_studbook_id": 353920,
+    "age": 4,
+    "sex_cat": "Hembra",
+    "total_win": 3.0,
     "races": [
       {
         "race_date": "28jun2024",
@@ -418,10 +427,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 102.30499,
-        "pwin_bsn": 94.451218,
+        "bsn": 102.33773,
+        "pwin_bsn": 94.46907,
         "ema_past_bsn": null,
-        "glicko": 2086.0247
+        "glicko": 2086.4092
       },
       {
         "race_date": "04nov2024",
@@ -433,10 +442,10 @@
         "estado": "Not_Normal",
         "p": 2.0,
         "ecpos": 2.0,
-        "bsn": 102.27683,
-        "pwin_bsn": 112.97005,
-        "ema_past_bsn": 102.30499,
-        "glicko": 2129.0383
+        "bsn": 102.33316,
+        "pwin_bsn": 113.02914,
+        "ema_past_bsn": 102.33773,
+        "glicko": 2129.4106
       },
       {
         "race_date": "30nov2024",
@@ -448,10 +457,10 @@
         "estado": "Normal",
         "p": 4.0,
         "ecpos": 3.5,
-        "bsn": 95.239983,
-        "pwin_bsn": 114.72347,
-        "ema_past_bsn": 102.28622,
-        "glicko": 2148.1958
+        "bsn": 95.252647,
+        "pwin_bsn": 114.72017,
+        "ema_past_bsn": 102.33469,
+        "glicko": 2148.5833
       },
       {
         "race_date": "22dec2024",
@@ -463,10 +472,10 @@
         "estado": "Normal",
         "p": 5.0,
         "ecpos": 8.150000005960464,
-        "bsn": 110.28564,
-        "pwin_bsn": 121.02484,
-        "ema_past_bsn": 98.7631,
-        "glicko": 2167.7727
+        "bsn": 110.28548,
+        "pwin_bsn": 121.04594,
+        "ema_past_bsn": 98.793671,
+        "glicko": 2168.1528
       },
       {
         "race_date": "27jan2025",
@@ -478,10 +487,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 116.61155,
-        "pwin_bsn": 114.97822,
-        "ema_past_bsn": 103.37212,
-        "glicko": 2188.9089
+        "bsn": 116.63676,
+        "pwin_bsn": 114.97177,
+        "ema_past_bsn": 103.3904,
+        "glicko": 2189.2866
       },
       {
         "race_date": "14feb2025",
@@ -493,10 +502,10 @@
         "estado": "Normal",
         "p": 4.0,
         "ecpos": 17.5,
-        "bsn": 78.586716,
-        "pwin_bsn": 118.72647,
-        "ema_past_bsn": 107.78526,
-        "glicko": 2147.6831
+        "bsn": 78.639824,
+        "pwin_bsn": 118.7625,
+        "ema_past_bsn": 107.80585,
+        "glicko": 2148.053
       },
       {
         "race_date": "23jun2025",
@@ -508,10 +517,10 @@
         "estado": "Normal",
         "p": 8.0,
         "ecpos": 11.02500000037253,
-        "bsn": 99.986168,
-        "pwin_bsn": 119.79272,
-        "ema_past_bsn": 99.442818,
-        "glicko": 2088.1826
+        "bsn": 99.876381,
+        "pwin_bsn": 119.81443,
+        "ema_past_bsn": 99.472694,
+        "glicko": 2088.564
       },
       {
         "race_date": "12jul2025",
@@ -523,10 +532,10 @@
         "estado": "Normal",
         "p": 4.0,
         "ecpos": 9.5,
-        "bsn": 99.862122,
-        "pwin_bsn": 115.51215,
-        "ema_past_bsn": 99.578659,
-        "glicko": 2073.9878
+        "bsn": 99.907944,
+        "pwin_bsn": 115.51151,
+        "ema_past_bsn": 99.573616,
+        "glicko": 2074.5591
       },
       {
         "race_date": "13sep2025",
@@ -538,10 +547,10 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 1.25,
-        "bsn": 114.11083,
-        "pwin_bsn": 118.72714,
-        "ema_past_bsn": 99.641647,
-        "glicko": 2119.3467
+        "bsn": 114.13398,
+        "pwin_bsn": 118.75697,
+        "ema_past_bsn": 99.647911,
+        "glicko": 2119.9097
       },
       {
         "race_date": "22oct2025",
@@ -553,10 +562,10 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 4.400000005960464,
-        "bsn": 95.912888,
-        "pwin_bsn": 110.796,
-        "ema_past_bsn": 102.53548,
-        "glicko": 2135.1135
+        "bsn": 95.959801,
+        "pwin_bsn": 110.78562,
+        "ema_past_bsn": 102.54513,
+        "glicko": 2135.6819
       },
       {
         "race_date": "29nov2025",
@@ -568,10 +577,10 @@
         "estado": "Not_Normal",
         "p": 2.0,
         "ecpos": 1.0,
-        "bsn": 112.50401,
-        "pwin_bsn": 115.2012,
-        "ema_past_bsn": 101.33138,
-        "glicko": 2144.595
+        "bsn": 112.51756,
+        "pwin_bsn": 115.25092,
+        "ema_past_bsn": 101.34779,
+        "glicko": 2145.1323
       },
       {
         "race_date": "27dec2025",
@@ -583,10 +592,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 122.29623,
-        "pwin_bsn": 121.12515,
-        "ema_past_bsn": 103.19348,
-        "glicko": 2167.7327
+        "bsn": 122.3336,
+        "pwin_bsn": 121.11307,
+        "ema_past_bsn": 103.20942,
+        "glicko": 2168.2551
       },
       {
         "race_date": "07feb2026",
@@ -598,10 +607,10 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 1.75,
-        "bsn": 109.51949,
-        "pwin_bsn": 120.61064,
-        "ema_past_bsn": 106.13237,
-        "glicko": 2167.2566
+        "bsn": 111.19938,
+        "pwin_bsn": 120.47057,
+        "ema_past_bsn": 106.1516,
+        "glicko": 2167.7905
       },
       {
         "race_date": "28feb2026",
@@ -613,10 +622,10 @@
         "estado": "Normal",
         "p": 5.0,
         "ecpos": 8.5,
-        "bsn": 104.94564,
-        "pwin_bsn": 118.82278,
-        "ema_past_bsn": 106.61624,
-        "glicko": 2165.9146
+        "bsn": 104.97436,
+        "pwin_bsn": 118.81009,
+        "ema_past_bsn": 106.87271,
+        "glicko": 2166.4375
       }
     ]
   },
@@ -625,10 +634,13 @@
     "name": "ROYAL BLISS",
     "padrillo": "FORTIFY (USA)",
     "M": "BELLEZA ROMANA",
-    "PRS": 0.088571213,
-    "PR": 0.67634088,
-    "PS": 0.13095647,
+    "PRS": 0.087946452,
+    "PR": 0.67684692,
+    "PS": 0.12993552,
     "yegua_studbook_id": 328063,
+    "age": 4,
+    "sex_cat": "Hembra",
+    "total_win": 1.0,
     "races": [
       {
         "race_date": "24feb2024",
@@ -640,10 +652,10 @@
         "estado": "Normal",
         "p": 5.0,
         "ecpos": 20.25,
-        "bsn": 74.225388,
-        "pwin_bsn": 94.451218,
+        "bsn": 74.257156,
+        "pwin_bsn": 94.46907,
         "ema_past_bsn": null,
-        "glicko": 1560.8947
+        "glicko": 1561.2141
       },
       {
         "race_date": "17jan2025",
@@ -655,10 +667,10 @@
         "estado": "Normal",
         "p": 7.0,
         "ecpos": 13.35000000149012,
-        "bsn": 94.558998,
-        "pwin_bsn": 112.42448,
-        "ema_past_bsn": 74.225388,
-        "glicko": 1927.318
+        "bsn": 94.572495,
+        "pwin_bsn": 112.43948,
+        "ema_past_bsn": 74.257156,
+        "glicko": 1927.6639
       },
       {
         "race_date": "16feb2025",
@@ -670,10 +682,10 @@
         "estado": "Normal",
         "p": 9.0,
         "ecpos": 43.5,
-        "bsn": 43.688274,
-        "pwin_bsn": 116.5741,
-        "ema_past_bsn": 87.781128,
-        "glicko": 1771.4254
+        "bsn": 43.716961,
+        "pwin_bsn": 116.58941,
+        "ema_past_bsn": 87.800713,
+        "glicko": 1771.7678
       },
       {
         "race_date": "07apr2025",
@@ -685,10 +697,10 @@
         "estado": "Normal",
         "p": 7.0,
         "ecpos": 16.25,
-        "bsn": 79.619064,
-        "pwin_bsn": 106.885,
-        "ema_past_bsn": 65.734703,
-        "glicko": 1757.0133
+        "bsn": 79.665672,
+        "pwin_bsn": 106.89183,
+        "ema_past_bsn": 65.758835,
+        "glicko": 1757.3611
       },
       {
         "race_date": "20jul2025",
@@ -700,10 +712,10 @@
         "estado": "Not_Normal",
         "p": 5.0,
         "ecpos": 11.5,
-        "bsn": 94.847672,
-        "pwin_bsn": 103.81844,
-        "ema_past_bsn": 71.288445,
-        "glicko": 1797.1825
+        "bsn": 94.850426,
+        "pwin_bsn": 103.41647,
+        "ema_past_bsn": 71.321571,
+        "glicko": 1796.0964
       },
       {
         "race_date": "14sep2025",
@@ -715,10 +727,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 115.61373,
-        "pwin_bsn": 106.11612,
-        "ema_past_bsn": 79.141518,
-        "glicko": 1885.0917
+        "bsn": 115.63419,
+        "pwin_bsn": 106.18726,
+        "ema_past_bsn": 79.16452,
+        "glicko": 1884.1456
       },
       {
         "race_date": "04oct2025",
@@ -730,10 +742,10 @@
         "estado": "Normal",
         "p": 6.0,
         "ecpos": 11.65000000596046,
-        "bsn": 104.50882,
-        "pwin_bsn": 111.59042,
-        "ema_past_bsn": 89.562149,
-        "glicko": 1888.7445
+        "bsn": 104.51545,
+        "pwin_bsn": 111.6161,
+        "ema_past_bsn": 89.584427,
+        "glicko": 1888.0314
       },
       {
         "race_date": "25oct2025",
@@ -745,10 +757,10 @@
         "estado": "Not_Normal",
         "p": 6.0,
         "ecpos": 19.0,
-        "bsn": 74.855995,
-        "pwin_bsn": 114.51407,
-        "ema_past_bsn": 93.298813,
-        "glicko": 1872.3915
+        "bsn": 74.855072,
+        "pwin_bsn": 114.54683,
+        "ema_past_bsn": 93.317184,
+        "glicko": 1871.8569
       }
     ]
   },
@@ -757,10 +769,13 @@
     "name": "UCA RIM",
     "padrillo": "REMOTE (GB)",
     "M": "UCA SEATTLE",
-    "PRS": 0.078696035,
-    "PR": 0.68468028,
-    "PS": 0.11493836,
+    "PRS": 0.07936278,
+    "PR": 0.68846852,
+    "PS": 0.11527438,
     "yegua_studbook_id": 352523,
+    "age": 3,
+    "sex_cat": "Macho",
+    "total_win": null,
     "races": []
   },
   "435153": {
@@ -768,10 +783,13 @@
     "name": "HIERATIC",
     "padrillo": "HIT IT A BOMB (USA)",
     "M": "INTER STAR",
-    "PRS": 0.10289221,
-    "PR": 0.70548457,
-    "PS": 0.14584614,
+    "PRS": 0.10287973,
+    "PR": 0.71042585,
+    "PS": 0.14481416,
     "yegua_studbook_id": 335564,
+    "age": 3,
+    "sex_cat": "Macho",
+    "total_win": 2.0,
     "races": [
       {
         "race_date": "07nov2025",
@@ -783,10 +801,10 @@
         "estado": "Normal",
         "p": 2.0,
         "ecpos": 0.300000011920929,
-        "bsn": 99.774506,
-        "pwin_bsn": 111.38517,
+        "bsn": 99.761978,
+        "pwin_bsn": 111.38123,
         "ema_past_bsn": null,
-        "glicko": 2044.3383
+        "glicko": 2044.7932
       },
       {
         "race_date": "27dec2025",
@@ -798,10 +816,10 @@
         "estado": "Normal",
         "p": 2.0,
         "ecpos": 0.1000000014901161,
-        "bsn": 115.20243,
-        "pwin_bsn": 115.20243,
-        "ema_past_bsn": 99.774506,
-        "glicko": 2191.6731
+        "bsn": 115.22351,
+        "pwin_bsn": 115.22351,
+        "ema_past_bsn": 99.761978,
+        "glicko": 2191.96
       },
       {
         "race_date": "24jan2026",
@@ -813,10 +831,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 122.07977,
-        "pwin_bsn": 115.55849,
-        "ema_past_bsn": 119.84035,
-        "glicko": 2261.4514
+        "bsn": 122.10209,
+        "pwin_bsn": 115.35303,
+        "ema_past_bsn": 119.85764,
+        "glicko": 2261.5308
       },
       {
         "race_date": "09feb2026",
@@ -828,10 +846,10 @@
         "estado": "Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 116.63163,
-        "pwin_bsn": 124.41953,
-        "ema_past_bsn": 120.96006,
-        "glicko": 2280.7854
+        "bsn": 116.65429,
+        "pwin_bsn": 124.1871,
+        "ema_past_bsn": 120.97987,
+        "glicko": 2280.8591
       }
     ]
   },
@@ -840,10 +858,13 @@
     "name": "EMOTIVA CANCION",
     "padrillo": "FORTIFY (USA)",
     "M": "ELIZABETTA",
-    "PRS": 0.092593402,
-    "PR": 0.69155097,
-    "PS": 0.13389237,
+    "PRS": 0.092056401,
+    "PR": 0.69596511,
+    "PS": 0.13227157,
     "yegua_studbook_id": 314988,
+    "age": 3,
+    "sex_cat": "Hembra",
+    "total_win": 0.0,
     "races": [
       {
         "race_date": "17jul2025",
@@ -855,10 +876,10 @@
         "estado": "Not_Normal",
         "p": 8.0,
         "ecpos": 11.5,
-        "bsn": 85.488846,
-        "pwin_bsn": 116.32442,
+        "bsn": 85.524055,
+        "pwin_bsn": 116.37093,
         "ema_past_bsn": null,
-        "glicko": 2059.4907
+        "glicko": 2060.0337
       },
       {
         "race_date": "17aug2025",
@@ -870,10 +891,10 @@
         "estado": "Normal",
         "p": 12.0,
         "ecpos": 28.25,
-        "bsn": 48.819012,
-        "pwin_bsn": 110.96672,
-        "ema_past_bsn": 85.488846,
-        "glicko": 1827.9868
+        "bsn": 48.799641,
+        "pwin_bsn": 110.85566,
+        "ema_past_bsn": 85.524055,
+        "glicko": 1826.8751
       }
     ]
   },
@@ -882,10 +903,13 @@
     "name": "SWEET SABRINA",
     "padrillo": "DANIEL BOONE (BRZ)",
     "M": "SAFE SABRINA",
-    "PRS": 0.077071801,
-    "PR": 0.63092661,
-    "PS": 0.12215652,
+    "PRS": 0.077795506,
+    "PR": 0.63580406,
+    "PS": 0.12235767,
     "yegua_studbook_id": 333022,
+    "age": 3,
+    "sex_cat": "Hembra",
+    "total_win": 1.0,
     "races": [
       {
         "race_date": "29jun2025",
@@ -897,10 +921,10 @@
         "estado": "Normal",
         "p": 5.0,
         "ecpos": 8.0,
-        "bsn": 99.187225,
-        "pwin_bsn": 113.47285,
+        "bsn": 99.171921,
+        "pwin_bsn": 113.47865,
         "ema_past_bsn": null,
-        "glicko": 2116.26
+        "glicko": 2116.4604
       },
       {
         "race_date": "20jul2025",
@@ -912,10 +936,10 @@
         "estado": "Not_Normal",
         "p": 1.0,
         "ecpos": 0.0,
-        "bsn": 102.87272,
-        "pwin_bsn": 116.54519,
-        "ema_past_bsn": 99.187225,
-        "glicko": 2232.8601
+        "bsn": 102.86369,
+        "pwin_bsn": 116.52816,
+        "ema_past_bsn": 99.171921,
+        "glicko": 2233.0342
       },
       {
         "race_date": "02aug2025",
@@ -927,10 +951,10 @@
         "estado": "Not_Normal",
         "p": 6.0,
         "ecpos": 28.5,
-        "bsn": 85.687904,
-        "pwin_bsn": 118.6227,
-        "ema_past_bsn": 101.64422,
-        "glicko": 2135.6035
+        "bsn": 85.726883,
+        "pwin_bsn": 118.68015,
+        "ema_past_bsn": 101.63309,
+        "glicko": 2135.8293
       },
       {
         "race_date": "14sep2025",
@@ -942,10 +966,10 @@
         "estado": "Normal",
         "p": 5.0,
         "ecpos": 4.009999999776483,
-        "bsn": 122.98255,
-        "pwin_bsn": 118.574,
-        "ema_past_bsn": 93.666061,
-        "glicko": 2158.9868
+        "bsn": 122.98714,
+        "pwin_bsn": 118.56907,
+        "ema_past_bsn": 93.679993,
+        "glicko": 2159.2517
       },
       {
         "race_date": "07feb2026",
@@ -957,10 +981,10 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 2.050000011920929,
-        "bsn": 93.312782,
-        "pwin_bsn": 118.78059,
-        "ema_past_bsn": 105.39265,
-        "glicko": 2175.9421
+        "bsn": 95.022316,
+        "pwin_bsn": 118.7336,
+        "ema_past_bsn": 105.40285,
+        "glicko": 2176.1472
       },
       {
         "race_date": "08mar2026",
@@ -972,10 +996,25 @@
         "estado": "Normal",
         "p": 3.0,
         "ecpos": 1.300000011920929,
-        "bsn": 109.37408,
-        "pwin_bsn": 116.51286,
-        "ema_past_bsn": 101.36603,
-        "glicko": 2172.6724
+        "bsn": 110.84517,
+        "pwin_bsn": 116.46201,
+        "ema_past_bsn": 101.94267,
+        "glicko": 2172.8748
+      },
+      {
+        "race_date": "11apr2026",
+        "track": "Hipódromo de San Isidro",
+        "categoria": "ALW",
+        "cond": "h3ag1",
+        "surface": "Pasto",
+        "distance": 1400.0,
+        "estado": "Normal",
+        "p": 6.0,
+        "ecpos": 14.25,
+        "bsn": 90.337669,
+        "pwin_bsn": 112.34969,
+        "ema_past_bsn": 104.48624,
+        "glicko": 2141.5823
       }
     ]
   },
@@ -984,10 +1023,13 @@
     "name": "PETRIN TOWER",
     "padrillo": "ANGIOLO",
     "M": "MALA STRANA",
-    "PRS": 0.015309306,
-    "PR": 0.59237206,
-    "PS": 0.025844071,
+    "PRS": 0.015608096,
+    "PR": 0.59533465,
+    "PS": 0.026217349,
     "yegua_studbook_id": 353194,
+    "age": 3,
+    "sex_cat": "Hembra",
+    "total_win": null,
     "races": []
   },
   "438262": {
@@ -995,10 +1037,13 @@
     "name": "FOREVER BENTER",
     "padrillo": "SEEK AGAIN (USA)",
     "M": "FORLISA",
-    "PRS": 0.026131265,
-    "PR": 0.67141616,
-    "PS": 0.038919624,
+    "PRS": 0.026868597,
+    "PR": 0.67534024,
+    "PS": 0.039785273,
     "yegua_studbook_id": 353106,
+    "age": 3,
+    "sex_cat": "Macho",
+    "total_win": 0.0,
     "races": [
       {
         "race_date": "26dec2025",
@@ -1010,10 +1055,10 @@
         "estado": "Normal",
         "p": 9.0,
         "ecpos": 18.75,
-        "bsn": 64.111626,
-        "pwin_bsn": 103.13343,
+        "bsn": 64.136765,
+        "pwin_bsn": 103.11684,
         "ema_past_bsn": null,
-        "glicko": 1412.9521
+        "glicko": 1413.2996
       },
       {
         "race_date": "18feb2026",
@@ -1025,10 +1070,10 @@
         "estado": "Normal",
         "p": 4.0,
         "ecpos": 6.5,
-        "bsn": 84.46769,
-        "pwin_bsn": 100.58035,
-        "ema_past_bsn": 64.111626,
-        "glicko": 1562.0098
+        "bsn": 83.509811,
+        "pwin_bsn": 100.38566,
+        "ema_past_bsn": 64.136765,
+        "glicko": 1561.6945
       },
       {
         "race_date": "22mar2026",
@@ -1040,10 +1085,10 @@
         "estado": "Normal",
         "p": 10.0,
         "ecpos": 18.5,
-        "bsn": 70.738205,
-        "pwin_bsn": 110.38413,
-        "ema_past_bsn": 77.682335,
-        "glicko": 1568.2322
+        "bsn": 71.832321,
+        "pwin_bsn": 110.50957,
+        "ema_past_bsn": 77.052132,
+        "glicko": 1567.7866
       }
     ]
   },
@@ -1052,10 +1097,13 @@
     "name": "KELLY STRIPES",
     "padrillo": "CITYSCAPE (GB)",
     "M": "MICHELE STRIPES",
-    "PRS": 0.016999111,
-    "PR": 0.52812165,
-    "PS": 0.032187868,
+    "PRS": 0.017591128,
+    "PR": 0.53144449,
+    "PS": 0.033100594,
     "yegua_studbook_id": 333912,
+    "age": 3,
+    "sex_cat": "Hembra",
+    "total_win": null,
     "races": []
   },
   "438265": {
@@ -1063,10 +1111,13 @@
     "name": "ETERNAL PASSION",
     "padrillo": "SEEK AGAIN (USA)",
     "M": "ESA PASION",
-    "PRS": 0.014222452,
-    "PR": 0.62984413,
-    "PS": 0.022580909,
+    "PRS": 0.014502581,
+    "PR": 0.63477051,
+    "PS": 0.022846967,
     "yegua_studbook_id": 352337,
+    "age": 3,
+    "sex_cat": "Hembra",
+    "total_win": null,
     "races": []
   },
   "439707": {
@@ -1074,10 +1125,13 @@
     "name": "PRECIOUS MIND",
     "padrillo": "TREASURE BEACH (GB)",
     "M": "PRECIOUS TIME",
-    "PRS": 0.028849214,
-    "PR": 0.60015458,
-    "PS": 0.048069641,
+    "PRS": 0.029551387,
+    "PR": 0.60414726,
+    "PS": 0.048914213,
     "yegua_studbook_id": 324778,
+    "age": 3,
+    "sex_cat": "Hembra",
+    "total_win": 0.0,
     "races": [
       {
         "race_date": "04nov2025",
@@ -1089,10 +1143,10 @@
         "estado": "Not_Normal",
         "p": 9.0,
         "ecpos": 20.0,
-        "bsn": 60.027401,
-        "pwin_bsn": 100.84974,
+        "bsn": 60.350163,
+        "pwin_bsn": 100.83339,
         "ema_past_bsn": null,
-        "glicko": 1495.0428
+        "glicko": 1495.2739
       },
       {
         "race_date": "04dec2025",
@@ -1104,10 +1158,10 @@
         "estado": "Normal",
         "p": 7.0,
         "ecpos": 17.55000001192093,
-        "bsn": 65.845291,
-        "pwin_bsn": 100.03247,
-        "ema_past_bsn": 60.027401,
-        "glicko": 1510.1178
+        "bsn": 65.836205,
+        "pwin_bsn": 100.0358,
+        "ema_past_bsn": 60.350163,
+        "glicko": 1510.3132
       },
       {
         "race_date": "23dec2025",
@@ -1119,10 +1173,10 @@
         "estado": "Normal",
         "p": 9.0,
         "ecpos": 12.25,
-        "bsn": 83.704117,
-        "pwin_bsn": 104.14481,
-        "ema_past_bsn": 63.905994,
-        "glicko": 1666.4563
+        "bsn": 83.718781,
+        "pwin_bsn": 104.15915,
+        "ema_past_bsn": 64.007523,
+        "glicko": 1666.593
       },
       {
         "race_date": "08jan2026",
@@ -1134,10 +1188,10 @@
         "estado": "Normal",
         "p": 11.0,
         "ecpos": 20.90000000596046,
-        "bsn": 52.17926,
-        "pwin_bsn": 93.752327,
-        "ema_past_bsn": 73.805054,
-        "glicko": 1564.1006
+        "bsn": 52.178638,
+        "pwin_bsn": 94.084564,
+        "ema_past_bsn": 73.863152,
+        "glicko": 1564.277
       }
     ]
   }
