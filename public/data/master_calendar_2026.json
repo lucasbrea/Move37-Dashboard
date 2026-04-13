@@ -9,7 +9,7 @@
     "Abril 2026",
     "Mayo 2026"
   ],
-  "total_races": 645,
+  "total_races": 935,
   "legend": {
     "J": "Para jockeys y jockey aprendices con licencia o permiso de Palermo y San Isidro que no hayan ganado más de 30 carreras (Período: 1/3/25 al 29/2/26)",
     "OPC": "Opcional - carrera complementaria",
@@ -8927,57 +8927,3035 @@
     },
     {
       "id": 502,
-      "track": "La Plata",
-      "date": "2026-04-02",
-      "date_label": "J.2",
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
       "section": "PERDEDORES",
       "race_type": "conditioned",
       "category": {
-        "sex": "machos",
-        "age_min": 2,
-        "age_max": 2,
-        "raw": "POTRILLOS de 2 años"
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
       },
-      "distance": 1000,
+      "distance": 1400,
       "surface": "arena",
-      "month": "Abril 2026"
+      "month": "Mayo 2026"
     },
     {
       "id": 503,
-      "track": "La Plata",
-      "date": "2026-04-09",
-      "date_label": "J.9",
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
       "section": "PERDEDORES",
       "race_type": "conditioned",
       "category": {
-        "sex": "machos",
-        "age_min": 2,
-        "age_max": 2,
-        "raw": "POTRILLOS de 2 años"
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
       },
       "distance": 1200,
       "surface": "arena",
-      "month": "Abril 2026"
+      "month": "Mayo 2026"
     },
     {
       "id": 504,
-      "track": "La Plata",
-      "date": "2026-04-14",
-      "date_label": "Mt.14",
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
       "section": "PERDEDORES",
       "race_type": "conditioned",
       "category": {
-        "sex": "machos",
-        "age_min": 2,
-        "age_max": 2,
-        "raw": "POTRILLOS de 2 años"
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
       },
-      "distance": 1100,
+      "distance": 1600,
       "surface": "arena",
-      "month": "Abril 2026"
+      "month": "Mayo 2026"
     },
     {
       "id": 505,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "jockey_restriction": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 506,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 507,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "YEGUAS de 5 y 6 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 508,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 509,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "jockey_restriction": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 510,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 511,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 512,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 513,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": 6,
+        "raw": "TODO CABALLO de 5 y 6 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 514,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 515,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 516,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 517,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 518,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 519,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 520,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 521,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 522,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 2000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 523,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 524,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 525,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 526,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 527,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 528,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 529,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 530,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 531,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 532,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 533,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 534,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 535,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 536,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 2000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 537,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "CABALLOS de 4 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 538,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 539,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 540,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 541,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 542,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 543,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 544,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 545,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 546,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 547,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 548,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 549,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 550,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 551,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 552,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 553,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 554,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 555,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 556,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 557,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 558,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 559,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 560,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 561,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 562,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 563,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 564,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 565,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 566,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 567,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 568,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 569,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 570,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 571,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "De Grupo, Listados, Non Grade y Hándicaps",
+      "eligible": "Yeguas 3+",
+      "distance": 1400,
+      "surface": "cesped",
+      "notes": "Diagonal. Handicap Descendente",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 572,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "VELOCIDAD",
+      "eligible": "Productos",
+      "distance": 1000,
+      "surface": "cesped",
+      "group": "G3",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 573,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "NG",
+      "name": "DORIA",
+      "eligible": "Yeguas 3+",
+      "distance": 1400,
+      "surface": "cesped",
+      "notes": "Handicap Descendente. Diagonal.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 574,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "FULL SAIL",
+      "eligible": "T.Caballo 5+, Ganadores de 3 ó más carreras",
+      "distance": 1800,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 575,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "SOUTHERN HALO",
+      "eligible": "T.Caballo 3+",
+      "distance": 1400,
+      "surface": "cesped",
+      "group": "G3",
+      "notes": "Diagonal",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 576,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "SEDUCTOR",
+      "eligible": "Yeguas 5+, Ganadoras de 3 ó más carreras",
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 577,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "SANTIAGO LAWRIE",
+      "eligible": "T.Caballo 3+",
+      "distance": 1000,
+      "surface": "cesped",
+      "group": "G3",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 578,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "AMSTERDAM",
+      "eligible": "Yeguas 3 años, ganadoras de 1+ carreras",
+      "distance": 1400,
+      "surface": "arena",
+      "notes": "Gan 1: Peso 53 kg. Recargo de 2 Kilos por carrera subsiguiente ganada y de 2 kilos extra a la ganadora de clásico de Grupo.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 579,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "MAKE TRACKS",
+      "eligible": "T.Caballo 5+, Ganadores de 3 ó más carreras",
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 580,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "DE POTRANCAS",
+      "eligible": "Potrancas",
+      "distance": 1600,
+      "surface": "cesped",
+      "group": "G1",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 581,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "GRAN CRITERIUM",
+      "eligible": "Potrillos",
+      "distance": 1600,
+      "surface": "cesped",
+      "group": "G1",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 582,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "COPA DIAMANTE",
+      "eligible": "Yeguas 3+",
+      "distance": 1600,
+      "surface": "cesped",
+      "group": "G1",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 583,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "25 DE MAYO",
+      "eligible": "T.Caballo 3+",
+      "distance": 2400,
+      "surface": "cesped",
+      "group": "G1",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 584,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "FINAL CAMPEONATO INTERIOR",
+      "eligible": "T.Caballo 3+",
+      "distance": 2000,
+      "surface": "cesped",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 585,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "NG",
+      "name": "VALE DORI",
+      "eligible": "Yeguas 3+",
+      "distance": 1200,
+      "surface": "arena",
+      "notes": "Handicap Descendente",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 586,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Listed",
+      "name": "MANUEL ANASAGASTI",
+      "eligible": "Productos",
+      "distance": 1400,
+      "surface": "cesped",
+      "notes": "Diagonal",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 587,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "PARTICULA",
+      "eligible": "Yeguas 3+",
+      "distance": 2000,
+      "surface": "cesped",
+      "group": "G2",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 588,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "NG",
+      "name": "A. P. GIOVANETTI",
+      "eligible": "T.Caballo 3+",
+      "distance": 1200,
+      "surface": "arena",
+      "notes": "Handicap Descendente",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 589,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 590,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 591,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 592,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "jockey_restriction": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 593,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 594,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 595,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 596,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 597,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 598,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 599,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 600,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 601,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 602,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 603,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 604,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 605,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 606,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 607,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 608,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 609,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 610,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 611,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 612,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 613,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 614,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 3,
+      "wins_max": 4,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 615,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "jockey_restriction": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 616,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 617,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 618,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 619,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 620,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 621,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 622,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 623,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 624,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 625,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 626,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 627,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 628,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1800,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 629,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 630,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 631,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 632,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 633,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 634,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 635,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 636,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 637,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 638,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 639,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 640,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 641,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 2000,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 642,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 643,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 644,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 645,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 646,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 647,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 648,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 649,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 650,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 651,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 652,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 653,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 654,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 655,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 656,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 657,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 658,
+      "track": "San Isidro",
+      "date": "2026-05-02",
+      "date_label": "SÁB 2",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1600,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 659,
+      "track": "San Isidro",
+      "date": "2026-05-06",
+      "date_label": "MIÉ 6",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 660,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1000,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 661,
+      "track": "San Isidro",
+      "date": "2026-05-10",
+      "date_label": "DOM 10",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 662,
+      "track": "San Isidro",
+      "date": "2026-05-13",
+      "date_label": "MIÉ 13",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 663,
+      "track": "San Isidro",
+      "date": "2026-05-15",
+      "date_label": "VIE 15",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "cesped",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 664,
+      "track": "San Isidro",
+      "date": "2026-05-20",
+      "date_label": "MIÉ 20",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 665,
+      "track": "San Isidro",
+      "date": "2026-05-22",
+      "date_label": "VIE 22",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 666,
+      "track": "San Isidro",
+      "date": "2026-05-25",
+      "date_label": "LUN 25",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 2000,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 667,
+      "track": "San Isidro",
+      "date": "2026-05-27",
+      "date_label": "MIÉ 27",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 668,
+      "track": "San Isidro",
+      "date": "2026-05-30",
+      "date_label": "SÁB 30",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1400,
+      "surface": "cesped",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 669,
+      "track": "San Isidro",
+      "date": "2026-06-03",
+      "date_label": "MIÉ 3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "TODO CABALLO de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "optional": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 671,
+      "track": "La Plata",
+      "date": "2026-04-02",
+      "date_label": "J.2",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 672,
+      "track": "La Plata",
+      "date": "2026-04-09",
+      "date_label": "J.9",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 673,
+      "track": "La Plata",
+      "date": "2026-04-14",
+      "date_label": "Mt.14",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Abril 2026"
+    },
+    {
+      "id": 674,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -8994,7 +11972,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 506,
+      "id": 675,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -9011,7 +11989,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 507,
+      "id": 676,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9030,7 +12008,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 508,
+      "id": 677,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9047,7 +12025,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 509,
+      "id": 678,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -9064,7 +12042,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 510,
+      "id": 679,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -9081,7 +12059,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 511,
+      "id": 680,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -9098,7 +12076,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 512,
+      "id": 681,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -9115,7 +12093,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 513,
+      "id": 682,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9132,7 +12110,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 514,
+      "id": 683,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -9149,7 +12127,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 515,
+      "id": 684,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9168,7 +12146,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 516,
+      "id": 685,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -9187,7 +12165,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 517,
+      "id": 686,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -9206,7 +12184,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 518,
+      "id": 687,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -9225,7 +12203,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 519,
+      "id": 688,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -9244,7 +12222,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 520,
+      "id": 689,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9263,7 +12241,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 521,
+      "id": 690,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -9282,7 +12260,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 522,
+      "id": 691,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -9301,7 +12279,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 523,
+      "id": 692,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -9320,7 +12298,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 524,
+      "id": 693,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -9339,7 +12317,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 525,
+      "id": 694,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -9358,7 +12336,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 526,
+      "id": 695,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -9377,7 +12355,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 527,
+      "id": 696,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -9396,7 +12374,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 528,
+      "id": 697,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9415,7 +12393,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 529,
+      "id": 698,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -9434,7 +12412,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 530,
+      "id": 699,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9453,7 +12431,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 531,
+      "id": 700,
       "track": "La Plata",
       "date": "2026-03-31",
       "date_label": "Mar Mt.31",
@@ -9470,7 +12448,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 532,
+      "id": 701,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9488,7 +12466,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 533,
+      "id": 702,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -9505,7 +12483,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 534,
+      "id": 703,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -9522,7 +12500,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 535,
+      "id": 704,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -9539,7 +12517,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 536,
+      "id": 705,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -9556,7 +12534,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 537,
+      "id": 706,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9574,7 +12552,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 538,
+      "id": 707,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -9591,7 +12569,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 539,
+      "id": 708,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -9611,7 +12589,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 540,
+      "id": 709,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -9630,7 +12608,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 541,
+      "id": 710,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -9649,7 +12627,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 542,
+      "id": 711,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -9668,7 +12646,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 543,
+      "id": 712,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9688,7 +12666,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 544,
+      "id": 713,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -9707,7 +12685,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 545,
+      "id": 714,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9726,7 +12704,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 546,
+      "id": 715,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -9745,7 +12723,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 547,
+      "id": 716,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9765,7 +12743,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 548,
+      "id": 717,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -9784,7 +12762,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 549,
+      "id": 718,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9804,7 +12782,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 550,
+      "id": 719,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -9824,7 +12802,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 551,
+      "id": 720,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9844,7 +12822,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 552,
+      "id": 721,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9863,7 +12841,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 553,
+      "id": 722,
       "track": "La Plata",
       "date": "2026-03-31",
       "date_label": "Mar Mt.31",
@@ -9880,7 +12858,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 554,
+      "id": 723,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9897,7 +12875,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 555,
+      "id": 724,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -9915,7 +12893,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 556,
+      "id": 725,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -9932,7 +12910,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 557,
+      "id": 726,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -9949,7 +12927,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 558,
+      "id": 727,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -9966,7 +12944,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 559,
+      "id": 728,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -9985,7 +12963,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 560,
+      "id": 729,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -10004,7 +12982,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 561,
+      "id": 730,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10023,7 +13001,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 562,
+      "id": 731,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -10042,7 +13020,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 563,
+      "id": 732,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -10061,7 +13039,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 564,
+      "id": 733,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -10080,7 +13058,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 565,
+      "id": 734,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -10099,7 +13077,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 566,
+      "id": 735,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10118,7 +13096,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 567,
+      "id": 736,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -10137,7 +13115,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 568,
+      "id": 737,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -10156,7 +13134,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 569,
+      "id": 738,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -10175,7 +13153,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 570,
+      "id": 739,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -10194,7 +13172,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 571,
+      "id": 740,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -10212,7 +13190,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 572,
+      "id": 741,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -10230,7 +13208,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 573,
+      "id": 742,
       "track": "La Plata",
       "date": "2026-04-02",
       "date_label": "J.2",
@@ -10247,7 +13225,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 574,
+      "id": 743,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -10264,7 +13242,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 575,
+      "id": 744,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -10281,7 +13259,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 576,
+      "id": 745,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10298,7 +13276,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 577,
+      "id": 746,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10317,7 +13295,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 578,
+      "id": 747,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -10334,7 +13312,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 579,
+      "id": 748,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -10351,7 +13329,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 580,
+      "id": 749,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -10368,7 +13346,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 581,
+      "id": 750,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10385,7 +13363,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 582,
+      "id": 751,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -10402,7 +13380,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 583,
+      "id": 752,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -10419,7 +13397,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 584,
+      "id": 753,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10436,7 +13414,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 585,
+      "id": 754,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -10455,7 +13433,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 586,
+      "id": 755,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -10474,7 +13452,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 587,
+      "id": 756,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10493,7 +13471,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 588,
+      "id": 757,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -10512,7 +13490,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 589,
+      "id": 758,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -10531,7 +13509,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 590,
+      "id": 759,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10550,7 +13528,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 591,
+      "id": 760,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -10569,7 +13547,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 592,
+      "id": 761,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -10588,7 +13566,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 593,
+      "id": 762,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10607,7 +13585,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 594,
+      "id": 763,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10625,7 +13603,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 595,
+      "id": 764,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -10642,7 +13620,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 596,
+      "id": 765,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -10659,7 +13637,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 597,
+      "id": 766,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10676,7 +13654,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 598,
+      "id": 767,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10693,7 +13671,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 599,
+      "id": 768,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10710,7 +13688,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 600,
+      "id": 769,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10730,7 +13708,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 601,
+      "id": 770,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -10749,7 +13727,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 602,
+      "id": 771,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -10769,7 +13747,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 603,
+      "id": 772,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10788,7 +13766,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 604,
+      "id": 773,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -10807,7 +13785,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 605,
+      "id": 774,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -10826,7 +13804,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 606,
+      "id": 775,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -10845,7 +13823,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 607,
+      "id": 776,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -10864,7 +13842,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 608,
+      "id": 777,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10883,7 +13861,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 609,
+      "id": 778,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -10900,7 +13878,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 610,
+      "id": 779,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -10917,7 +13895,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 611,
+      "id": 780,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -10934,7 +13912,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 612,
+      "id": 781,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -10951,7 +13929,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 613,
+      "id": 782,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -10968,7 +13946,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 614,
+      "id": 783,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -10985,7 +13963,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 615,
+      "id": 784,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -11002,7 +13980,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 616,
+      "id": 785,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -11021,7 +13999,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 617,
+      "id": 786,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -11040,7 +14018,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 618,
+      "id": 787,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -11059,7 +14037,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 619,
+      "id": 788,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -11078,7 +14056,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 620,
+      "id": 789,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -11097,7 +14075,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 621,
+      "id": 790,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -11116,7 +14094,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 622,
+      "id": 791,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -11135,7 +14113,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 623,
+      "id": 792,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -11153,7 +14131,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 624,
+      "id": 793,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -11171,7 +14149,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 625,
+      "id": 794,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -11185,7 +14163,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 626,
+      "id": 795,
       "track": "La Plata",
       "date": "2026-04-12",
       "date_label": "D.12",
@@ -11199,7 +14177,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 627,
+      "id": 796,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -11213,7 +14191,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 628,
+      "id": 797,
       "track": "La Plata",
       "date": "2026-04-23",
       "date_label": "J.23",
@@ -11227,7 +14205,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 629,
+      "id": 798,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -11241,7 +14219,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 630,
+      "id": 799,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -11256,7 +14234,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 631,
+      "id": 800,
       "track": "La Plata",
       "date": "2026-04-07",
       "date_label": "Mt.7",
@@ -11269,7 +14247,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 632,
+      "id": 801,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -11283,7 +14261,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 633,
+      "id": 802,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -11296,7 +14274,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 634,
+      "id": 803,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -11309,7 +14287,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 635,
+      "id": 804,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -11323,7 +14301,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 636,
+      "id": 805,
       "track": "La Plata",
       "date": "2026-04-09",
       "date_label": "J.9",
@@ -11337,7 +14315,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 637,
+      "id": 806,
       "track": "La Plata",
       "date": "2026-04-14",
       "date_label": "Mt.14",
@@ -11351,7 +14329,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 638,
+      "id": 807,
       "track": "La Plata",
       "date": "2026-04-21",
       "date_label": "Mt.21",
@@ -11365,7 +14343,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 639,
+      "id": 808,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -11379,7 +14357,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 640,
+      "id": 809,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -11393,7 +14371,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 641,
+      "id": 810,
       "track": "La Plata",
       "date": "2026-04-25",
       "date_label": "S.25",
@@ -11406,7 +14384,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 642,
+      "id": 811,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -11419,7 +14397,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 643,
+      "id": 812,
       "track": "La Plata",
       "date": "2026-04-28",
       "date_label": "Mt.28",
@@ -11432,7 +14410,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 644,
+      "id": 813,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -11446,7 +14424,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 645,
+      "id": 814,
       "track": "La Plata",
       "date": "2026-04-30",
       "date_label": "J.30",
@@ -11460,7 +14438,7 @@
       "month": "Abril 2026"
     },
     {
-      "id": 646,
+      "id": 815,
       "track": "La Plata",
       "date": "2026-04-16",
       "date_label": "J.16",
@@ -11471,6 +14449,2144 @@
       "distance": 1000,
       "surface": "arena",
       "month": "Abril 2026"
+    },
+    {
+      "id": 817,
+      "track": "La Plata",
+      "date": "2026-05-08",
+      "date_label": "V.8",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 818,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 819,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 820,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 821,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRILLOS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 822,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 823,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 824,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 825,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 826,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 827,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 828,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 829,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 830,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 831,
+      "track": "La Plata",
+      "date": "2026-05-08",
+      "date_label": "V.8",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 832,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 833,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 834,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 835,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 836,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 837,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 838,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 839,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 840,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 841,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 842,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "CABALLOS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 843,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "age_note": "4y5",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 844,
+      "track": "La Plata",
+      "date": "2026-05-08",
+      "date_label": "V.8",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 845,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 846,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "age_note": "4y5",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 847,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 848,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 849,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "age_note": "4y5",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 850,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 851,
+      "track": "La Plata",
+      "date": "2026-05-08",
+      "date_label": "V.8",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 852,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 853,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "age_note": "4+",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 854,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 855,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "age_note": "4+",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 856,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "age_note": "4+",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 857,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "age_note": "4+",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 858,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 859,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "machos",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "TODO CABALLO de 4 años"
+      },
+      "distance": 1700,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "age_note": "4+",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 860,
+      "track": "La Plata",
+      "date": "2026-05-08",
+      "date_label": "V.8",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "jockey_restriction": true,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 861,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1700,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 862,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 863,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 864,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 865,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 866,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 867,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 868,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 2100,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 869,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 870,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 871,
+      "track": "La Plata",
+      "date": "2026-05-03",
+      "date_label": "D.3",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 872,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "TODO CABALLO de 5 años y más edad"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 873,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 874,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "all",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "TODO CABALLO de 6 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 875,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 876,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 877,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 878,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 879,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 2,
+        "age_max": 2,
+        "raw": "POTRANCAS de 2 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 880,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 881,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 882,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 883,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 884,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1700,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 885,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 886,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 887,
+      "track": "La Plata",
+      "date": "2026-05-08",
+      "date_label": "V.8",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 888,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 889,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 890,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 891,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 892,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 893,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 894,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 895,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 3,
+        "age_max": 3,
+        "raw": "YEGUAS de 3 años"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 896,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "age_note": "4y5",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 897,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 898,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 899,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 900,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 901,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 902,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 2000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "age_note": "4+",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 903,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 4,
+        "age_max": 4,
+        "raw": "YEGUAS de 4 años"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 904,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1100,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 905,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1700,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 906,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1300,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 907,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 908,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "PERDEDORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 909,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 910,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 911,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 1,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 912,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 913,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 1,
+      "wins_max": 2,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 914,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1000,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 915,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 916,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 5,
+        "age_max": null,
+        "raw": "YEGUAS de 5 años y más edad"
+      },
+      "distance": 1500,
+      "surface": "arena",
+      "wins_min": 2,
+      "wins_max": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 917,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1400,
+      "surface": "arena",
+      "wins_min": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 918,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "GANADORES",
+      "race_type": "conditioned",
+      "category": {
+        "sex": "yeguas",
+        "age_min": 6,
+        "age_max": null,
+        "raw": "YEGUAS de 6 años y más edad"
+      },
+      "distance": 1200,
+      "surface": "arena",
+      "wins_min": 3,
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 919,
+      "track": "La Plata",
+      "date": "2026-05-05",
+      "date_label": "Mt.5",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "ASOC.DE PROP. DE CAB. DE CARR. DE B.S.",
+      "eligible": "Potrillos",
+      "distance": 1400,
+      "surface": "arena",
+      "group": "G3",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 920,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "LUIS MARIA DOYHENARD",
+      "eligible": "Potrillos",
+      "distance": 1300,
+      "surface": "arena",
+      "group": "G3",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 921,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "PEDRO B. PALACIOS",
+      "eligible": "T.Caballo 3+",
+      "distance": 2100,
+      "surface": "arena",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 922,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Listed",
+      "name": "JULIO CORTE",
+      "eligible": "T.Caballo 3+",
+      "distance": 1100,
+      "surface": "arena",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 923,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "25 DE MAYO DE 1810",
+      "eligible": "T.Caballo 3+",
+      "distance": 1600,
+      "surface": "arena",
+      "group": "G2",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 924,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "ASOCIACION BONAERENSE DE PROP. DE CABALLOS DE CARRERA",
+      "eligible": "T.Caballo 3+",
+      "distance": 1200,
+      "surface": "arena",
+      "group": "G3",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 925,
+      "track": "La Plata",
+      "date": "2026-05-03",
+      "date_label": "D.3",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "SNOW GAMBLER",
+      "eligible": "T.Caballo 4+, 3+ carreras",
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 926,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "INTER RED",
+      "eligible": "T.Caballo 4+, 3+ carreras",
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 927,
+      "track": "La Plata",
+      "date": "2026-05-24",
+      "date_label": "D.24",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "HARAS POZO DE LUNA",
+      "eligible": "T.Caballo 4+, 3+ carreras",
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 928,
+      "track": "La Plata",
+      "date": "2026-05-08",
+      "date_label": "V.8",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "FORLI",
+      "eligible": "T.Caballo 5+",
+      "distance": 1700,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 929,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "SNOW CAT",
+      "eligible": "T.Caballo 5+",
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 930,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "ANDRES S. TORRES",
+      "eligible": "Potrancas",
+      "distance": 1400,
+      "surface": "arena",
+      "group": "G3",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 931,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "FRANCISCO P. MORENO",
+      "eligible": "Yeguas 3+",
+      "distance": 1100,
+      "surface": "arena",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 932,
+      "track": "La Plata",
+      "date": "2026-05-16",
+      "date_label": "S.16",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "JOAQUIN V. MAQUEDA",
+      "eligible": "Yeguas 3+",
+      "distance": 1400,
+      "surface": "arena",
+      "group": "G3",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 933,
+      "track": "La Plata",
+      "date": "2026-05-26",
+      "date_label": "Mt.26",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "STK",
+      "name": "MEXICO",
+      "eligible": "Yeguas 3+",
+      "distance": 2000,
+      "surface": "arena",
+      "conditions": "P.P.E.",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 934,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "ESPECIAL FORNARA",
+      "eligible": "Yeguas 3+",
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 935,
+      "track": "La Plata",
+      "date": "2026-05-12",
+      "date_label": "Mt.12",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "MAD CORSARIA",
+      "eligible": "Yeguas 4+",
+      "distance": 1200,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 936,
+      "track": "La Plata",
+      "date": "2026-05-19",
+      "date_label": "Mt.19",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "HCP",
+      "name": "HARAS DILU",
+      "eligible": "Yeguas 4+, 3+ carreras",
+      "distance": 1000,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 937,
+      "track": "La Plata",
+      "date": "2026-05-29",
+      "date_label": "V.29",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "TALAVERA",
+      "eligible": "Yeguas 4+, 3+ carreras",
+      "distance": 1400,
+      "surface": "arena",
+      "month": "Mayo 2026"
+    },
+    {
+      "id": 938,
+      "track": "La Plata",
+      "date": "2026-05-14",
+      "date_label": "J.14",
+      "section": "CLASICOS_ESPECIALES_HANDICAPS",
+      "race_type": "Special",
+      "name": "BETHYSMAL",
+      "eligible": "Yeguas 5+, 3+ carreras",
+      "distance": 1600,
+      "surface": "arena",
+      "month": "Mayo 2026"
     }
   ]
 }
