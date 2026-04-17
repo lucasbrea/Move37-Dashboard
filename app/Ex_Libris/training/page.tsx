@@ -32,6 +32,8 @@ interface TrainingHorse {
   PRS: number | null;
   PR: number | null;
   PS: number | null;
+  sire_precocity: string | null;
+  sire_wa: number | null;
   yegua_studbook_id: string;
   age: number | null;
   sex_cat: string | null;
@@ -68,6 +70,45 @@ function race_dateToISO(d: string): string {
   const [, day, mon, year] = m;
   const mm = MONTHS[mon.toLowerCase()] ?? '??';
   return `${year}-${mm}-${day}`;
+}
+
+/** Excel-style heat color: t=1 → green, t=0 → red */
+function heatColor(value: number | null, values: (number | null)[], higherIsBetter: boolean): string {
+  if (value == null) return '';
+  const valid = values.filter((v): v is number => v != null);
+  if (valid.length < 2) return '';
+  const min = Math.min(...valid);
+  const max = Math.max(...valid);
+  if (min === max) return '';
+  let t = (value - min) / (max - min);
+  if (!higherIsBetter) t = 1 - t;
+  const hue = Math.round(t * 120);
+  return `hsl(${hue}, 65%, 50%)`;
+}
+
+
+// Distance bands for Argentine racing (based on actual calendar distances)
+const DIST_BANDS: { label: string; min: number; max: number }[] = [
+  { label: '1000–1200m', min: 1000, max: 1200 },
+  { label: '1300–1400m', min: 1300, max: 1400 },
+  { label: '1500–1600m', min: 1500, max: 1600 },
+  { label: '1700–1800m', min: 1700, max: 1800 },
+  { label: '2000–2200m', min: 2000, max: 2200 },
+  { label: '2400–2500m', min: 2400, max: 2500 },
+];
+
+function distBandIndex(m: number): number {
+  for (let i = 0; i < DIST_BANDS.length; i++) {
+    if (m >= DIST_BANDS[i].min && m <= DIST_BANDS[i].max) return i;
+  }
+  // fallback: nearest band
+  let best = 0, bestDiff = Infinity;
+  for (let i = 0; i < DIST_BANDS.length; i++) {
+    const mid = (DIST_BANDS[i].min + DIST_BANDS[i].max) / 2;
+    const diff = Math.abs(m - mid);
+    if (diff < bestDiff) { bestDiff = diff; best = i; }
+  }
+  return best;
 }
 
 
@@ -353,7 +394,10 @@ export default function ExLibrisTrainingPage() {
   const [suggestedRaces, setSuggestedRaces] = useState<Record<string, HorseMatch> | null>(null);
   const [suggestionsLoading, setSuggestionsLoading] = useState(false);
   const [suggestionsError, setSuggestionsError] = useState('');
+  const [visibleSuggestions, setVisibleSuggestions] = useState<Set<string>>(new Set());
   const [suggestionsUpdatedAt, setSuggestionsUpdatedAt] = useState<string | null>(null);
+  // Per-horse extra distance bands unlocked via dropdown (band index set)
+  const [extraBands, setExtraBands] = useState<Record<string, Set<number>>>({});
 
   const STORAGE_KEY = 'race_suggestions_master_v1';
 
@@ -418,7 +462,8 @@ export default function ExLibrisTrainingPage() {
   // ── Filter options derived from all eligible races ─────────────────────────
   const filterOptions = useMemo(() => {
     if (!suggestedRaces) return { tracks: [] as string[], months: [] as string[], weeks: [] as string[] };
-    const all = Object.values(suggestedRaces).flatMap(h => h.eligible_races);
+    const today = new Date().toISOString().slice(0, 10);
+    const all = Object.values(suggestedRaces).flatMap(h => h.eligible_races).filter(r => r.fecha >= today);
     const tracks = Array.from(new Set(all.map(r => r.track).filter(Boolean) as string[])).sort();
     const months = Array.from(new Set(all.map(r => r.month).filter(Boolean) as string[]));
     const weeks  = Array.from(new Set(all.map(r => r.week).filter(Boolean) as string[])).sort();
@@ -561,6 +606,8 @@ export default function ExLibrisTrainingPage() {
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PRS</th>
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PR</th>
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PS</th>
+                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Precocity</th>
+                <th className="text-right py-2 px-2 font-medium whitespace-nowrap">Sire Ē[Age]</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">State</th>
                 <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Last Race</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Results</th>
@@ -593,6 +640,8 @@ export default function ExLibrisTrainingPage() {
                       <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PRS)}</td>
                       <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PR)}</td>
                       <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PS)}</td>
+                      <td className="py-1.5 px-2 text-center text-gray-300 whitespace-nowrap">{horse.sire_precocity ?? '—'}</td>
+                      <td className="py-1.5 px-2 text-right text-gray-300">{horse.sire_wa != null ? horse.sire_wa.toFixed(2) : '—'}</td>
 
                       {/* Estado */}
                       <td className="py-1.5 px-2 text-center">
@@ -635,20 +684,39 @@ export default function ExLibrisTrainingPage() {
 
                       {/* LOG */}
                       <td className="py-1.5 pl-2 text-center">
-                        <button
-                          onClick={() => setModalHorse(horse)}
-                          className="font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300
-                                     border border-yellow-500/30 px-2 py-0.5 rounded transition-colors duration-150"
-                        >
-                          +
-                        </button>
+                        <div className="flex items-center justify-center gap-1">
+                          {suggestedRaces?.[String(horse.studbook_id)] && (
+                            <button
+                              onClick={() => setVisibleSuggestions((prev: Set<string>) => {
+                                const next = new Set(prev);
+                                next.has(horse.studbook_id) ? next.delete(horse.studbook_id) : next.add(horse.studbook_id);
+                                return next;
+                              })}
+                              title={visibleSuggestions.has(horse.studbook_id) ? 'Hide race suggestions' : 'Show race suggestions'}
+                              className={`text-[10px] px-2 py-0.5 rounded border transition-colors duration-150 whitespace-nowrap
+                                ${visibleSuggestions.has(horse.studbook_id)
+                                  ? 'bg-yellow-500/20 text-yellow-200 border-yellow-500/40 hover:bg-yellow-500/10'
+                                  : 'bg-white/5 text-gray-400 border-white/15 hover:text-yellow-300 hover:border-yellow-500/30'
+                                }`}
+                            >
+                              {visibleSuggestions.has(horse.studbook_id) ? '🏁 Hide' : '🏁 Races'}
+                            </button>
+                          )}
+                          <button
+                            onClick={() => setModalHorse(horse)}
+                            className="font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300
+                                       border border-yellow-500/30 px-2 py-0.5 rounded transition-colors duration-150"
+                          >
+                            +
+                          </button>
+                        </div>
                       </td>
                     </tr>
 
                     {/* Latest comment row — always visible */}
                     {!logsLoading && latest?.comentarios && (
                       <tr className="border-b border-white/5" style={{ background: 'rgba(255,255,255,0.025)' }}>
-                        <td colSpan={10} className="px-4 py-2">
+                        <td colSpan={12} className="px-4 py-2">
                           <div className="flex items-start justify-between gap-6">
                             <div className="flex items-start gap-3 min-w-0">
                               <span className="text-gray-500 text-xs whitespace-nowrap mt-px shrink-0">
@@ -675,9 +743,13 @@ export default function ExLibrisTrainingPage() {
                     )}
 
                     {/* Campaign expansion */}
-                    {campaignOpen && (
+                    {campaignOpen && (() => {
+                      const sortedRaces = [...horse.races].sort((a, b) => race_dateToISO(b.race_date).localeCompare(race_dateToISO(a.race_date)));
+                      const bsnVals = sortedRaces.map(r => r.bsn);
+                      const posVals = sortedRaces.map(r => r.p);
+                      return (
                       <tr className="bg-white/[0.02]">
-                        <td colSpan={10} className="px-8 pb-4 pt-2">
+                        <td colSpan={12} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                               <thead>
@@ -699,7 +771,7 @@ export default function ExLibrisTrainingPage() {
                                 </tr>
                               </thead>
                               <tbody>
-                                {[...horse.races].sort((a, b) => race_dateToISO(b.race_date).localeCompare(race_dateToISO(a.race_date))).map((race, i) => (
+                                {sortedRaces.map((race, i) => (
                                   <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-100">
                                     <td className="py-2.5 pr-5 text-gray-300">{race_dateToISO(race.race_date)}</td>
                                     <td className="py-2.5 pr-5 text-gray-300">{stripHip(race.track)}</td>
@@ -712,9 +784,9 @@ export default function ExLibrisTrainingPage() {
                                         {race.estado}
                                       </span>
                                     </td>
-                                    <td className="py-2.5 px-4 text-right text-gray-300">{fmt(race.p, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right font-medium" style={{ color: heatColor(race.p, posVals, false) || undefined }}>{fmt(race.p, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ecpos, 2)}</td>
-                                    <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.bsn, 0)}</td>
+                                    <td className="py-2.5 px-4 text-right font-medium" style={{ color: heatColor(race.bsn, bsnVals, true) || undefined }}>{fmt(race.bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.pwin_bsn, 0)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.ema_past_bsn, 1)}</td>
                                     <td className="py-2.5 px-4 text-right text-gray-400">{fmt(race.glicko, 0)}</td>
@@ -730,37 +802,98 @@ export default function ExLibrisTrainingPage() {
                           </div>
                         </td>
                       </tr>
-                    )}
+                      );
+                    })()}
 
                     {/* AI race suggestions row */}
-                    {suggestedRaces?.[String(horse.studbook_id)] && (() => {
+                    {visibleSuggestions.has(horse.studbook_id) && suggestedRaces?.[String(horse.studbook_id)] && (() => {
                       const match = suggestedRaces[String(horse.studbook_id)];
                       if (!match.eligible_races.length) return null;
-                      // Apply filters then group by date
+
+                      // Compute allowed band indices: last race band ±1, plus any extras
+                      const lastDist = latestRace?.distance ?? null;
+                      const baseBand = lastDist != null ? distBandIndex(lastDist) : null;
+                      const horseExtra = extraBands[horse.studbook_id] ?? new Set<number>();
+                      const allowedBands: Set<number> | null = baseBand != null
+                        ? new Set([baseBand - 1, baseBand, baseBand + 1, ...Array.from(horseExtra)].filter(i => i >= 0 && i < DIST_BANDS.length))
+                        : null;
+
+                      const today = new Date().toISOString().slice(0, 10);
+                      const cutoff = new Date(); cutoff.setDate(cutoff.getDate() + 14);
+                      const cutoffStr = cutoff.toISOString().slice(0, 10);
                       const filtered = match.eligible_races.filter(r => {
+                        if (r.fecha < today) return false;
+                        if (filterWeek === 'all' && filterMonth === 'all' && r.fecha > cutoffStr) return false;
+                        if (allowedBands != null) {
+                          const rb = distBandIndex(r.distancia_mts);
+                          if (!allowedBands.has(rb)) return false;
+                        }
                         if (filterTrack !== 'all' && r.track !== filterTrack) return false;
                         if (filterMonth !== 'all' && r.month !== filterMonth) return false;
                         if (filterWeek !== 'all' && r.week !== filterWeek) return false;
                         return true;
                       });
-                      if (!filtered.length) return null;
+
+                      // Bands not yet included (for the dropdown)
+                      const availableExtra = DIST_BANDS
+                        .map((b, i) => ({ ...b, i }))
+                        .filter(b => allowedBands != null && !allowedBands.has(b.i));
+
                       const byDate: Record<string, typeof match.eligible_races> = {};
                       for (const r of filtered) {
                         if (!byDate[r.fecha]) byDate[r.fecha] = [];
                         byDate[r.fecha].push(r);
                       }
+
+                      // Label for the active distance filter
+                      const bandLabel = allowedBands != null
+                        ? Array.from(allowedBands).sort((a,b)=>a-b).map(i => DIST_BANDS[i].label).join(', ')
+                        : 'all';
+
                       return (
                         <tr style={{ background: 'rgba(234,179,8,0.04)' }}>
-                          <td colSpan={10} className="px-4 pb-3 pt-2 border-b border-yellow-500/10">
+                          <td colSpan={12} className="px-4 pb-3 pt-2 border-b border-yellow-500/10">
+                            {/* Distance filter header */}
+                            <div className="flex items-center gap-2 mb-2 flex-wrap">
+                              <span className="text-[9px] text-yellow-500/50 uppercase tracking-widest">Distancia:</span>
+                              <span className="text-[10px] text-yellow-300/70">{bandLabel}</span>
+                              {allowedBands != null && horseExtra.size > 0 && (
+                                <button
+                                  onClick={() => setExtraBands(prev => ({ ...prev, [horse.studbook_id]: new Set() }))}
+                                  className="text-[9px] text-gray-500 hover:text-red-400 border border-white/10 px-1.5 py-0.5 rounded transition-colors"
+                                >
+                                  Reset
+                                </button>
+                              )}
+                              {availableExtra.length > 0 && (
+                                <select
+                                  value=""
+                                  onChange={e => {
+                                    const idx = parseInt(e.target.value, 10);
+                                    if (isNaN(idx)) return;
+                                    setExtraBands(prev => {
+                                      const cur = new Set(prev[horse.studbook_id] ?? []);
+                                      cur.add(idx);
+                                      return { ...prev, [horse.studbook_id]: cur };
+                                    });
+                                  }}
+                                  className="text-[10px] bg-white/5 border border-white/15 text-gray-400 rounded px-1.5 py-0.5 cursor-pointer hover:border-yellow-500/30 focus:outline-none"
+                                >
+                                  <option value="">+ Add distance</option>
+                                  {availableExtra.map(b => (
+                                    <option key={b.i} value={b.i}>{b.label}</option>
+                                  ))}
+                                </select>
+                              )}
+                            </div>
                             <div className="flex items-start gap-3 flex-wrap">
-                              <span className="text-[10px] text-yellow-500/60 uppercase tracking-widest shrink-0 mt-1">
-                                Abril 2026
-                              </span>
-                              <span className="text-[10px] text-gray-600 shrink-0 mt-1 hidden sm:inline">
+                              <span className="text-[10px] text-gray-600 shrink-0 hidden sm:inline">
                                 {match.current_analysis}
                               </span>
-                              <div className="flex flex-wrap gap-1.5 mt-0.5">
-                                {Object.entries(byDate).sort().map(([fecha, races]) =>
+                              <div className="flex flex-wrap gap-1.5">
+                                {filtered.length === 0 ? (
+                                  <span className="text-[10px] text-gray-600 italic">No upcoming races in this distance range</span>
+                                ) : Object.entries(byDate).sort().map(([fecha, races]) =>
                                   races.map((r, i) => {
                                     const isGroup = !!r.group;
                                     const isG1 = r.group === 'G1';
@@ -769,7 +902,7 @@ export default function ExLibrisTrainingPage() {
                                     return (
                                       <span
                                         key={`${fecha}-${i}`}
-                                        title={`${r.track ? r.track + ' · ' : ''}${r.match_reason}`}
+                                        title={`${r.track ? r.track + ' · ' : ''}${r.distancia_mts}m · ${r.match_reason}`}
                                         onClick={() => setSelectedRace(r)}
                                         className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px]
                                                    border transition-colors cursor-pointer
@@ -802,7 +935,7 @@ export default function ExLibrisTrainingPage() {
                     {/* Log history expansion */}
                     {logOpen && horseLog.length > 0 && (
                       <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
-                        <td colSpan={10} className="px-6 pb-5 pt-4 border-b border-white/8">
+                        <td colSpan={12} className="px-6 pb-5 pt-4 border-b border-white/8">
                           <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-4">
                             Historial — {horse.name}
                           </p>
