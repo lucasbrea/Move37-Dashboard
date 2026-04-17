@@ -607,7 +607,6 @@ export default function ExLibrisTrainingPage() {
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PR</th>
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PS</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Precocity</th>
-                <th className="text-right py-2 px-2 font-medium whitespace-nowrap">Sire Ē[Age]</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">State</th>
                 <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Last Race</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Results</th>
@@ -641,7 +640,6 @@ export default function ExLibrisTrainingPage() {
                       <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PR)}</td>
                       <td className="py-1.5 px-2 text-right text-gray-300">{pct(horse.PS)}</td>
                       <td className="py-1.5 px-2 text-center text-gray-300 whitespace-nowrap">{horse.sire_precocity ?? '—'}</td>
-                      <td className="py-1.5 px-2 text-right text-gray-300">{horse.sire_wa != null ? horse.sire_wa.toFixed(2) : '—'}</td>
 
                       {/* Estado */}
                       <td className="py-1.5 px-2 text-center">
