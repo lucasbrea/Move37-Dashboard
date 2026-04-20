@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 
-export type EstadoType = 'corriendo' | 'lesionado' | 'descanso';
+export type EstadoType = 'corriendo' | 'lesionado' | 'descanso' | 'retirado';
+export type MotivoRetiroType = 'lesion' | 'venta';
 
 export interface TrainingLogEntry {
   id: string;
@@ -10,7 +11,7 @@ export interface TrainingLogEntry {
   fecha: string;           // ISO date yyyy-mm-dd
   estado: EstadoType;
   cuidador: string | null;
-  campo: string | null;
+  campo: string | null;    // For 'descanso': field name. For 'retirado': motivo ('lesion' | 'venta')
   comentarios: string | null;
   proximas_carreras: string | null;
   created_at: string;
@@ -50,6 +51,17 @@ export function useTrainingLog() {
     return data?.[0];
   };
 
+  const updateLog = async (id: string, updates: Partial<Omit<TrainingLogEntry, 'id' | 'created_at'>>) => {
+    const { data, error } = await supabase
+      .from('training_logs')
+      .update(updates)
+      .eq('id', id)
+      .select();
+    if (error) throw error;
+    if (data) setLogs(prev => prev.map(l => l.id === id ? { ...l, ...data[0] } : l));
+    return data?.[0];
+  };
+
   const deleteLog = async (id: string) => {
     const { error } = await supabase.from('training_logs').delete().eq('id', id);
     if (error) throw error;
@@ -58,5 +70,5 @@ export function useTrainingLog() {
 
   useEffect(() => { fetchLogs(); }, []);
 
-  return { logs, loading, error, addLog, deleteLog, refetch: fetchLogs };
+  return { logs, loading, error, addLog, updateLog, deleteLog, refetch: fetchLogs };
 }
