@@ -3,6 +3,7 @@
 import { useState, Fragment, useMemo } from 'react';
 import rawData from '../../../public/data/ExLibris_Dams.json';
 import offspringRaw from '../../../public/data/dams_offspring.json';
+import { useDamComments, DamCommentEntry, NewDamCommentEntry } from '../../../hooks/useDamComments';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -146,6 +147,108 @@ function getTopBsns(races: OffspringRace[]): [{ bsn: number; dist: number } | nu
   return [first, second];
 }
 
+// ── Comment Modal ─────────────────────────────────────────────────────────────
+
+function CommentModal({ dam, onSave, onClose }: {
+  dam: Dam;
+  onSave: (entry: NewDamCommentEntry) => Promise<void>;
+  onClose: () => void;
+}) {
+  const today = new Date().toISOString().slice(0, 10);
+  const [comentarios, setComentarios] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [err, setErr] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!comentarios.trim()) { setErr('Ingresá un comentario.'); return; }
+    try {
+      setSaving(true);
+      await onSave({ dam_id: dam.id, dam_name: dam.nombre, fecha: today, comentarios: comentarios.trim() });
+      onClose();
+    } catch { setErr('Error al guardar. Intente nuevamente.'); }
+    finally { setSaving(false); }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div className="bg-[#0a192f] border border-white/15 w-full sm:max-w-lg sm:rounded-xl rounded-t-2xl overflow-y-auto max-h-[92vh]">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 sticky top-0 bg-[#0a192f] z-10">
+          <div>
+            <p className="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Comentario</p>
+            <h3 className="text-white font-medium text-lg leading-tight">{dam.nombre}</h3>
+            <p className="text-xs text-gray-500 mt-0.5">{new Date(today + 'T12:00:00').toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
+          </div>
+          <button onClick={onClose} className="text-gray-500 hover:text-white text-2xl leading-none px-1">×</button>
+        </div>
+        <form onSubmit={handleSubmit} className="px-5 py-5 space-y-5">
+          <div>
+            <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Comentario</label>
+            <textarea autoFocus value={comentarios} onChange={e => setComentarios(e.target.value)}
+rows={4}
+              className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-white/30 text-sm resize-none" />
+          </div>
+          {err && <p className="text-red-400 text-sm">{err}</p>}
+          <button type="submit" disabled={saving}
+            className="w-full py-4 rounded-lg bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-300 font-medium text-sm border border-yellow-500/30 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed">
+            {saving ? 'Guardando…' : 'Guardar Comentario'}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+// ── Edit Comment Modal ────────────────────────────────────────────────────────
+
+function EditCommentModal({ entry, onSave, onClose }: {
+  entry: DamCommentEntry;
+  onSave: (id: string, comentarios: string) => Promise<void>;
+  onClose: () => void;
+}) {
+  const [comentarios, setComentarios] = useState(entry.comentarios);
+  const [saving, setSaving] = useState(false);
+  const [err, setErr] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!comentarios.trim()) { setErr('Ingresá un comentario.'); return; }
+    try {
+      setSaving(true);
+      await onSave(entry.id, comentarios.trim());
+      onClose();
+    } catch { setErr('Error al guardar. Intente nuevamente.'); }
+    finally { setSaving(false); }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div className="bg-[#0a192f] border border-white/15 w-full sm:max-w-lg sm:rounded-xl rounded-t-2xl overflow-y-auto max-h-[92vh]">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 sticky top-0 bg-[#0a192f] z-10">
+          <div>
+            <p className="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Editar Comentario</p>
+            <h3 className="text-white font-medium text-lg leading-tight">{entry.dam_name}</h3>
+            <p className="text-xs text-gray-500 mt-0.5">{new Date(entry.fecha + 'T12:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+          </div>
+          <button onClick={onClose} className="text-gray-500 hover:text-white text-2xl leading-none px-1">×</button>
+        </div>
+        <form onSubmit={handleSubmit} className="px-5 py-5 space-y-5">
+          <div>
+            <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Comentario</label>
+            <textarea autoFocus value={comentarios} onChange={e => setComentarios(e.target.value)} rows={4}
+              className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-white/30 text-sm resize-none" />
+          </div>
+          {err && <p className="text-red-400 text-sm">{err}</p>}
+          <button type="submit" disabled={saving}
+            className="w-full py-4 rounded-lg bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-300 font-medium text-sm border border-yellow-500/30 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed">
+            {saving ? 'Guardando…' : 'Guardar Cambios'}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function ExistingDams2026Page() {
@@ -202,6 +305,20 @@ export default function ExistingDams2026Page() {
   const [expandedCampaign, setExpandedCampaign] = useState<Set<string>>(new Set());
   const [expandedOffspring, setExpandedOffspring] = useState<Set<string>>(new Set());
   const [expandedOffspringCampaign, setExpandedOffspringCampaign] = useState<Set<string>>(new Set());
+  const [expandedComments, setExpandedComments] = useState<Set<string>>(new Set());
+  const [modalDam, setModalDam] = useState<Dam | null>(null);
+  const [editingComment, setEditingComment] = useState<DamCommentEntry | null>(null);
+
+  const { comments, loading: commentsLoading, addComment, updateComment, deleteComment } = useDamComments();
+
+  const commentsByDam = useMemo(() => {
+    const map: Record<string, DamCommentEntry[]> = {};
+    for (const c of comments) {
+      if (!map[c.dam_id]) map[c.dam_id] = [];
+      map[c.dam_id].push(c);
+    }
+    return map;
+  }, [comments]);
 
   function toggle(set: Set<string>, setFn: (s: Set<string>) => void, id: string) {
     const next = new Set(set);
@@ -251,6 +368,7 @@ export default function ExistingDams2026Page() {
                 <th rowSpan={2} className="text-center py-2 px-1.5 font-medium whitespace-nowrap border-b border-white/10">Best Offspring BSN</th>
                 <th rowSpan={2} className="text-center py-2 px-1.5 font-medium whitespace-nowrap border-b border-white/10">Results</th>
                 <th rowSpan={2} className="text-center py-2 px-1.5 font-medium whitespace-nowrap border-b border-white/10">Offspring</th>
+                <th rowSpan={2} className="text-center py-2 px-1.5 font-medium whitespace-nowrap border-b border-white/10">Comments</th>
               </tr>
               <tr className="text-gray-400 text-xs uppercase tracking-tight border-b border-white/10">
                 <th className="text-center py-1 px-1.5 font-medium whitespace-nowrap">Last</th>
@@ -268,6 +386,10 @@ export default function ExistingDams2026Page() {
                 const offspringEntry = offspringMap[dam.id];
                 const offspringData = [...(offspringEntry?.offspring ?? [])].sort((a, b) => (b.PRS ?? -Infinity) - (a.PRS ?? -Infinity));
                 const stats = damStats[dam.id];
+
+                const damComments = commentsByDam[dam.id] ?? [];
+                const latestComment = damComments[0] ?? null;
+                const commentsOpen = expandedComments.has(dam.id);
 
                 return (
                   <Fragment key={dam.id}>
@@ -308,7 +430,67 @@ export default function ExistingDams2026Page() {
                           : <span className="text-gray-600 text-xs">—</span>
                         }
                       </td>
+                      <td className="py-1.5 px-1.5 text-center">
+                        <button onClick={() => setModalDam(dam)}
+                          className="font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300 border border-yellow-500/30 px-2 py-0.5 rounded transition-colors duration-150">
+                          +
+                        </button>
+                      </td>
                     </tr>
+
+                    {/* Latest comment sub-row */}
+                    {!commentsLoading && (latestComment || damComments.length > 0) && (
+                      <tr className="border-b border-white/5" style={{ background: 'rgba(255,255,255,0.025)' }}>
+                        <td colSpan={16} className="px-4 py-2">
+                          <div className="flex items-start justify-between gap-6">
+                            <div className="flex items-start gap-3 min-w-0">
+                              {latestComment && (
+                                <>
+                                  <span className="text-gray-500 text-xs whitespace-nowrap mt-px shrink-0">
+                                    {new Date(latestComment.fecha + 'T12:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                  </span>
+                                  <span className="text-gray-200 text-xs leading-relaxed">{latestComment.comentarios}</span>
+                                </>
+                              )}
+                            </div>
+                            {damComments.length > 0 && (
+                              <button onClick={() => toggle(expandedComments, setExpandedComments, dam.id)}
+                                className={`flex-shrink-0 text-xs flex items-center gap-1.5 px-2.5 py-1 border rounded transition-colors duration-150 ${commentsOpen ? 'border-yellow-400/40 text-yellow-300' : 'border-white/15 text-gray-400 hover:text-white hover:border-white/30'}`}>
+                                {damComments.length} {damComments.length === 1 ? 'entrada' : 'entradas'}
+                                <span style={{ display: 'inline-block', transform: commentsOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>▾</span>
+                              </button>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    )}
+
+                    {/* Comment history */}
+                    {commentsOpen && damComments.length > 0 && (
+                      <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
+                        <td colSpan={16} className="px-6 pb-5 pt-4 border-b border-white/8">
+                          <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-4">Historial — {dam.nombre}</p>
+                          <div className="space-y-3">
+                            {damComments.map(entry => (
+                              <div key={entry.id} className="flex gap-4 items-start border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                                <div className="shrink-0 w-24 text-gray-500 text-xs pt-0.5">
+                                  {new Date(entry.fecha + 'T12:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-gray-200 text-sm leading-relaxed">{entry.comentarios}</p>
+                                </div>
+                                <div className="shrink-0 flex items-center gap-1.5">
+                                  <button onClick={() => setEditingComment(entry)}
+                                    className="text-xs px-2 py-1 rounded border border-white/10 text-gray-400 hover:text-yellow-300 hover:border-yellow-500/30 transition-colors duration-150">Edit</button>
+                                  <button onClick={() => { if (confirm('¿Eliminar este comentario?')) deleteComment(entry.id); }}
+                                    className="text-xs px-2 py-1 rounded border border-white/10 text-gray-400 hover:text-red-400 hover:border-red-500/30 transition-colors duration-150">Delete</button>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                    )}
 
                     {/* Dam campaign */}
                     {campaignOpen && (() => {
@@ -317,7 +499,7 @@ export default function ExistingDams2026Page() {
                       const posVals = sortedRaces.map(r => r.posicion);
                       return (
                       <tr className="bg-white/[0.02]">
-                        <td colSpan={15} className="px-8 pb-4 pt-2">
+                        <td colSpan={16} className="px-8 pb-4 pt-2">
                           <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                               <thead>
@@ -370,7 +552,7 @@ export default function ExistingDams2026Page() {
                     {/* Offspring table */}
                     {offspringOpen && (
                       <tr className="bg-blue-900/20">
-                        <td colSpan={15} className="px-8 pb-6 pt-3">
+                        <td colSpan={16} className="px-8 pb-6 pt-3">
                           <p className="text-xs text-blue-300/60 uppercase tracking-wider mb-3">Offspring of {dam.nombre}</p>
                           <table className="w-full text-sm border-collapse">
                             <thead>
@@ -496,6 +678,8 @@ export default function ExistingDams2026Page() {
           </table>
         </div>
       </div>
+      {modalDam && <CommentModal dam={modalDam} onSave={addComment} onClose={() => setModalDam(null)} />}
+      {editingComment && <EditCommentModal entry={editingComment} onSave={updateComment} onClose={() => setEditingComment(null)} />}
     </div>
   );
 }
