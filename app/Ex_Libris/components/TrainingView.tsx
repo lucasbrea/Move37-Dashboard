@@ -60,6 +60,14 @@ function stripHip(track: string) {
   return track.replace(/^Hip[oó]dromo de\s*/i, '');
 }
 
+function formatCat(sex: string | null, age: number | null, totalWin: number | null): string {
+  const s = sex === 'Hembra' ? 'H' : sex === 'Macho' ? 'M' : '';
+  const a = age != null ? `${age}a` : '';
+  const g = totalWin != null ? ` G${Math.round(totalWin)}` : '';
+  const out = `${s}${a}${g}`.trim();
+  return out || '—';
+}
+
 const MONTHS: Record<string, string> = {
   jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',
   jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12',
@@ -591,6 +599,7 @@ export default function TrainingView({ filter }: { filter: 'active' | 'retirado'
                 <th className="text-right py-2 px-2 font-medium whitespace-nowrap">PS</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Precocity</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">State</th>
+                <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Cat</th>
                 <th className="text-left py-2 px-2 font-medium whitespace-nowrap">Last Race</th>
                 <th className="text-center py-2 px-2 font-medium whitespace-nowrap">Results</th>
                 <th className="text-center py-2 pl-2 font-medium whitespace-nowrap">LOG</th>
@@ -624,6 +633,7 @@ export default function TrainingView({ filter }: { filter: 'active' | 'retirado'
                           : latest ? <EstadoBadge estado={latest.estado} />
                           : <span className="text-gray-700 text-xs">—</span>}
                       </td>
+                      <td className="py-1.5 px-2 text-center text-gray-300 whitespace-nowrap">{formatCat(horse.sex_cat, horse.age, horse.total_win)}</td>
                       <td className="py-1.5 px-2 text-gray-400">
                         {latestRace ? (
                           <div>
@@ -660,7 +670,7 @@ export default function TrainingView({ filter }: { filter: 'active' | 'retirado'
 
                     {!logsLoading && (latest?.comentarios || horseLog.length > 0) && (
                       <tr className="border-b border-white/5" style={{ background: 'rgba(255,255,255,0.025)' }}>
-                        <td colSpan={12} className="px-4 py-2">
+                        <td colSpan={13} className="px-4 py-2">
                           <div className="flex items-start justify-between gap-6">
                             <div className="flex items-start gap-3 min-w-0">
                               {latest?.comentarios && (
@@ -690,7 +700,7 @@ export default function TrainingView({ filter }: { filter: 'active' | 'retirado'
                       const posVals = sortedRaces.map(r => r.p);
                       return (
                         <tr className="bg-white/[0.02]">
-                          <td colSpan={12} className="px-8 pb-4 pt-2">
+                          <td colSpan={13} className="px-8 pb-4 pt-2">
                             <div className="overflow-x-auto">
                               <table className="w-full text-sm border-collapse">
                                 <thead>
@@ -747,7 +757,7 @@ export default function TrainingView({ filter }: { filter: 'active' | 'retirado'
                                         </tr>
                                         {(savedComment || isEditing) && (
                                           <tr className="border-b border-white/5">
-                                            <td colSpan={14} className="px-4 pb-3 pt-1 pl-8">
+                                            <td colSpan={13} className="px-4 pb-3 pt-1 pl-8">
                                               {isEditing ? (
                                                 <div className="flex items-start gap-2">
                                                   <textarea autoFocus value={commentDraft} onChange={e => setCommentDraft(e.target.value)} rows={2}
@@ -811,7 +821,7 @@ export default function TrainingView({ filter }: { filter: 'active' | 'retirado'
                       const bandLabel = allowedBands != null ? Array.from(allowedBands).sort((a,b)=>a-b).map(i => DIST_BANDS[i].label).join(', ') : 'all';
                       return (
                         <tr style={{ background: 'rgba(234,179,8,0.04)' }}>
-                          <td colSpan={12} className="px-4 pb-3 pt-2 border-b border-yellow-500/10">
+                          <td colSpan={13} className="px-4 pb-3 pt-2 border-b border-yellow-500/10">
                             <div className="flex items-center gap-2 mb-2 flex-wrap">
                               <span className="text-[9px] text-yellow-500/50 uppercase tracking-widest">Distancia:</span>
                               <span className="text-[10px] text-yellow-300/70">{bandLabel}</span>
@@ -857,7 +867,7 @@ export default function TrainingView({ filter }: { filter: 'active' | 'retirado'
 
                     {logOpen && horseLog.length > 0 && (
                       <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
-                        <td colSpan={12} className="px-6 pb-5 pt-4 border-b border-white/8">
+                        <td colSpan={13} className="px-6 pb-5 pt-4 border-b border-white/8">
                           <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-4">Historial — {horse.name}</p>
                           <div className="space-y-3">
                             {horseLog.map(entry => (
