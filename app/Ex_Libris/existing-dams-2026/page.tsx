@@ -4,6 +4,7 @@ import { useState, Fragment, useMemo } from 'react';
 import rawData from '../../../public/data/ExLibris_Dams.json';
 import offspringRaw from '../../../public/data/dams_offspring.json';
 import { useDamComments, DamCommentEntry, NewDamCommentEntry } from '../../../hooks/useDamComments';
+import { useDamRetirements } from '../../../hooks/useDamRetirements';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -252,11 +253,16 @@ function EditCommentModal({ entry, onSave, onClose }: {
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function ExistingDams2026Page() {
-  const dams = useMemo<Dam[]>(
+  const allDams = useMemo<Dam[]>(
     () => Object.entries(rawData as Record<string, Omit<Dam, 'id'>>)
       .map(([id, d]) => ({ id, ...d }))
       .sort((a, b) => (b.prs ?? -Infinity) - (a.prs ?? -Infinity)),
     []
+  );
+  const { isRetired, retireDam, loading: retirementsLoading } = useDamRetirements();
+  const dams = useMemo(
+    () => allDams.filter(d => !isRetired(d.id)),
+    [allDams, isRetired]
   );
   const offspringMap = useMemo(
     () => offspringRaw as unknown as Record<string, OffspringEntry>,
@@ -431,10 +437,23 @@ export default function ExistingDams2026Page() {
                         }
                       </td>
                       <td className="py-1.5 px-1.5 text-center">
-                        <button onClick={() => setModalDam(dam)}
-                          className="font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300 border border-yellow-500/30 px-2 py-0.5 rounded transition-colors duration-150">
-                          +
-                        </button>
+                        <div className="flex items-center justify-center gap-1.5">
+                          <button onClick={() => setModalDam(dam)}
+                            className="font-medium bg-yellow-500/15 hover:bg-yellow-500/25 text-yellow-300 border border-yellow-500/30 px-2 py-0.5 rounded transition-colors duration-150">
+                            +
+                          </button>
+                          <button
+                            disabled={retirementsLoading}
+                            onClick={async () => {
+                              if (!confirm(`¿Mover "${dam.nombre}" a Retirados?`)) return;
+                              try { await retireDam(dam.id, dam.nombre); }
+                              catch { alert('Error al retirar. Intente nuevamente.'); }
+                            }}
+                            title="Mover a Retirados"
+                            className="font-medium bg-white/5 hover:bg-orange-500/20 hover:text-orange-300 hover:border-orange-500/40 text-gray-400 border border-white/15 px-2 py-0.5 rounded transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed">
+                            ⤓
+                          </button>
+                        </div>
                       </td>
                     </tr>
 
