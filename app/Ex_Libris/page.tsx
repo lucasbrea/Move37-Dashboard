@@ -8,6 +8,7 @@ const sections = [
   { id: 'crias-2024-2025', label: 'Crías Ex Libris' },
   { id: 'training', label: 'Training' },
   { id: 'retirados', label: 'Retirados' },
+  { id: 'dams-retiradas', label: 'Dams Retiradas' },
 ];
 
 export default function ExLibrisPage() {
